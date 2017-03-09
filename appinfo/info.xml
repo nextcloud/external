@@ -24,9 +24,14 @@
 	<bugs>https://github.com/nextcloud/external/issues</bugs>
 	<repository type="git">https://github.com/nextcloud/external.git</repository>
 
-	<version>1.2</version>
+	<version>1.2.1</version>
+	<namespace>External</namespace>
 
 	<dependencies>
 		<nextcloud min-version="12" max-version="12" />
 	</dependencies>
+
+	<settings>
+		<admin>OCA\External\Settings\Admin</admin>
+	</settings>
 </info>

@@ -23,8 +23,6 @@
 
 use OCA\External\External;
 
-OCP\App::registerAdmin('external', 'settings');
-
 $sites = External::getSites();
 if (!empty($sites)) {
 	$urlGenerator = \OC::$server->getURLGenerator();
