@@ -32,7 +32,7 @@ if (!empty($sites)) {
 			return [
 				'id'    => 'external_index' . ($i + 1),
 				'order' => 80 + $i,
-				'href' => $urlGenerator->linkToRoute('external_index', ['id'=> $i + 1]),
+				'href' => $urlGenerator->linkToRoute('external.page.showPage', ['id'=> $i + 1]),
 				'icon' => $urlGenerator->imagePath('external', !empty($sites[$i][2]) ? $sites[$i][2] : 'external.svg'),
 				'name' => $sites[$i][0],
 			];
