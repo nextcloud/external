@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ownCloud - External app
  *
@@ -21,20 +20,20 @@
  *
  */
 
-use OCA\External\External;
-
-$sites = External::getSites();
-if (!empty($sites)) {
+$jsonEncodedList = \OC::$server->getConfig()->getAppValue('external', 'sites', '');
+$sites = json_decode($jsonEncodedList);
+if (is_array($sites) && !empty($sites)) {
 	$urlGenerator = \OC::$server->getURLGenerator();
 	$navigationManager = \OC::$server->getNavigationManager();
-	for ($i = 0; $i < sizeof($sites); $i++) {
-		$navigationEntry = function () use ($i, $urlGenerator, $sites) {
+
+	foreach ($sites as $i => $site) {
+		$navigationEntry = function () use ($i, $urlGenerator, $site) {
 			return [
 				'id'    => 'external_index' . ($i + 1),
 				'order' => 80 + $i,
 				'href' => $urlGenerator->linkToRoute('external.page.showPage', ['id'=> $i + 1]),
-				'icon' => $urlGenerator->imagePath('external', !empty($sites[$i][2]) ? $sites[$i][2] : 'external.svg'),
-				'name' => $sites[$i][0],
+				'icon' => $urlGenerator->imagePath('external', !empty($site[2]) ? $site[2] : 'external.svg'),
+				'name' => $site[0],
 			];
 		};
 		$navigationManager->add($navigationEntry);

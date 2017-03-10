@@ -39,15 +39,14 @@ script('external', 'admin');
 		<ul class="external_sites">
 
 		<?php
-		$sites = \OCA\External\External::getSites();
-		for($i = 0; $i < sizeof($sites); $i++) {
+		foreach ($_['sites'] as $site) {
 			print_unescaped('<li>
-			<input type="text" class="site_name" name="site_name[]" value="'.OCP\Util::sanitizeHTML($sites[$i][0]).'" placeholder="'.$l->t('Name').'" />
-			<input type="text" class="site_url"  name="site_url[]"  value="'.OCP\Util::sanitizeHTML($sites[$i][1]).'" placeholder="'.$l->t('URL').'" />
+			<input type="text" class="site_name" name="site_name[]" value="'.OCP\Util::sanitizeHTML($site[0]).'" placeholder="'.$l->t('Name').'" />
+			<input type="text" class="site_url"  name="site_url[]"  value="'.OCP\Util::sanitizeHTML($site[1]).'" placeholder="'.$l->t('URL').'" />
 			<select class="site_icon" name="site_icon[]">');
 			$nf = true;
-			foreach($_['images'] as $image) {
-				if (basename($image) === $sites[$i][2]) {
+			foreach ($_['images'] as $image) {
+				if (basename($image) === $site[2]) {
 					print_unescaped('<option value="'.basename($image).'" selected>'.basename($image).'</option>');
 					$nf = false;
 				} else {
@@ -60,20 +59,20 @@ script('external', 'admin');
 				print_unescaped('<option value="">'.$l->t('Select an icon').'</option>');
 			}
 			print_unescaped('</select>
-			<img class="svg action delete_button" src="'.OCP\image_path("", "actions/delete.svg") .'" title="'.$l->t("Remove site").'" />
+			<img class="svg action delete_button" src="'.image_path("", "actions/delete.svg") .'" title="'.$l->t("Remove site").'" />
 			</li>');
 		}
-		if (empty($sites)) {
+		if (empty($_['sites'])) {
 			print_unescaped('<li>
 			<input type="text" class="site_name" name="site_name[]" value="" placeholder="'.$l->t('Name').'" />
 			<input type="text" class="site_url"  name="site_url[]"  value="" placeholder="'.$l->t('URL').'" />
 			<select class="site_icon" name="site_icon[]">');
-			foreach($_['images'] as $image) {
+			foreach ($_['images'] as $image) {
 				print_unescaped('<option value="'.basename($image).'">'.basename($image).'</option>');
 			}
 			print_unescaped('<option value="" selected>'.$l->t('Select an icon').'</option>
 			</select>
-			<img class="svg action delete_button" src="'.OCP\image_path("", "actions/delete.svg") .'" title="'.$l->t("Remove site").'" />
+			<img class="svg action delete_button" src="'.image_path("", "actions/delete.svg") .'" title="'.$l->t("Remove site").'" />
 			</li>');
 		}
 
