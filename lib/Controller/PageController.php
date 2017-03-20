@@ -21,25 +21,26 @@
 
 namespace OCA\External\Controller;
 
+use OCA\External\SiteNotFoundException;
+use OCA\External\SitesManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IConfig;
 use OCP\INavigationManager;
 use OCP\IRequest;
 
 class PageController extends Controller {
 
-	/** @var IConfig */
-	protected $config;
+	/** @var SitesManager */
+	protected $sitesManager;
 
 	/** @var INavigationManager */
 	protected $navigationManager;
 
-	public function __construct($appName, IRequest $request, INavigationManager $navigationManager, IConfig $config) {
+	public function __construct($appName, IRequest $request, INavigationManager $navigationManager, SitesManager $sitesManager) {
 		parent::__construct($appName, $request);
-		$this->config = $config;
+		$this->sitesManager = $sitesManager;
 		$this->navigationManager = $navigationManager;
 	}
 
@@ -51,27 +52,21 @@ class PageController extends Controller {
 	 * @return TemplateResponse|RedirectResponse
 	 */
 	public function showPage($id) {
-
-		$sites = $this->getSites();
-		if (isset($sites[$id - 1])) {
-			$url = $sites[$id - 1][1];
+		try {
+			$site = $this->sitesManager->getSiteById($id);
 			$this->navigationManager->setActiveEntry('external_index' . $id);
 
 			$response = new TemplateResponse('external', 'frame', [
-				'url' => $url
+				'url' => $site['url'],
 			], 'user');
+
 			$policy = new ContentSecurityPolicy();
 			$policy->addAllowedChildSrcDomain('*');
 			$response->setContentSecurityPolicy($policy);
+
 			return $response;
-		} else {
+		} catch (SiteNotFoundException $e) {
 			return new RedirectResponse(\OC_Util::getDefaultPageUrl());
 		}
-	}
-
-	protected function getSites() {
-		$jsonEncodedList = $this->config->getAppValue('external', 'sites', '');
-		$sites = json_decode($jsonEncodedList);
-		return !is_array($sites) ? [] : $sites;
 	}
 }

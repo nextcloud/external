@@ -23,10 +23,10 @@
 
 namespace OCA\External\Settings;
 
+use OCA\External\SitesManager;
 use OCP\App\AppPathNotFoundException;
 use OCP\App\IAppManager;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IConfig;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
@@ -34,16 +34,16 @@ class Admin implements ISettings {
 	/** @var IAppManager */
 	protected $appManager;
 
-	/** @var IConfig */
-	protected $config;
+	/** @var SitesManager */
+	protected $sitesManager;
 
 	/**
 	 * @param IAppManager $appManager
-	 * @param IConfig $config
+	 * @param SitesManager $sitesManager
 	 */
-	public function __construct(IAppManager $appManager, IConfig $config) {
+	public function __construct(IAppManager $appManager, SitesManager $sitesManager) {
 		$this->appManager = $appManager;
-		$this->config = $config;
+		$this->sitesManager = $sitesManager;
 	}
 
 	/**
@@ -52,7 +52,7 @@ class Admin implements ISettings {
 	 */
 	public function getForm() {
 		$images = glob($this->appManager->getAppPath('external') . '/img/*.*');
-		$sites = $this->getSites();
+		$sites = $this->sitesManager->getSites();
 
 		return new TemplateResponse('external', 'settings', [
 			'images' => $images,
@@ -76,11 +76,5 @@ class Admin implements ISettings {
 	 */
 	public function getPriority() {
 		return 55;
-	}
-
-	protected function getSites() {
-		$jsonEncodedList = $this->config->getAppValue('external', 'sites', '');
-		$sites = json_decode($jsonEncodedList);
-		return !is_array($sites) ? [] : $sites;
 	}
 }

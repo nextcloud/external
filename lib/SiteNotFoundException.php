@@ -19,5 +19,6 @@
  *
  */
 
-$app = new \OCA\External\AppInfo\Application();
-$app->register();
+namespace OCA\External;
+
+class SiteNotFoundException extends \OutOfBoundsException {}

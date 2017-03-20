@@ -41,12 +41,12 @@ script('external', 'admin');
 		<?php
 		foreach ($_['sites'] as $site) {
 			print_unescaped('<li>
-			<input type="text" class="site_name" name="site_name[]" value="'.OCP\Util::sanitizeHTML($site[0]).'" placeholder="'.$l->t('Name').'" />
-			<input type="text" class="site_url"  name="site_url[]"  value="'.OCP\Util::sanitizeHTML($site[1]).'" placeholder="'.$l->t('URL').'" />
+			<input type="text" class="site_name" name="site_name[]" value="'.OCP\Util::sanitizeHTML($site['name']).'" placeholder="'.$l->t('Name').'" />
+			<input type="text" class="site_url"  name="site_url[]"  value="'.OCP\Util::sanitizeHTML($site['url']).'" placeholder="'.$l->t('URL').'" />
 			<select class="site_icon" name="site_icon[]">');
 			$nf = true;
 			foreach ($_['images'] as $image) {
-				if (basename($image) === $site[2]) {
+				if (basename($image) === $site['icon']) {
 					print_unescaped('<option value="'.basename($image).'" selected>'.basename($image).'</option>');
 					$nf = false;
 				} else {
