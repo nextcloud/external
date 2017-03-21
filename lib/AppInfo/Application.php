@@ -21,6 +21,7 @@
 
 namespace OCA\External\AppInfo;
 
+use OCA\External\Capabilities;
 use OCA\External\SitesManager;
 use OCP\AppFramework\App;
 
@@ -28,6 +29,8 @@ class Application extends App {
 
 	public function __construct() {
 		parent::__construct('external');
+
+		$this->getContainer()->registerCapability(Capabilities::class);
 	}
 
 	public function register() {
