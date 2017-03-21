@@ -2,8 +2,6 @@
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  *
- * @author Joas Schilling <coding@schilljs.com>
- *
  * @license GNU AGPL version 3 or any later version
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,35 +19,6 @@
  *
  */
 
-namespace OCA\External\Settings;
+namespace OCA\External\Exceptions;
 
-use OCP\AppFramework\Http\TemplateResponse;
-use OCP\Settings\ISettings;
-
-class Admin implements ISettings {
-
-	/**
-	 * @return TemplateResponse
-	 */
-	public function getForm() {
-		return new TemplateResponse('external', 'settings', [], 'blank');
-	}
-
-	/**
-	 * @return string the section ID, e.g. 'sharing'
-	 */
-	public function getSection() {
-		return 'additional';
-	}
-
-	/**
-	 * @return int whether the form should be rather on the top or bottom of
-	 * the admin section. The forms are arranged in ascending order of the
-	 * priority values. It is required to return a value between 0 and 100.
-	 *
-	 * E.g.: 70
-	 */
-	public function getPriority() {
-		return 55;
-	}
-}
+class LanguageNotFoundException extends \OutOfBoundsException {}

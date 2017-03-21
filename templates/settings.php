@@ -54,10 +54,19 @@ script('external', 'admin');
 				<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>" />
 				<select class="site-icon trigger-save">
 					{{#each (getIcons icon)}}
-						{{#if (isSelectedIcon icon ../icon)}}
+						{{#if (isSelected icon ../icon)}}
 							<option value="{{icon}}" selected="selected">{{name}}</option>
 						{{else}}
 							<option value="{{icon}}">{{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
+				<select class="site-lang trigger-save">
+					{{#each (getLanguages lang)}}
+						{{#if (isSelected code ../lang)}}
+							<option value="{{code}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{code}}">{{name}}</option>
 						{{/if}}
 					{{/each}}
 				</select>

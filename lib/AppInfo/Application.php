@@ -39,7 +39,7 @@ class Application extends App {
 		/** @var SitesManager $sitesManager */
 		$sitesManager = $this->getContainer()->query(SitesManager::class);
 
-		$sites = $sitesManager->getSites();
+		$sites = $sitesManager->getSitesByLanguage($server->getL10NFactory()->findLanguage());
 
 		foreach ($sites as $id => $site) {
 			$server->getNavigationManager()->add(function() use ($site, $server) {

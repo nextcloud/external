@@ -27,12 +27,16 @@
 		OCA.External = {};
 	}
 
-	Handlebars.registerHelper('isSelectedIcon', function(currentValue, itemValue) {
+	Handlebars.registerHelper('isSelected', function(currentValue, itemValue) {
 		return currentValue === itemValue;
 	});
 
 	Handlebars.registerHelper('getIcons', function() {
 		return OCA.External.App.availableIcons;
+	});
+
+	Handlebars.registerHelper('getLanguages', function() {
+		return OCA.External.App.availableLanguages;
 	});
 
 	OCA.External.Models = OCA.External.Models || {};
@@ -51,9 +55,6 @@
 		url: OC.linkToOCS('apps/external/api/v1', 2) + 'sites',
 
 		parse: function(response) {
-			console.log(response);
-			console.log(response.ocs.data.sites);
-			console.log(response.ocs.data.icon);
 			return response.ocs.data.sites;
 		}
 	});
@@ -75,6 +76,7 @@
 				success: function(_, response) {
 					$('#loading_sites').removeClass('icon-loading-small');
 					self.availableIcons = response.ocs.data.icons;
+					self.availableLanguages = response.ocs.data.languages;
 
 					if (response.ocs.data.sites.length === 0) {
 						var $el = $(self._compiledTemplate({
@@ -149,6 +151,7 @@
 				site.save({
 					name: $site.find('.site-name').val(),
 					url: $site.find('.site-url').val(),
+					lang: $site.find('.site-lang').val(),
 					icon: $site.find('.site-icon').val()
 				}, {
 					success: function() {
@@ -167,6 +170,7 @@
 				this._sites.create({
 					name: $site.find('.site-name').val(),
 					url: $site.find('.site-url').val(),
+					lang: $site.find('.site-lang').val(),
 					icon: $site.find('.site-icon').val()
 				}, {
 					success: function() {

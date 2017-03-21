@@ -24,6 +24,7 @@ namespace OCA\External\Controller;
 use OCA\External\Exceptions\IconNotFoundException;
 use OCA\External\Exceptions\InvalidNameException;
 use OCA\External\Exceptions\InvalidURLException;
+use OCA\External\Exceptions\LanguageNotFoundException;
 use OCA\External\Exceptions\SiteNotFoundException;
 use OCA\External\SitesManager;
 use OCP\AppFramework\Http;
@@ -59,7 +60,7 @@ class APIController extends OCSController {
 	 * @return DataResponse
 	 */
 	public function get() {
-		return new DataResponse(array_values($this->sitesManager->getSites()));
+		return new DataResponse(array_values($this->sitesManager->getSitesByLanguage($this->l->getLanguageCode())));
 	}
 
 	/**
@@ -71,27 +72,34 @@ class APIController extends OCSController {
 		$icons = array_map(function($icon) {
 			return ['icon' => $icon, 'name' => $icon];
 		}, $this->sitesManager->getAvailableIcons());
-
 		array_unshift($icons, ['icon' => '', 'name' => $this->l->t('Select an icon')]);
+
+		$languages = $this->sitesManager->getAvailableLanguages();
+		array_unshift($languages, ['code' => '', 'name' => $this->l->t('All languages')]);
+
 		return new DataResponse([
 			'sites' => array_values($this->sitesManager->getSites()),
 			'icons' => $icons,
+			'languages' => $languages,
 		]);
 	}
 
 	/**
 	 * @param string $name
 	 * @param string $url
+	 * @param string $lang
 	 * @param string $icon
 	 * @return DataResponse
 	 */
-	public function add($name, $url, $icon) {
+	public function add($name, $url, $lang, $icon) {
 		try {
-			return new DataResponse($this->sitesManager->addSite($name, $url, $icon));
+			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $icon));
 		} catch (InvalidNameException $e) {
 			return new DataResponse($this->l->t('The given name is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
 			return new DataResponse($this->l->t('The given url is invalid'), Http::STATUS_BAD_REQUEST);
+		} catch (LanguageNotFoundException $e) {
+			return new DataResponse($this->l->t('The given language does not exist'), Http::STATUS_BAD_REQUEST);
 		} catch (IconNotFoundException $e) {
 			return new DataResponse($this->l->t('The given icon does not exist'), Http::STATUS_BAD_REQUEST);
 		}
@@ -101,18 +109,21 @@ class APIController extends OCSController {
 	 * @param int $id
 	 * @param string $name
 	 * @param string $url
+	 * @param string $lang
 	 * @param string $icon
 	 * @return DataResponse
 	 */
-	public function update($id, $name, $url, $icon) {
+	public function update($id, $name, $url, $lang, $icon) {
 		try {
-			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $icon));
+			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $icon));
 		} catch (SiteNotFoundException $e) {
 			return new DataResponse($this->l->t('The site does not exist'), Http::STATUS_NOT_FOUND);
 		} catch (InvalidNameException $e) {
 			return new DataResponse($this->l->t('The given name is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
 			return new DataResponse($this->l->t('The given url is invalid'), Http::STATUS_BAD_REQUEST);
+		} catch (LanguageNotFoundException $e) {
+			return new DataResponse($this->l->t('The given language does not exist'), Http::STATUS_BAD_REQUEST);
 		} catch (IconNotFoundException $e) {
 			return new DataResponse($this->l->t('The given icon does not exist'), Http::STATUS_BAD_REQUEST);
 		}
