@@ -30,28 +30,12 @@ use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
 
-	/** @var SitesManager */
-	protected $sitesManager;
-
-	/**
-	 * @param SitesManager $sitesManager
-	 */
-	public function __construct(SitesManager $sitesManager) {
-		$this->sitesManager = $sitesManager;
-	}
-
 	/**
 	 * @return TemplateResponse
 	 * @throws AppPathNotFoundException
 	 */
 	public function getForm() {
-		$images = $this->sitesManager->getAvailableIcons();
-		$sites = $this->sitesManager->getSites();
-
-		return new TemplateResponse('external', 'settings', [
-			'images' => $images,
-			'sites' => $sites,
-		], 'blank');
+		return new TemplateResponse('external', 'settings', [], 'blank');
 	}
 
 	/**

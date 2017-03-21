@@ -203,7 +203,7 @@ class SitesManager {
 	 */
 	public function getAvailableIcons() {
 		try {
-			return glob($this->appManager->getAppPath('external') . '/img/*.*');
+			return array_map('basename', glob($this->appManager->getAppPath('external') . '/img/*.*'));
 		} catch (AppPathNotFoundException $e) {
 			return ['external.svg'];
 		}

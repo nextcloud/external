@@ -58,8 +58,25 @@ class APIController extends OCSController {
 	 *
 	 * @return DataResponse
 	 */
-	public function getAll() {
-		return new DataResponse($this->sitesManager->getSites());
+	public function get() {
+		return new DataResponse(array_values($this->sitesManager->getSites()));
+	}
+
+	/**
+	 * @NoCSRFRequired
+	 *
+	 * @return DataResponse
+	 */
+	public function getAdmin() {
+		$icons = array_map(function($icon) {
+			return ['icon' => $icon, 'name' => $icon];
+		}, $this->sitesManager->getAvailableIcons());
+
+		array_unshift($icons, ['icon' => '', 'name' => $this->l->t('Select an icon')]);
+		return new DataResponse([
+			'sites' => array_values($this->sitesManager->getSites()),
+			'icons' => $icons,
+		]);
 	}
 
 	/**

@@ -1,13 +1,22 @@
-.site_url {
+.site-url {
 	width: 250px;
 }
 
-.delete_button {
-	display: none;
+#loading_sites {
+	width: 512px;
 }
 
-.external_sites {
-	width: 470px;
+.delete-button {
+	display: none;
+	cursor: pointer;
+}
+
+.invalid-value {
+	border-color: red !important;
+}
+
+li:hover .delete-button {
+	display: inline-block;
 }
 
 #ifm {

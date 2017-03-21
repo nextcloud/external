@@ -44,11 +44,17 @@ class Application extends App {
 		foreach ($sites as $id => $site) {
 			$server->getNavigationManager()->add(function() use ($site, $server) {
 				$url = $server->getURLGenerator();
+
+				try {
+					$image = $url->imagePath('external', $site['icon']);
+				} catch (\RuntimeException $e) {
+					$image = $url->imagePath('external', 'external.svg');
+				}
 				return [
 					'id' => 'external_index' . $site['id'],
 					'order' =>  80 + $site['id'],
 					'href' => $url->linkToRoute('external.page.showPage', ['id'=> $site['id']]),
-					'icon' => $url->imagePath('external', $site['icon']),
+					'icon' => $image,
 					'name' => $site['name'],
 				];
 			});
