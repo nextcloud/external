@@ -21,6 +21,12 @@
 
 namespace OCA\External;
 
+use OCA\External\Exceptions\IconNotFoundException;
+use OCA\External\Exceptions\InvalidNameException;
+use OCA\External\Exceptions\InvalidURLException;
+use OCA\External\Exceptions\SiteNotFoundException;
+use OCP\App\AppPathNotFoundException;
+use OCP\App\IAppManager;
 use OCP\IConfig;
 
 class SitesManager {
@@ -28,8 +34,12 @@ class SitesManager {
 	/** @var IConfig */
 	protected $config;
 
-	public function __construct(IConfig $config) {
+	/** @var IAppManager */
+	protected $appManager;
+
+	public function __construct(IConfig $config, IAppManager $appManager) {
 		$this->config = $config;
+		$this->appManager = $appManager;
 	}
 
 	/**
@@ -66,6 +76,106 @@ class SitesManager {
 	}
 
 	/**
+	 * @param string $name
+	 * @param string $url
+	 * @param string $icon
+	 * @return array
+	 * @throws InvalidNameException
+	 * @throws InvalidURLException
+	 * @throws IconNotFoundException
+	 */
+	public function addSite($name, $url, $icon) {
+		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
+
+		if ($name === '') {
+			throw new InvalidNameException();
+		}
+
+		if (filter_var($url, FILTER_VALIDATE_URL) === false ||
+			  strpos($url, 'http://') === strpos($url, 'https://')) {
+			throw new InvalidURLException();
+		}
+
+		$icons = $this->getAvailableIcons();
+		if ($icon === '') {
+			$icon = 'external.svg';
+		}
+		if (!in_array($icon, $icons, true)) {
+			throw new IconNotFoundException();
+		}
+
+		$sites = $this->getSites();
+		$sites[$id] = [
+			'id'   => $id,
+			'name' => $name,
+			'url'  => $url,
+			'icon' => $icon,
+		];
+		$this->config->setAppValue('external', 'sites', json_encode($sites));
+		$this->config->setAppValue('external', 'max_site', $id);
+
+		return $sites[$id];
+	}
+
+	/**
+	 * @param int $id
+	 * @param string $name
+	 * @param string $url
+	 * @param string $icon
+	 * @return array
+	 * @throws SiteNotFoundException
+	 * @throws InvalidNameException
+	 * @throws InvalidURLException
+	 * @throws IconNotFoundException
+	 */
+	public function updateSite($id, $name, $url, $icon) {
+		$sites = $this->getSites();
+		if (!isset($sites[$id])) {
+			throw new SiteNotFoundException();
+		}
+
+		if ($name === '') {
+			throw new InvalidNameException();
+		}
+
+		if (filter_var($url, FILTER_VALIDATE_URL) === false ||
+			  strpos($url, 'http://') === strpos($url, 'https://')) {
+			throw new InvalidURLException();
+		}
+
+		$icons = $this->getAvailableIcons();
+		if ($icon === '') {
+			$icon = 'external.svg';
+		}
+		if (!in_array($icon, $icons, true)) {
+			throw new IconNotFoundException();
+		}
+
+		$sites[$id] = [
+			'id'   => $id,
+			'name' => $name,
+			'url'  => $url,
+			'icon' => $icon,
+		];
+		$this->config->setAppValue('external', 'sites', json_encode($sites));
+
+		return $sites[$id];
+	}
+
+	/**
+	 * @param int $id
+	 */
+	public function deleteSite($id) {
+		$sites = $this->getSites();
+		if (!isset($sites[$id])) {
+			return;
+		}
+
+		unset($sites[$id]);
+		$this->config->setAppValue('external', 'sites', json_encode($sites));
+	}
+
+	/**
 	 * @param array[] $sites
 	 * @return array[]
 	 */
@@ -84,6 +194,18 @@ class SitesManager {
 		}
 
 		$this->config->setAppValue('external', 'sites', json_encode($fixedSites));
+		$this->config->setAppValue('external', 'max_site', max(array_keys($fixedSites)));
 		return $fixedSites;
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getAvailableIcons() {
+		try {
+			return glob($this->appManager->getAppPath('external') . '/img/*.*');
+		} catch (AppPathNotFoundException $e) {
+			return ['external.svg'];
+		}
 	}
 }

@@ -25,24 +25,18 @@ namespace OCA\External\Settings;
 
 use OCA\External\SitesManager;
 use OCP\App\AppPathNotFoundException;
-use OCP\App\IAppManager;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
 
-	/** @var IAppManager */
-	protected $appManager;
-
 	/** @var SitesManager */
 	protected $sitesManager;
 
 	/**
-	 * @param IAppManager $appManager
 	 * @param SitesManager $sitesManager
 	 */
-	public function __construct(IAppManager $appManager, SitesManager $sitesManager) {
-		$this->appManager = $appManager;
+	public function __construct(SitesManager $sitesManager) {
 		$this->sitesManager = $sitesManager;
 	}
 
@@ -51,7 +45,7 @@ class Admin implements ISettings {
 	 * @throws AppPathNotFoundException
 	 */
 	public function getForm() {
-		$images = glob($this->appManager->getAppPath('external') . '/img/*.*');
+		$images = $this->sitesManager->getAvailableIcons();
 		$sites = $this->sitesManager->getSites();
 
 		return new TemplateResponse('external', 'settings', [

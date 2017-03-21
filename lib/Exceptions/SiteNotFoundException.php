@@ -19,6 +19,6 @@
  *
  */
 
-namespace OCA\External;
+namespace OCA\External\Exceptions;
 
 class SiteNotFoundException extends \OutOfBoundsException {}

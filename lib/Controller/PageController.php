@@ -21,7 +21,7 @@
 
 namespace OCA\External\Controller;
 
-use OCA\External\SiteNotFoundException;
+use OCA\External\Exceptions\SiteNotFoundException;
 use OCA\External\SitesManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\ContentSecurityPolicy;

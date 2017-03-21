@@ -19,14 +19,6 @@
  *
  */
 
-return [
-	'routes' => [
-		['name' => 'page#showPage', 'url' => '/{id}', 'verb' => 'GET'],
-	],
-	'ocs' => [
-		['name' => 'API#getAll', 'url' => '/api/{apiVersion}/sites', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],
-		['name' => 'API#add', 'url' => '/api/{apiVersion}/sites', 'verb' => 'POST', 'requirements' => ['apiVersion' => 'v1']],
-		['name' => 'API#update', 'url' => '/api/{apiVersion}/sites/{id}', 'verb' => 'PUT', 'requirements' => ['apiVersion' => 'v1', 'id' => '\d+']],
-		['name' => 'API#delete', 'url' => '/api/{apiVersion}/sites/{id}', 'verb' => 'DELETE', 'requirements' => ['apiVersion' => 'v1', 'id' => '\d+']],
-	],
-];
+namespace OCA\External\Exceptions;
+
+class InvalidNameException extends \UnexpectedValueException {}
