@@ -196,7 +196,7 @@
 			}
 		}
 	}
-})(OC, OCA, _, Backbone);
+})(OC, OCA, _, OC.Backbone);
 
 $(document).ready(function(){
 	OCA.External.App.init();
