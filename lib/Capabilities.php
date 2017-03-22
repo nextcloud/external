@@ -19,15 +19,29 @@
  *
  */
 
-return [
-	'routes' => [
-		['name' => 'page#showPage', 'url' => '/{id}', 'verb' => 'GET'],
-	],
-	'ocs' => [
-		['name' => 'API#get', 'url' => '/api/{apiVersion}', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],
-		['name' => 'API#getAdmin', 'url' => '/api/{apiVersion}/sites', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],
-		['name' => 'API#add', 'url' => '/api/{apiVersion}/sites', 'verb' => 'POST', 'requirements' => ['apiVersion' => 'v1']],
-		['name' => 'API#update', 'url' => '/api/{apiVersion}/sites/{id}', 'verb' => 'PUT', 'requirements' => ['apiVersion' => 'v1', 'id' => '\d+']],
-		['name' => 'API#delete', 'url' => '/api/{apiVersion}/sites/{id}', 'verb' => 'DELETE', 'requirements' => ['apiVersion' => 'v1', 'id' => '\d+']],
-	],
-];
+namespace OCA\External;
+
+use OCP\Capabilities\ICapability;
+
+/**
+ * Class Capabilities
+ *
+ * @package OCA\External
+ */
+class Capabilities implements ICapability {
+
+	/**
+	 * Return this classes capabilities
+	 *
+	 * @return array
+	 */
+	public function getCapabilities() {
+		return [
+			'external' => [
+				'v1' => [
+					'sites',
+				],
+			],
+		];
+	}
+}
