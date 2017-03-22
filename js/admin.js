@@ -47,6 +47,16 @@
 			url: '',
 			icon: '',
 			lang: ''
+		},
+
+		parse: function(response) {
+			if (!_.isUndefined(response.ocs)) {
+				// Parse of single response from save/create
+				return response.ocs.data;
+			}
+
+			// Parse of entry from collection data
+			return response;
 		}
 	});
 
@@ -141,19 +151,20 @@
 
 			var $target = $(e.target),
 				$site = $target.closest('li'),
-				site = this._sites.get($site.data('site-id'));
+				site = this._sites.get($site.data('site-id')),
+				data = {
+					name: $site.find('.site-name').val(),
+					url: $site.find('.site-url').val(),
+					lang: $site.find('.site-lang').val(),
+					icon: $site.find('.site-icon').val()
+				};
 
 			$site.find('.failure').addClass('hidden');
 			$site.find('.saved').addClass('hidden');
 			$site.find('.saving').removeClass('hidden');
 
 			if (!_.isUndefined(site)) {
-				site.save({
-					name: $site.find('.site-name').val(),
-					url: $site.find('.site-url').val(),
-					lang: $site.find('.site-lang').val(),
-					icon: $site.find('.site-icon').val()
-				}, {
+				site.save(data, {
 					success: function() {
 						$site.find('.saving').addClass('hidden');
 						$site.find('.saved').removeClass('hidden');
@@ -167,13 +178,9 @@
 					}
 				});
 			} else {
-				this._sites.create({
-					name: $site.find('.site-name').val(),
-					url: $site.find('.site-url').val(),
-					lang: $site.find('.site-lang').val(),
-					icon: $site.find('.site-icon').val()
-				}, {
-					success: function() {
+				this._sites.create(data, {
+					success: function(site) {
+						$site.data('site-id', site.get('id'));
 						$site.find('.saving').addClass('hidden');
 						$site.find('.saved').removeClass('hidden');
 						setTimeout(function() {
