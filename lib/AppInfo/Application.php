@@ -45,6 +45,10 @@ class Application extends App {
 		$sites = $sitesManager->getSitesByLanguage($server->getL10NFactory()->findLanguage());
 
 		foreach ($sites as $id => $site) {
+			if ($site['type'] !== SitesManager::LINK && $site['type'] !== SitesManager::SETTING) {
+				continue;
+			}
+
 			$server->getNavigationManager()->add(function() use ($site, $server) {
 				$url = $server->getURLGenerator();
 
@@ -58,6 +62,7 @@ class Application extends App {
 					'order' =>  80 + $site['id'],
 					'href' => $url->linkToRoute('external.page.showPage', ['id'=> $site['id']]),
 					'icon' => $image,
+					'type' => $site['type'],
 					'name' => $site['name'],
 				];
 			});

@@ -31,12 +31,16 @@
 		return currentValue === itemValue;
 	});
 
-	Handlebars.registerHelper('getIcons', function() {
-		return OCA.External.App.availableIcons;
-	});
-
 	Handlebars.registerHelper('getLanguages', function() {
 		return OCA.External.App.availableLanguages;
+	});
+
+	Handlebars.registerHelper('getTypes', function() {
+		return OCA.External.App.availableTypes;
+	});
+
+	Handlebars.registerHelper('getIcons', function() {
+		return OCA.External.App.availableIcons;
 	});
 
 	OCA.External.Models = OCA.External.Models || {};
@@ -45,8 +49,9 @@
 		defaults: {
 			name: '',
 			url: '',
-			icon: '',
-			lang: ''
+			lang: '',
+			type: 'link',
+			icon: 'external.svg'
 		},
 
 		parse: function(response) {
@@ -87,6 +92,7 @@
 					$('#loading_sites').removeClass('icon-loading-small');
 					self.availableIcons = response.ocs.data.icons;
 					self.availableLanguages = response.ocs.data.languages;
+					self.availableTypes = response.ocs.data.types;
 
 					if (response.ocs.data.sites.length === 0) {
 						var $el = $(self._compiledTemplate({
@@ -105,7 +111,8 @@
 
 				var $el = $(self._compiledTemplate({
 					id: 'undefined',
-					icon: 'external.svg'
+					icon: 'external.svg',
+					type: 'link'
 				}));
 				self._attachEvents($el);
 				self.$list.append($el);
@@ -157,6 +164,7 @@
 					name: $site.find('.site-name').val(),
 					url: $site.find('.site-url').val(),
 					lang: $site.find('.site-lang').val(),
+					type: $site.find('.site-type').val(),
 					icon: $site.find('.site-icon').val()
 				};
 

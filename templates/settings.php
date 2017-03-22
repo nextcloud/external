@@ -70,6 +70,15 @@ script('external', 'admin');
 						{{/if}}
 					{{/each}}
 				</select>
+				<select class="site-type trigger-save">
+					{{#each (getTypes type)}}
+						{{#if (isSelected type ../type)}}
+							<option value="{{type}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{type}}">{{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
 				<img class="svg action delete-button" src="<?php p(image_path('core', 'actions/delete.svg')); ?>" title="<?php p($l->t('Remove site')); ?>" />
 				<img class="svg action saving hidden" src="<?php p(image_path('core', 'loading-small.gif')); ?>" alt="<?php p($l->t('Saving')); ?>" />
 				<img class="svg action saved hidden" src="<?php p(image_path('core', 'actions/checkmark-color.svg')); ?>" alt="<?php p($l->t('Saved!')); ?>" />
