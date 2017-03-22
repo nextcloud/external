@@ -104,7 +104,8 @@
 				e.preventDefault();
 
 				var $el = $(self._compiledTemplate({
-					id: 'undefined'
+					id: 'undefined',
+					icon: 'external.svg'
 				}));
 				self._attachEvents($el);
 				self.$list.append($el);
