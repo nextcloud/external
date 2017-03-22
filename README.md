@@ -31,11 +31,23 @@ curl  -H "OCS-APIRequest: true" \
    <name>Homepage</name>
    <url>https://localhost/index.php</url>
    <lang>en</lang>
-   <icon>external.svg</icon>
+   <type>link</type>
+   <icon>https://localhost/external.svg</icon>
   </element>
  </data>
 </ocs>
 ```
+
+#### Explanation
+
+| Field | Type   | Description                              |
+| ----- | ------ | ---------------------------------------- |
+| id    | int    | Numeric identifier of the site           |
+| name  | string | Name of the site, ready to use           |
+| url   | string | URL that should be framed/linked to      |
+| lang  | string | Language code for which this link is valid (empty string means all languages) |
+| type  | string | Can be one of `link`, `settings` or `quota`; see [this issue](https://github.com/nextcloud/external/issues/7) for details |
+| icon  | string | Full URL of the icon that should be shown next to the name of the link |
 
 ### Capability
 
