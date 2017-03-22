@@ -32,10 +32,14 @@ use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
 use OCP\IL10N;
 use OCP\IRequest;
+use OCP\IURLGenerator;
 
 class APIController extends OCSController {
 	/** @var SitesManager */
 	private $sitesManager;
+
+	/** @var IURLGenerator */
+	private $url;
 
 	/** @var IL10N */
 	private $l;
@@ -44,12 +48,14 @@ class APIController extends OCSController {
 	 * @param string $appName
 	 * @param IRequest $request
 	 * @param SitesManager $sitesManager
+	 * @param IURLGenerator $url
 	 * @param IL10N $l
 	 */
-	public function __construct($appName, IRequest $request, SitesManager $sitesManager, IL10N $l) {
+	public function __construct($appName, IRequest $request, SitesManager $sitesManager, IURLGenerator $url, IL10N $l) {
 		parent::__construct($appName, $request);
 
 		$this->sitesManager = $sitesManager;
+		$this->url = $url;
 		$this->l = $l;
 	}
 
@@ -60,7 +66,14 @@ class APIController extends OCSController {
 	 * @return DataResponse
 	 */
 	public function get() {
-		return new DataResponse(array_values($this->sitesManager->getSitesByLanguage($this->l->getLanguageCode())));
+		$data = $this->sitesManager->getSitesByLanguage($this->l->getLanguageCode());
+
+		$sites = [];
+		foreach ($data as $site) {
+			$site['icon'] = $this->url->getAbsoluteURL($this->url->imagePath('external', $site['icon']));
+			$sites[] = $site;
+		}
+		return new DataResponse($sites);
 	}
 
 	/**
