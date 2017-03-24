@@ -1,14 +1,22 @@
 { "translations": {
-    "Please enter valid urls - they have to start with either http://, https:// or /" : "Bitte geben Sie gültige URLs ein - diese müssen mit http://, https:// oder / beginnen",
-    "External sites saved." : "Externe Seiten gespeichert.",
+    "Select an icon" : "Wählen Sie ein Icon aus",
+    "All languages" : "Alle Sprachen",
+    "The given name is invalid" : "Der eingegebene Name ist ungültig",
+    "The given url is invalid" : "Die eingegebene URL ist ungültig",
+    "The given language does not exist" : "Die eingegebene Sprache existiert nicht",
+    "The given icon does not exist" : "Das angegebene Symbol existiert nicht",
+    "The site does not exist" : "Die Seite existiert nicht",
+    "__language_name__" : "Deutsch (Förmlich: Sie)",
     "External sites" : "Externe Seiten",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Bitte beachten Sie, dass einige Browser die Anzeige der Seiten über http sperren, wenn Sie https verwenden.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachten Sie bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",
     "We highly recommend to test the configured sites below properly." : "Wir empfehlen dringend, die unten konfigurierten Seiten zu testen.",
+    "Add" : "Hinzufügen",
     "Name" : "Name",
     "URL" : "URL",
-    "Select an icon" : "Wählen Sie ein Icon aus",
     "Remove site" : "Seite entfernen",
-    "Add" : "Hinzufügen"
+    "Saving" : "Speichere",
+    "Saved!" : "Gespeichert",
+    "Can not save site" : "Seite kann nicht gespeichert werden"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
