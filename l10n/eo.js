@@ -1,12 +1,10 @@
 OC.L10N.register(
     "external",
     {
-    "External sites saved." : "Malenaj ejoj konserviĝis.",
-    "External Sites" : "Malenaj ejoj",
+    "Select an icon" : "Elektu bildeton",
+    "Add" : "Aldoni",
     "Name" : "Nomo",
     "URL" : "URL",
-    "Select an icon" : "Elektu bildeton",
-    "Remove site" : "Forigi ejon",
-    "Add" : "Aldoni"
+    "Remove site" : "Forigi ejon"
 },
 "nplurals=2; plural=(n != 1);");
