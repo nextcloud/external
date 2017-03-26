@@ -23,6 +23,7 @@ namespace OCA\External;
 
 use OCA\External\Exceptions\IconNotFoundException;
 use OCA\External\Exceptions\InvalidNameException;
+use OCA\External\Exceptions\InvalidTypeException;
 use OCA\External\Exceptions\InvalidURLException;
 use OCA\External\Exceptions\LanguageNotFoundException;
 use OCA\External\Exceptions\SiteNotFoundException;
@@ -32,6 +33,10 @@ use OCP\IConfig;
 use OCP\L10N\IFactory;
 
 class SitesManager {
+
+	const LINK = 'link';
+	const SETTING = 'settings';
+	const QUOTA = 'quota';
 
 	/** @var IConfig */
 	protected $config;
@@ -96,21 +101,40 @@ class SitesManager {
 			return $this->getSitesFromOldConfig($sites);
 		}
 
+		$sites = array_map([$this, 'fillSiteArray'], $sites);
+
 		return $sites;
+	}
+
+	/**
+	 * Adds default values for new attributes of sites
+	 * @param array $site
+	 * @return array
+	 */
+	protected function fillSiteArray(array $site) {
+		return array_merge([
+				'icon' => 'external.svg',
+				'lang' => '',
+				'type' => self::LINK,
+			],
+			$site
+		);
 	}
 
 	/**
 	 * @param string $name
 	 * @param string $url
 	 * @param string $lang
+	 * @param string $type
 	 * @param string $icon
 	 * @return array
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
 	 * @throws LanguageNotFoundException
+	 * @throws InvalidTypeException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $icon) {
+	public function addSite($name, $url, $lang, $type, $icon) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -136,6 +160,10 @@ class SitesManager {
 			}
 		}
 
+		if (!in_array($type, [self::LINK, self::SETTING, self::QUOTA], true)) {
+			throw new InvalidTypeException();
+		}
+
 		$icons = $this->getAvailableIcons();
 		if ($icon === '') {
 			$icon = 'external.svg';
@@ -150,6 +178,7 @@ class SitesManager {
 			'name' => $name,
 			'url'  => $url,
 			'lang' => $lang,
+			'type' => $type,
 			'icon' => $icon,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
@@ -163,15 +192,17 @@ class SitesManager {
 	 * @param string $name
 	 * @param string $url
 	 * @param string $lang
+	 * @param string $type
 	 * @param string $icon
 	 * @return array
 	 * @throws SiteNotFoundException
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
 	 * @throws LanguageNotFoundException
+	 * @throws InvalidTypeException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $icon) {
+	public function updateSite($id, $name, $url, $lang, $type, $icon) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -200,6 +231,10 @@ class SitesManager {
 			}
 		}
 
+		if (!in_array($type, [self::LINK, self::SETTING, self::QUOTA], true)) {
+			throw new InvalidTypeException();
+		}
+
 		$icons = $this->getAvailableIcons();
 		if ($icon === '') {
 			$icon = 'external.svg';
@@ -213,6 +248,7 @@ class SitesManager {
 			'name' => $name,
 			'url'  => $url,
 			'lang' => $lang,
+			'type' => $type,
 			'icon' => $icon,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
@@ -242,14 +278,12 @@ class SitesManager {
 
 		/** @var array[] $sites */
 		foreach ($sites as $id => $site) {
-			$fixedSites[$id + 1] = [
+			$fixedSites[$id + 1] = $this->fillSiteArray([
 				'id'   => $id + 1,
 				'name' => $site[0],
 				'url'  => $site[1],
-				// TODO when php7+ is supported: 'icon' => $site[2] ?? 'external.svg',
 				'icon' => isset($site[2]) ? $site[2] : 'external.svg',
-				'lang' => '',
-			];
+			]);
 		}
 
 		$this->config->setAppValue('external', 'sites', json_encode($fixedSites));
