@@ -3,9 +3,13 @@ OC.L10N.register(
     {
     "Select an icon" : "Bir simge seçin",
     "All languages" : "Tüm diller",
+    "Normal" : "Normal",
+    "Setting" : "Ayarlar",
+    "Quota" : "Kota",
     "The given name is invalid" : "Belirtilen ad geçersiz",
     "The given url is invalid" : "Belirtilen adres geçersiz",
     "The given language does not exist" : "Belirtilen dil bulunamadı",
+    "The given type is invalid" : "Belirtilen tür geçersiz",
     "The given icon does not exist" : "Belirtilen simge bulunamadı",
     "The site does not exist" : "Site bulunamadı",
     "__language_name__" : "__language_name__",

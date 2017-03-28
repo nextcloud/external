@@ -1,9 +1,13 @@
 { "translations": {
     "Select an icon" : "Selecteer een pictogram",
     "All languages" : "Alle talen",
+    "Normal" : "Normaal",
+    "Setting" : "Instellingen",
+    "Quota" : "Quotum",
     "The given name is invalid" : "De opgegeven naam is ongeldig",
     "The given url is invalid" : "De opgegeven url is ongeldig",
     "The given language does not exist" : "De opgegeven taal bestaat niet",
+    "The given type is invalid" : "Het opgegeven type is ongeldig",
     "The given icon does not exist" : "Het opgegeven pictogram bestaat niet",
     "The site does not exist" : "De site bestaat niet.",
     "__language_name__" : "Nederlands",

@@ -3,9 +3,13 @@ OC.L10N.register(
     {
     "Select an icon" : "Sélectionner un icône",
     "All languages" : "Toutes les langues",
+    "Normal" : "Normal",
+    "Setting" : "Paramètres",
+    "Quota" : "Quota",
     "The given name is invalid" : "Le nom donné est invalide",
     "The given url is invalid" : "l'URL donnée est invalide",
     "The given language does not exist" : "La langue renseignée n'existe pas",
+    "The given type is invalid" : "Le type donné est invalide",
     "The given icon does not exist" : "L'icone donnée n'existe pas",
     "The site does not exist" : "Le site n'existe pas",
     "__language_name__" : "Français",

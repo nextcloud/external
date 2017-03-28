@@ -3,9 +3,13 @@ OC.L10N.register(
     {
     "Select an icon" : "Wähle ein Icon",
     "All languages" : "Alle Sprachen",
+    "Normal" : "Normal",
+    "Setting" : "Einstellung",
+    "Quota" : "Kontingent",
     "The given name is invalid" : "Der eingegebene Name ist ungültig",
     "The given url is invalid" : "Die eingegebene URL ist ungültig",
     "The given language does not exist" : "Die eingegebene Sprache existiert nicht",
+    "The given type is invalid" : "Der eingegebene Typ ist ungültig",
     "The given icon does not exist" : "Das angegebene Symbol existiert nicht",
     "The site does not exist" : "Die Seite existiert nicht",
     "__language_name__" : "Deutsch (Persönlich)",

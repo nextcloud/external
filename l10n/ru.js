@@ -3,9 +3,13 @@ OC.L10N.register(
     {
     "Select an icon" : "Выберите иконку",
     "All languages" : "Все языки",
+    "Normal" : "Обычный",
+    "Setting" : "Настройки",
+    "Quota" : "Квота",
     "The given name is invalid" : "Указано не верное имя",
     "The given url is invalid" : "Указано не верный URL",
     "The given language does not exist" : "Указанный язык не существует",
+    "The given type is invalid" : "Указан не верный тип",
     "The given icon does not exist" : "Указанный значок не существует",
     "The site does not exist" : "Сайт не существует",
     "__language_name__" : "__language_name__",
