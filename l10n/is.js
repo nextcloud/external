@@ -2,6 +2,17 @@ OC.L10N.register(
     "external",
     {
     "Select an icon" : "Veldu tákn",
+    "All languages" : "Öll tungumál",
+    "Normal" : "Venjulegt",
+    "Setting" : "Stilling",
+    "Quota" : "Kvóti",
+    "The given name is invalid" : "Uppgefið heiti er ógilt",
+    "The given url is invalid" : "Uppgefin slóð er ógild",
+    "The given language does not exist" : "Uppgefið tungumál er ekki til",
+    "The given type is invalid" : "Uppgefin tegund er ógild",
+    "The given icon does not exist" : "Uppgefin táknmynd er ekki til",
+    "The site does not exist" : "Vefsvæðið er ekki til",
+    "__language_name__" : "Íslenska",
     "External sites" : "Ytri vefsvæði",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Athugaðu að sumir vafrar loka á birtingu vefsvæða með http ef þú ert að keyra https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Athugaðu einnig að margar síður þessa dagana banna \"iframe\" af öryggisástæðum.",
@@ -9,6 +20,9 @@ OC.L10N.register(
     "Add" : "Bæta við",
     "Name" : "Heiti",
     "URL" : "URL",
-    "Remove site" : "Fjarlægja vefsvæði"
+    "Remove site" : "Fjarlægja vefsvæði",
+    "Saving" : "Vista",
+    "Saved!" : "Vistað!",
+    "Can not save site" : "Gat ekki vistað vefsvæðið"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

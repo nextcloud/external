@@ -1,9 +1,13 @@
 { "translations": {
     "Select an icon" : "Wybierz ikonę",
     "All languages" : "Wszystkie języki",
+    "Normal" : "Normalne",
+    "Setting" : "Ustawienia",
+    "Quota" : "Quota",
     "The given name is invalid" : "Podana nazwa jest niepoprawna",
     "The given url is invalid" : "Podany adres url jest niepoprawny",
     "The given language does not exist" : "Podany język nie istnieje",
+    "The given type is invalid" : "Podany typ jest nieprawidłowy",
     "The given icon does not exist" : "Podana ikona nie istnieje",
     "The site does not exist" : "Miejsce nie istnieje",
     "__language_name__" : "__language_name__",
