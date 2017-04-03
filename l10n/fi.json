@@ -1,5 +1,15 @@
 { "translations": {
     "Select an icon" : "Valitse kuvake",
+    "All languages" : "Kaikki kielet",
+    "Normal" : "Normaali",
+    "Setting" : "Asetus",
+    "Quota" : "Kiintiö",
+    "The given name is invalid" : "Annettu nimi on virheellinen",
+    "The given url is invalid" : "Annettu url on virheellinen",
+    "The given language does not exist" : "Annettua kieltä ei ole",
+    "The given type is invalid" : "Annettu tyyppi on virheellinen",
+    "The given icon does not exist" : "Annettua ikonia ei ole",
+    "The site does not exist" : "Sivustoa ei ole",
     "External sites" : "Ulkoiset sivustot",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Huomioi, että jotkin selaimet estävät http-protokollaa käyttävien sivustojen näyttämisen, jos käytät itse https-protokollaa.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
@@ -7,6 +17,9 @@
     "Add" : "Lisää",
     "Name" : "Nimi",
     "URL" : "Verkko-osoite",
-    "Remove site" : "Poista sivusto"
+    "Remove site" : "Poista sivusto",
+    "Saving" : "Tallennetaan",
+    "Saved!" : "Tallennettu!",
+    "Can not save site" : "Ei voida tallentaa sivustoa"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
