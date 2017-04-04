@@ -74,7 +74,14 @@ class APIController extends OCSController {
 			$site['icon'] = $this->url->getAbsoluteURL($this->url->imagePath('external', $site['icon']));
 			$sites[] = $site;
 		}
-		return new DataResponse($sites);
+
+
+		$etag = md5(json_encode($sites));
+		if ($this->request->getHeader('If-None-Match') === $etag) {
+			return new DataResponse([], Http::STATUS_NOT_MODIFIED);
+		}
+
+		return new DataResponse($sites, Http::STATUS_OK, ['ETag' => $etag]);
 	}
 
 	/**

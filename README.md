@@ -49,6 +49,10 @@ curl  -H "OCS-APIRequest: true" \
 | type  | string | Can be one of `link`, `settings` or `quota`; see [this issue](https://github.com/nextcloud/external/issues/7) for details |
 | icon  | string | Full URL of the icon that should be shown next to the name of the link |
 
+### ETag / If-None-Match
+
+The API provides an ETag for the sites array. In case the ETag matches the given value, a `304 Not Modified` is delivered together with an empty response body.
+
 ### Capability
 
 The app registers a capability, so clients can check that before making the actual OCS request:
