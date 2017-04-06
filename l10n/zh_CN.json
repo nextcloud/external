@@ -1,6 +1,8 @@
 { "translations": {
     "Select an icon" : "选择图标",
     "All languages" : "所有语言",
+    "Setting" : "设置",
+    "Quota" : "配额",
     "The given name is invalid" : "用户名无效",
     "The given url is invalid" : "URL无效",
     "The given language does not exist" : "语言不存在",
