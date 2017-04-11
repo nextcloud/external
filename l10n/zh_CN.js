@@ -3,11 +3,13 @@ OC.L10N.register(
     {
     "Select an icon" : "选择图标",
     "All languages" : "所有语言",
+    "Normal" : "普通",
     "Setting" : "设置",
     "Quota" : "配额",
     "The given name is invalid" : "用户名无效",
     "The given url is invalid" : "URL无效",
     "The given language does not exist" : "语言不存在",
+    "The given type is invalid" : "类型无效",
     "The given icon does not exist" : "图标不存在",
     "The site does not exist" : "网站不存在",
     "__language_name__" : "__language_name__",
