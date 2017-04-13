@@ -126,7 +126,7 @@ class APIController extends OCSController {
 		} catch (InvalidNameException $e) {
 			return new DataResponse($this->l->t('The given name is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
-			return new DataResponse($this->l->t('The given url is invalid'), Http::STATUS_BAD_REQUEST);
+			return new DataResponse($this->l->t('The given URL is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (LanguageNotFoundException $e) {
 			return new DataResponse($this->l->t('The given language does not exist'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidTypeException $e) {
@@ -153,7 +153,7 @@ class APIController extends OCSController {
 		} catch (InvalidNameException $e) {
 			return new DataResponse($this->l->t('The given name is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
-			return new DataResponse($this->l->t('The given url is invalid'), Http::STATUS_BAD_REQUEST);
+			return new DataResponse($this->l->t('The given URL is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (LanguageNotFoundException $e) {
 			return new DataResponse($this->l->t('The given language does not exist'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidTypeException $e) {
