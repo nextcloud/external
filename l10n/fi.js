@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "Asetus",
     "Quota" : "Kiintiö",
     "The given name is invalid" : "Annettu nimi on virheellinen",
-    "The given url is invalid" : "Annettu url on virheellinen",
     "The given language does not exist" : "Annettua kieltä ei ole",
     "The given type is invalid" : "Annettu tyyppi on virheellinen",
     "The given icon does not exist" : "Annettua ikonia ei ole",

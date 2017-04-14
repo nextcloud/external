@@ -1,6 +1,10 @@
 { "translations": {
     "Select an icon" : "Επιλέξτε ένα εικονίδιο",
     "All languages" : "Όλες οι γλώσσες",
+    "Setting" : "Ρύθμιση",
+    "Quota" : "Σύνολο Χώρου",
+    "The site does not exist" : "Η ιστοσελίδα δεν υπάρχει",
+    "External sites" : "Εξωτερικές ιστοσελίδες",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλώ σημειώστε ότι μερικά προγράμματα περιήγησης θα εμποδίσουν την εμφάνιση ιστοτόπων μέσω http αν χρησιμοποιήτε https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλοί ιστότοποι πλέον δεν επιτρέπουν το iframing για λόγους ασφαλείας.",
     "We highly recommend to test the configured sites below properly." : "Σας συνιστούμε να ελέγξετε τους διαμορφωμένους ιστότοπους παρακάτω σωστά.",

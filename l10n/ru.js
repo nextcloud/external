@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "Настройки",
     "Quota" : "Квота",
     "The given name is invalid" : "Указано не верное имя",
-    "The given url is invalid" : "Указано не верный URL",
     "The given language does not exist" : "Указанный язык не существует",
     "The given type is invalid" : "Указан не верный тип",
     "The given icon does not exist" : "Указанный значок не существует",

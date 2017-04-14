@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "Ustawienia",
     "Quota" : "Quota",
     "The given name is invalid" : "Podana nazwa jest niepoprawna",
-    "The given url is invalid" : "Podany adres url jest niepoprawny",
     "The given language does not exist" : "Podany język nie istnieje",
     "The given type is invalid" : "Podany typ jest nieprawidłowy",
     "The given icon does not exist" : "Podana ikona nie istnieje",

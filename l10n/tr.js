@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "Ayarlar",
     "Quota" : "Kota",
     "The given name is invalid" : "Belirtilen ad geçersiz",
-    "The given url is invalid" : "Belirtilen adres geçersiz",
     "The given language does not exist" : "Belirtilen dil bulunamadı",
     "The given type is invalid" : "Belirtilen tür geçersiz",
     "The given icon does not exist" : "Belirtilen simge bulunamadı",

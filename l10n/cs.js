@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "Nastavení",
     "Quota" : "Kvóta",
     "The given name is invalid" : "Zadané jméno je neplatné",
-    "The given url is invalid" : "Zadaná url je neplatná",
     "The given language does not exist" : "Zadaný jazyk neexistuje",
     "The given type is invalid" : "Zadaný typ je neplatný",
     "The given icon does not exist" : "Zadaná ikona neexistuje",

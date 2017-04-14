@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "設定",
     "Quota" : "クォータ",
     "The given name is invalid" : "指定された名前は無効です",
-    "The given url is invalid" : "指定されたURLは無効です",
     "The given language does not exist" : "指定された言語は存在しません",
     "The given type is invalid" : "指定されたタイプは無効です",
     "The given icon does not exist" : "指定されたアイコンは存在しません",

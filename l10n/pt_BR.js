@@ -7,7 +7,6 @@ OC.L10N.register(
     "Setting" : "Configurações",
     "Quota" : "Limite",
     "The given name is invalid" : "O nome fornecido é inválido",
-    "The given url is invalid" : "A url fornecida é inválida",
     "The given language does not exist" : "A língua fornecida não existe",
     "The given type is invalid" : "O tipo fornecido é inválido",
     "The given icon does not exist" : "O ícone fornecido não existe",
