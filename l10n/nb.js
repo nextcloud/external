@@ -7,6 +7,10 @@ OC.L10N.register(
     "Setting" : "Innstilling",
     "Quota" : "Kvote",
     "The given name is invalid" : "Det angitte navnet er ugyldig",
+    "The given URL is invalid" : "Den angitte nettadressen er ugyldig",
+    "The given language does not exist" : "Det angitte språket finnes ikke",
+    "The given icon does not exist" : "Det angitte ikonet finnes ikke",
+    "The site does not exist" : "Siden finnes ikke",
     "__language_name__" : "Norwegian Bokmål",
     "External sites" : "Eksterne sider",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær oppmerksom på at noen nettlesere blokkerer visning av sider via http hvis du kjører https.",
@@ -17,6 +21,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Remove site" : "Fjern side",
     "Saving" : "Lagrer",
-    "Saved!" : "Lagret!"
+    "Saved!" : "Lagret!",
+    "Can not save site" : "Kan ikke lagre side"
 },
 "nplurals=2; plural=(n != 1);");

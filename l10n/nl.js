@@ -7,6 +7,7 @@ OC.L10N.register(
     "Setting" : "Instellingen",
     "Quota" : "Quotum",
     "The given name is invalid" : "De opgegeven naam is ongeldig",
+    "The given URL is invalid" : "De opgegeven url is ongeldig",
     "The given language does not exist" : "De opgegeven taal bestaat niet",
     "The given type is invalid" : "Het opgegeven type is ongeldig",
     "The given icon does not exist" : "Het opgegeven pictogram bestaat niet",
