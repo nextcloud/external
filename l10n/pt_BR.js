@@ -23,6 +23,6 @@ OC.L10N.register(
     "Remove site" : "Excluir site",
     "Saving" : "Salvando",
     "Saved!" : "Salvo!",
-    "Can not save site" : "Não pode salvar site"
+    "Can not save site" : "Não foi possível salvar o site"
 },
 "nplurals=2; plural=(n > 1);");

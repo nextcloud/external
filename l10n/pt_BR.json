@@ -21,6 +21,6 @@
     "Remove site" : "Excluir site",
     "Saving" : "Salvando",
     "Saved!" : "Salvo!",
-    "Can not save site" : "Não pode salvar site"
+    "Can not save site" : "Não foi possível salvar o site"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
