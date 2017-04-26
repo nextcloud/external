@@ -9,6 +9,7 @@ OC.L10N.register(
     "The given name is invalid" : "Det angitte navnet er ugyldig",
     "The given URL is invalid" : "Den angitte nettadressen er ugyldig",
     "The given language does not exist" : "Det angitte språket finnes ikke",
+    "The given type is invalid" : "Den angitte typen er ugyldig",
     "The given icon does not exist" : "Det angitte ikonet finnes ikke",
     "The site does not exist" : "Siden finnes ikke",
     "__language_name__" : "Norwegian Bokmål",
