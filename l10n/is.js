@@ -7,6 +7,7 @@ OC.L10N.register(
     "Setting" : "Stilling",
     "Quota" : "Kvóti",
     "The given name is invalid" : "Uppgefið heiti er ógilt",
+    "The given URL is invalid" : "Uppgefin slóð er ógild",
     "The given language does not exist" : "Uppgefið tungumál er ekki til",
     "The given type is invalid" : "Uppgefin tegund er ógild",
     "The given icon does not exist" : "Uppgefin táknmynd er ekki til",
