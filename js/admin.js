@@ -147,6 +147,9 @@
 				site.destroy({
 					success: function() {
 						$site.remove();
+						if(OC.Settings && OC.Settings.Apps) {
+							OC.Settings.Apps.rebuildNavigation();
+						}
 					}
 				});
 			} else {
@@ -180,6 +183,9 @@
 						setTimeout(function() {
 							$site.find('.saved').addClass('hidden');
 						}, 2500);
+						if(OC.Settings && OC.Settings.Apps) {
+							OC.Settings.Apps.rebuildNavigation();
+						}
 					},
 					error: function() {
 						$site.find('.saving').addClass('hidden');
@@ -195,6 +201,9 @@
 						setTimeout(function() {
 							$site.find('.saved').addClass('hidden');
 						}, 2500);
+						if(OC.Settings && OC.Settings.Apps) {
+							OC.Settings.Apps.rebuildNavigation();
+						}
 					},
 					error: function() {
 						$site.find('.saving').addClass('hidden');
