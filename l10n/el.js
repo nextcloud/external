@@ -14,15 +14,15 @@ OC.L10N.register(
     "The site does not exist" : "Η ιστοσελίδα δεν υπάρχει",
     "__language_name__" : "__όνομα_γλώσσας__",
     "External sites" : "Εξωτερικές σελίδες",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλούμε σημειώστε ότι μερικοί φυλλομετρητές θα εμποδίσουν την εμφάνιση σελίδων μέσω http αν χρησιμοποιήτε https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας.",
-    "We highly recommend to test the configured sites below properly." : "Σας συνιστούμε να ελέγξετε σωστά τις ρυθμισμένες παρακάτω σελίδες.",
     "Add" : "Προσθήκη",
     "Name" : "Όνομα",
     "URL" : "URL",
     "Remove site" : "Αφαίρεση σελίδας",
     "Saving" : "Γίνεται αποθήκευση",
     "Saved!" : "Αποθηκεύτηκε!",
-    "Can not save site" : "Αδυναμία αποθήκευσης σελίδας"
+    "Can not save site" : "Αδυναμία αποθήκευσης σελίδας",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλούμε σημειώστε ότι μερικοί φυλλομετρητές θα εμποδίσουν την εμφάνιση σελίδων μέσω http αν χρησιμοποιήτε https.",
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας.",
+    "We highly recommend to test the configured sites below properly." : "Σας συνιστούμε να ελέγξετε σωστά τις ρυθμισμένες παρακάτω σελίδες."
 },
 "nplurals=2; plural=(n != 1);");

@@ -14,15 +14,15 @@ OC.L10N.register(
     "The site does not exist" : "Le site n'existe pas",
     "__language_name__" : "Français",
     "External sites" : "Sites externes",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Par ailleurs, veuillez noter que de nombreux sites interdisent l’utilisation des iframes pour des raisons de sécurité.",
-    "We highly recommend to test the configured sites below properly." : "Nous recommandons vivement de tester le bon fonctionnement des sites ci-dessous.",
     "Add" : "Ajouter",
     "Name" : "Nom",
     "URL" : "URL",
     "Remove site" : "Supprimer le site",
     "Saving" : "Sauvegarde en cours",
     "Saved!" : "Sauvegardé !",
-    "Can not save site" : "Impossible de sauvegarder le site"
+    "Can not save site" : "Impossible de sauvegarder le site",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https.",
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Par ailleurs, veuillez noter que de nombreux sites interdisent l’utilisation des iframes pour des raisons de sécurité.",
+    "We highly recommend to test the configured sites below properly." : "Nous recommandons vivement de tester le bon fonctionnement des sites ci-dessous."
 },
 "nplurals=2; plural=(n > 1);");

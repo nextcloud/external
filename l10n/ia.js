@@ -2,12 +2,12 @@ OC.L10N.register(
     "external",
     {
     "Select an icon" : "Selige un icone",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Pro favor nota que alcun navigatores blocara le monstrar de sitos via http si tu es executante https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ulteriormente nota que multe sitos iste dies dishabilita iframing debite a motivationes de securitate.",
-    "We highly recommend to test the configured sites below properly." : "Nos recommenda calidemente provar le sitos configurate a basso propriemente.",
     "Add" : "Adder",
     "Name" : "Nomine",
     "URL" : "URL",
-    "Remove site" : "Remove sito"
+    "Remove site" : "Remove sito",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Pro favor nota que alcun navigatores blocara le monstrar de sitos via http si tu es executante https.",
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ulteriormente nota que multe sitos iste dies dishabilita iframing debite a motivationes de securitate.",
+    "We highly recommend to test the configured sites below properly." : "Nos recommenda calidemente provar le sitos configurate a basso propriemente."
 },
 "nplurals=2; plural=(n != 1);");

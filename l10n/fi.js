@@ -14,15 +14,15 @@ OC.L10N.register(
     "The site does not exist" : "Sivustoa ei ole",
     "__language_name__" : "suomi",
     "External sites" : "Ulkoiset sivustot",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Huomioi, että jotkin selaimet estävät http-protokollaa käyttävien sivustojen näyttämisen, jos käytät itse https-protokollaa.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
-    "We highly recommend to test the configured sites below properly." : "Suosittelemme testaamaan alla määriteltyjen sivustojen toimivuuden.",
     "Add" : "Lisää",
     "Name" : "Nimi",
     "URL" : "Verkko-osoite",
     "Remove site" : "Poista sivusto",
     "Saving" : "Tallennetaan",
     "Saved!" : "Tallennettu!",
-    "Can not save site" : "Ei voida tallentaa sivustoa"
+    "Can not save site" : "Ei voida tallentaa sivustoa",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Huomioi, että jotkin selaimet estävät http-protokollaa käyttävien sivustojen näyttämisen, jos käytät itse https-protokollaa.",
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
+    "We highly recommend to test the configured sites below properly." : "Suosittelemme testaamaan alla määriteltyjen sivustojen toimivuuden."
 },
 "nplurals=2; plural=(n != 1);");
