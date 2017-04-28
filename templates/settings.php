@@ -84,7 +84,7 @@ script('external', 'admin');
 			<br>
 			<em><?php p($l->t('Furthermore please note that many sites these days disallow iframing due to security reasons.')); ?></em>
 			<br>
-			<em><?php p($l->t('We highly recommend to test the configured sites below properly.')); ?></em>
+			<em><?php p($l->t('We highly recommend to test the configured sites above properly.')); ?></em>
 		</p>
 	</div>
 </form>
