@@ -12,6 +12,7 @@
     "The site does not exist" : "O site não existe",
     "__language_name__" : "__language_name__",
     "External sites" : "Sites externos",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adicionar um site diretamente à lista de aplicativos no topo. Isto será visível para todosos usuários e é útil para rapidamente encontrar outro aplicativo web usado internamente ou sites importantes.",
     "Add" : "Adicionar",
     "Name" : "Nome",
     "URL" : "URL",
