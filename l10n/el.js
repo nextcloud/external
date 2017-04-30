@@ -22,7 +22,6 @@ OC.L10N.register(
     "Saved!" : "Αποθηκεύτηκε!",
     "Can not save site" : "Αδυναμία αποθήκευσης σελίδας",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλούμε σημειώστε ότι μερικοί φυλλομετρητές θα εμποδίσουν την εμφάνιση σελίδων μέσω http αν χρησιμοποιήτε https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας.",
-    "We highly recommend to test the configured sites below properly." : "Σας συνιστούμε να ελέγξετε σωστά τις ρυθμισμένες παρακάτω σελίδες."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας."
 },
 "nplurals=2; plural=(n != 1);");

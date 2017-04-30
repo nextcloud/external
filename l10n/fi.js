@@ -14,6 +14,7 @@ OC.L10N.register(
     "The site does not exist" : "Sivustoa ei ole",
     "__language_name__" : "suomi",
     "External sites" : "Ulkoiset sivustot",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lisää verkkosivusto suoraan sovellusluetteloon yläpalkissa. Se näkyy kaikille käyttäjille ja on hyödyllinen mahdollistamalla sisäisten verkko-ohjelmien tai tärkeiden verkkosivustojen avaamisen nopeasti.",
     "Add" : "Lisää",
     "Name" : "Nimi",
     "URL" : "Verkko-osoite",
@@ -22,7 +23,6 @@ OC.L10N.register(
     "Saved!" : "Tallennettu!",
     "Can not save site" : "Ei voida tallentaa sivustoa",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Huomioi, että jotkin selaimet estävät http-protokollaa käyttävien sivustojen näyttämisen, jos käytät itse https-protokollaa.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
-    "We highly recommend to test the configured sites below properly." : "Suosittelemme testaamaan alla määriteltyjen sivustojen toimivuuden."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä."
 },
 "nplurals=2; plural=(n != 1);");

@@ -22,7 +22,6 @@ OC.L10N.register(
     "Saved!" : "Kaydedildi",
     "Can not save site" : "Site kaydedilemedi",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "https kullanıyorsanız, bazı tarayıcıların sitelerin http ile görüntülenmesini engelleyeceğini unutmayın.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor.",
-    "We highly recommend to test the configured sites below properly." : "Aşağıdaki yapılandırılmış siteleri sınamanız önemle önerilir."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor."
 },
 "nplurals=2; plural=(n > 1);");

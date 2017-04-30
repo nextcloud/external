@@ -23,7 +23,6 @@ OC.L10N.register(
     "Saved!" : "已保存！",
     "Can not save site" : "无法保存网站",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "请注意当运行 HTTPS 环境下时，部分浏览器将会屏蔽显示 HTTP 网站。",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "另外请注意由于安全原因，部分站点禁用了 iFrame。",
-    "We highly recommend to test the configured sites below properly." : "我们强烈建议测试一下配置的站点。"
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "另外请注意由于安全原因，部分站点禁用了 iFrame。"
 },
 "nplurals=1; plural=0;");
