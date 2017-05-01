@@ -12,6 +12,7 @@
     "The site does not exist" : "Le site n'existe pas",
     "__language_name__" : "Français",
     "External sites" : "Sites externes",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Ajoutez un site directement à la liste des applications dans la barre supérieure. Cela sera visible pour tous les utilisateurs et est utile pour accéder rapidement à d'autres applications Web utilisées en interne ou à des sites importants.",
     "Add" : "Ajouter",
     "Name" : "Nom",
     "URL" : "URL",
@@ -20,6 +21,7 @@
     "Saved!" : "Sauvegardé !",
     "Can not save site" : "Impossible de sauvegarder le site",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Par ailleurs, veuillez noter que de nombreux sites interdisent l’utilisation des iframes pour des raisons de sécurité."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Par ailleurs, veuillez noter que de nombreux sites interdisent l’utilisation des iframes pour des raisons de sécurité.",
+    "We highly recommend to test the configured sites above properly." : "Nous recommandons vivement de tester le bon fonctionnement des sites ci-dessus."
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

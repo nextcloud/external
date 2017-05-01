@@ -12,6 +12,7 @@ OC.L10N.register(
     "The given type is invalid" : "Typen er ugyldig",
     "The given icon does not exist" : "Ikonet findes ikke",
     "The site does not exist" : "Siden findes ikke",
+    "__language_name__" : "Dansk",
     "External sites" : "Eksterne sider",
     "Add" : "Tilføj",
     "Name" : "Navn",

@@ -21,6 +21,7 @@
     "Saved!" : "Gespeichert",
     "Can not save site" : "Seite kann nicht gespeichert werden",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Bitte beachte, dass einige Browser die Anzeige der Seiten über http sperren, wenn Du https verwendest.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachte bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachte bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",
+    "We highly recommend to test the configured sites above properly." : "Wir empfehlen dringend, die oben konfigurierten Seiten ausführlich zu testen."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

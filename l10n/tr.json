@@ -12,6 +12,7 @@
     "The site does not exist" : "Site bulunamadı",
     "__language_name__" : "__language_name__",
     "External sites" : "Dış siteler",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Bir web sitesini doğrudan üst çubuktaki uygulama listesine ekler. Bu site tüm kullanıcılara görüntülenir ve sık kullanılan web uygulaması ya da önemli sitelerin tüm kullanıcılara sunulması için kullanışlıdır.",
     "Add" : "Ekle",
     "Name" : "Ad",
     "URL" : "Adres",
@@ -20,6 +21,7 @@
     "Saved!" : "Kaydedildi",
     "Can not save site" : "Site kaydedilemedi",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "https kullanıyorsanız, bazı tarayıcıların sitelerin http ile görüntülenmesini engelleyeceğini unutmayın.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor.",
+    "We highly recommend to test the configured sites above properly." : "Yukarıda ayarlanmış siteleri sınamanız önemli önerilir."
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
