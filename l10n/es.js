@@ -14,6 +14,7 @@ OC.L10N.register(
     "The site does not exist" : "El sitio no existe",
     "__language_name__" : "__language_name__",
     "External sites" : "Sitios externos",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Añade un sitio web directamente a la lista de apps en la barra superior. Será visible por todos los usuarios y es útil para alcanzar rápidamente otras apps web o sitios importantes que se usen internamente.",
     "Add" : "Agregar",
     "Name" : "Nombre",
     "URL" : "URL",
@@ -22,6 +23,7 @@ OC.L10N.register(
     "Saved!" : "¡Guardados!",
     "Can not save site" : "No puede guardar sitio",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Nótese que algunos navegadores no mostrarán sitios vía http si está usando https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Además tenga en cuenta que, por motivos de seguridad, hoy en día muchos sitios no permiten el uso de iframes."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Además tenga en cuenta que, por motivos de seguridad, hoy en día muchos sitios no permiten el uso de iframes.",
+    "We highly recommend to test the configured sites above properly." : "Recomendamos encarecidamente probar con cuidado los sitios configurados arriba."
 },
 "nplurals=2; plural=(n != 1);");
