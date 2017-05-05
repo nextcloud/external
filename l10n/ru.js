@@ -14,6 +14,7 @@ OC.L10N.register(
     "The site does not exist" : "Сайт не существует",
     "__language_name__" : "__language_name__",
     "External sites" : "Внешние сайты",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Добавьте сайт непосредственно в список приложений в верхней панели. Это будет доступно для всех пользователей и полезно для быстрого доступа к другим  используемым веб-приложениям или важным сайтам.",
     "Add" : "Добавить",
     "Name" : "Имя",
     "URL" : "Ссылка",
@@ -22,6 +23,7 @@ OC.L10N.register(
     "Saved!" : "Сохранено!",
     "Can not save site" : "Не удалось сохранить сайт",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Имейте ввиду, что некоторые браузеры не отображают сайты доступные по http, если вы используете https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Кроме того, имейте ввиду, что многие сайты не разрешают iframe в целях безопасности."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Кроме того, имейте ввиду, что многие сайты не разрешают iframe в целях безопасности.",
+    "We highly recommend to test the configured sites above properly." : "Мы настойчиво рекомендуем правильно протестировать настроенные выше сайты."
 },
 "nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);");
