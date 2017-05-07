@@ -14,6 +14,7 @@ OC.L10N.register(
     "The site does not exist" : "Siden finnes ikke",
     "__language_name__" : "Norwegian Bokmål",
     "External sites" : "Eksterne sider",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Legg til en nettside til programlisten i toppfeltet. Dette vil bli synelig for alle brukere, og er nyttig for å raskt nå andre internt brukte vev-programmer eller viktige sider.",
     "Add" : "Legg til",
     "Name" : "Navn",
     "URL" : "URL",
@@ -22,6 +23,7 @@ OC.L10N.register(
     "Saved!" : "Lagret!",
     "Can not save site" : "Kan ikke lagre side",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær oppmerksom på at noen nettlesere blokkerer visning av sider via http hvis du kjører https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Vær også oppmerksom på at mange sider nå ikke tillater iframing av sikkerhetshensyn."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Vær også oppmerksom på at mange sider nå ikke tillater iframing av sikkerhetshensyn.",
+    "We highly recommend to test the configured sites above properly." : "Vi anbefaler sterkt at du tester de oppsatte sidene ovenfor på rett vis."
 },
 "nplurals=2; plural=(n != 1);");
