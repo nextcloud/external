@@ -2,19 +2,18 @@
 <info>
 	<id>external</id>
 	<name>External sites</name>
-	<description>
-		This application allows an admin to add a link in the Nextcloud web interface
-		Apps menu that points to an external website. By simply entering the URL and
-		the name for the external site, an icon appears. When this icon is clicked by a
-		user, the external website appears in the Nextcloud frame. For the user, this
-		external site appears as if it is part of Nextcloud but, in fact, this can be
-		any external URL.
+	<summary>Add external sites to your Nextcloud navigation</summary>
+	<description><![CDATA[This application allows an admin to add a link in the Nextcloud web interface
+Apps menu that points to an external website. By simply entering the URL and
+the name for the external site, an icon appears. When this icon is clicked by a
+user, the external website appears in the Nextcloud frame. For the user, this
+external site appears as if it is part of Nextcloud but, in fact, this can be
+any external URL.
 
-		Note that the external site link must use the same type of encryption as
-		provided by Nextcloud. In other words, if Nextcloud is hosted on HTTPS, the
-		link in the external site must also be HTTPS. The same is also true for HTTP.
-		More information is available in the External sites documentation.
-	</description>
+Note that the external site link must use the same type of encryption as
+provided by Nextcloud. In other words, if Nextcloud is hosted on HTTPS, the
+link in the external site must also be HTTPS. The same is also true for HTTP.
+More information is available in the External sites documentation.]]></description>
 
 	<licence>AGPL</licence>
 	<author>Joas Schilling</author>
