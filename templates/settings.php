@@ -25,7 +25,6 @@
 
 style('external', 'style');
 script('external', 'admin');
-script('settings', 'apps');
 
 /** @var array $_ */
 /** @var \OCP\IL10N $l */
