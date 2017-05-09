@@ -160,7 +160,8 @@
 		_saveSite: function(e) {
 			e.preventDefault();
 
-			var $target = $(e.target),
+			var self = this,
+				$target = $(e.target),
 				$site = $target.closest('li'),
 				site = this._sites.get($site.data('site-id')),
 				data = {
@@ -183,9 +184,7 @@
 						setTimeout(function() {
 							$site.find('.saved').addClass('hidden');
 						}, 2500);
-						if(OC.Settings && OC.Settings.Apps) {
-							OC.Settings.Apps.rebuildNavigation();
-						}
+						self._rebuildNavigation();
 					},
 					error: function() {
 						$site.find('.saving').addClass('hidden');
@@ -201,9 +200,7 @@
 						setTimeout(function() {
 							$site.find('.saved').addClass('hidden');
 						}, 2500);
-						if(OC.Settings && OC.Settings.Apps) {
-							OC.Settings.Apps.rebuildNavigation();
-						}
+						self._rebuildNavigation();
 					},
 					error: function() {
 						$site.find('.saving').addClass('hidden');
@@ -211,6 +208,90 @@
 					}
 				});
 			}
+		},
+
+		_rebuildNavigation: function() {
+			$.getJSON(OC.filePath('settings', 'ajax', 'navigationdetect.php')).done(function(response){
+				if(response.status === 'success') {
+					var addedApps = {};
+					var navEntries = response.nav_entries;
+					var container = $('#apps ul');
+
+					// remove disabled apps
+					for (var i = 0; i < navEntries.length; i++) {
+						var entry = navEntries[i];
+						if(container.children('li[data-id="' + entry.id + '"]').length === 0) {
+							addedApps[entry.id] = true;
+						}
+					}
+					container.children('li[data-id]').each(function (index, el) {
+						var id = $(el).data('id');
+						// remove all apps that are not in the correct order
+						if (!navEntries[index] || (navEntries[index] && navEntries[index].id !== $(el).data('id'))) {
+							$(el).remove();
+							$('#appmenu li[data-id='+id+']').remove();
+						}
+					});
+
+					var previousEntry = {};
+					// add enabled apps to #navigation and #appmenu
+					for (var i = 0; i < navEntries.length; i++) {
+						var entry = navEntries[i];
+						if (container.children('li[data-id="' + entry.id + '"]').length === 0) {
+							var li = $('<li></li>');
+							li.attr('data-id', entry.id);
+							var img = '<svg width="16" height="16" viewBox="0 0 16 16">';
+							img += '<defs><filter id="invert"><feColorMatrix in="SourceGraphic" type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" /></filter></defs>';
+							img += '<image x="0" y="0" width="16" height="16" preserveAspectRatio="xMinYMin meet" filter="url(#invert)" xlink:href="' + entry.icon + '"  class="app-icon" /></svg>';
+							var a = $('<a></a>').attr('href', entry.href);
+							var filename = $('<span></span>');
+							var loading = $('<div class="icon-loading-dark"></div>').css('display', 'none');
+							filename.text(entry.name);
+							a.prepend(filename);
+							a.prepend(loading);
+							a.prepend(img);
+							li.append(a);
+
+							$('#navigation li[data-id=' + previousEntry.id + ']').after(li);
+
+							// draw attention to the newly added app entry
+							// by flashing it twice
+							if(addedApps[entry.id]) {
+								$('#header .menutoggle')
+									.animate({opacity: 0.5})
+									.animate({opacity: 1})
+									.animate({opacity: 0.5})
+									.animate({opacity: 1})
+									.animate({opacity: 0.75});
+							}
+						}
+
+						if ($('#appmenu').children('li[data-id="' + entry.id + '"]').length === 0) {
+							var li = $('<li></li>');
+							li.attr('data-id', entry.id);
+							var img = '<img src="' + entry.icon + '" class="app-icon">';
+							var a = $('<a></a>').attr('href', entry.href);
+							var filename = $('<span></span>');
+							var loading = $('<div class="icon-loading-dark"></div>').css('display', 'none');
+							filename.text(entry.name);
+							a.prepend(filename);
+							a.prepend(loading);
+							a.prepend(img);
+							li.append(a);
+							$('#appmenu li[data-id='+ previousEntry.id+']').after(li);
+							if(addedApps[entry.id]) {
+								li.animate({opacity: 0.5})
+									.animate({opacity: 1})
+									.animate({opacity: 0.5})
+									.animate({opacity: 1});
+							}
+						}
+						previousEntry = entry;
+					}
+
+					$(window).trigger('resize');
+				}
+			});
 		}
 	}
 })(OC, OCA, _, OC.Backbone);
