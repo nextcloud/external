@@ -1,7 +1,7 @@
 OC.L10N.register(
     "external",
     {
-    "Select an icon" : "Seleicionar un iconu",
+    "Select an icon" : "Esbillar un iconu",
     "Add" : "Amestar",
     "Name" : "Nome",
     "URL" : "URL",
