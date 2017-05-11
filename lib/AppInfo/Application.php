@@ -24,6 +24,7 @@ namespace OCA\External\AppInfo;
 use OCA\External\Capabilities;
 use OCA\External\SitesManager;
 use OCP\AppFramework\App;
+use OCP\IServerContainer;
 
 class Application extends App {
 
@@ -34,16 +35,21 @@ class Application extends App {
 	}
 
 	public function register() {
-		$this->registerNavigationEntries();
-	}
-
-	public function registerNavigationEntries() {
 		$server = $this->getContainer()->getServer();
+
 		/** @var SitesManager $sitesManager */
 		$sitesManager = $this->getContainer()->query(SitesManager::class);
-
 		$sites = $sitesManager->getSitesByLanguage($server->getL10NFactory()->findLanguage());
 
+		$this->registerNavigationEntries($server, $sites);
+		$this->registerPersonalPage($sites);
+	}
+
+	/**
+	 * @param IServerContainer $server
+	 * @param array[] $sites
+	 */
+	public function registerNavigationEntries(IServerContainer $server, array $sites) {
 		foreach ($sites as $id => $site) {
 			if ($site['type'] !== SitesManager::LINK && $site['type'] !== SitesManager::SETTING) {
 				continue;
@@ -66,6 +72,18 @@ class Application extends App {
 					'name' => $site['name'],
 				];
 			});
+		}
+	}
+
+	/**
+	 * @param array[] $sites
+	 */
+	public function registerPersonalPage(array $sites) {
+		foreach ($sites as $site) {
+			if ($site['type'] === SitesManager::QUOTA) {
+				\OCP\App::registerPersonal('external', 'personal');
+				return;
+			}
 		}
 	}
 }
