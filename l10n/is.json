@@ -12,6 +12,7 @@
     "The site does not exist" : "Vefsvæðið er ekki til",
     "__language_name__" : "Íslenska",
     "External sites" : "Ytri vefsvæði",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Bættu vefsvæði beint á forritalistann í toppstikunni. Þetta verður sýnilegt öllum notendum og nýtist til að nálgast á fljótlegan hátt vefforrit eða mikilvæga vefi.",
     "Add" : "Bæta við",
     "Name" : "Heiti",
     "URL" : "URL",

@@ -2,6 +2,9 @@ OC.L10N.register(
     "external",
     {
     "Select an icon" : "Përzgjidhni një ikonë",
+    "All languages" : "Të gjitha gjuhët",
+    "Setting" : "Mjedis",
+    "The given type is invalid" : "Tipi i dhënë është i pavlefshëm",
     "Add" : "Shtoje",
     "Name" : "Emër",
     "URL" : "URL",
