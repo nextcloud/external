@@ -21,7 +21,7 @@
 
 return [
 	'routes' => [
-		['name' => 'page#showPage', 'url' => '/{id}', 'verb' => 'GET'],
+		['name' => 'site#showPage', 'url' => '/{id}', 'verb' => 'GET'],
 	],
 	'ocs' => [
 		['name' => 'API#get', 'url' => '/api/{apiVersion}', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],

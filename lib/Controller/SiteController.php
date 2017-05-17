@@ -21,33 +21,76 @@
 
 namespace OCA\External\Controller;
 
+use OCA\External\Exceptions\SiteNotFoundException;
 use OCA\External\SitesManager;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\ContentSecurityPolicy;
+use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\IL10N;
+use OCP\INavigationManager;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 
-class SettingsController extends Controller {
+class SiteController extends Controller {
+
 	/** @var SitesManager */
 	protected $sitesManager;
+	/** @var INavigationManager */
+	protected $navigationManager;
 	/** @var IURLGenerator */
 	protected $url;
+	/** @var IL10N */
+	protected $l10n;
 
 	/**
-	 * constructor of the controller
+	 * SiteController constructor.
 	 *
 	 * @param string $appName
 	 * @param IRequest $request
+	 * @param INavigationManager $navigationManager
 	 * @param SitesManager $sitesManager
 	 * @param IURLGenerator $url
+	 * @param IL10N $l10n
 	 */
 	public function __construct($appName,
 								IRequest $request,
+								INavigationManager $navigationManager,
 								SitesManager $sitesManager,
-								IURLGenerator $url) {
+								IURLGenerator $url,
+								IL10N $l10n) {
 		parent::__construct($appName, $request);
 		$this->sitesManager = $sitesManager;
+		$this->navigationManager = $navigationManager;
 		$this->url = $url;
+		$this->l10n = $l10n;
+	}
+
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 *
+	 * @param int $id
+	 * @return TemplateResponse|RedirectResponse
+	 */
+	public function showPage($id) {
+		try {
+			$site = $this->sitesManager->getSiteById($id);
+			$this->navigationManager->setActiveEntry('external_index' . $id);
+
+			$response = new TemplateResponse('external', 'frame', [
+				'url' => $site['url'],
+			], 'user');
+
+			$policy = new ContentSecurityPolicy();
+			$policy->addAllowedChildSrcDomain('*');
+			$policy->addAllowedFrameDomain('*');
+			$response->setContentSecurityPolicy($policy);
+
+			return $response;
+		} catch (SiteNotFoundException $e) {
+			return new RedirectResponse(\OC_Util::getDefaultPageUrl());
+		}
 	}
 
 	/**
@@ -56,19 +99,19 @@ class SettingsController extends Controller {
 	 *
 	 * @return TemplateResponse
 	 */
-	public function displayPanel() {
-		$pages = $this->sitesManager->getSitesToDisplay();
+	public function renderQuotaLink() {
+		$sites = $this->sitesManager->getSitesToDisplay();
 
 		$quotaLink = [];
-		foreach ($pages as $page) {
-			if ($page['type'] === SitesManager::TYPE_QUOTA) {
-				$quotaLink = $page;
+		foreach ($sites as $site) {
+			if ($site['type'] === SitesManager::TYPE_QUOTA) {
+				$quotaLink = $site;
 				break;
 			}
 		}
 
 		return new TemplateResponse('external', 'quota', [
-			'quotaLink'			=> $this->url->linkToRoute('external.page.showPage', ['id'=> $quotaLink['id']]),
+			'quotaLink'			=> $this->url->linkToRoute('external.site.showPage', ['id'=> $quotaLink['id']]),
 			'quotaName'			=> $quotaLink['name'],
 		], '');
 	}
