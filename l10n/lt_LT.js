@@ -2,6 +2,10 @@ OC.L10N.register(
     "external",
     {
     "Select an icon" : "Pasirinkite piktogramą",
+    "The given URL is invalid" : "Nurodytas URL yra neteisingas",
+    "The given type is invalid" : "Nurodytas tipas yra neteisingas",
+    "The given icon does not exist" : "Nurodytos piktogramos nėra",
+    "The site does not exist" : "Šios svetainės nėra",
     "External sites" : "Išorinės svetainės",
     "Add" : "Pridėti",
     "Name" : "Pavadinimas",
