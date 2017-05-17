@@ -62,6 +62,7 @@ class PageController extends Controller {
 
 			$policy = new ContentSecurityPolicy();
 			$policy->addAllowedChildSrcDomain('*');
+			$policy->addAllowedFrameDomain('*');
 			$response->setContentSecurityPolicy($policy);
 
 			return $response;
