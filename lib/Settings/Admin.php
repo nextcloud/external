@@ -24,15 +24,25 @@
 namespace OCA\External\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
+
+	/** @var IURLGenerator */
+	protected $url;
+
+	public function __construct(IURLGenerator $url) {
+		$this->url = $url;
+	}
 
 	/**
 	 * @return TemplateResponse
 	 */
 	public function getForm() {
-		return new TemplateResponse('external', 'settings', [], 'blank');
+		return new TemplateResponse('external', 'settings', [
+			'uploadRoute' => $this->url->linkToRoute('external.icon.uploadIcon'),
+		], 'blank');
 	}
 
 	/**

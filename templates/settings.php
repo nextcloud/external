@@ -29,7 +29,7 @@ script('external', 'admin');
 /** @var array $_ */
 /** @var \OCP\IL10N $l */
 ?>
-<form id="external">
+<div id="external">
 	<div class="section">
 		<h2><?php p($l->t('External sites'));?></h2>
 		<p class="settings-hint"><?php p($l->t('Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.')); ?></p>
@@ -136,5 +136,14 @@ script('external', 'admin');
 			<br>
 			<em><?php p($l->t('We highly recommend to test the configured sites above properly.')); ?></em>
 		</p>
+
+
+		<form class="uploadButton" method="post" action="<?php p($_['uploadRoute']); ?>">
+			<input type="hidden" id="current-logoMime" name="current-logoMime" value="<?php p($_['logoMime']); ?>" />
+			<label for="uploadlogo"><span><?php p($l->t('Logo')) ?></span></label>
+			<input id="uploadlogo" class="upload-logo-field" name="uploadlogo" type="file" />
+			<label for="uploadlogo" class="button icon-upload svg" id="uploadlogo" title="<?php p($l->t('Upload new logo')) ?>"></label>
+			<div data-setting="logoMime" data-toggle="tooltip" data-original-title="<?php p($l->t('reset to default')); ?>" class="theme-undo icon icon-history"></div>
+		</form>
 	</div>
-</form>
+</div>

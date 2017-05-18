@@ -23,6 +23,7 @@ return [
 	'routes' => [
 		['name' => 'site#showDefaultPage', 'url' => '/', 'verb' => 'GET'],
 		['name' => 'site#showPage', 'url' => '/{id}', 'verb' => 'GET'],
+		['name' => 'icon#uploadIcon', 'url' => '/icons', 'verb' => 'POST'],
 	],
 	'ocs' => [
 		['name' => 'API#get', 'url' => '/api/{apiVersion}', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],
