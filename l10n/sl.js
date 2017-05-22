@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "Select an icon" : "Izbor ikone",
+    "All languages" : "Vsi jeziki",
     "Add" : "Dodaj",
     "Name" : "Ime",
     "URL" : "Naslov URL",
