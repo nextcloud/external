@@ -10,7 +10,7 @@ It is also possible to add links only for a given language.
 More information is available in the External sites documentation.]]></description>
 
 	<documentation>
-		<admin>https://docs.nextcloud.com/server/12/admin_manual/configuration_server/external_sites.html</admin>
+		<admin>https://docs.nextcloud.com/server/13/admin_manual/configuration_server/external_sites.html</admin>
 	</documentation>
 
 	<licence>AGPL</licence>
@@ -30,11 +30,11 @@ More information is available in the External sites documentation.]]></descripti
 	<bugs>https://github.com/nextcloud/external/issues</bugs>
 	<repository type="git">https://github.com/nextcloud/external.git</repository>
 
-	<version>2.0.2</version>
+	<version>2.1.0</version>
 	<namespace>External</namespace>
 
 	<dependencies>
-		<nextcloud min-version="12" max-version="12" />
+		<nextcloud min-version="13" max-version="13" />
 	</dependencies>
 
 	<settings>
