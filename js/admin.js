@@ -39,6 +39,10 @@
 		return OCA.External.App.availableTypes;
 	});
 
+	Handlebars.registerHelper('getDevices', function() {
+		return OCA.External.App.availableDevices;
+	});
+
 	Handlebars.registerHelper('getIcons', function() {
 		return OCA.External.App.availableIcons;
 	});
@@ -51,6 +55,7 @@
 			url: '',
 			lang: '',
 			type: 'link',
+			device: '',
 			icon: 'external.svg'
 		},
 
@@ -93,6 +98,7 @@
 					self.availableIcons = response.ocs.data.icons;
 					self.availableLanguages = response.ocs.data.languages;
 					self.availableTypes = response.ocs.data.types;
+					self.availableDevices = response.ocs.data.devices;
 
 					if (response.ocs.data.sites.length === 0) {
 						var $el = $(self._compiledTemplate({
@@ -112,7 +118,9 @@
 				var $el = $(self._compiledTemplate({
 					id: 'undefined',
 					icon: 'external.svg',
-					type: 'link'
+					type: 'link',
+					lang: '',
+					device: ''
 				}));
 				self._attachEvents($el);
 				self.$list.append($el);
@@ -169,6 +177,7 @@
 					url: $site.find('.site-url').val(),
 					lang: $site.find('.site-lang').val(),
 					type: $site.find('.site-type').val(),
+					device: $site.find('.site-device').val(),
 					icon: $site.find('.site-icon').val()
 				};
 

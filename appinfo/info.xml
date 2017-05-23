@@ -5,7 +5,7 @@
 	<summary>Add external sites to your Nextcloud navigation</summary>
 	<description><![CDATA[This application allows an admin to add additional links into the Nextcloud menus.
 Following a link, the external website appears in the Nextcloud frame.
-It is also possible to add links only for a given language.
+It is also possible to add links only for a given language and/or device.
 
 More information is available in the External sites documentation.]]></description>
 

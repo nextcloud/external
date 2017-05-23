@@ -22,6 +22,7 @@
 namespace OCA\External\Controller;
 
 use OCA\External\Exceptions\IconNotFoundException;
+use OCA\External\Exceptions\InvalidDeviceException;
 use OCA\External\Exceptions\InvalidNameException;
 use OCA\External\Exceptions\InvalidTypeException;
 use OCA\External\Exceptions\InvalidURLException;
@@ -67,7 +68,7 @@ class APIController extends OCSController {
 	 * @return DataResponse
 	 */
 	public function get() {
-		$data = $this->sitesManager->getSitesByLanguage($this->l->getLanguageCode());
+		$data = $this->sitesManager->getSitesToDisplay();
 
 		$sites = [];
 		foreach ($data as $site) {
@@ -99,9 +100,16 @@ class APIController extends OCSController {
 		array_unshift($languages, ['code' => '', 'name' => $this->l->t('All languages')]);
 
 		$types = [
-			['type' => SitesManager::LINK, 'name' => $this->l->t('Normal')],
-			['type' => SitesManager::SETTING, 'name' => $this->l->t('Setting')],
-			['type' => SitesManager::QUOTA, 'name' => $this->l->t('Quota')],
+			['type' => SitesManager::TYPE_LINK, 'name' => $this->l->t('Normal')],
+			['type' => SitesManager::TYPE_SETTING, 'name' => $this->l->t('Setting')],
+			['type' => SitesManager::TYPE_QUOTA, 'name' => $this->l->t('Quota')],
+		];
+		$devices = [
+			['device' => SitesManager::DEVICE_ALL, 'name' => $this->l->t('All devices')],
+			['device' => SitesManager::DEVICE_ANDROID, 'name' => $this->l->t('Only in the Android app')],
+			['device' => SitesManager::DEVICE_IOS, 'name' => $this->l->t('Only in the iOS app')],
+			['device' => SitesManager::DEVICE_DESKTOP, 'name' => $this->l->t('Only in the desktop client')],
+			['device' => SitesManager::DEVICE_BROWSER, 'name' => $this->l->t('Only in the browser')],
 		];
 
 		return new DataResponse([
@@ -109,6 +117,7 @@ class APIController extends OCSController {
 			'icons' => $icons,
 			'languages' => $languages,
 			'types' => $types,
+			'devices' => $devices,
 		]);
 	}
 
@@ -117,12 +126,13 @@ class APIController extends OCSController {
 	 * @param string $url
 	 * @param string $lang
 	 * @param string $type
+	 * @param string $device
 	 * @param string $icon
 	 * @return DataResponse
 	 */
-	public function add($name, $url, $lang, $type, $icon) {
+	public function add($name, $url, $lang, $type, $device, $icon) {
 		try {
-			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $icon));
+			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon));
 		} catch (InvalidNameException $e) {
 			return new DataResponse($this->l->t('The given name is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
@@ -131,6 +141,8 @@ class APIController extends OCSController {
 			return new DataResponse($this->l->t('The given language does not exist'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidTypeException $e) {
 			return new DataResponse($this->l->t('The given type is invalid'), Http::STATUS_BAD_REQUEST);
+		} catch (InvalidDeviceException $e) {
+			return new DataResponse($this->l->t('The given device is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (IconNotFoundException $e) {
 			return new DataResponse($this->l->t('The given icon does not exist'), Http::STATUS_BAD_REQUEST);
 		}
@@ -142,12 +154,13 @@ class APIController extends OCSController {
 	 * @param string $url
 	 * @param string $lang
 	 * @param string $type
+	 * @param string $device
 	 * @param string $icon
 	 * @return DataResponse
 	 */
-	public function update($id, $name, $url, $lang, $type, $icon) {
+	public function update($id, $name, $url, $lang, $type, $device, $icon) {
 		try {
-			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $icon));
+			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon));
 		} catch (SiteNotFoundException $e) {
 			return new DataResponse($this->l->t('The site does not exist'), Http::STATUS_NOT_FOUND);
 		} catch (InvalidNameException $e) {
@@ -158,6 +171,8 @@ class APIController extends OCSController {
 			return new DataResponse($this->l->t('The given language does not exist'), Http::STATUS_BAD_REQUEST);
 		} catch (InvalidTypeException $e) {
 			return new DataResponse($this->l->t('The given type is invalid'), Http::STATUS_BAD_REQUEST);
+		} catch (InvalidDeviceException $e) {
+			return new DataResponse($this->l->t('The given device is invalid'), Http::STATUS_BAD_REQUEST);
 		} catch (IconNotFoundException $e) {
 			return new DataResponse($this->l->t('The given icon does not exist'), Http::STATUS_BAD_REQUEST);
 		}
