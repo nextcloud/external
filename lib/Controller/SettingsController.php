@@ -24,7 +24,6 @@ namespace OCA\External\Controller;
 use OCA\External\SitesManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 
@@ -33,8 +32,6 @@ class SettingsController extends Controller {
 	protected $sitesManager;
 	/** @var IURLGenerator */
 	protected $url;
-	/** @var IL10N */
-	protected $l10n;
 
 	/**
 	 * constructor of the controller
@@ -43,17 +40,14 @@ class SettingsController extends Controller {
 	 * @param IRequest $request
 	 * @param SitesManager $sitesManager
 	 * @param IURLGenerator $url
-	 * @param IL10N $l10n
 	 */
 	public function __construct($appName,
 								IRequest $request,
 								SitesManager $sitesManager,
-								IURLGenerator $url,
-								IL10N $l10n) {
+								IURLGenerator $url) {
 		parent::__construct($appName, $request);
 		$this->sitesManager = $sitesManager;
 		$this->url = $url;
-		$this->l10n = $l10n;
 	}
 
 	/**
@@ -63,11 +57,11 @@ class SettingsController extends Controller {
 	 * @return TemplateResponse
 	 */
 	public function displayPanel() {
-		$pages = $this->sitesManager->getSitesByLanguage($this->l10n->getLanguageCode());
+		$pages = $this->sitesManager->getSitesToDisplay();
 
 		$quotaLink = [];
 		foreach ($pages as $page) {
-			if ($page['type'] === SitesManager::QUOTA) {
+			if ($page['type'] === SitesManager::TYPE_QUOTA) {
 				$quotaLink = $page;
 				break;
 			}

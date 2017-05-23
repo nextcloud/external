@@ -32,6 +32,7 @@ curl  -H "OCS-APIRequest: true" \
    <url>https://localhost/index.php</url>
    <lang>en</lang>
    <type>link</type>
+   <device>ios</device>
    <icon>https://localhost/external.svg</icon>
   </element>
  </data>
@@ -47,6 +48,7 @@ curl  -H "OCS-APIRequest: true" \
 | url   | string | URL that should be framed/linked to      |
 | lang  | string | Language code for which this link is valid (empty string means all languages) |
 | type  | string | Can be one of `link`, `settings` or `quota`; see [this issue](https://github.com/nextcloud/external/issues/7) for details |
+| device  | string | Can be one of `''`, `android`, `ios`, `desktop` or `browser` (Added in version 2.0.3, check capabilities) |
 | icon  | string | Full URL of the icon that should be shown next to the name of the link |
 
 ### ETag / If-None-Match
@@ -66,6 +68,7 @@ The app registers a capability, so clients can check that before making the actu
    <external>
     <v1>
      <element>sites</element>
+     <element>device</element>
     </v1>
    </external>
    ...

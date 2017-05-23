@@ -22,6 +22,7 @@
 namespace OCA\External;
 
 use OCA\External\Exceptions\IconNotFoundException;
+use OCA\External\Exceptions\InvalidDeviceException;
 use OCA\External\Exceptions\InvalidNameException;
 use OCA\External\Exceptions\InvalidTypeException;
 use OCA\External\Exceptions\InvalidURLException;
@@ -30,13 +31,23 @@ use OCA\External\Exceptions\SiteNotFoundException;
 use OCP\App\AppPathNotFoundException;
 use OCP\App\IAppManager;
 use OCP\IConfig;
+use OCP\IRequest;
 use OCP\L10N\IFactory;
 
 class SitesManager {
 
-	const LINK = 'link';
-	const SETTING = 'settings';
-	const QUOTA = 'quota';
+	const TYPE_LINK = 'link';
+	const TYPE_SETTING = 'settings';
+	const TYPE_QUOTA = 'quota';
+
+	const DEVICE_ALL = '';
+	const DEVICE_ANDROID = 'android';
+	const DEVICE_IOS = 'ios';
+	const DEVICE_DESKTOP = 'desktop';
+	const DEVICE_BROWSER = 'browser';
+
+	/** @var IRequest */
+	protected $request;
 
 	/** @var IConfig */
 	protected $config;
@@ -47,7 +58,8 @@ class SitesManager {
 	/** @var IAppManager */
 	protected $appManager;
 
-	public function __construct(IConfig $config, IAppManager $appManager, IFactory $languageFactory) {
+	public function __construct(IRequest $request, IConfig $config, IAppManager $appManager, IFactory $languageFactory) {
+		$this->request = $request;
 		$this->config = $config;
 		$this->appManager = $appManager;
 		$this->languageFactory = $languageFactory;
@@ -69,17 +81,23 @@ class SitesManager {
 	}
 
 	/**
-	 * @param string $lang
 	 * @return array[]
 	 */
-	public function getSitesByLanguage($lang) {
+	public function getSitesToDisplay() {
 		$sites = $this->getSites();
+		$lang = $this->languageFactory->findLanguage();
+		$device = $this->getDeviceFromUserAgent();
 
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
 				continue;
 			}
+
+			if ($site['device'] !== self::DEVICE_ALL && $site['device'] !== $device) {
+				continue;
+			}
+
 			$langSites[$id] = $site;
 		}
 
@@ -115,7 +133,8 @@ class SitesManager {
 		return array_merge([
 				'icon' => 'external.svg',
 				'lang' => '',
-				'type' => self::LINK,
+				'type' => self::TYPE_LINK,
+				'device' => self::DEVICE_ALL,
 			],
 			$site
 		);
@@ -126,15 +145,17 @@ class SitesManager {
 	 * @param string $url
 	 * @param string $lang
 	 * @param string $type
+	 * @param string $device
 	 * @param string $icon
 	 * @return array
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
 	 * @throws LanguageNotFoundException
 	 * @throws InvalidTypeException
+	 * @throws InvalidDeviceException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $icon) {
+	public function addSite($name, $url, $lang, $type, $device, $icon) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -160,8 +181,12 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::LINK, self::SETTING, self::QUOTA], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA], true)) {
 			throw new InvalidTypeException();
+		}
+
+		if (!in_array($device, [self::DEVICE_ALL, self::DEVICE_ANDROID, self::DEVICE_IOS, self::DEVICE_DESKTOP, self::DEVICE_BROWSER], true)) {
+			throw new InvalidDeviceException();
 		}
 
 		$icons = $this->getAvailableIcons();
@@ -179,6 +204,7 @@ class SitesManager {
 			'url'  => $url,
 			'lang' => $lang,
 			'type' => $type,
+			'device' => $device,
 			'icon' => $icon,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
@@ -193,6 +219,7 @@ class SitesManager {
 	 * @param string $url
 	 * @param string $lang
 	 * @param string $type
+	 * @param string $device
 	 * @param string $icon
 	 * @return array
 	 * @throws SiteNotFoundException
@@ -200,9 +227,10 @@ class SitesManager {
 	 * @throws InvalidURLException
 	 * @throws LanguageNotFoundException
 	 * @throws InvalidTypeException
+	 * @throws InvalidDeviceException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $icon) {
+	public function updateSite($id, $name, $url, $lang, $type, $device, $icon) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -231,8 +259,12 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::LINK, self::SETTING, self::QUOTA], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA], true)) {
 			throw new InvalidTypeException();
+		}
+
+		if (!in_array($device, [self::DEVICE_ALL, self::DEVICE_ANDROID, self::DEVICE_IOS, self::DEVICE_DESKTOP, self::DEVICE_BROWSER], true)) {
+			throw new InvalidDeviceException();
 		}
 
 		$icons = $this->getAvailableIcons();
@@ -249,6 +281,7 @@ class SitesManager {
 			'url'  => $url,
 			'lang' => $lang,
 			'type' => $type,
+			'device' => $device,
 			'icon' => $icon,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
@@ -303,7 +336,7 @@ class SitesManager {
 	}
 
 	/**
-	 * @return string[]
+	 * @return array[]
 	 */
 	public function getAvailableLanguages() {
 		$languageCodes = $this->languageFactory->findAvailableLanguages();
@@ -353,5 +386,21 @@ class SitesManager {
 			return strcmp($a['name'], $b['name']);
 		});
 		return $languages;
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function getDeviceFromUserAgent() {
+		if ($this->request->isUserAgent([IRequest::USER_AGENT_CLIENT_ANDROID])) {
+			return self::DEVICE_ANDROID;
+		}
+		if ($this->request->isUserAgent([IRequest::USER_AGENT_CLIENT_IOS])) {
+			return self::DEVICE_IOS;
+		}
+		if ($this->request->isUserAgent([IRequest::USER_AGENT_CLIENT_DESKTOP])) {
+			return self::DEVICE_DESKTOP;
+		}
+		return self::DEVICE_BROWSER;
 	}
 }

@@ -19,30 +19,6 @@
  *
  */
 
-namespace OCA\External;
+namespace OCA\External\Exceptions;
 
-use OCP\Capabilities\ICapability;
-
-/**
- * Class Capabilities
- *
- * @package OCA\External
- */
-class Capabilities implements ICapability {
-
-	/**
-	 * Return this classes capabilities
-	 *
-	 * @return array
-	 */
-	public function getCapabilities() {
-		return [
-			'external' => [
-				'v1' => [
-					'sites',
-					'device',
-				],
-			],
-		];
-	}
-}
+class InvalidDeviceException extends \UnexpectedValueException {}
