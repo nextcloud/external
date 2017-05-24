@@ -39,7 +39,7 @@ class Application extends App {
 
 		/** @var SitesManager $sitesManager */
 		$sitesManager = $this->getContainer()->query(SitesManager::class);
-		$sites = $sitesManager->getSitesByLanguage($server->getL10NFactory()->findLanguage());
+		$sites = $sitesManager->getSitesToDisplay();
 
 		$this->registerNavigationEntries($server, $sites);
 		$this->registerPersonalPage($sites);
@@ -51,7 +51,7 @@ class Application extends App {
 	 */
 	public function registerNavigationEntries(IServerContainer $server, array $sites) {
 		foreach ($sites as $id => $site) {
-			if ($site['type'] !== SitesManager::LINK && $site['type'] !== SitesManager::SETTING) {
+			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING) {
 				continue;
 			}
 
@@ -80,7 +80,7 @@ class Application extends App {
 	 */
 	public function registerPersonalPage(array $sites) {
 		foreach ($sites as $site) {
-			if ($site['type'] === SitesManager::QUOTA) {
+			if ($site['type'] === SitesManager::TYPE_QUOTA) {
 				\OCP\App::registerPersonal('external', 'personal');
 				return;
 			}
