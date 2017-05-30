@@ -43,48 +43,86 @@ script('external', 'admin');
 
 		<script type="text/template" id="site-template">
 			<li data-site-id="{{id}}">
-				<input type="text" class="site-name trigger-save" name="site-name" value="{{name}}" placeholder="<?php p($l->t('Name')); ?>" />
-				<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>" />
-				<select class="site-icon trigger-save">
-					{{#each (getIcons icon)}}
-						{{#if (isSelected icon ../icon)}}
-							<option value="{{icon}}" selected="selected">{{name}}</option>
-						{{else}}
-							<option value="{{icon}}">{{name}}</option>
-						{{/if}}
-					{{/each}}
-				</select>
-				<select class="site-lang trigger-save">
-					{{#each (getLanguages lang)}}
-						{{#if (isSelected code ../lang)}}
-							<option value="{{code}}" selected="selected">{{name}}</option>
-						{{else}}
-							<option value="{{code}}">{{name}}</option>
-						{{/if}}
-					{{/each}}
-				</select>
-				<select class="site-type trigger-save">
-					{{#each (getTypes type)}}
-						{{#if (isSelected type ../type)}}
-							<option value="{{type}}" selected="selected">{{name}}</option>
-						{{else}}
-							<option value="{{type}}">{{name}}</option>
-						{{/if}}
-					{{/each}}
-				</select>
-				<select class="site-device trigger-save">
-					{{#each (getDevices device)}}
-						{{#if (isSelected device ../device)}}
-							<option value="{{device}}" selected="selected">{{name}}</option>
-						{{else}}
-							<option value="{{device}}">{{name}}</option>
-						{{/if}}
-					{{/each}}
-				</select>
-				<img class="svg action delete-button" src="<?php p(image_path('core', 'actions/delete.svg')); ?>" title="<?php p($l->t('Remove site')); ?>" />
-				<img class="svg action saving hidden" src="<?php p(image_path('core', 'loading-small.gif')); ?>" alt="<?php p($l->t('Saving')); ?>" />
-				<img class="svg action saved hidden" src="<?php p(image_path('core', 'actions/checkmark-color.svg')); ?>" alt="<?php p($l->t('Saved!')); ?>" />
-				<img class="svg action failure hidden" src="<?php p(image_path('core', 'actions/error-color.svg')); ?>" alt="<?php p($l->t('Can not save site')); ?>" />
+				<h3>
+					{{name}} <small>{{url}}</small>
+					<img class="svg action delete-button" src="<?php p(image_path('core', 'actions/delete.svg')); ?>" title="<?php p($l->t('Remove site')); ?>">
+				</h3>
+
+				<div class="options hidden">
+					<div>
+						<label>
+							<span><?php p($l->t('Label')) ?></span>
+							<input type="text" class="site-name trigger-save" name="site-name" value="{{name}}" placeholder="<?php p($l->t('Name')); ?>">
+						</label>
+					</div>
+
+					<div>
+						<label>
+							<span><?php p($l->t('URL')) ?></span>
+							<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>">
+						</label>
+					</div>
+
+					<div>
+						<label>
+							<span><?php p($l->t('Language')) ?></span>
+							<select class="site-lang trigger-save">
+								{{#each (getLanguages lang)}}
+								{{#if (isSelected code ../lang)}}
+								<option value="{{code}}" selected="selected">{{name}}</option>
+								{{else}}
+								<option value="{{code}}">{{name}}</option>
+								{{/if}}
+								{{/each}}
+							</select>
+						</label>
+					</div>
+
+					<div>
+						<label>
+							<span><?php p($l->t('Devices')) ?></span>
+							<select class="site-device trigger-save">
+								{{#each (getDevices device)}}
+								{{#if (isSelected device ../device)}}
+								<option value="{{device}}" selected="selected">{{name}}</option>
+								{{else}}
+								<option value="{{device}}">{{name}}</option>
+								{{/if}}
+								{{/each}}
+							</select>
+						</label>
+					</div>
+
+					<div>
+						<label>
+							<span><?php p($l->t('Icon')) ?></span>
+							<select class="site-icon trigger-save">
+								{{#each (getIcons icon)}}
+								{{#if (isSelected icon ../icon)}}
+								<option value="{{icon}}" selected="selected">{{name}}</option>
+								{{else}}
+								<option value="{{icon}}"><img class="svg action delete-button" src="<?php p(image_path('core', 'actions/delete.svg')); ?>" title="<?php p($l->t('Remove site')); ?>"> {{name}}</option>
+								{{/if}}
+								{{/each}}
+							</select>
+						</label>
+					</div>
+
+					<div>
+						<label>
+							<span><?php p($l->t('Position')) ?></span>
+							<select class="site-type trigger-save">
+								{{#each (getTypes type)}}
+								{{#if (isSelected type ../type)}}
+								<option value="{{type}}" selected="selected">{{name}}</option>
+								{{else}}
+								<option value="{{type}}">{{name}}</option>
+								{{/if}}
+								{{/each}}
+							</select>
+						</label>
+					</div>
+				</div>
 			</li>
 		</script>
 

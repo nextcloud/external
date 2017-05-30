@@ -1,5 +1,34 @@
-.site-url {
-	width: 250px;
+.site-name, .site-url {
+	width: 35%;
+}
+
+.site-lang, .site-icon, .site-device, .site-type {
+	width: 20%;
+}
+
+#external label span {
+	display: inline-block;
+	min-width: 120px;
+}
+
+#external ul.external_sites li {
+	padding: 5px 12px 20px;
+}
+
+#external ul.external_sites li.saving {
+	box-shadow: inset 2px 0 #CCCCCC;
+}
+
+#external ul.external_sites li.saved {
+	box-shadow: inset 2px 0 #00AA00;
+}
+
+#external ul.external_sites li.failure {
+	box-shadow: inset 2px 0 #AA0000;
+}
+
+#external ul.external_sites li h3 {
+	cursor: pointer;
 }
 
 #loading_sites {
@@ -12,7 +41,7 @@
 }
 
 .invalid-value {
-	border-color: red !important;
+	border-color: #AA0000 !important;
 }
 
 li:hover .delete-button {

@@ -117,12 +117,14 @@
 
 				var $el = $(self._compiledTemplate({
 					id: 'undefined',
+					name: t('external', 'New site'),
 					icon: 'external.svg',
 					type: 'link',
 					lang: '',
 					device: ''
 				}));
 				self._attachEvents($el);
+				$el.find('.options').removeClass('hidden');
 				self.$list.append($el);
 			});
 			this._compiledTemplate = Handlebars.compile($('#site-template').html());
@@ -141,6 +143,9 @@
 		_attachEvents: function($site) {
 			$site.find('.delete-button').click(_.bind(this._deleteSite, this));
 			$site.find('.trigger-save').change(_.bind(this._saveSite, this));
+			$site.find('h3').on('click', function() {
+				$site.find('.options').toggleClass('hidden');
+			});
 		},
 
 		_deleteSite: function(e) {
@@ -149,7 +154,7 @@
 			var $site = $(e.target).closest('li'),
 				site = this._sites.get($site.data('site-id'));
 
-			$site.find('.saving').removeClass('hidden');
+			$site.removeClass('failure saved').addClass('saving');
 
 			if (!_.isUndefined(site)) {
 				site.destroy({
@@ -181,39 +186,43 @@
 					icon: $site.find('.site-icon').val()
 				};
 
-			$site.find('.failure').addClass('hidden');
-			$site.find('.saved').addClass('hidden');
-			$site.find('.saving').removeClass('hidden');
+			$site.removeClass('failure saved').addClass('saving');
+			$site.find('.invalid-value').removeClass('invalid-value');
 
 			if (!_.isUndefined(site)) {
 				site.save(data, {
 					success: function() {
-						$site.find('.saving').addClass('hidden');
-						$site.find('.saved').removeClass('hidden');
+						$site.removeClass('saving').addClass('saved');
+						$site.find('h3').html(escapeHTML(data.name) + ' <small>' + escapeHTML(data.url) + '</small>');
+						$('#appmenu li[data-id="external_index' + site.get('id') + '"] span').text(data.name);
 						setTimeout(function() {
-							$site.find('.saved').addClass('hidden');
+							$site.removeClass('saved');
 						}, 2500);
 						self._rebuildNavigation();
 					},
-					error: function() {
-						$site.find('.saving').addClass('hidden');
-						$site.find('.failure').removeClass('hidden');
+					error: function(model, xhr) {
+						if (!_.isUndefined(xhr.responseJSON.ocs.data.field) && xhr.responseJSON.ocs.data.field !== '') {
+							$site.find('.site-' + xhr.responseJSON.ocs.data.field).addClass('invalid-value');
+						}
+						$site.removeClass('saving').addClass('failure');
 					}
 				});
 			} else {
 				this._sites.create(data, {
 					success: function(site) {
 						$site.data('site-id', site.get('id'));
-						$site.find('.saving').addClass('hidden');
-						$site.find('.saved').removeClass('hidden');
+						$site.removeClass('saving').addClass('saved');
+						$site.find('h3').html(escapeHTML(data.name) + ' <small>' + escapeHTML(data.url) + '</small>');
 						setTimeout(function() {
-							$site.find('.saved').addClass('hidden');
+							$site.removeClass('saved');
 						}, 2500);
 						self._rebuildNavigation();
 					},
-					error: function() {
-						$site.find('.saving').addClass('hidden');
-						$site.find('.failure').removeClass('hidden');
+					error: function(model, xhr) {
+						if (!_.isUndefined(xhr.responseJSON.ocs.data.field) && xhr.responseJSON.ocs.data.field !== '') {
+							$site.find('.site-' + xhr.responseJSON.ocs.data.field).addClass('invalid-value');
+						}
+						$site.removeClass('saving').addClass('failure');
 					}
 				});
 			}
