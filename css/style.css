@@ -6,13 +6,25 @@
 	width: 20%;
 }
 
+#external .icon-more {
+	width: 16px;
+	height: 16px;
+	padding: 14px;
+	opacity: .5;
+	cursor: pointer;
+}
+
+#external .icon-more:hover {
+	opacity: 1;
+}
+
 #external label span {
 	display: inline-block;
 	min-width: 120px;
 }
 
 #external ul.external_sites li {
-	padding: 5px 12px 20px;
+	padding: 5px 0 10px;
 }
 
 #external ul.external_sites li.saving {
@@ -27,8 +39,8 @@
 	box-shadow: inset 2px 0 #AA0000;
 }
 
-#external ul.external_sites li h3 {
-	cursor: pointer;
+#external ul.external_sites li .options {
+	padding: 0 10px;
 }
 
 #loading_sites {
@@ -36,16 +48,12 @@
 }
 
 .delete-button {
-	display: none;
-	cursor: pointer;
+	margin-left: 123px;
+	display: inline-block;
 }
 
 .invalid-value {
 	border-color: #AA0000 !important;
-}
-
-li:hover .delete-button {
-	display: inline-block;
 }
 
 #ifm {
