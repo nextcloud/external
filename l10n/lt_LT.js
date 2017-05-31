@@ -8,9 +8,9 @@ OC.L10N.register(
     "The site does not exist" : "Šios svetainės nėra",
     "External sites" : "Išorinės svetainės",
     "Add" : "Pridėti",
+    "Remove site" : "Šalinti svetainę",
     "Name" : "Pavadinimas",
     "URL" : "URL",
-    "Remove site" : "Šalinti svetainę",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Turėkite omenyje, kad kai kurios naršyklės blokuos http svetainių rodymą tuo atveju, jeigu naudojate https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Be to, turėkite omenyje, kad šiomis dienomis daugelis svetainių saugumo sumetimais neleidžia naudoti iframe."
 },
