@@ -102,17 +102,18 @@ class SiteController extends Controller {
 	public function renderQuotaLink() {
 		$sites = $this->sitesManager->getSitesToDisplay();
 
-		$quotaLink = [];
+		$quotaLinks = [];
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$quotaLink = $site;
-				break;
+				$quotaLinks[] = [
+					'link' => $this->url->linkToRoute('external.site.showPage', ['id'=> $site['id']]),
+					'name' => $site['name'],
+				];
 			}
 		}
 
 		return new TemplateResponse('external', 'quota', [
-			'quotaLink'			=> $this->url->linkToRoute('external.site.showPage', ['id'=> $quotaLink['id']]),
-			'quotaName'			=> $quotaLink['name'],
+			'sites'			=> $quotaLinks,
 		], '');
 	}
 }
