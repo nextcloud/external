@@ -6,6 +6,7 @@ OC.L10N.register(
     "All languages" : "Todos los idiomas",
     "Header" : "Encabezado",
     "Setting menu" : "Menú de configuración",
+    "User quota" : "Cuota de usuario",
     "All devices" : "Todos los dispositivos",
     "Only in the Android app" : "Sólo en la aplicación Android",
     "Only in the iOS app" : "Sólo en la aplicación iOS",

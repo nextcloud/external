@@ -1,6 +1,11 @@
 { "translations": {
     "Select an icon" : "Επιλέξτε ένα εικονίδιο",
     "All languages" : "Όλες οι γλώσσες",
+    "All devices" : "Όλες οι συσκευές",
+    "Only in the Android app" : "Μόνο στην εφαρμογή Android",
+    "Only in the iOS app" : "Μόνο στην εφαρμογή iOS",
+    "Only in the desktop client" : "Μόνο στον πελάτη για τον υπολογιστή",
+    "Only in the browser" : "Μόνο για τον περιηγητή",
     "The given URL is invalid" : "Δόθηκε μη έγκυρο URL",
     "The given language does not exist" : "Η γλώσσα που δόθηκε δεν υπάρχει",
     "The given type is invalid" : "Δόθηκε μη έγκυρος τύπος",
@@ -10,8 +15,13 @@
     "__language_name__" : "__όνομα_γλώσσας__",
     "Add" : "Προσθήκη",
     "Remove site" : "Αφαίρεση σελίδας",
+    "Label" : "Ετικέτα",
     "Name" : "Όνομα",
     "URL" : "URL",
+    "Language" : "Γλώσσα",
+    "Devices" : "Συσκευές",
+    "Icon" : "Εικονίδιο",
+    "Position" : "Θέση",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλούμε σημειώστε ότι μερικοί φυλλομετρητές θα εμποδίσουν την εμφάνιση σελίδων μέσω http αν χρησιμοποιήτε https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
