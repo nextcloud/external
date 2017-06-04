@@ -1,8 +1,12 @@
 OC.L10N.register(
     "external",
     {
+    "New site" : "Uusi sivu",
     "Select an icon" : "Valitse kuvake",
     "All languages" : "Kaikki kielet",
+    "Setting menu" : "Asetusvalikko",
+    "User quota" : "Käyttäjäkiintiö",
+    "All devices" : "Kaikki laitteet",
     "The given URL is invalid" : "Annettu osoite on virheellinen",
     "The given language does not exist" : "Annettua kieltä ei ole",
     "The given type is invalid" : "Annettu tyyppi on virheellinen",
