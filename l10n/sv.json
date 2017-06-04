@@ -1,10 +1,6 @@
 { "translations": {
     "Select an icon" : "Välj en ikon",
     "All languages" : "Alla språk",
-    "Normal" : "Normal",
-    "Setting" : "Inställningar",
-    "Quota" : "Kvot",
-    "The given name is invalid" : "Det angivna namnet är ogiltigt",
     "The given URL is invalid" : "Den angivna URL:en är ogiltig",
     "The given language does not exist" : "Det valda språket finns inte tillgängligt",
     "The given type is invalid" : "Den angivna typen är ogiltig",
@@ -12,12 +8,9 @@
     "The site does not exist" : "Sidan finns inte",
     "External sites" : "Externa sidor",
     "Add" : "Lägg till",
+    "Remove site" : "Ta bort webbplats",
     "Name" : "Namn",
     "URL" : "URL",
-    "Remove site" : "Ta bort webbplats",
-    "Saving" : "Sparar",
-    "Saved!" : "Sparat!",
-    "Can not save site" : "Kan inte spara sida",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Notera dessutom att många platser inte tillåter inramning i 'iframe' på grund av säkerhetsskäl."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
