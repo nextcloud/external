@@ -33,6 +33,13 @@ OC.L10N.register(
     "Position" : "Posição",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Por favor, note que alguns navegadores irão bloquear a exibição de sites via http, se você estiver executando o https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Além disso, por favor, observe que muitos sites hoje em dia impossibilitam iframing devido a razões de segurança.",
-    "We highly recommend to test the configured sites above properly." : "Recomendamos testar apropriadamente os sites configurados abaixo."
+    "We highly recommend to test the configured sites above properly." : "Recomendamos testar apropriadamente os sites configurados abaixo.",
+    "Normal" : "Normal",
+    "Setting" : "Configuração",
+    "Quota" : "Quota",
+    "The given name is invalid" : "O nome fornecido é inválido",
+    "Saving" : "Salvando",
+    "Saved!" : "Salvo!",
+    "Can not save site" : "Não foi possível salvar o site"
 },
 "nplurals=2; plural=(n > 1);");
