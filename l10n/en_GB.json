@@ -31,6 +31,13 @@
     "Position" : "Position",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Furthermore please note that many sites these days disallow iframing due to security reasons.",
-    "We highly recommend to test the configured sites above properly." : "We highly recommend to test the configured sites above properly."
+    "We highly recommend to test the configured sites above properly." : "We highly recommend to test the configured sites above properly.",
+    "Normal" : "Normal",
+    "Setting" : "Setting",
+    "Quota" : "Quota",
+    "The given name is invalid" : "The given name is invalid",
+    "Saving" : "Saving",
+    "Saved!" : "Saved!",
+    "Can not save site" : "Can not save site"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
