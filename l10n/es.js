@@ -19,8 +19,11 @@ OC.L10N.register(
     "URL" : "URL",
     "Language" : "Idioma",
     "Devices" : "Dispositivos",
+    "Icon" : "Icono",
+    "Position" : "Posición",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Nótese que algunos navegadores no mostrarán sitios vía http si está usando https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Además tenga en cuenta que, por motivos de seguridad, hoy en día muchos sitios no permiten el uso de iframes.",
-    "We highly recommend to test the configured sites above properly." : "Recomendamos encarecidamente probar con cuidado los sitios configurados arriba."
+    "We highly recommend to test the configured sites above properly." : "Recomendamos encarecidamente probar con cuidado los sitios configurados arriba.",
+    "Saved!" : "¡Guardado!"
 },
 "nplurals=2; plural=(n != 1);");
