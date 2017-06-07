@@ -31,6 +31,13 @@
     "Position" : "Konum",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "https kullanıyorsanız, bazı tarayıcıların sitelerin http ile görüntülenmesini engelleyeceğini unutmayın.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor.",
-    "We highly recommend to test the configured sites above properly." : "Yukarıda ayarlanmış siteleri sınamanız önemli önerilir."
+    "We highly recommend to test the configured sites above properly." : "Yukarıda ayarlanmış siteleri sınamanız önemli önerilir.",
+    "Normal" : "Normal",
+    "Setting" : "Ayarlar",
+    "Quota" : "Kota",
+    "The given name is invalid" : "Belirtilen ad geçersiz",
+    "Saving" : "Kaydediliyor",
+    "Saved!" : "Kaydedildi",
+    "Can not save site" : "Site kaydedilemedi"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

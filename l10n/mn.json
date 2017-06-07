@@ -1,0 +1,14 @@
+{ "translations": {
+    "All languages" : "Бүх хэлүүд",
+    "Add" : "Нэмэх",
+    "Remove site" : "Цахим хуудсыг устгах",
+    "Name" : "Нэр",
+    "URL" : "URL",
+    "Language" : "Хэл",
+    "Devices" : "Төхөөрөмжүүд",
+    "Normal" : "Хэвийн",
+    "Setting" : "Тохиргоо",
+    "Saving" : "Хадгалж байна",
+    "Saved!" : "Хадгалагдлаа!"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
