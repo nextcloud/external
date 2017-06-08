@@ -33,6 +33,13 @@ OC.L10N.register(
     "Position" : "Posisjon",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær oppmerksom på at noen nettlesere blokkerer visning av sider via http hvis du kjører https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Vær også oppmerksom på at mange sider nå ikke tillater iframing av sikkerhetshensyn.",
-    "We highly recommend to test the configured sites above properly." : "Vi anbefaler sterkt at du tester de oppsatte sidene ovenfor på rett vis."
+    "We highly recommend to test the configured sites above properly." : "Vi anbefaler sterkt at du tester de oppsatte sidene ovenfor på rett vis.",
+    "Normal" : "Normal",
+    "Setting" : "Innstilling",
+    "Quota" : "Kvote",
+    "The given name is invalid" : "Angitt navn er ugyldig",
+    "Saving" : "Lagrer",
+    "Saved!" : "Lagret!",
+    "Can not save site" : "Kan ikke lagre side"
 },
 "nplurals=2; plural=(n != 1);");

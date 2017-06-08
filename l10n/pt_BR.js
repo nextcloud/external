@@ -7,7 +7,7 @@ OC.L10N.register(
     "Header" : "Cabeçalho",
     "Setting menu" : "Menu de configuração",
     "User quota" : "Quota do usuário",
-    "All devices" : "Em todos os dispositivos",
+    "All devices" : "Todos os dispositivos",
     "Only in the Android app" : "Somente no aplicativo Android",
     "Only in the iOS app" : "Somente no aplicativo iOS",
     "Only in the desktop client" : "Somente no cliente desktop",
