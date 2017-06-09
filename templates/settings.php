@@ -38,31 +38,16 @@ script('external', 'admin');
 
 		<ul class="external_sites"></ul>
 
-		<input type="button" id="add_external_site" value="<?php p($l->t('Add')); ?>" />
+		<input type="button" id="add_external_site" value="<?php p($l->t('New site')); ?>" />
 		<span class="msg"></span>
 
 		<script type="text/template" id="site-template">
 			<li data-site-id="{{id}}">
-				<h3>
-					{{name}} <small>{{url}}</small>
-					<img class="svg action delete-button" src="<?php p(image_path('core', 'actions/delete.svg')); ?>" title="<?php p($l->t('Remove site')); ?>">
-				</h3>
+				<input type="text" class="site-name trigger-save" name="site-name" value="{{name}}" placeholder="<?php p($l->t('Name')); ?>">
+				<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>">
+				<a class="icon-more" href="#"></a>
 
 				<div class="options hidden">
-					<div>
-						<label>
-							<span><?php p($l->t('Label')) ?></span>
-							<input type="text" class="site-name trigger-save" name="site-name" value="{{name}}" placeholder="<?php p($l->t('Name')); ?>">
-						</label>
-					</div>
-
-					<div>
-						<label>
-							<span><?php p($l->t('URL')) ?></span>
-							<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>">
-						</label>
-					</div>
-
 					<div>
 						<label>
 							<span><?php p($l->t('Language')) ?></span>
@@ -122,6 +107,8 @@ script('external', 'admin');
 							</select>
 						</label>
 					</div>
+
+					<div class="button delete-button"><?php p($l->t('Remove site')); ?></div>
 				</div>
 			</li>
 		</script>

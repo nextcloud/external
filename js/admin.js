@@ -143,7 +143,7 @@
 		_attachEvents: function($site) {
 			$site.find('.delete-button').click(_.bind(this._deleteSite, this));
 			$site.find('.trigger-save').change(_.bind(this._saveSite, this));
-			$site.find('h3').on('click', function() {
+			$site.find('.icon-more').on('click', function() {
 				$site.find('.options').toggleClass('hidden');
 			});
 		},
