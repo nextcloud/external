@@ -19,7 +19,7 @@
  *
  */
 
-script('external', 'quota');
+script('external', 'quota-personal');
 ?>
 <div id="quota_link" class="section hidden">
 	<?php foreach ($_['sites'] as $site) { ?>

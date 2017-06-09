@@ -82,6 +82,9 @@ class Application extends App {
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
 				\OCP\App::registerPersonal('external', 'personal');
+				\OC::$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function() {
+					\OCP\Util::addScript('external', 'quota-files-sidebar');
+				});
 				return;
 			}
 		}
