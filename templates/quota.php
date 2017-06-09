@@ -19,7 +19,7 @@
  *
  */
 
-script('external', 'quota');
+script('external', 'quota-personal');
 ?>
 <div id="quota_link" class="section hidden">
 	<a class="button" href="<?php p($_['quotaLink']); ?>"><?php p($_['quotaName']); ?></a>
