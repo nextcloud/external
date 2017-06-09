@@ -20,6 +20,6 @@
  */
 
 $app = new \OCA\External\AppInfo\Application();
-/** @var \OCA\External\Controller\SettingsController $controller */
-$controller = $app->getContainer()->query(\OCA\External\Controller\SettingsController::class);
-return $controller->displayPanel()->render();
+/** @var \OCA\External\Controller\SiteController $controller */
+$controller = $app->getContainer()->query(\OCA\External\Controller\SiteController::class);
+return $controller->renderQuotaLink()->render();

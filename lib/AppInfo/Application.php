@@ -66,7 +66,7 @@ class Application extends App {
 				return [
 					'id' => 'external_index' . $site['id'],
 					'order' =>  80 + $site['id'],
-					'href' => $url->linkToRoute('external.page.showPage', ['id'=> $site['id']]),
+					'href' => $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]),
 					'icon' => $image,
 					'type' => $site['type'],
 					'name' => $site['name'],
