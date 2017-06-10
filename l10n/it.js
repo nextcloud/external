@@ -19,17 +19,16 @@ OC.L10N.register(
     "The site does not exist" : "Il sito non esiste",
     "External sites" : "Siti esterni",
     "__language_name__" : "italiano",
-    "Add" : "Aggiungi",
-    "Remove site" : "Rimuovi il sito",
-    "Label" : "Etichetta",
     "Name" : "Nome",
     "URL" : "URL",
     "Language" : "Lingua",
     "Devices" : "Dispositivi",
     "Icon" : "Icona",
+    "Remove site" : "Rimuovi il sito",
     "Position" : "Posizione",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Nota che alcuni browser bloccheranno la visualizzazione dei siti tramite http se stai utilizzando https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Nota inoltre che molti siti attualmente non consentono l'utilizzo di iframe per motivi di sicurezza.",
-    "We highly recommend to test the configured sites above properly." : "Suggeriamo vivamente di provare i seguenti siti configurati."
+    "We highly recommend to test the configured sites above properly." : "Suggeriamo vivamente di provare i seguenti siti configurati.",
+    "Add" : "Aggiungi"
 },
 "nplurals=2; plural=(n != 1);");

@@ -17,12 +17,12 @@ OC.L10N.register(
     "External sites" : "Ytri vefsvæði",
     "__language_name__" : "Íslenska",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Bættu vefsvæði beint á forritalistann í toppstikunni. Þetta verður sýnilegt öllum notendum og nýtist til að nálgast á fljótlegan hátt vefforrit eða mikilvæga vefi.",
-    "Add" : "Bæta við",
-    "Remove site" : "Fjarlægja vefsvæði",
     "Name" : "Heiti",
     "URL" : "URL",
+    "Remove site" : "Fjarlægja vefsvæði",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Athugaðu að sumir vafrar loka á birtingu vefsvæða með http ef þú ert að keyra https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Athugaðu einnig að margar síður þessa dagana banna \"iframe\" af öryggisástæðum.",
-    "We highly recommend to test the configured sites above properly." : "Við mælum sterklega með því að prófa vel vefsvæðin hér fyrir ofan."
+    "We highly recommend to test the configured sites above properly." : "Við mælum sterklega með því að prófa vel vefsvæðin hér fyrir ofan.",
+    "Add" : "Bæta við"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");
