@@ -17,11 +17,11 @@ OC.L10N.register(
     "The given icon does not exist" : "Ikona e dhënë nuk ekziston ",
     "The site does not exist" : "Kjo faqe nuk ekziston ",
     "__language_name__" : "__gjuha_emri__",
-    "Add" : "Shtoje",
-    "Remove site" : "Hiqe vendndodhjen",
     "Name" : "Emër",
     "URL" : "URL",
+    "Remove site" : "Hiqe vendndodhjen",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Ju lutemi, kini parasysh që disa shfletues do të bllokojnë shfaqjen e sajteve përmes http-je, nëse xhironi https.",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Për më tepër, ju lutemi, kini parasysh që mjaft sajte në këto kohë s’lejojnë iframing, për arsye sigurie."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Për më tepër, ju lutemi, kini parasysh që mjaft sajte në këto kohë s’lejojnë iframing, për arsye sigurie.",
+    "Add" : "Shtoje"
 },
 "nplurals=2; plural=(n != 1);");
