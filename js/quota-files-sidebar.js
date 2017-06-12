@@ -1,9 +1,11 @@
 $(document).ready(function () {
 
-	var $p = $('<p>');
-	$p.addClass('quotatext-additional').text(t('external', 'Do you need more space?'));
+	var $p = $('<p>'),
+		$quotaLink = $('#external_quota_link'),
+		$quotaName = $('#external_quota_name');
+	$p.addClass('quotatext-additional').text($quotaName.val());
 	$('li#quota').on('click', function(e) {
-		OC.redirect(OC.generateUrl('/apps/external/1'));
+		OC.redirect($quotaLink.val());
 	});
 	$('li#quota div.quota-container').after($p);
 });
