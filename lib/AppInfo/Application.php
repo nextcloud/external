@@ -25,6 +25,7 @@ use OCA\External\Capabilities;
 use OCA\External\SitesManager;
 use OCP\AppFramework\App;
 use OCP\IServerContainer;
+use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
 
@@ -42,7 +43,7 @@ class Application extends App {
 		$sites = $sitesManager->getSitesToDisplay();
 
 		$this->registerNavigationEntries($server, $sites);
-		$this->registerPersonalPage($sites);
+		$this->registerPersonalPage($server, $sites);
 	}
 
 	/**
@@ -76,13 +77,21 @@ class Application extends App {
 	}
 
 	/**
+	 * @param IServerContainer $server
 	 * @param array[] $sites
 	 */
-	public function registerPersonalPage(array $sites) {
+	public function registerPersonalPage(IServerContainer $server, array $sites) {
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
 				\OCP\App::registerPersonal('external', 'personal');
-				\OC::$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function() {
+				\OC::$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function(GenericEvent $event) use ($server, $site) {
+					$url = $server->getURLGenerator();
+
+					$hiddenFields = $event->getArgument('hiddenFields');
+					$hiddenFields['external_quota_link'] = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+					$hiddenFields['external_quota_name'] = $site['name'];
+					$event->setArgument('hiddenFields', $hiddenFields);
+
 					\OCP\Util::addScript('external', 'quota-files-sidebar');
 				});
 				return;
