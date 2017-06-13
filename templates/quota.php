@@ -22,7 +22,5 @@
 script('external', 'quota-personal');
 ?>
 <div id="quota_link" class="section hidden">
-	<?php foreach ($_['sites'] as $site) { ?>
-		<a class="button" href="<?php p($site['link']); ?>"><?php p($site['name']); ?></a>
-	<?php } ?>
+	<a class="button" href="<?php p($_['quotaLink']); ?>"><?php p($_['quotaName']); ?></a>
 </div>
