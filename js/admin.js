@@ -146,6 +146,16 @@
 			$site.find('.icon-more').on('click', function() {
 				$site.find('.options').toggleClass('hidden');
 			});
+
+			var self = this,
+				$groupsSelect = $site.find('.site-groups');
+
+			OC.Settings.setupGroupsSelect($groupsSelect);
+			$groupsSelect.change(function(e) {
+				var groups = e.val || ['admin'];
+				groups = JSON.stringify(groups);
+				self._saveSite(e);
+			});
 		},
 
 		_deleteSite: function(e) {
@@ -184,8 +194,11 @@
 					type: $site.find('.site-type').val(),
 					device: $site.find('.site-device').val(),
 					redirect: $site.find('.site-redirect').prop("checked") ? 1 : 0,
+					groups: $site.find('input.site-groups').val().split('|'),
 					icon: $site.find('.site-icon').val()
 				};
+
+			console.log(data);
 
 			$site.removeClass('failure saved').addClass('saving');
 			$site.find('.invalid-value').removeClass('invalid-value');

@@ -47,7 +47,7 @@ script('external', 'admin');
 				<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>">
 				<a class="icon-more" href="#"></a>
 
-				<div class="options hidden">
+				<div class="options hidden-FIXME">
 					<div>
 						<label>
 							<span><?php p($l->t('Language')) ?></span>
@@ -60,6 +60,13 @@ script('external', 'admin');
 								{{/if}}
 								{{/each}}
 							</select>
+						</label>
+					</div>
+
+					<div>
+						<label>
+							<span><?php p($l->t('Groups')) ?></span>
+							<input type="hidden" name="site-groups" class="site-groups" value="{{groups}}" style="width: 320px;" />
 						</label>
 					</div>
 

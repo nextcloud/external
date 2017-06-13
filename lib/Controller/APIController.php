@@ -21,6 +21,7 @@
 
 namespace OCA\External\Controller;
 
+use OCA\External\Exceptions\GroupNotFoundException;
 use OCA\External\Exceptions\IconNotFoundException;
 use OCA\External\Exceptions\InvalidDeviceException;
 use OCA\External\Exceptions\InvalidNameException;
@@ -129,12 +130,13 @@ class APIController extends OCSController {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param string[] $groups
 	 * @param int $redirect
 	 * @return DataResponse
 	 */
-	public function add($name, $url, $lang, $type, $device, $icon, $redirect) {
+	public function add($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
 		try {
-			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, (bool) $redirect));
+			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
 		} catch (InvalidNameException $e) {
 			return new DataResponse(['error' => $this->l->t('The given label is invalid'), 'field' => 'name'], Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
@@ -145,6 +147,8 @@ class APIController extends OCSController {
 			return new DataResponse(['error' => $this->l->t('The given type is invalid'), 'field' => 'type'], Http::STATUS_BAD_REQUEST);
 		} catch (InvalidDeviceException $e) {
 			return new DataResponse(['error' => $this->l->t('The given device is invalid'), 'field' => 'device'], Http::STATUS_BAD_REQUEST);
+		} catch (GroupNotFoundException $e) {
+			return new DataResponse(['error' => $this->l->t('At least one of the given groups does not exist'), 'field' => 'groups'], Http::STATUS_BAD_REQUEST);
 		} catch (IconNotFoundException $e) {
 			return new DataResponse(['error' => $this->l->t('The given icon does not exist'), 'field' => 'icon'], Http::STATUS_BAD_REQUEST);
 		}
@@ -158,12 +162,13 @@ class APIController extends OCSController {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param string[] $groups
 	 * @param int $redirect
 	 * @return DataResponse
 	 */
-	public function update($id, $name, $url, $lang, $type, $device, $icon, $redirect) {
+	public function update($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
 		try {
-			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, (bool) $redirect));
+			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
 		} catch (SiteNotFoundException $e) {
 			return new DataResponse(['error' => $this->l->t('The site does not exist'), 'field' => 'site'], Http::STATUS_NOT_FOUND);
 		} catch (InvalidNameException $e) {
@@ -176,6 +181,8 @@ class APIController extends OCSController {
 			return new DataResponse(['error' => $this->l->t('The given type is invalid'), 'field' => 'type'], Http::STATUS_BAD_REQUEST);
 		} catch (InvalidDeviceException $e) {
 			return new DataResponse(['error' => $this->l->t('The given device is invalid'), 'field' => 'device'], Http::STATUS_BAD_REQUEST);
+		} catch (GroupNotFoundException $e) {
+			return new DataResponse(['error' => $this->l->t('At least one of the given groups does not exist'), 'field' => 'groups'], Http::STATUS_BAD_REQUEST);
 		} catch (IconNotFoundException $e) {
 			return new DataResponse(['error' => $this->l->t('The given icon does not exist'), 'field' => 'icon'], Http::STATUS_BAD_REQUEST);
 		}
