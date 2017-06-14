@@ -8,12 +8,12 @@ $(document).ready(function () {
 		OC.redirect($quotaLink.val());
 	});
 	$('li#quota div.quota-container').after($p);
-	$('li.nav-trashbin').attr('style', 'margin-bottom: 36px !important');
+	var style = '#app-navigation li.nav-trashbin {margin-bottom: 36px !important; }';
 
 	if ($('li.nav-trashbin').exists()) {
-		$('#app-navigation > ul li:nth-last-child(2)').attr('style', 'margin-bottom: 124px !important');
+		style += ' #app-navigation > ul li:nth-last-child(2) { margin-bottom: 124px !important; }';
 	} else {
-		$('#app-navigation > ul li:nth-last-child(1)').attr('style', 'margin-bottom: 80px !important');
-
+		style += ' #app-navigation > ul li:nth-last-child(1) { margin-bottom: 80px !important; }';
 	}
+	$('head').append('<style type="text/css">' + style + '</style>');
 });
