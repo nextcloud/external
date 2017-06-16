@@ -88,7 +88,7 @@ class Application extends App {
 					$url = $server->getURLGenerator();
 
 					$hiddenFields = $event->getArgument('hiddenFields');
-					$hiddenFields['external_quota_link'] = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+					$hiddenFields['external_quota_link'] = $url->linkToRoute('external.page.showPage', ['id'=> $site['id']]);
 					$hiddenFields['external_quota_name'] = $site['name'];
 					$event->setArgument('hiddenFields', $hiddenFields);
 
