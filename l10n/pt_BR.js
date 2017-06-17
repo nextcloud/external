@@ -21,7 +21,7 @@ OC.L10N.register(
     "The site does not exist" : "O site não existe",
     "External sites" : "Sites externos",
     "__language_name__" : "__language_name__",
-    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adicionar um site diretamente à lista de aplicativos no topo. Isto será visível para todosos usuários e é útil para rapidamente encontrar outro aplicativo web usado internamente ou sites importantes.",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adicionar um site diretamente à lista de aplicativos no topo. Isto será visível para todos os usuários e é útil para rapidamente encontrar outro aplicativo web usado internamente ou sites importantes.",
     "Name" : "Nome",
     "URL" : "URL",
     "Language" : "Idioma",
