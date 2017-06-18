@@ -135,6 +135,7 @@ class SitesManager {
 				'lang' => '',
 				'type' => self::TYPE_LINK,
 				'device' => self::DEVICE_ALL,
+				'redirect' => false,
 			],
 			$site
 		);
@@ -147,6 +148,7 @@ class SitesManager {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param bool $redirect
 	 * @return array
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
@@ -155,7 +157,7 @@ class SitesManager {
 	 * @throws InvalidDeviceException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon) {
+	public function addSite($name, $url, $lang, $type, $device, $icon, $redirect) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -206,6 +208,7 @@ class SitesManager {
 			'type' => $type,
 			'device' => $device,
 			'icon' => $icon,
+			'redirect' => $redirect,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 		$this->config->setAppValue('external', 'max_site', $id);
@@ -221,6 +224,7 @@ class SitesManager {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param bool $redirect
 	 * @return array
 	 * @throws SiteNotFoundException
 	 * @throws InvalidNameException
@@ -230,7 +234,7 @@ class SitesManager {
 	 * @throws InvalidDeviceException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon) {
+	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, $redirect) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -283,6 +287,7 @@ class SitesManager {
 			'type' => $type,
 			'device' => $device,
 			'icon' => $icon,
+			'redirect' => $redirect,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 

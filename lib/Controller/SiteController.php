@@ -110,8 +110,13 @@ class SiteController extends Controller {
 			}
 		}
 
+		$url = $quotaLink['url'];
+		if (!$quotaLink['redirect']) {
+			$url = $this->url->linkToRoute('external.site.showPage', ['id'=> $quotaLink['id']]);
+		}
+
 		return new TemplateResponse('external', 'quota', [
-			'quotaLink'			=> $this->url->linkToRoute('external.site.showPage', ['id'=> $quotaLink['id']]),
+			'quotaLink'			=> $url,
 			'quotaName'			=> $quotaLink['name'],
 		], '');
 	}

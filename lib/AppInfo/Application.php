@@ -64,10 +64,16 @@ class Application extends App {
 				} catch (\RuntimeException $e) {
 					$image = $url->imagePath('external', 'external.svg');
 				}
+
+				$href = $site['url'];
+				if (!$site['redirect']) {
+					$href = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+				}
+
 				return [
 					'id' => 'external_index' . $site['id'],
 					'order' =>  80 + $site['id'],
-					'href' => $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]),
+					'href' => $href,
 					'icon' => $image,
 					'type' => $site['type'],
 					'name' => $site['name'],
@@ -88,7 +94,11 @@ class Application extends App {
 					$url = $server->getURLGenerator();
 
 					$hiddenFields = $event->getArgument('hiddenFields');
-					$hiddenFields['external_quota_link'] = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+
+					$hiddenFields['external_quota_link'] = $site['url'];
+					if (!$site['redirect']) {
+						$hiddenFields['external_quota_link'] = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+					}
 					$hiddenFields['external_quota_name'] = $site['name'];
 					$event->setArgument('hiddenFields', $hiddenFields);
 
