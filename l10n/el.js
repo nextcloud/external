@@ -5,6 +5,7 @@ OC.L10N.register(
     "Select an icon" : "Επιλέξτε ένα εικονίδιο",
     "All languages" : "Όλες οι γλώσσες",
     "Header" : "Επικεφαλίδα",
+    "Setting menu" : "Ρύθμιση μενού",
     "All devices" : "Όλες οι συσκευές",
     "Only in the Android app" : "Μόνο στην εφαρμογή Android",
     "Only in the iOS app" : "Μόνο στην εφαρμογή iOS",
