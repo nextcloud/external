@@ -108,6 +108,15 @@ script('external', 'admin');
 						</label>
 					</div>
 
+					<div class="site-redirect-box">
+						<label>
+							<span><?php p($l->t('Redirect')) ?></span>
+							<input type="checkbox" id="site_redirect_{{id}}" name="site_redirect_{{id}}"
+								   value="1" class="site-redirect checkbox trigger-save" {{#if redirect}} checked="checked"{{/if}} />
+							<label for="site_redirect_{{id}}"><?php p($l->t('This site does not allow embeding')) ?></label>
+						</label>
+					</div>
+
 					<div class="button delete-button"><?php p($l->t('Remove site')); ?></div>
 				</div>
 			</li>

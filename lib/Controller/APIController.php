@@ -129,11 +129,12 @@ class APIController extends OCSController {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param int $redirect
 	 * @return DataResponse
 	 */
-	public function add($name, $url, $lang, $type, $device, $icon) {
+	public function add($name, $url, $lang, $type, $device, $icon, $redirect) {
 		try {
-			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon));
+			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, (bool) $redirect));
 		} catch (InvalidNameException $e) {
 			return new DataResponse(['error' => $this->l->t('The given label is invalid'), 'field' => 'name'], Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
@@ -157,11 +158,12 @@ class APIController extends OCSController {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param int $redirect
 	 * @return DataResponse
 	 */
-	public function update($id, $name, $url, $lang, $type, $device, $icon) {
+	public function update($id, $name, $url, $lang, $type, $device, $icon, $redirect) {
 		try {
-			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon));
+			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, (bool) $redirect));
 		} catch (SiteNotFoundException $e) {
 			return new DataResponse(['error' => $this->l->t('The site does not exist'), 'field' => 'site'], Http::STATUS_NOT_FOUND);
 		} catch (InvalidNameException $e) {

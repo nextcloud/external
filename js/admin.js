@@ -116,7 +116,7 @@
 				e.preventDefault();
 
 				var $el = $(self._compiledTemplate({
-					id: 'undefined',
+					id: 'new-' + Date.now(),
 					name: t('external', 'New site'),
 					icon: 'external.svg',
 					type: 'link',
@@ -183,6 +183,7 @@
 					lang: $site.find('.site-lang').val(),
 					type: $site.find('.site-type').val(),
 					device: $site.find('.site-device').val(),
+					redirect: $site.find('.site-redirect').prop("checked") ? 1 : 0,
 					icon: $site.find('.site-icon').val()
 				};
 

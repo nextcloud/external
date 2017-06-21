@@ -6,6 +6,10 @@
 	width: 20%;
 }
 
+.site-redirect-box {
+	padding: 8px 0;
+}
+
 #external .icon-more {
 	width: 16px;
 	height: 16px;
@@ -24,7 +28,8 @@
 }
 
 #external ul.external_sites li {
-	padding: 5px 0 10px;
+	margin-left: -5px;
+	padding: 5px 0 10px 5px;
 }
 
 #external ul.external_sites li.saving {
