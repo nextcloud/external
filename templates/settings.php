@@ -66,7 +66,7 @@ script('external', 'admin');
 					<div>
 						<label>
 							<span><?php p($l->t('Groups')) ?></span>
-							<input type="hidden" name="site-groups" class="site-groups" value="{{groups}}" style="width: 320px;" />
+							<input type="hidden" name="site-groups" class="site-groups" value="{{ join groups }}" style="width: 320px;" />
 						</label>
 					</div>
 

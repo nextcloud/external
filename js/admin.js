@@ -31,6 +31,13 @@
 		return currentValue === itemValue;
 	});
 
+	Handlebars.registerHelper('join', function(array) {
+		if (_.isUndefined(array)) {
+			return '';
+		}
+		return array.join('|');
+	});
+
 	Handlebars.registerHelper('getLanguages', function() {
 		return OCA.External.App.availableLanguages;
 	});
@@ -56,7 +63,8 @@
 			lang: '',
 			type: 'link',
 			device: '',
-			icon: 'external.svg'
+			icon: 'external.svg',
+			groups: []
 		},
 
 		parse: function(response) {
@@ -197,8 +205,6 @@
 					groups: $site.find('input.site-groups').val().split('|'),
 					icon: $site.find('.site-icon').val()
 				};
-
-			console.log(data);
 
 			$site.removeClass('failure saved').addClass('saving');
 			$site.find('.invalid-value').removeClass('invalid-value');
