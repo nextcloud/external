@@ -195,6 +195,7 @@
 				$target = $(e.target),
 				$site = $target.closest('li'),
 				site = this._sites.get($site.data('site-id')),
+				groups = $site.find('input.site-groups').val(),
 				data = {
 					name: $site.find('.site-name').val(),
 					url: $site.find('.site-url').val(),
@@ -202,7 +203,7 @@
 					type: $site.find('.site-type').val(),
 					device: $site.find('.site-device').val(),
 					redirect: $site.find('.site-redirect').prop("checked") ? 1 : 0,
-					groups: $site.find('input.site-groups').val().split('|'),
+					groups: groups === '' ? [] : groups.split('|'),
 					icon: $site.find('.site-icon').val()
 				};
 
