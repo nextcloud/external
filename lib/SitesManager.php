@@ -34,6 +34,8 @@ use OCP\App\IAppManager;
 use OCP\IConfig;
 use OCP\IGroupManager;
 use OCP\IRequest;
+use OCP\IUser;
+use OCP\IUserSession;
 use OCP\L10N\IFactory;
 
 class SitesManager {
@@ -63,11 +65,20 @@ class SitesManager {
 	/** @var IGroupManager */
 	protected $groupManager;
 
-	public function __construct(IRequest $request, IConfig $config, IAppManager $appManager, IGroupManager $groupManager, IFactory $languageFactory) {
+	/** @var IUserSession */
+	protected $userSession;
+
+	public function __construct(IRequest $request,
+								IConfig $config,
+								IAppManager $appManager,
+								IGroupManager $groupManager,
+								IUserSession $userSession,
+								IFactory $languageFactory) {
 		$this->request = $request;
 		$this->config = $config;
 		$this->appManager = $appManager;
 		$this->groupManager = $groupManager;
+		$this->userSession = $userSession;
 		$this->languageFactory = $languageFactory;
 	}
 
@@ -94,6 +105,13 @@ class SitesManager {
 		$lang = $this->languageFactory->findLanguage();
 		$device = $this->getDeviceFromUserAgent();
 
+		$user = $this->userSession->getUser();
+		if ($user instanceof IUser) {
+			$groups = $this->groupManager->getUserGroupIds($this->userSession->getUser());
+		} else {
+			$groups = [];
+		}
+
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
@@ -101,6 +119,10 @@ class SitesManager {
 			}
 
 			if ($site['device'] !== self::DEVICE_ALL && $site['device'] !== $device) {
+				continue;
+			}
+
+			if (!empty($site['groups']) && empty(array_intersect($site['groups'], $groups))) {
 				continue;
 			}
 
@@ -293,7 +315,6 @@ class SitesManager {
 			if (!$this->groupManager->groupExists($gid)) {
 				throw new GroupNotFoundException();
 			}
-			throw new GroupNotFoundException();
 		}
 
 		$icons = $this->getAvailableIcons();
