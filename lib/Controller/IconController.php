@@ -24,11 +24,16 @@
 
 namespace OCA\External\Controller;
 
+use OCP\App\IAppManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\FileDisplayResponse;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
+use OCP\Files\SimpleFS\ISimpleFile;
+use OCP\Files\SimpleFS\ISimpleFolder;
 use OCP\IL10N;
 use OCP\IRequest;
 
@@ -37,6 +42,10 @@ class IconController extends Controller {
 	private $l10n;
 	/** @var IAppData */
 	private $appData;
+	/** @var IAppManager */
+	private $appManager;
+	/** @var ITimeFactory */
+	private $timeFactory;
 
 	/**
 	 * ThemingController constructor.
@@ -45,17 +54,23 @@ class IconController extends Controller {
 	 * @param IRequest $request
 	 * @param IL10N $l
 	 * @param IAppData $appData
+	 * @param IAppManager $appManager
+	 * @param ITimeFactory $timeFactory
 	 */
 	public function __construct(
 		$appName,
 		IRequest $request,
 		IL10N $l,
-		IAppData $appData
+		IAppData $appData,
+		IAppManager $appManager,
+		ITimeFactory $timeFactory
 	) {
 		parent::__construct($appName, $request);
 
 		$this->l10n = $l;
 		$this->appData = $appData;
+		$this->appManager = $appManager;
+		$this->timeFactory = $timeFactory;
 	}
 
 	/**
@@ -82,7 +97,7 @@ class IconController extends Controller {
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
-		if ($imageSize !== false && $imageSize[0] !== $imageSize[1]) {
+		if ($imageSize !== false && (!in_array($imageSize[0], [16, 24, 32], true) || $imageSize[0] !== $imageSize[1])) {
 			// Not a square
 			return new DataResponse([
 				'error' => $this->l10n->t('Provided image is not a square'),
@@ -107,5 +122,53 @@ class IconController extends Controller {
 			'id' => $target->getName(),
 			'name' => $target->getName(),
 		]);
+	}
+
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 *
+	 * @param string $icon
+	 * @return FileDisplayResponse
+	 */
+	public function showIcon($icon) {
+		$folder = $this->appData->getFolder('icons');
+		try {
+			$iconFile = $folder->getFile($icon);
+		} catch (NotFoundException $exception) {
+			$iconFile = $this->getDefaultIcon($folder, 'external.svg');
+		}
+
+		$response = new FileDisplayResponse($iconFile, Http::STATUS_OK, ['Content-Type' => $iconFile->getMimeType()]);
+		$response->cacheFor(86400);
+		$expires = new \DateTime();
+		$expires->setTimestamp($this->timeFactory->getTime());
+		$expires->add(new \DateInterval('PT24H'));
+		$response->addHeader('Expires', $expires->format(\DateTime::RFC2822));
+		$response->addHeader('Pragma', 'cache');
+		return $response;
+	}
+
+	/**
+	 * @param ISimpleFolder $folder
+	 * @param string $file
+	 * @return ISimpleFile
+	 * @throws NotFoundException
+	 */
+	protected function getDefaultIcon(ISimpleFolder $folder, $file) {
+		try {
+			return $folder->getFile($file);
+		} catch (NotFoundException $exception) {
+		}
+
+		// Default icon is missing, copy it from img/
+		$content = file_get_contents($this->appManager->getAppPath('external') . '/img/' . $file);
+		if ($content === false) {
+			throw new NotFoundException();
+		}
+
+		$externalSVG = $folder->newFile($file);
+		$externalSVG->putContent($content);
+		return $externalSVG;
 	}
 }

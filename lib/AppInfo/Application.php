@@ -59,9 +59,9 @@ class Application extends App {
 			$server->getNavigationManager()->add(function() use ($site, $server) {
 				$url = $server->getURLGenerator();
 
-				try {
-					$image = $url->imagePath('external', $site['icon']);
-				} catch (\RuntimeException $e) {
+				if ($site['icon'] !== '') {
+					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
+				} else {
 					$image = $url->imagePath('external', 'external.svg');
 				}
 
