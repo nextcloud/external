@@ -29,6 +29,8 @@ OC.L10N.register(
     "Icon" : "Значок",
     "Remove site" : "Удалить сайт",
     "Position" : "Позиция",
+    "Redirect" : "Перенаправление",
+    "This site does not allow embeding" : "Этот сайт не разрешает встраивание",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Имейте ввиду, что некоторые браузеры не отображают сайты доступные по http, если вы используете https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Кроме того, имейте ввиду, что многие сайты не разрешают iframe в целях безопасности.",
     "We highly recommend to test the configured sites above properly." : "Мы настойчиво рекомендуем правильно протестировать настроенные выше сайты.",
