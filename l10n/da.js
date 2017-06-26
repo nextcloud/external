@@ -1,6 +1,7 @@
 OC.L10N.register(
     "external",
     {
+    "New site" : "Ny side",
     "Select an icon" : "Vælg et ikon",
     "All languages" : "Alle sprog",
     "The given URL is invalid" : "URLen er ugyldig",
