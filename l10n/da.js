@@ -4,6 +4,7 @@ OC.L10N.register(
     "New site" : "Ny side",
     "Select an icon" : "Vælg et ikon",
     "All languages" : "Alle sprog",
+    "Header" : "Overskrift",
     "The given URL is invalid" : "URLen er ugyldig",
     "The given language does not exist" : "Sproget findes ikke",
     "The given type is invalid" : "Typen er ugyldig",
