@@ -39,7 +39,6 @@ script('external', 'admin');
 		<ul class="external_sites"></ul>
 
 		<input type="button" id="add_external_site" value="<?php p($l->t('New site')); ?>" />
-		<span class="msg"></span>
 
 		<script type="text/template" id="site-template">
 			<li data-site-id="{{id}}">
@@ -136,7 +135,17 @@ script('external', 'admin');
 			<br>
 			<em><?php p($l->t('We highly recommend to test the configured sites above properly.')); ?></em>
 		</p>
+	</div>
 
+	<div class="section">
+		<h2><?php p($l->t('Icons'));?></h2>
+
+		<ul class="icon-list">
+			<li>
+				<img src="<?php p(image_path('external', 'external.svg')); ?>"/>
+				<span>external.svg</span>
+			</li>
+		</ul>
 
 		<form class="uploadButton" method="post" action="<?php p($_['uploadRoute']); ?>">
 			<input type="hidden" id="current-logoMime" name="current-logoMime" value="<?php p($_['logoMime']); ?>" />

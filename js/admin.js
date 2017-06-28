@@ -342,12 +342,11 @@ $(document).ready(function(){
 		pasteZone: null,
 		dropZone: null,
 		done: function (e, response) {
-			preview('logoMime', response.result.data.name);
 			OC.msg.finishedSaving('#theming_settings_msg', response.result);
 			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
 			$('.theme-undo[data-setting=logoMime]').show();
 		},
-		submit: function(e, response) {
+		submit: function() {
 			$('label#uploadlogo').removeClass('icon-upload').addClass('icon-loading-small');
 		},
 		fail: function (e, response){

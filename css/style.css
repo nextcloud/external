@@ -48,6 +48,18 @@
 	padding: 0 10px;
 }
 
+#external ul.icon-list img {
+	padding: 5px;
+	border-radius: 5px;
+	width: 32px;
+	background: #efefef;
+	vertical-align: middle;
+}
+
+#external ul.icon-list span {
+	padding-left: 10px;
+}
+
 #loading_sites {
 	width: 512px;
 }
