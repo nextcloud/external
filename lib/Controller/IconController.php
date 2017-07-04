@@ -100,7 +100,7 @@ class IconController extends Controller {
 		if ($imageSize !== false && (!in_array($imageSize[0], [16, 24, 32], true) || $imageSize[0] !== $imageSize[1])) {
 			// Not a square
 			return new DataResponse([
-				'error' => $this->l10n->t('Provided image is not a square'),
+				'error' => $this->l10n->t('Provided image is not a square with 16, 24 or 32 pixels width'),
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
@@ -115,6 +115,8 @@ class IconController extends Controller {
 		} catch (NotFoundException $e) {
 			$target = $icons->newFile($icon['name']);
 		}
+
+		$icons->getFile('settings-white.svg')->delete();
 
 		$target->putContent(file_get_contents($icon['tmp_name'], 'r'));
 
@@ -137,6 +139,22 @@ class IconController extends Controller {
 			$iconFile = $folder->getFile($icon);
 		} catch (NotFoundException $exception) {
 			$iconFile = $this->getDefaultIcon($folder, 'external.svg');
+		}
+
+		if (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
+				IRequest::USER_AGENT_CLIENT_ANDROID,
+				IRequest::USER_AGENT_CLIENT_IOS,
+				IRequest::USER_AGENT_CLIENT_DESKTOP,
+			])) {
+			// Check if there is a dark icon as well
+			$basename = pathinfo($iconFile->getName(), PATHINFO_FILENAME);
+			$basename .= '-dark.';
+			$basename .= pathinfo($iconFile->getName(), PATHINFO_EXTENSION);
+
+			try {
+				$iconFile = $folder->getFile($basename);
+			} catch (NotFoundException $exception) {
+			}
 		}
 
 		$response = new FileDisplayResponse($iconFile, Http::STATUS_OK, ['Content-Type' => $iconFile->getMimeType()]);

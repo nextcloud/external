@@ -99,27 +99,6 @@
 			var self = this;
 			this.$list = $('ul.external_sites');
 
-			this._sites = new OCA.External.Models.SiteCollection();
-			this._sites.fetch({
-				success: function(_, response) {
-					$('#loading_sites').removeClass('icon-loading-small');
-					self.availableIcons = response.ocs.data.icons;
-					self.availableLanguages = response.ocs.data.languages;
-					self.availableTypes = response.ocs.data.types;
-					self.availableDevices = response.ocs.data.devices;
-
-					if (response.ocs.data.sites.length === 0) {
-						var $el = $(self._compiledTemplate({
-							id: 'undefined'
-						}));
-						self._attachEvents($el);
-						self.$list.append($el);
-					} else {
-						self._render();
-					}
-				}
-			});
-
 			$('#add_external_site').click(function(e) {
 				e.preventDefault();
 
@@ -136,6 +115,41 @@
 				self.$list.append($el);
 			});
 			this._compiledTemplate = Handlebars.compile($('#site-template').html());
+
+			this.load();
+		},
+
+		load: function() {
+			var self = this;
+			$('#loading_sites').removeClass('hidden');
+			this.$list.empty();
+
+			this._sites = new OCA.External.Models.SiteCollection();
+			this._sites.fetch({
+				success: function(_, response) {
+					$('#loading_sites').addClass('hidden');
+
+					_.each(response.ocs.data.icons, function(icon) {
+						console.log('icon');
+					});
+
+					self.availableIcons = response.ocs.data.icons;
+					self._buildIconList(response.ocs.data.icons);
+					self.availableLanguages = response.ocs.data.languages;
+					self.availableTypes = response.ocs.data.types;
+					self.availableDevices = response.ocs.data.devices;
+
+					if (response.ocs.data.sites.length === 0) {
+						var $el = $(self._compiledTemplate({
+							id: 'undefined'
+						}));
+						self._attachEvents($el);
+						self.$list.append($el);
+					} else {
+						self._render();
+					}
+				}
+			});
 		},
 
 		_render: function() {
@@ -249,6 +263,45 @@
 			}
 		},
 
+		_buildIconList: function(data) {
+			var $table = $('ul.icon-list'),
+				lastIcon = '',
+				$lastIcon = null,
+				icons = [];
+			$table.empty();
+
+			_.each(data, function(data) {
+				if (data.icon === '') {
+					icons.push(data);
+					return;
+				}
+
+				if (lastIcon !== '' && data.name === lastIcon.replace('-dark.', '.')) {
+					$lastIcon.find('div.img').prepend($('<img>').attr('src', data.url));
+					$lastIcon.find('span').prepend(data.name + ' / ');
+					$lastIcon.addClass('twin-icons');
+
+					icons.pop();
+					icons.push(_.extend(data, {
+						name: data.name + ' / ' + lastIcon
+					}));
+					return;
+				}
+
+
+				var $row = $('<li>');
+				$row.append($('<div>').addClass('img').append($('<img>').attr('src', data.url)));
+				$row.append($('<span>').text(data.name));
+				$table.append($row);
+				icons.push(data);
+
+				lastIcon = data.name;
+				$lastIcon = $row;
+			});
+
+			this.availableIcons = icons;
+		},
+
 		_rebuildNavigation: function() {
 			$.getJSON(OC.filePath('settings', 'ajax', 'navigationdetect.php')).done(function(response){
 				if(response.status === 'success') {
@@ -341,16 +394,18 @@ $(document).ready(function(){
 	var uploadParamsLogo = {
 		pasteZone: null,
 		dropZone: null,
-		done: function (e, response) {
-			OC.msg.finishedSaving('#theming_settings_msg', response.result);
-			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
-			$('.theme-undo[data-setting=logoMime]').show();
-		},
 		submit: function() {
+			OC.msg.startAction('form.uploadButton span.msg', t('external', 'Uploading…'));
 			$('label#uploadlogo').removeClass('icon-upload').addClass('icon-loading-small');
 		},
-		fail: function (e, response){
-			OC.msg.finishedError('#theming_settings_msg', response._response.jqXHR.responseJSON.data.message);
+		done: function () {
+			OCA.External.App.load();
+			OC.msg.finishedSuccess('form.uploadButton span.msg', t('external', 'Reloading icon list…'));
+			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
+		},
+		fail: function (e, result) {
+			console.log(result.jqXHR.responseJSON.error);
+			OC.msg.finishedError('form.uploadButton span.msg', result.jqXHR.responseJSON.error);
 			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
 		}
 	};

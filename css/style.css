@@ -48,12 +48,26 @@
 	padding: 0 10px;
 }
 
-#external ul.icon-list img {
+#external ul.icon-list li {
+	padding: 5px 0;
+	display: inline-block;
+	width: 25%;
+}
+
+#external ul.icon-list .img {
 	padding: 5px;
 	border-radius: 5px;
-	width: 32px;
 	background: #efefef;
+	display: inline-block;
+}
+
+#external ul.icon-list .img img {
+	width: 32px;
 	vertical-align: middle;
+}
+
+#external ul.icon-list li.twin-icons img:first-child {
+	padding-right: 5px;
 }
 
 #external ul.icon-list span {

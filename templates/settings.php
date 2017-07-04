@@ -140,19 +140,18 @@ script('external', 'admin');
 	<div class="section">
 		<h2><?php p($l->t('Icons'));?></h2>
 
+		<p class="settings-hint">
+			<?php p($l->t('If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background on the mobile apps.')); ?>
+			<?php p($l->t('Uploading an icon with the same name will replace the current icon.')); ?>
+		</p>
+
 		<ul class="icon-list">
-			<li>
-				<img src="<?php p(image_path('external', 'external.svg')); ?>"/>
-				<span>external.svg</span>
-			</li>
 		</ul>
 
 		<form class="uploadButton" method="post" action="<?php p($_['uploadRoute']); ?>">
-			<input type="hidden" id="current-logoMime" name="current-logoMime" value="<?php p($_['logoMime']); ?>" />
-			<label for="uploadlogo"><span><?php p($l->t('Logo')) ?></span></label>
 			<input id="uploadlogo" class="upload-logo-field" name="uploadlogo" type="file" />
 			<label for="uploadlogo" class="button icon-upload svg" id="uploadlogo" title="<?php p($l->t('Upload new logo')) ?>"></label>
-			<div data-setting="logoMime" data-toggle="tooltip" data-original-title="<?php p($l->t('reset to default')); ?>" class="theme-undo icon icon-history"></div>
+			<span class="msg"></span>
 		</form>
 	</div>
 </div>

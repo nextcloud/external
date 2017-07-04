@@ -97,7 +97,11 @@ class APIController extends OCSController {
 	 */
 	public function getAdmin() {
 		$icons = array_map(function($icon) {
-			return ['icon' => $icon, 'name' => $icon];
+			return [
+				'icon' => $icon,
+				'name' => $icon,
+				'url' => $this->url->linkToRoute('external.icon.showIcon', ['icon' => $icon]),
+			];
 		}, $this->sitesManager->getAvailableIcons());
 		array_unshift($icons, ['icon' => '', 'name' => $this->l->t('Select an icon')]);
 
