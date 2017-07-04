@@ -62,7 +62,7 @@ class Application extends App {
 				if ($site['icon'] !== '') {
 					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
 				} else {
-					$image = $url->imagePath('external', 'external.svg');
+					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
 				}
 
 				$href = $site['url'];

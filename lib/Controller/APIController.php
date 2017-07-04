@@ -76,7 +76,7 @@ class APIController extends OCSController {
 			if ($site['icon'] !== '') {
 				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => $site['icon']]);
 			} else {
-				$site['icon'] = $this->url->getAbsoluteURL($this->url->imagePath('external', 'external.svg'));
+				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => 'external.svg']);
 			}
 			$sites[] = $site;
 		}
