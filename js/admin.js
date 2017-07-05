@@ -404,7 +404,6 @@ $(document).ready(function(){
 			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
 		},
 		fail: function (e, result) {
-			console.log(result.jqXHR.responseJSON.error);
 			OC.msg.finishedError('form.uploadButton span.msg', result.jqXHR.responseJSON.error);
 			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
 		}

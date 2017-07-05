@@ -32,6 +32,7 @@ use OCP\AppFramework\Http\FileDisplayResponse;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
+use OCP\Files\NotPermittedException;
 use OCP\Files\SimpleFS\ISimpleFile;
 use OCP\Files\SimpleFS\ISimpleFolder;
 use OCP\IL10N;
@@ -105,18 +106,26 @@ class IconController extends Controller {
 		}
 
 		try {
-			$icons = $this->appData->getFolder('icons');
-		} catch (NotFoundException $e) {
-			$icons = $this->appData->newFolder('icons');
-		}
+			try {
+				$icons = $this->appData->getFolder('icons');
+			} catch (NotFoundException $e) {
+				$icons = $this->appData->newFolder('icons');
+			}
 
-		try {
-			$target = $icons->getFile($icon['name']);
-		} catch (NotFoundException $e) {
-			$target = $icons->newFile($icon['name']);
+			try {
+				$target = $icons->getFile($icon['name']);
+			} catch (NotFoundException $e) {
+				$target = $icons->newFile($icon['name']);
+			}
+		} catch (NotPermittedException $e) {
+			return new DataResponse([
+				'error' => $this->l10n->t('An error occurred while uploading the icon, please make sure the data directory is writable'),
+			], Http::STATUS_UNPROCESSABLE_ENTITY);
+		} catch (\RuntimeException $e) {
+			return new DataResponse([
+				'error' => $this->l10n->t('An error occurred while uploading the icon, please make sure the data directory is writable'),
+			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
-
-		$icons->getFile('settings-white.svg')->delete();
 
 		$target->putContent(file_get_contents($icon['tmp_name'], 'r'));
 
