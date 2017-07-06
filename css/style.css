@@ -51,7 +51,7 @@
 #external ul.icon-list li {
 	padding: 5px 0;
 	display: inline-block;
-	width: 25%;
+	width: 33%;
 }
 
 #external ul.icon-list .img {
@@ -72,6 +72,11 @@
 
 #external ul.icon-list span {
 	padding-left: 10px;
+}
+
+#external ul.icon-list span.icon-delete {
+	padding-left: 25px;
+	cursor: pointer;
 }
 
 #loading_sites {

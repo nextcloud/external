@@ -177,6 +177,29 @@ class IconController extends Controller {
 	}
 
 	/**
+	 * @param string $icon
+	 * @return DataResponse
+	 */
+	public function deleteIcon($icon) {
+		$folder = $this->appData->getFolder('icons');
+
+		try {
+			$iconFile = $folder->getFile($icon);
+			$iconFile->delete();
+
+			if (strpos($icon, '-dark.') !== false) {
+				// Delete the white version as well
+				$iconFile = $folder->getFile(str_replace('-dark.', '.', $icon));
+				$iconFile->delete();
+			}
+		} catch (NotFoundException $exception) {
+		} catch (NotPermittedException $exception) {
+		}
+
+		return new DataResponse();
+	}
+
+	/**
 	 * @param ISimpleFolder $folder
 	 * @param string $file
 	 * @return ISimpleFile

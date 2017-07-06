@@ -128,6 +128,16 @@ script('external', 'admin');
 			</li>
 		</script>
 
+		<script type="text/template" id="icon-template">
+			<li data-icon="{{name}}">
+				<div class="img">
+					<img src="{{url}}">
+				</div>
+				<span class="name">{{name}}</span>
+				<span class="icon icon-delete" title="<?php p($l->t('Delete icon')); ?>"></span>
+			</li>
+		</script>
+
 		<p>
 			<em><?php p($l->t('Please note that some browsers will block displaying of sites via http if you are running https.')); ?></em>
 			<br>

@@ -25,6 +25,7 @@ return [
 		['name' => 'site#showPage', 'url' => '/{id}', 'verb' => 'GET'],
 		['name' => 'icon#uploadIcon', 'url' => '/icons', 'verb' => 'POST'],
 		['name' => 'icon#showIcon', 'url' => '/icons/{icon}', 'verb' => 'GET'],
+		['name' => 'icon#deleteIcon', 'url' => '/icons/{icon}', 'verb' => 'DELETE'],
 	],
 	'ocs' => [
 		['name' => 'API#get', 'url' => '/api/{apiVersion}', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],
