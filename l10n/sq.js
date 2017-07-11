@@ -25,7 +25,10 @@ OC.L10N.register(
     "Remove site" : "Hiqe vendndodhjen",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Ju lutemi, kini parasysh që disa shfletues do të bllokojnë shfaqjen e sajteve përmes http-je, nëse xhironi https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Për më tepër, ju lutemi, kini parasysh që mjaft sajte në këto kohë s’lejojnë iframing, për arsye sigurie.",
+    "Normal" : "Normal",
+    "The given name is invalid" : "Emri i dhënë është i pa disponueshëm",
     "Add" : "Shtoje",
+    "Saving" : "Duke u ruajtur",
     "Saved!" : "I/E ruajtur!",
     "Can not save site" : "Nuk mund të ruhej faqja"
 },
