@@ -2,7 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Nuevo sitio",
-    "Select an icon" : "Seleccione un ícono",
+    "Select an icon" : "Selecciona un ícono",
     "All languages" : "Todos los idiomas",
     "Header" : "Encabezado",
     "Setting menu" : "Menú de configuración",
