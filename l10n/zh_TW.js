@@ -1,12 +1,31 @@
 OC.L10N.register(
     "external",
     {
+    "New site" : "新網站",
     "Select an icon" : "選擇一個圖示",
-    "Add" : "新增",
+    "All languages" : "全部語言",
+    "Header" : "檔案標頭",
+    "Setting menu" : "設定選單",
+    "User quota" : "使用者配額",
+    "All devices" : "所有裝置",
+    "Only in the Android app" : "只能在安卓app上",
+    "Only in the iOS app" : "只能在iOS app上",
+    "Only in the desktop client" : "只能在桌面用戶軟體上",
+    "Only in the browser" : "只能透過瀏覽器",
+    "The given label is invalid" : "名稱無效",
+    "The given URL is invalid" : "URL無效",
+    "The given language does not exist" : "指定的語言不存在",
+    "The given type is invalid" : "指定類型無效",
+    "The given device is invalid" : "指定裝置無效",
+    "The given icon does not exist" : "選定圖示不存在",
+    "The site does not exist" : "該主機並不存在",
+    "External sites" : "外部連結主機",
+    "__language_name__" : "正體中文（(臺灣）",
     "Name" : "名稱",
     "URL" : "網址URL",
     "Remove site" : "移除站台",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "請注意當使用https環境時，部分瀏覽器將會封鎖顯示經由http的網站。",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，基於安全性的考量，某些網站禁用iframe。"
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，基於安全性的考量，某些網站禁用iframe。",
+    "Add" : "新增"
 },
 "nplurals=1; plural=0;");
