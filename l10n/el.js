@@ -28,6 +28,7 @@ OC.L10N.register(
     "Position" : "Θέση",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλούμε σημειώστε ότι μερικοί φυλλομετρητές θα εμποδίσουν την εμφάνιση σελίδων μέσω http αν χρησιμοποιήτε https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας.",
-    "Add" : "Προσθήκη"
+    "Add" : "Προσθήκη",
+    "Saved!" : "Αποθηκεύτηκε!"
 },
 "nplurals=2; plural=(n != 1);");
