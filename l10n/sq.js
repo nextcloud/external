@@ -1,9 +1,12 @@
 OC.L10N.register(
     "external",
     {
+    "New site" : "Faqe e re",
     "Select an icon" : "Përzgjidhni një ikonë",
     "All languages" : "Të gjitha gjuhët",
+    "Header" : "Header",
     "Setting menu" : "Menuja e mjedisit",
+    "User quota" : "Kuota e përdoruesit",
     "All devices" : "Të gjitha paisjet",
     "Only in the Android app" : "Vetëm në Android app",
     "Only in the iOS app" : "Vetëm në iOS app",
