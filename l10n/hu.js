@@ -1,6 +1,7 @@
 OC.L10N.register(
     "external",
     {
+    "New site" : "Új oldal",
     "Select an icon" : "Ikon beállítása",
     "All languages" : "Minden nyelv",
     "The given URL is invalid" : "A megadott URL érvénytelen",
