@@ -19,11 +19,19 @@
     "The site does not exist" : "該主機並不存在",
     "External sites" : "外部連結主機",
     "__language_name__" : "正體中文（(臺灣）",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "可直接在最上方應用功能選單列新增網址，讓所有使用者從內部顯示連結，連往一些網路應用程式或者重要的網站。",
     "Name" : "名稱",
     "URL" : "網址URL",
+    "Language" : "語言",
+    "Devices" : "裝置",
+    "Icon" : "圖示",
     "Remove site" : "移除站台",
+    "Position" : "位置",
+    "Redirect" : "重新導向",
+    "This site does not allow embeding" : "此網站不允許被嵌入",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "請注意當使用https環境時，部分瀏覽器將會封鎖顯示經由http的網站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，基於安全性的考量，某些網站禁用iframe。",
+    "We highly recommend to test the configured sites above properly." : "我們強烈建議您測試上述配置的網站是否正確。",
     "Add" : "新增"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
