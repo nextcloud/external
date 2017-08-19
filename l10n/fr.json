@@ -37,7 +37,7 @@
     "Quota" : "Quota",
     "The given name is invalid" : "Le nom donné est invalide",
     "Add" : "Ajouter",
-    "Saving" : "Sauvegarde en cours",
+    "Saving" : "Enregistrement en cours",
     "Saved!" : "Sauvegardé !",
     "Can not save site" : "Impossible de sauvegarder le site"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"

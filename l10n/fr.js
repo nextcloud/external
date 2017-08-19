@@ -39,7 +39,7 @@ OC.L10N.register(
     "Quota" : "Quota",
     "The given name is invalid" : "Le nom donné est invalide",
     "Add" : "Ajouter",
-    "Saving" : "Sauvegarde en cours",
+    "Saving" : "Enregistrement en cours",
     "Saved!" : "Sauvegardé !",
     "Can not save site" : "Impossible de sauvegarder le site"
 },
