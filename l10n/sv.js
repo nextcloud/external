@@ -1,7 +1,7 @@
 OC.L10N.register(
     "external",
     {
-    "New site" : "Ny sida",
+    "New site" : "Ny site",
     "Select an icon" : "Välj en ikon",
     "All languages" : "Alla språk",
     "Header" : "Rubrik",
