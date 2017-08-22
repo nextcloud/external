@@ -21,6 +21,7 @@ OC.L10N.register(
     "The site does not exist" : "Sidan finns inte",
     "External sites" : "Externa sidor",
     "__language_name__" : "__language_name__",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lägg till en webbplats direkt i applistan i menyn. Detta kommer bli synligt för alla användare och är användbart för att snabbt nå andra internt använda webbappar och viktiga siter.",
     "Name" : "Namn",
     "URL" : "URL",
     "Language" : "Språk",
