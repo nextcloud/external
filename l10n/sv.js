@@ -1,7 +1,7 @@
 OC.L10N.register(
     "external",
     {
-    "New site" : "Ny site",
+    "New site" : "Ny webbplats",
     "Select an icon" : "Välj en ikon",
     "All languages" : "Alla språk",
     "Header" : "Rubrik",
@@ -18,8 +18,8 @@ OC.L10N.register(
     "The given type is invalid" : "Den angivna typen är ogiltig",
     "The given device is invalid" : "Den angivna enheten är ogiltig",
     "The given icon does not exist" : "Den angivna ikonen finns inte",
-    "The site does not exist" : "Sidan finns inte",
-    "External sites" : "Externa sidor",
+    "The site does not exist" : "Webbplatsen finns inte",
+    "External sites" : "Externa webbplatser",
     "__language_name__" : "__language_name__",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lägg till en webbplats direkt i applistan i menyn. Detta kommer bli synligt för alla användare och är användbart för att snabbt nå andra internt använda webbappar och viktiga siter.",
     "Name" : "Namn",
@@ -30,10 +30,10 @@ OC.L10N.register(
     "Remove site" : "Ta bort webbplats",
     "Position" : "Position",
     "Redirect" : "Omdirigera",
-    "This site does not allow embeding" : "Sidan tillåter inte inbäddning",
+    "This site does not allow embeding" : "Webbplatsen tillåter inte inbäddning",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Notera dessutom att många platser inte tillåter inramning i 'iframe' på grund av säkerhetsskäl.",
-    "We highly recommend to test the configured sites above properly." : "Vi rekommenderar starkt att testa de ovan konfigurerade sidorna ordentligt.",
+    "We highly recommend to test the configured sites above properly." : "Vi rekommenderar starkt att testa de ovan konfigurerade platserna ordentligt.",
     "Normal" : "Normal",
     "Setting" : "Inställning",
     "Quota" : "Utrymme",
@@ -41,6 +41,6 @@ OC.L10N.register(
     "Add" : "Lägg till",
     "Saving" : "Sparar",
     "Saved!" : "Sparad!",
-    "Can not save site" : "Kan inte spara sida"
+    "Can not save site" : "Kan inte spara plats"
 },
 "nplurals=2; plural=(n != 1);");
