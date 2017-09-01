@@ -5,6 +5,7 @@ OC.L10N.register(
     "Select an icon" : "Esbillar un iconu",
     "All languages" : "Toles llingües",
     "All devices" : "Tolos preseos",
+    "Only in the iOS app" : "Namái n'aplicación d'iOS",
     "Only in the desktop client" : "Namái nel veceru d'escritoriu",
     "The given label is invalid" : "La etiqueta dada nun ye válida",
     "The given URL is invalid" : "La URL dada nun ye válida",
