@@ -159,8 +159,13 @@ script('external', 'admin');
 		</ul>
 
 		<form class="uploadButton" method="post" action="<?php p($_['uploadRoute']); ?>">
-			<input id="uploadlogo" class="upload-logo-field" name="uploadlogo" type="file" />
-			<label for="uploadlogo" class="button icon-upload svg" id="uploadlogo" title="<?php p($l->t('Upload new logo')) ?>"></label>
+			<input id="uploadicon" class="hidden" name="uploadicon" type="file" />
+			<label for="uploadicon">
+				<span class="button">
+					<span class="icon icon-upload svg"></span>
+					<?php p($l->t('Upload new icon')) ?>
+				</span>
+			</label>
 			<span class="msg"></span>
 		</form>
 	</div>

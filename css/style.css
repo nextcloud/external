@@ -22,7 +22,7 @@
 	opacity: 1;
 }
 
-#external label span {
+#external label > span {
 	display: inline-block;
 	min-width: 120px;
 }

@@ -80,7 +80,7 @@ class IconController extends Controller {
 	 * @return DataResponse
 	 */
 	public function uploadIcon() {
-		$icon = $this->request->getUploadedFile('uploadlogo');
+		$icon = $this->request->getUploadedFile('uploadicon');
 		if (empty($icon)) {
 			return new DataResponse([
 				'data' => [
