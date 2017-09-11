@@ -21,6 +21,7 @@
 
 return [
 	'routes' => [
+		['name' => 'page#showDefaultPage', 'url' => '/', 'verb' => 'GET'],
 		['name' => 'page#showPage', 'url' => '/{id}', 'verb' => 'GET'],
 	],
 	'ocs' => [
