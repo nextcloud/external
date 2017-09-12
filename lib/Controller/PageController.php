@@ -31,6 +31,7 @@ use OCP\IConfig;
 use OCP\IL10N;
 use OCP\INavigationManager;
 use OCP\IRequest;
+use OCP\IURLGenerator;
 
 class PageController extends Controller {
 
