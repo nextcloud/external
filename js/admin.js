@@ -421,10 +421,10 @@ $(document).ready(function(){
 			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
 		},
 		fail: function (e, result) {
-			if (_.isUndefined(result.jqXHR.responseJSON.data.message)) {
+			if (_.isUndefined(result.jqXHR.responseJSON.error)) {
 				OC.msg.finishedError('form.uploadButton span.msg', t('external', 'Icon could not be uploaded'));
 			} else {
-				OC.msg.finishedError('form.uploadButton span.msg', result.jqXHR.responseJSON.data.message);
+				OC.msg.finishedError('form.uploadButton span.msg', result.jqXHR.responseJSON.error);
 			}
 			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
 		}

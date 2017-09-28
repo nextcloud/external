@@ -83,10 +83,8 @@ class IconController extends Controller {
 		$icon = $this->request->getUploadedFile('uploadicon');
 		if (empty($icon)) {
 			return new DataResponse([
-				'data' => [
-					'message' => $this->l10n->t('No file uploaded'),
-				]], Http::STATUS_UNPROCESSABLE_ENTITY
-			);
+				'error' => $this->l10n->t('No file uploaded'),
+			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
 		$imageSize = getimagesize($icon['tmp_name']);
