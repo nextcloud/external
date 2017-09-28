@@ -93,37 +93,17 @@
 
 		$list: null,
 
-		_compiledTemplate: null,
+		_compiledSiteTemplate: null,
+		_compiledIconTemplate: null,
 
 		init: function() {
 			var self = this;
 			this.$list = $('ul.external_sites');
 
-			this._sites = new OCA.External.Models.SiteCollection();
-			this._sites.fetch({
-				success: function(_, response) {
-					$('#loading_sites').removeClass('icon-loading-small');
-					self.availableIcons = response.ocs.data.icons;
-					self.availableLanguages = response.ocs.data.languages;
-					self.availableTypes = response.ocs.data.types;
-					self.availableDevices = response.ocs.data.devices;
-
-					if (response.ocs.data.sites.length === 0) {
-						var $el = $(self._compiledTemplate({
-							id: 'undefined'
-						}));
-						self._attachEvents($el);
-						self.$list.append($el);
-					} else {
-						self._render();
-					}
-				}
-			});
-
 			$('#add_external_site').click(function(e) {
 				e.preventDefault();
 
-				var $el = $(self._compiledTemplate({
+				var $el = $(self._compiledSiteTemplate({
 					id: 'new-' + Date.now(),
 					name: t('external', 'New site'),
 					icon: 'external.svg',
@@ -135,14 +115,46 @@
 				$el.find('.options').removeClass('hidden');
 				self.$list.append($el);
 			});
-			this._compiledTemplate = Handlebars.compile($('#site-template').html());
+			this._compiledSiteTemplate = Handlebars.compile($('#site-template').html());
+			this._compiledIconTemplate = Handlebars.compile($('#icon-template').html());
+
+			this.load();
+		},
+
+		load: function() {
+			var self = this;
+			$('#loading_sites').removeClass('hidden');
+			this.$list.empty();
+
+			this._sites = new OCA.External.Models.SiteCollection();
+			this._sites.fetch({
+				success: function(_, response) {
+					$('#loading_sites').addClass('hidden');
+
+					self.availableIcons = response.ocs.data.icons;
+					self._buildIconList(response.ocs.data.icons);
+					self.availableLanguages = response.ocs.data.languages;
+					self.availableTypes = response.ocs.data.types;
+					self.availableDevices = response.ocs.data.devices;
+
+					if (response.ocs.data.sites.length === 0) {
+						var $el = $(self._compiledSiteTemplate({
+							id: 'undefined'
+						}));
+						self._attachEvents($el);
+						self.$list.append($el);
+					} else {
+						self._render();
+					}
+				}
+			});
 		},
 
 		_render: function() {
 			var self = this;
 
 			_.each(this._sites.models, function(site) {
-				var $el = $(self._compiledTemplate(site.attributes));
+				var $el = $(self._compiledSiteTemplate(site.attributes));
 				self._attachEvents($el);
 				self.$list.append($el);
 			});
@@ -249,6 +261,64 @@
 			}
 		},
 
+		_buildIconList: function(data) {
+			var self = this,
+				$table = $('ul.icon-list'),
+				lastIcon = '',
+				$lastIcon = null,
+				icons = [];
+			$table.empty();
+
+			_.each(data, function(data) {
+				if (data.icon === '') {
+					icons.push(data);
+					return;
+				}
+
+				if (lastIcon !== '' && data.name === lastIcon.replace('-dark.', '.')) {
+					$lastIcon.find('div.img').prepend($('<img>').attr('src', data.url));
+					$lastIcon.find('span.name').prepend(data.name + ' / ');
+					$lastIcon.addClass('twin-icons');
+
+					icons.pop();
+					icons.push(_.extend(data, {
+						name: data.name + ' / ' + lastIcon
+					}));
+					return;
+				}
+
+
+				var $row = $(self._compiledIconTemplate(data));
+				self._attachEventsIcon($row);
+				$table.append($row);
+				icons.push(data);
+
+				lastIcon = data.name;
+				$lastIcon = $row;
+			});
+
+			this.availableIcons = icons;
+		},
+
+		_attachEventsIcon: function($icon) {
+			$icon.find('span.icon-delete').click(_.bind(this._deleteIcon, this));
+		},
+
+		_deleteIcon: function(e) {
+			var $row = $(e.currentTarget).parents('li'),
+				icon = $row.attr('data-icon');
+
+			$.ajax({
+				type: 'DELETE',
+				url: OC.generateUrl('/apps/external/icons/' + icon)
+			}).done(function () {
+				$row.slideUp();
+				setTimeout(function() {
+					$row.remove();
+				}, 750);
+			});
+		},
+
 		_rebuildNavigation: function() {
 			$.getJSON(OC.filePath('settings', 'ajax', 'navigationdetect.php')).done(function(response){
 				if(response.status === 'success') {
@@ -337,4 +407,28 @@
 
 $(document).ready(function(){
 	OCA.External.App.init();
+
+	var uploadParamsLogo = {
+		pasteZone: null,
+		dropZone: null,
+		submit: function() {
+			OC.msg.startAction('form.uploadButton span.msg', t('external', 'Uploading…'));
+			$('label#uploadlogo').removeClass('icon-upload').addClass('icon-loading-small');
+		},
+		done: function () {
+			OCA.External.App.load();
+			OC.msg.finishedSuccess('form.uploadButton span.msg', t('external', 'Reloading icon list…'));
+			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
+		},
+		fail: function (e, result) {
+			if (_.isUndefined(result.jqXHR.responseJSON.error)) {
+				OC.msg.finishedError('form.uploadButton span.msg', t('external', 'Icon could not be uploaded'));
+			} else {
+				OC.msg.finishedError('form.uploadButton span.msg', result.jqXHR.responseJSON.error);
+			}
+			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small');
+		}
+	};
+
+	$('#uploadicon').fileupload(uploadParamsLogo);
 });

@@ -29,7 +29,7 @@ script('external', 'admin');
 /** @var array $_ */
 /** @var \OCP\IL10N $l */
 ?>
-<form id="external">
+<div id="external">
 	<div class="section">
 		<h2><?php p($l->t('External sites'));?></h2>
 		<p class="settings-hint"><?php p($l->t('Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.')); ?></p>
@@ -39,7 +39,6 @@ script('external', 'admin');
 		<ul class="external_sites"></ul>
 
 		<input type="button" id="add_external_site" value="<?php p($l->t('New site')); ?>" />
-		<span class="msg"></span>
 
 		<script type="text/template" id="site-template">
 			<li data-site-id="{{id}}">
@@ -129,6 +128,16 @@ script('external', 'admin');
 			</li>
 		</script>
 
+		<script type="text/template" id="icon-template">
+			<li data-icon="{{name}}">
+				<div class="img">
+					<img src="{{url}}">
+				</div>
+				<span class="name">{{name}}</span>
+				<span class="icon icon-delete" title="<?php p($l->t('Delete icon')); ?>"></span>
+			</li>
+		</script>
+
 		<p>
 			<em><?php p($l->t('Please note that some browsers will block displaying of sites via http if you are running https.')); ?></em>
 			<br>
@@ -137,4 +146,27 @@ script('external', 'admin');
 			<em><?php p($l->t('We highly recommend to test the configured sites above properly.')); ?></em>
 		</p>
 	</div>
-</form>
+
+	<div class="section">
+		<h2><?php p($l->t('Icons'));?></h2>
+
+		<p class="settings-hint">
+			<?php p($l->t('If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background on the mobile apps.')); ?>
+			<?php p($l->t('Uploading an icon with the same name will replace the current icon.')); ?>
+		</p>
+
+		<ul class="icon-list">
+		</ul>
+
+		<form class="uploadButton" method="post" action="<?php p($_['uploadRoute']); ?>">
+			<input id="uploadicon" class="hidden" name="uploadicon" type="file" />
+			<label for="uploadicon">
+				<span class="button">
+					<span class="icon icon-upload svg"></span>
+					<?php p($l->t('Upload new icon')) ?>
+				</span>
+			</label>
+			<span class="msg"></span>
+		</form>
+	</div>
+</div>

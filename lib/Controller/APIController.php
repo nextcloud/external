@@ -73,7 +73,11 @@ class APIController extends OCSController {
 
 		$sites = [];
 		foreach ($data as $site) {
-			$site['icon'] = $this->url->getAbsoluteURL($this->url->imagePath('external', $site['icon']));
+			if ($site['icon'] !== '') {
+				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => $site['icon']]);
+			} else {
+				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => 'external.svg']);
+			}
 			$sites[] = $site;
 		}
 
@@ -93,7 +97,11 @@ class APIController extends OCSController {
 	 */
 	public function getAdmin() {
 		$icons = array_map(function($icon) {
-			return ['icon' => $icon, 'name' => $icon];
+			return [
+				'icon' => $icon,
+				'name' => $icon,
+				'url' => $this->url->linkToRoute('external.icon.showIcon', ['icon' => $icon]),
+			];
 		}, $this->sitesManager->getAvailableIcons());
 		array_unshift($icons, ['icon' => '', 'name' => $this->l->t('Select an icon')]);
 

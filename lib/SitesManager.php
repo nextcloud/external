@@ -29,8 +29,10 @@ use OCA\External\Exceptions\InvalidTypeException;
 use OCA\External\Exceptions\InvalidURLException;
 use OCA\External\Exceptions\LanguageNotFoundException;
 use OCA\External\Exceptions\SiteNotFoundException;
-use OCP\App\AppPathNotFoundException;
 use OCP\App\IAppManager;
+use OCP\Files\IAppData;
+use OCP\Files\NotFoundException;
+use OCP\Files\SimpleFS\ISimpleFile;
 use OCP\IConfig;
 use OCP\IGroupManager;
 use OCP\IRequest;
@@ -68,18 +70,24 @@ class SitesManager {
 	/** @var IUserSession */
 	protected $userSession;
 
+	/** @var IAppData */
+	protected $appData;
+
+
 	public function __construct(IRequest $request,
 								IConfig $config,
 								IAppManager $appManager,
 								IGroupManager $groupManager,
 								IUserSession $userSession,
-								IFactory $languageFactory) {
+								IFactory $languageFactory,
+								IAppData $appData) {
 		$this->request = $request;
 		$this->config = $config;
 		$this->appManager = $appManager;
 		$this->groupManager = $groupManager;
 		$this->userSession = $userSession;
 		$this->languageFactory = $languageFactory;
+		$this->appData = $appData;
 	}
 
 	/**
@@ -381,8 +389,12 @@ class SitesManager {
 	 */
 	public function getAvailableIcons() {
 		try {
-			return array_map('basename', glob($this->appManager->getAppPath('external') . '/img/*.*'));
-		} catch (AppPathNotFoundException $e) {
+			$folder = $this->appData->getFolder('icons');
+			$icons = $folder->getDirectoryListing();
+			return array_map(function(ISimpleFile $icon) {
+				return $icon->getName();
+			}, $icons);
+		} catch (NotFoundException $e) {
 			return ['external.svg'];
 		}
 	}

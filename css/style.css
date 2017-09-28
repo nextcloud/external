@@ -22,7 +22,7 @@
 	opacity: 1;
 }
 
-#external label span {
+#external label > span {
 	display: inline-block;
 	min-width: 120px;
 }
@@ -46,6 +46,37 @@
 
 #external ul.external_sites > li .options {
 	padding: 0 10px;
+}
+
+#external ul.icon-list li {
+	padding: 5px 0;
+	display: inline-block;
+	width: 33%;
+}
+
+#external ul.icon-list .img {
+	padding: 5px;
+	border-radius: 5px;
+	background: #efefef;
+	display: inline-block;
+}
+
+#external ul.icon-list .img img {
+	width: 32px;
+	vertical-align: middle;
+}
+
+#external ul.icon-list li.twin-icons img:first-child {
+	padding-right: 5px;
+}
+
+#external ul.icon-list span {
+	padding-left: 10px;
+}
+
+#external ul.icon-list span.icon-delete {
+	padding-left: 25px;
+	cursor: pointer;
 }
 
 #loading_sites {
