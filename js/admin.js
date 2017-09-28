@@ -31,6 +31,13 @@
 		return currentValue === itemValue;
 	});
 
+	Handlebars.registerHelper('join', function(array) {
+		if (_.isUndefined(array)) {
+			return '';
+		}
+		return array.join('|');
+	});
+
 	Handlebars.registerHelper('getLanguages', function() {
 		return OCA.External.App.availableLanguages;
 	});
@@ -56,7 +63,8 @@
 			lang: '',
 			type: 'link',
 			device: '',
-			icon: 'external.svg'
+			icon: 'external.svg',
+			groups: []
 		},
 
 		parse: function(response) {
@@ -146,6 +154,16 @@
 			$site.find('.icon-more').on('click', function() {
 				$site.find('.options').toggleClass('hidden');
 			});
+
+			var self = this,
+				$groupsSelect = $site.find('.site-groups');
+
+			OC.Settings.setupGroupsSelect($groupsSelect);
+			$groupsSelect.change(function(e) {
+				var groups = e.val || ['admin'];
+				groups = JSON.stringify(groups);
+				self._saveSite(e);
+			});
 		},
 
 		_deleteSite: function(e) {
@@ -177,6 +195,7 @@
 				$target = $(e.target),
 				$site = $target.closest('li'),
 				site = this._sites.get($site.data('site-id')),
+				groups = $site.find('input.site-groups').val(),
 				data = {
 					name: $site.find('.site-name').val(),
 					url: $site.find('.site-url').val(),
@@ -184,6 +203,7 @@
 					type: $site.find('.site-type').val(),
 					device: $site.find('.site-device').val(),
 					redirect: $site.find('.site-redirect').prop("checked") ? 1 : 0,
+					groups: groups === '' ? [] : groups.split('|'),
 					icon: $site.find('.site-icon').val()
 				};
 

@@ -27,24 +27,24 @@
 	min-width: 120px;
 }
 
-#external ul.external_sites li {
+#external ul.external_sites > li {
 	margin-left: -5px;
 	padding: 5px 0 10px 5px;
 }
 
-#external ul.external_sites li.saving {
+#external ul.external_sites > li.saving {
 	box-shadow: inset 2px 0 #CCCCCC;
 }
 
-#external ul.external_sites li.saved {
+#external ul.external_sites > li.saved {
 	box-shadow: inset 2px 0 #00AA00;
 }
 
-#external ul.external_sites li.failure {
+#external ul.external_sites > li.failure {
 	box-shadow: inset 2px 0 #AA0000;
 }
 
-#external ul.external_sites li .options {
+#external ul.external_sites > li .options {
 	padding: 0 10px;
 }
 

@@ -21,6 +21,7 @@
 
 namespace OCA\External;
 
+use OCA\External\Exceptions\GroupNotFoundException;
 use OCA\External\Exceptions\IconNotFoundException;
 use OCA\External\Exceptions\InvalidDeviceException;
 use OCA\External\Exceptions\InvalidNameException;
@@ -31,7 +32,10 @@ use OCA\External\Exceptions\SiteNotFoundException;
 use OCP\App\AppPathNotFoundException;
 use OCP\App\IAppManager;
 use OCP\IConfig;
+use OCP\IGroupManager;
 use OCP\IRequest;
+use OCP\IUser;
+use OCP\IUserSession;
 use OCP\L10N\IFactory;
 
 class SitesManager {
@@ -58,10 +62,23 @@ class SitesManager {
 	/** @var IAppManager */
 	protected $appManager;
 
-	public function __construct(IRequest $request, IConfig $config, IAppManager $appManager, IFactory $languageFactory) {
+	/** @var IGroupManager */
+	protected $groupManager;
+
+	/** @var IUserSession */
+	protected $userSession;
+
+	public function __construct(IRequest $request,
+								IConfig $config,
+								IAppManager $appManager,
+								IGroupManager $groupManager,
+								IUserSession $userSession,
+								IFactory $languageFactory) {
 		$this->request = $request;
 		$this->config = $config;
 		$this->appManager = $appManager;
+		$this->groupManager = $groupManager;
+		$this->userSession = $userSession;
 		$this->languageFactory = $languageFactory;
 	}
 
@@ -88,6 +105,13 @@ class SitesManager {
 		$lang = $this->languageFactory->findLanguage();
 		$device = $this->getDeviceFromUserAgent();
 
+		$user = $this->userSession->getUser();
+		if ($user instanceof IUser) {
+			$groups = $this->groupManager->getUserGroupIds($this->userSession->getUser());
+		} else {
+			$groups = [];
+		}
+
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
@@ -95,6 +119,10 @@ class SitesManager {
 			}
 
 			if ($site['device'] !== self::DEVICE_ALL && $site['device'] !== $device) {
+				continue;
+			}
+
+			if (!empty($site['groups']) && empty(array_intersect($site['groups'], $groups))) {
 				continue;
 			}
 
@@ -135,6 +163,7 @@ class SitesManager {
 				'lang' => '',
 				'type' => self::TYPE_LINK,
 				'device' => self::DEVICE_ALL,
+				'groups' => [],
 				'redirect' => false,
 			],
 			$site
@@ -148,6 +177,7 @@ class SitesManager {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param string[] $groups
 	 * @param bool $redirect
 	 * @return array
 	 * @throws InvalidNameException
@@ -155,9 +185,10 @@ class SitesManager {
 	 * @throws LanguageNotFoundException
 	 * @throws InvalidTypeException
 	 * @throws InvalidDeviceException
+	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon, $redirect) {
+	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -191,6 +222,12 @@ class SitesManager {
 			throw new InvalidDeviceException();
 		}
 
+		foreach ($groups as $gid) {
+			if (!$this->groupManager->groupExists($gid)) {
+				throw new GroupNotFoundException();
+			}
+		}
+
 		$icons = $this->getAvailableIcons();
 		if ($icon === '') {
 			$icon = 'external.svg';
@@ -208,6 +245,7 @@ class SitesManager {
 			'type' => $type,
 			'device' => $device,
 			'icon' => $icon,
+			'groups' => $groups,
 			'redirect' => $redirect,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
@@ -224,6 +262,7 @@ class SitesManager {
 	 * @param string $type
 	 * @param string $device
 	 * @param string $icon
+	 * @param string[] $groups
 	 * @param bool $redirect
 	 * @return array
 	 * @throws SiteNotFoundException
@@ -232,9 +271,10 @@ class SitesManager {
 	 * @throws LanguageNotFoundException
 	 * @throws InvalidTypeException
 	 * @throws InvalidDeviceException
+	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, $redirect) {
+	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -271,6 +311,12 @@ class SitesManager {
 			throw new InvalidDeviceException();
 		}
 
+		foreach ($groups as $gid) {
+			if (!$this->groupManager->groupExists($gid)) {
+				throw new GroupNotFoundException();
+			}
+		}
+
 		$icons = $this->getAvailableIcons();
 		if ($icon === '') {
 			$icon = 'external.svg';
@@ -287,6 +333,7 @@ class SitesManager {
 			'type' => $type,
 			'device' => $device,
 			'icon' => $icon,
+			'groups' => $groups,
 			'redirect' => $redirect,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
