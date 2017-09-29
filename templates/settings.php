@@ -151,7 +151,7 @@ script('external', 'admin');
 		<h2><?php p($l->t('Icons'));?></h2>
 
 		<p class="settings-hint">
-			<?php p($l->t('If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background on the mobile apps.')); ?>
+			<?php p($l->t('If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps.')); ?>
 			<?php p($l->t('Uploading an icon with the same name will replace the current icon.')); ?>
 		</p>
 
