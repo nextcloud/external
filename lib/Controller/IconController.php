@@ -99,7 +99,7 @@ class IconController extends Controller {
 		if ($imageSize !== false && (!in_array($imageSize[0], [16, 24, 32], true) || $imageSize[0] !== $imageSize[1])) {
 			// Not a square
 			return new DataResponse([
-				'error' => $this->l10n->t('Provided image is not a square with 16, 24 or 32 pixels width'),
+				'error' => $this->l10n->t('Provided image is not a square of 16, 24 or 32 pixels width'),
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
