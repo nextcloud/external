@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Νέος ιστότοπος",
+    "Uploading…" : "Γίνεται μεταφόρτωση...",
     "Select an icon" : "Επιλέξτε ένα εικονίδιο",
     "All languages" : "Όλες οι γλώσσες",
     "Header" : "Επικεφαλίδα",
