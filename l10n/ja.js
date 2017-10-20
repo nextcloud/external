@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "新規サイト",
+    "Uploading…" : "アップロード中...",
     "Select an icon" : "アイコンを選択",
     "All languages" : "すべての言語",
     "Header" : "ヘッダー",
