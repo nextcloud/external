@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Új oldal",
+    "Uploading…" : "Feltöltés...",
     "Select an icon" : "Ikon beállítása",
     "All languages" : "Minden nyelv",
     "Header" : "Fejléc",
