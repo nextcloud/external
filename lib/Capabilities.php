@@ -41,6 +41,8 @@ class Capabilities implements ICapability {
 				'v1' => [
 					'sites',
 					'device',
+					'groups',
+					'redirect',
 				],
 			],
 		];

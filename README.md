@@ -65,6 +65,8 @@ The app registers a capability, so clients can check that before making the actu
     <v1>
      <element>sites</element>
      <element>device</element>
+     <element>groups</element>
+     <element>redirect</element>
     </v1>
    </external>
    ...
