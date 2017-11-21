@@ -36,6 +36,8 @@ use OCP\AppFramework\OCSController;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IURLGenerator;
+use OCP\IUser;
+use OCP\IUserSession;
 
 class APIController extends OCSController {
 	/** @var SitesManager */
@@ -47,19 +49,24 @@ class APIController extends OCSController {
 	/** @var IL10N */
 	private $l;
 
+	/** @var IUserSession */
+	protected $userSession;
+
 	/**
 	 * @param string $appName
 	 * @param IRequest $request
 	 * @param SitesManager $sitesManager
 	 * @param IURLGenerator $url
 	 * @param IL10N $l
+	 * @param IUserSession $userSession
 	 */
-	public function __construct($appName, IRequest $request, SitesManager $sitesManager, IURLGenerator $url, IL10N $l) {
+	public function __construct($appName, IRequest $request, SitesManager $sitesManager, IURLGenerator $url, IL10N $l, IUserSession $userSession) {
 		parent::__construct($appName, $request);
 
 		$this->sitesManager = $sitesManager;
 		$this->url = $url;
 		$this->l = $l;
+		$this->userSession = $userSession;
 	}
 
 	/**
@@ -71,6 +78,11 @@ class APIController extends OCSController {
 	public function get() {
 		$data = $this->sitesManager->getSitesToDisplay();
 
+		$user = $this->userSession->getUser();
+		$email= $user instanceof IUser ? $user->getEMailAddress() : '';
+		$uid  = $user instanceof IUser ? $user->getUID() : '';
+		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
+
 		$sites = [];
 		foreach ($data as $site) {
 			if ($site['icon'] !== '') {
@@ -78,6 +90,8 @@ class APIController extends OCSController {
 			} else {
 				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => 'external.svg']);
 			}
+
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
 
 			unset($site['lang'], $site['device'], $site['groups'], $site['redirect']);
 			$sites[] = $site;
