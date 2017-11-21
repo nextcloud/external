@@ -79,9 +79,9 @@ class APIController extends OCSController {
 		$data = $this->sitesManager->getSitesToDisplay();
 
 		$user = $this->userSession->getUser();
-		$email= $user->getEMailAddress();
-		$uid  = $user->getUID();
-		$displayname = $user->getDisplayName();
+		$email= $user instanceof IUser ? $user->getEMailAddress() : '';
+		$uid  = $user instanceof IUser ? $user->getUID() : '';
+		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
 
 		$sites = [];
 		foreach ($data as $site) {
@@ -91,7 +91,7 @@ class APIController extends OCSController {
 				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => 'external.svg']);
 			}
 
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayname], $site['url']);
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
 
 			unset($site['lang'], $site['device'], $site['groups'], $site['redirect']);
 			$sites[] = $site;
