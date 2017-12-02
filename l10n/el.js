@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "New site" : "Νέος ιστότοπος",
     "Uploading…" : "Γίνεται μεταφόρτωση...",
+    "Reloading icon list…" : "Επαναφόρτωση λίστας εικονιδίων",
     "Select an icon" : "Επιλέξτε ένα εικονίδιο",
     "All languages" : "Όλες οι γλώσσες",
     "Header" : "Επικεφαλίδα",
