@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Uus sait",
+    "Uploading…" : "Üleslaadminie...",
     "Select an icon" : "Vali ikoon",
     "All languages" : "Kõik keeled",
     "Header" : "Päis",
