@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.1 – 2018-01-10
+### Added
+ - Allow to add email, user id and displayname as placeholders in URLs
+  [#66](https://github.com/nextcloud/external/pull/66)
+
 ## 3.0.0 – 2017-11-16
 ### Added
  - Support for Nextcloud 13
