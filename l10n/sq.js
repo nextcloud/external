@@ -34,6 +34,8 @@ OC.L10N.register(
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Ju lutemi, kini parasysh që disa shfletues do të bllokojnë shfaqjen e sajteve përmes http-je, nëse xhironi https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Për më tepër, ju lutemi, kini parasysh që mjaft sajte në këto kohë s’lejojnë iframing, për arsye sigurie.",
     "We highly recommend to test the configured sites above properly." : "Ne rekomandojmë të testoni faqeve e konfiguruara më lart siç duhet.",
+    "Icons" : "Ikona",
+    "Upload new icon" : "Ngarko ikonë të re",
     "Normal" : "Normal",
     "Setting" : "Konfigurim",
     "Quota" : "Kuotë",
