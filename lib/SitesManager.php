@@ -99,7 +99,16 @@ class SitesManager {
 		$sites = $this->getSites();
 
 		if (isset($sites[$id])) {
-			return $sites[$id];
+			$site = $sites[$id];
+
+			$user = $this->userSession->getUser();
+			$email= $user instanceof IUser ? $user->getEMailAddress() : '';
+			$uid  = $user instanceof IUser ? $user->getUID() : '';
+			$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
+
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
+
+			return $site;
 		}
 
 		throw new SiteNotFoundException();
@@ -120,6 +129,10 @@ class SitesManager {
 			$groups = [];
 		}
 
+		$email= $user instanceof IUser ? $user->getEMailAddress() : '';
+		$uid  = $user instanceof IUser ? $user->getUID() : '';
+		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
+
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
@@ -133,6 +146,8 @@ class SitesManager {
 			if (!empty($site['groups']) && empty(array_intersect($site['groups'], $groups))) {
 				continue;
 			}
+
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
 
 			$langSites[$id] = $site;
 		}
