@@ -120,7 +120,7 @@ script('external', 'admin');
 							<span><?php p($l->t('Redirect')) ?></span>
 							<input type="checkbox" id="site_redirect_{{id}}" name="site_redirect_{{id}}"
 								   value="1" class="site-redirect checkbox trigger-save" {{#if redirect}} checked="checked"{{/if}} />
-							<label for="site_redirect_{{id}}"><?php p($l->t('This site does not allow embeding')) ?></label>
+							<label for="site_redirect_{{id}}"><?php p($l->t('This site does not allow embedding')) ?></label>
 						</label>
 					</div>
 
