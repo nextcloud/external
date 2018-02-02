@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "Fjern site",
     "Position" : "Position",
     "Redirect" : "Omdiriger",
-    "This site does not allow embeding" : "Denne side tillader ikke indlejring",
     "Delete icon" : "Slet ikon",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær opmærksom på at nogle browsere vil blokere sider via http://, hvis du kører https://",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "vær derudover opmærksom på at mange sites ikke tillader iframing idag, på grund af sikkerhedsmæssige årsager.",

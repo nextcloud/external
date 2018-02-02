@@ -28,7 +28,6 @@
     "Remove site" : "Видалити сайт",
     "Position" : "Позиція",
     "Redirect" : "Перенаправлення",
-    "This site does not allow embeding" : "Цей сайт не дозволяє вкладення",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі браузери будуть блокувати відображення сайтів за допомогою HTTP, якщо ви працюєте за протоколом HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Крім того, будь ласка, зверніть увагу, що багато сайтів не дозволяють iframing з міркувань безпеки.",
     "We highly recommend to test the configured sites above properly." : "Ми наполегливо радим перевірити правильність налаштування сайтів.",

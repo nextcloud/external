@@ -32,7 +32,6 @@ OC.L10N.register(
     "Remove site" : "Odstrani stran",
     "Position" : "Pozicija",
     "Redirect" : "Preusmeritev",
-    "This site does not allow embeding" : "Ta stran ne dovoljuje vdelave",
     "Delete icon" : "Izbriši ikono",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Nekateri brskalniki onemogočajo prikazovanje spletišč prek protokola http, če je zagnan protokol HTTPS!",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Pogosto spletne strani onemogočajo tudi uporabo uporabo kode iframe zaradi varnostnih razlogov.",

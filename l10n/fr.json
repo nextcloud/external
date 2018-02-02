@@ -37,7 +37,6 @@
     "Remove site" : "Supprimer le site",
     "Position" : "Position",
     "Redirect" : "Redirection",
-    "This site does not allow embeding" : "Ce site n'autorise pas l'intégration",
     "Delete icon" : "Supprimer l'icône",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Par ailleurs, veuillez noter que de nombreux sites interdisent l’utilisation des iframes pour des raisons de sécurité.",

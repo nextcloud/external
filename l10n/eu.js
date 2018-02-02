@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "Ezabatu lekua",
     "Position" : "Kokalekua",
     "Redirect" : "Birbideratu",
-    "This site does not allow embeding" : "Leku honek ez du kapsularik onartzen",
     "Delete icon" : "Ikonoa borratu",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Egin kontu zenbait nabigatzailek blokea dezaketela guneen http bidezko bistaratzea https erabiltzen ari bazara.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Gainera kontuan izan egun hauetan zenbait gunek ez dutela iframing onartzen seguritatea arrazoiengatik.",

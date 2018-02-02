@@ -35,7 +35,6 @@ OC.L10N.register(
     "Remove site" : "Înlătură pagina",
     "Position" : "Poziție",
     "Redirect" : "Deviere",
-    "This site does not allow embeding" : "Această pagină nu permite legături",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Rețineți că unele navigatoare Web vor bloca afișarea paginilor livrate prin trafic necriptat (HTTP) dacă accesați pagini prin protocolul criptat HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "În plus, vă rugăm să rețineți că în prezent multe site-uri Web interzic folosirea tehnicilor iframe din motive de securitate.",
     "We highly recommend to test the configured sites above properly." : "Recomandăm insistent testarea riguroasă a paginilor configurate mai sus.",
