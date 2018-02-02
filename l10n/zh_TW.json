@@ -37,7 +37,6 @@
     "Remove site" : "移除站台",
     "Position" : "位置",
     "Redirect" : "重新導向",
-    "This site does not allow embeding" : "此網站不允許被嵌入",
     "Delete icon" : "刪除圖示",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "請注意當使用https環境時，部分瀏覽器將會封鎖顯示經由http的網站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，基於安全性的考量，某些網站禁用iframe。",

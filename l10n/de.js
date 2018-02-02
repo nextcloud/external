@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "Seite entfernen",
     "Position" : "Position",
     "Redirect" : "Weiterleiten",
-    "This site does not allow embeding" : "Diese Seite erlaubt keine Einbindung",
     "Delete icon" : "Symbol löschen",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Bitte beachte, dass einige Browser die Anzeige der Seiten über http sperren, wenn Du https verwendest.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachte bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",

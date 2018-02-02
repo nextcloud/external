@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "Odstrániť stránku",
     "Position" : "Pozícia",
     "Redirect" : "Presmerovanie",
-    "This site does not allow embeding" : "Táto stránka neumožňuje vkladanie",
     "Delete icon" : "Zmazať ikonu",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Niektoré prezerače môžu blokovať zobrazovanie http stránok ak používate https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Funkcia iframe býva často z bezpečnostných dôvodov zakázaná.",

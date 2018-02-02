@@ -37,7 +37,6 @@
     "Remove site" : "Уклони сајт",
     "Position" : "Позиција",
     "Redirect" : "Пресмерење",
-    "This site does not allow embeding" : "Овај сајт не дозвољава угњеждавање",
     "Delete icon" : "Обриши икону",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Знајте да ће неки прегледачи блокирати приказ сајтова преко http ако сте тренутно на https",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Даље знајте да многи сајтови не дозвољавају уоквиривање (iframing) због сигурносних разлога.",

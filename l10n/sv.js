@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "Ta bort webbplats",
     "Position" : "Position",
     "Redirect" : "Omdirigera",
-    "This site does not allow embeding" : "Webbplatsen tillåter inte inbäddning",
     "Delete icon" : "Ta bort ikon",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Notera dessutom att många platser inte tillåter inramning i 'iframe' på grund av säkerhetsskäl.",

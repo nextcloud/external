@@ -37,7 +37,6 @@
     "Remove site" : "Siteyi sil",
     "Position" : "Konum",
     "Redirect" : "Yönlendir",
-    "This site does not allow embeding" : "Bu sitede gömme işlemini desteklemiyor",
     "Delete icon" : "Simgeyi sil",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "https kullanıyorsanız, bazı tarayıcıların sitelerin http ile görüntülenmesini engelleyeceğini unutmayın.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor.",

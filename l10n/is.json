@@ -37,7 +37,6 @@
     "Remove site" : "Fjarlægja vefsvæði",
     "Position" : "Staða",
     "Redirect" : "Endurbeina",
-    "This site does not allow embeding" : "Þetta vefsvæði leyfir ekki ígræðslu (embedding)",
     "Delete icon" : "Eyða táknmynd",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Athugaðu að sumir vafrar loka á birtingu vefsvæða með http ef þú ert að keyra https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Athugaðu einnig að margar síður þessa dagana banna \"iframe\" af öryggisástæðum.",

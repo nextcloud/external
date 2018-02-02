@@ -30,7 +30,6 @@ OC.L10N.register(
     "Remove site" : "Šalinti svetainę",
     "Position" : "Vieta",
     "Redirect" : "Nukreipti",
-    "This site does not allow embeding" : "Svetainė neleidžia įskiepių",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Turėkite omenyje, kad kai kurios naršyklės blokuos http svetainių rodymą tuo atveju, jeigu naudojate https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Be to, turėkite omenyje, kad šiomis dienomis daugelis svetainių saugumo sumetimais neleidžia naudoti iframe.",
     "We highly recommend to test the configured sites above properly." : "Rekomenduojame prideramai ištestuoti svetaines.",
