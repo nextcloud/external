@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "საიტის წაშლა",
     "Position" : "პოზიცია",
     "Redirect" : "გადამისამართება",
-    "This site does not allow embeding" : "ეს საიტი არ იძლევა თან-ჩართვის უფლებას",
     "Delete icon" : "პიქტოგრამის გაუქმება",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "გთხოვთ შენიშნოთ, რომ იმ შემთხვევაში თუ იყენებთ https-ს, ზოგი ბრაუზერი დაბლოკავს საიტების ჩვენებას http-თი.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "ასევე მიაქციათ ყურადღება იმას, რომ მრავალი საიტი დღევანდელ დღეს უსაფრთხოების მიზნით iframe-ის გამოყენების უფლებას არ მოგცემთ.",

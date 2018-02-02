@@ -39,7 +39,6 @@ OC.L10N.register(
     "Remove site" : "Oldal eltávolítása",
     "Position" : "Helyzet",
     "Redirect" : "Átirányítás",
-    "This site does not allow embeding" : "Ez az oldal nem engedélyezi a beágyazást",
     "Delete icon" : "Törlés ikon",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Kérjük tartsd szem előtt, hogy néhány böngésző blokkolja a http weboldalak megjelenítését miközben https-t használsz.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Továbbá napjainkban jó pár weboldal tiltja az iframezést biztonsági okokból.",
