@@ -33,6 +33,7 @@ script('external', 'admin');
 	<div class="section">
 		<h2><?php p($l->t('External sites'));?></h2>
 		<p class="settings-hint"><?php p($l->t('Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.')); ?></p>
+		<p class="settings-hint"><?php p($l->t('The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links.')); ?></p>
 
 		<div id="loading_sites" class="icon-loading-small"></div>
 
@@ -119,7 +120,7 @@ script('external', 'admin');
 							<span><?php p($l->t('Redirect')) ?></span>
 							<input type="checkbox" id="site_redirect_{{id}}" name="site_redirect_{{id}}"
 								   value="1" class="site-redirect checkbox trigger-save" {{#if redirect}} checked="checked"{{/if}} />
-							<label for="site_redirect_{{id}}"><?php p($l->t('This site does not allow embeding')) ?></label>
+							<label for="site_redirect_{{id}}"><?php p($l->t('This site does not allow embedding')) ?></label>
 						</label>
 					</div>
 
