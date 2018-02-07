@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.2 – 2018-02-07
+### Fixed
+ - Fix placeholders not working in the browser
+  [#73](https://github.com/nextcloud/external/pull/73)
+
 ## 3.0.1 – 2018-01-10
 ### Added
  - Allow to add email, user id and displayname as placeholders in URLs
