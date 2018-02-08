@@ -422,7 +422,7 @@ class SitesManager {
 
 		$languages = [];
 		foreach ($languageCodes as $lang) {
-			$l = $this->languageFactory->get('settings', $lang);
+			$l = $this->languageFactory->get('lib', $lang);
 			$potentialName = $l->t('__language_name__');
 
 			$ln = ['code' => $lang, 'name' => $lang];
