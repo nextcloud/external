@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Sitiu nuevu",
+    "Uploading…" : "Xubiendo...",
     "Select an icon" : "Esbillar un iconu",
     "All languages" : "Toles llingües",
     "All devices" : "Tolos preseos",
@@ -14,6 +15,7 @@ OC.L10N.register(
     "The given device is invalid" : "El preséu dau nun ye válidu",
     "The given icon does not exist" : "El icono dau nun esiste",
     "The site does not exist" : "El sitiu nun esiste",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Asocedió un fallu mentanto se xubíu l'iconu, asegúrate que'l direutoriu de datos ye escribible",
     "External sites" : "Sitios esternos",
     "__language_name__" : "Asturianu",
     "Name" : "Nome",
