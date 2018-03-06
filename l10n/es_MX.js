@@ -30,6 +30,7 @@ OC.L10N.register(
     "External sites" : "Sitios externos",
     "__language_name__" : "Español (México)",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Agrega un sitio web directamente a la lista de la aplicación en la barra superiror. Esto será visible para todos los usuarios y es útil para llegar rápidamente a otras aplicaciones web usadas internamente o sitios importantes. ",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Los marcadores de posición {emial}, {uid} y {displayname} pueden ser usados y se llenan con los valores del usuario para personalizar las ligas.",
     "Name" : "Nombre",
     "URL" : "URL",
     "Language" : "Idioma",
