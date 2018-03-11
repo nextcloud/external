@@ -13,7 +13,7 @@ OC.L10N.register(
     "All devices" : "Todos los dispositivos",
     "Only in the Android app" : "Solo en la app de Android",
     "Only in the iOS app" : "Solo en la app de iOS",
-    "Only in the desktop client" : "Solo en el cliente de escritorio",
+    "Only in the desktop client" : "Sólo en el cliente de escritorio",
     "Only in the browser" : "Solo en el navegador",
     "The given label is invalid" : "La etiqueta dada es inválida",
     "The given URL is invalid" : "La dirección URL dada es inválida",
