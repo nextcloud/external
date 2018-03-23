@@ -20,6 +20,7 @@ OC.L10N.register(
     "The given language does not exist" : "Annettua kieltä ei ole",
     "The given type is invalid" : "Annettu tyyppi on virheellinen",
     "The given device is invalid" : "Annettu laite on virheellinen",
+    "At least one of the given groups does not exist" : "Ainakin yhtä annetuista ryhmistä ei ole olemassa",
     "The given icon does not exist" : "Annettua ikonia ei ole",
     "The site does not exist" : "Sivustoa ei ole",
     "No file uploaded" : "Tiedostoa ei lähetetty",
