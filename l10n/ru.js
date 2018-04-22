@@ -2,8 +2,8 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Новый сайт",
-    "Uploading…" : "Загрузка...",
-    "Reloading icon list…" : "Обновляется список значков...",
+    "Uploading…" : "Загрузка…",
+    "Reloading icon list…" : "Обновляется список значков…",
     "Icon could not be uploaded" : "Не удалось обновить значок",
     "Select an icon" : "Выберите значок",
     "All languages" : "Все языки",
