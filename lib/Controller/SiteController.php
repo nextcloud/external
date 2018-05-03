@@ -137,32 +137,4 @@ class SiteController extends Controller {
 
 		return $response;
 	}
-
-	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 *
-	 * @return TemplateResponse
-	 */
-	public function renderQuotaLink() {
-		$sites = $this->sitesManager->getSitesToDisplay();
-
-		$quotaLink = [];
-		foreach ($sites as $site) {
-			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$quotaLink = $site;
-				break;
-			}
-		}
-
-		$url = $quotaLink['url'];
-		if (!$quotaLink['redirect']) {
-			$url = $this->url->linkToRoute('external.site.showPage', ['id'=> $quotaLink['id']]);
-		}
-
-		return new TemplateResponse('external', 'quota', [
-			'quotaLink'			=> $url,
-			'quotaName'			=> $quotaLink['name'],
-		], '');
-	}
 }
