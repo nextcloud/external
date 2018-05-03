@@ -3,6 +3,5 @@ $(document).ready(function () {
 		$quotaBox = $('#quota');
 
 	$quotaBox.after($quotaLink);
-	$quotaLink.css('padding-top', 0);
-	$quotaLink.removeClass('hidden');
+	$quotaLink.removeClass('hidden section');
 });
