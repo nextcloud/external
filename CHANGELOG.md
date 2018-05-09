@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.3 – 2018-05-09
+### Fixed
+ - Bring back the quota link on the personal page
+  [#94](https://github.com/nextcloud/external/pull/94)
+
 ## 3.0.2 – 2018-02-07
 ### Fixed
  - Fix placeholders not working in the browser
