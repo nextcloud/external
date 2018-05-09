@@ -22,9 +22,11 @@
 namespace OCA\External\AppInfo;
 
 use OCA\External\Capabilities;
+use OCA\External\Settings\Personal;
 use OCA\External\SitesManager;
 use OCP\AppFramework\App;
 use OCP\IServerContainer;
+use OCP\Settings\IManager;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 class Application extends App {
@@ -89,8 +91,12 @@ class Application extends App {
 	public function registerPersonalPage(IServerContainer $server, array $sites) {
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				\OCP\App::registerPersonal('external', 'personal');
-				\OC::$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function(GenericEvent $event) use ($server, $site) {
+				$server->getSettingsManager()->setupSettings([
+					IManager::KEY_PERSONAL_SETTINGS => [
+						Personal::class,
+					],
+				]);
+				$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function(GenericEvent $event) use ($server, $site) {
 					$url = $server->getURLGenerator();
 
 					$hiddenFields = $event->getArgument('hiddenFields');
