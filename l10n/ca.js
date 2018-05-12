@@ -2,6 +2,9 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Nou lloc",
+    "Uploading…" : "Pujant...",
+    "Reloading icon list…" : "Tornant a carregar la llista d'icones…",
+    "Icon could not be uploaded" : "La icona no s'ha pogut pujar",
     "Select an icon" : "Seleccioneu una icona",
     "All languages" : "Tots els idiomes",
     "Header" : "Capçalera",
