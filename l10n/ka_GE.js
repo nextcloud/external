@@ -58,4 +58,4 @@ OC.L10N.register(
     "Saved!" : "შენახულია!",
     "Can not save site" : "საიტის შენახვა ვერ მოხერხდა"
 },
-"nplurals=1; plural=0;");
+"nplurals=2; plural=(n==1);");
