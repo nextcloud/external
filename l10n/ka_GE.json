@@ -55,5 +55,5 @@
     "Saving" : "ინახება",
     "Saved!" : "შენახულია!",
     "Can not save site" : "საიტის შენახვა ვერ მოხერხდა"
-},"pluralForm" :"nplurals=2; plural=(n==1);"
+},"pluralForm" :"nplurals=2; plural=(n!=1);"
 }
