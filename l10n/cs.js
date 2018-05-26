@@ -1,14 +1,14 @@
 OC.L10N.register(
     "external",
     {
-    "New site" : "Nová stránka",
-    "Uploading…" : "Nahrávání...",
+    "New site" : "Nové stránky",
+    "Uploading…" : "Nahrávání…",
     "Reloading icon list…" : "Znovu načítání seznamu ikon ...",
     "Icon could not be uploaded" : "Ikona se nepodařilo nahrát",
     "Select an icon" : "Vybrat ikonu",
     "All languages" : "Všechny jazyky",
     "Header" : "Záhlaví",
-    "Setting menu" : "Menu nastavení",
+    "Setting menu" : "Nabídka nastavení",
     "User quota" : "Uživatelská kvóta",
     "All devices" : "Všechna zařízení",
     "Only in the Android app" : "Pouze aplikace pro Android",

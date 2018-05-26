@@ -29,6 +29,8 @@ OC.L10N.register(
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Se ha producido un error al subir el icono. Por favor, asegúrate de que se pueda escribir en el directorio de datos.",
     "External sites" : "Sitios externos",
     "__language_name__" : "Castellano",
+    "Add external sites to your Nextcloud navigation" : "Añade sitios externos a la navegación de Nextcloud",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Esta aplicación permite a los administradores añadir enlaces adicionales a los menús de Nextcloud.\nAl seguir un enlace, el sitio externo aparece en el marco de Nextcloud.\nEs posible añadir enlaces solo para un lenguaje, tipo de dispositivo o grupo de usuarios.\n\nMás información disponible en la documentación de Sitios externos.",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Añade un sitio web directamente a la lista de apps en la barra superior. Será visible por todos los usuarios y es útil para alcanzar rápidamente otras apps web o sitios importantes que se usen internamente.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Se pueden usar los parámetros {email}, {uid} y {displayname} y se rellenan con los valores del usuario para personalizar los enlaces.",
     "Name" : "Nombre",
