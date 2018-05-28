@@ -29,6 +29,7 @@ OC.L10N.register(
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Грешка приликом отпремања иконе, проверите да ли у директоријум може да се пише",
     "External sites" : "Спољни сајтови",
     "__language_name__" : "Српски",
+    "Add external sites to your Nextcloud navigation" : "Додајте спољне сајтове у Вашу Некстклауд навигацију",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Додајте сајт директно у листу апликација на врху. Ово ће бити видљиво свим корисницима и корисно је када брзо треба отићи на неки другу интерну апликацију у организацији или неки други битан сајт.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Да бисте прилагодили везе, можете користити замене  {email}, {uid} и {displayname}, које ће бити замењене са вредностима датог корисника.",
     "Name" : "Назив",
