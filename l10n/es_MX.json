@@ -51,6 +51,7 @@
     "Setting" : "Configuración",
     "Quota" : "Cuota",
     "The given name is invalid" : "El nombre dado es inválido",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Esta aplicación le permite a un adminsitrador agregar ligas adicionales en los menús de Nextcloud. \nAl seguir una liga, el sitio externo aparece en el frame de Nextcloud.\nTambién es posible agregar ligas solo para un idioma y/o dispositivo dado. \n\nHay más información disponible en la documentación de Sitios externios. ",
     "Add" : "Agregar",
     "Saving" : "Guardando",
     "Saved!" : "¡Guardado!",
