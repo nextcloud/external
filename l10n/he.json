@@ -26,6 +26,8 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "התמונה שצוינה אינה ריבועית בגודל של 16, 24 או 32 פיקסלים",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "אירעה שגיאה בעת העלאת הסמל, נא לוודא שתיקיית הנתונים זמינה לכתיבה",
     "External sites" : "אתרים חיצוניים",
+    "__language_name__" : "עברית",
+    "Add external sites to your Nextcloud navigation" : "הוספת אתרים חיצוניים לניווט שלך ב־Nextcloud",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "ניתן להוסיף אתר ישירות לרשימת היישומים בסרגל העליון. האתר יופיע בפני כל המשתמשים ומצב זה שימוש לצורך גישה מהירה לאתרים פנימיים או חשובים.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "בממלאי המקום {email},‏ {uid} ו־{displayname} ניתן להשתמש ולמלא בהם את ערכי המשתמש כדי ליצור קישורים מותאמים.",
     "Name" : "שם",
