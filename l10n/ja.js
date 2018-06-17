@@ -9,7 +9,7 @@ OC.L10N.register(
     "All languages" : "すべての言語",
     "Header" : "ヘッダー",
     "Setting menu" : "メニュー設定",
-    "User quota" : "ユーザー容量制限",
+    "User quota" : "ユーザークォータ",
     "All devices" : "すべての端末",
     "Only in the Android app" : "Androidアプリ限定",
     "Only in the iOS app" : "iOSアプリ限定",
