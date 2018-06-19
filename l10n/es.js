@@ -55,6 +55,7 @@ OC.L10N.register(
     "Setting" : "Configuración",
     "Quota" : "Cuota",
     "The given name is invalid" : "El nombre dado no es válido",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Esta aplicación permite a un administrador añadir enlaces adicionales en los menús de Nextcloud.\nAl seguir el enlace, el sitio externo aparece en el marco de Nextcloud.\nTambién es posible añadir enlaces solo para un lenguaje y/o dispositivo dado.\n\nMás información disponible en la documentación de Sitios externos.",
     "Add" : "Añadir",
     "Saving" : "Guardando",
     "Saved!" : "¡Guardado!",
