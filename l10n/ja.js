@@ -47,7 +47,7 @@ OC.L10N.register(
     "The given name is invalid" : "指定された名前は無効です",
     "Add" : "追加",
     "Saving" : "保存中",
-    "Saved!" : "保存されました",
+    "Saved!" : "保存しました！",
     "Can not save site" : "サイトを保存できません"
 },
 "nplurals=1; plural=0;");
