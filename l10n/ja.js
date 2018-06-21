@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "New site" : "新規サイト",
     "Uploading…" : "アップロード中...",
-    "Reloading icon list…" : "アイコンリストの再読込中…",
+    "Reloading icon list…" : "アイコンリストの再読み込み中…",
     "Icon could not be uploaded" : "アイコンをアップロードできませんでした",
     "Select an icon" : "アイコンを選択",
     "All languages" : "すべての言語",
@@ -23,6 +23,7 @@ OC.L10N.register(
     "The given icon does not exist" : "指定されたアイコンは存在しません",
     "The site does not exist" : "サイトが存在しません",
     "No file uploaded" : "ファイルがアップロードされていません",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "アイコンのアップロード中にエラーが発生しました。データディレクトリが書き込み可能か確認してください。",
     "External sites" : "外部サイト",
     "__language_name__" : "Japanese (日本語)",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "上のバーのところにウェブサイトを直接追加します。これにより重要なサイトや内部で利用する他のウェブアプリに簡単に移動することができるようになって便利です。",
