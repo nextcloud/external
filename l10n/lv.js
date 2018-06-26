@@ -1,0 +1,24 @@
+OC.L10N.register(
+    "external",
+    {
+    "Uploading…" : "Augšupielādē...",
+    "Select an icon" : "Izvēlies ikonu",
+    "All languages" : "Visas valodas",
+    "User quota" : "Lietotāja apjoms",
+    "Name" : "Nosaukums",
+    "URL" : "URL",
+    "Language" : "Valoda",
+    "Groups" : "Grupas",
+    "Devices" : "Ierīces",
+    "Icon" : "Ikona",
+    "Remove site" : "Izņemt vietni",
+    "Delete icon" : "Noņemt ikonu",
+    "Icons" : "Ikonas",
+    "Upload new icon" : "Augšupielādēt jaunu ikonu",
+    "Quota" : "Apjoms",
+    "Add" : "Pievienot",
+    "Saving" : "Saglabā",
+    "Saved!" : "Saglabāts!",
+    "Can not save site" : "Neizdevās saglabāt saiti"
+},
+"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");
