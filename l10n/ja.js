@@ -44,7 +44,7 @@ OC.L10N.register(
     "Upload new icon" : "新しいアイコンをアップロード",
     "Normal" : "通常",
     "Setting" : "設定",
-    "Quota" : "ユーザー容量制限",
+    "Quota" : "クォータ",
     "The given name is invalid" : "指定された名前は無効です",
     "Add" : "追加",
     "Saving" : "保存中",
