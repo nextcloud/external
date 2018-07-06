@@ -2,8 +2,8 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Nowa strona",
-    "Uploading…" : "Wysyłanie...",
-    "Reloading icon list…" : "Odświeżanie listy ikon...",
+    "Uploading…" : "Wysyłanie…",
+    "Reloading icon list…" : "Odświeżanie listy ikon…",
     "Icon could not be uploaded" : "Ikona cloud nie będzie wysłana",
     "Select an icon" : "Wybierz ikonę",
     "All languages" : "Wszystkie języki",
