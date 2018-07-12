@@ -20,7 +20,9 @@
  */
 
 script('external', 'quota-personal');
+if (isset($_['quotaLink'])) {
 ?>
 <div id="quota_link" class="section hidden">
 	<a class="button" href="<?php p($_['quotaLink']); ?>"><?php p($_['quotaName']); ?></a>
 </div>
+<?php }
