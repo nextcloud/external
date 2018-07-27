@@ -29,6 +29,7 @@ OC.L10N.register(
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Při nahrávání ikony došlo k chybě, ujistěte se, že je adresář zapisovatelný",
     "External sites" : "Externí stránky",
     "__language_name__" : "Česky",
+    "Add external sites to your Nextcloud navigation" : "Přidat externí stránky do navigace ve vašem Nextcloudu",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Přidejte webovou stránku přímo do seznamu aplikací v horní liště. Bude viditelná všem uživatelům a hodí se jako místo na odkazy na další interní stránky, nebo užitečné aplikace.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Umístění zástupců {email}, {uid} a {displayname} mohou být použity a jsou vyplněny hodnotami uživatele pro přizpůsobení odkazů.",
     "Name" : "Název",
