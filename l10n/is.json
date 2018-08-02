@@ -27,6 +27,7 @@
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Villa kom upp við að senda inn táknmyndina, gakktu úr skugga um að gagnamappan sé skrifanleg",
     "External sites" : "Ytri vefsvæði",
     "__language_name__" : "Íslenska",
+    "Add external sites to your Nextcloud navigation" : "Bæta utanaðkomandi vefsvæðum í Nextcloud leiðsögnina þína",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Bættu vefsvæði beint á forritalistann í toppstikunni. Þetta verður sýnilegt öllum notendum og nýtist til að nálgast á fljótlegan hátt vefforrit eða mikilvæga vefi.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Hægt er að nota frátökutáknin {email}, {uid} og {displayname} og eru þau fyllt með upplýsingum um notandann til að sérsníða veftenglana.",
     "Name" : "Heiti",
