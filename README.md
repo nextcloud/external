@@ -31,6 +31,7 @@ curl  -H "OCS-APIRequest: true" \
    <name>Homepage</name>
    <url>https://localhost/index.php</url>
    <type>link</type>
+   <redirect>0</redirect>
    <icon>https://localhost/external.svg</icon>
   </element>
  </data>
@@ -44,6 +45,7 @@ curl  -H "OCS-APIRequest: true" \
 | id    | int    | Numeric identifier of the site           |
 | name  | string | Name of the site, ready to use           |
 | url   | string | URL that should be framed/linked to      |
+| redirect | int | Whether the link should be opened inline or in a new window |
 | type  | string | Can be one of `link`, `settings` or `quota`; see [this issue](https://github.com/nextcloud/external/issues/7) for details |
 | icon  | string | Full URL of the icon that should be shown next to the name of the link |
 

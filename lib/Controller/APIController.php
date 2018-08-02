@@ -86,7 +86,9 @@ class APIController extends OCSController {
 				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => 'external.svg']);
 			}
 
-			unset($site['lang'], $site['device'], $site['groups'], $site['redirect']);
+			$site['redirect'] = (int) $site['redirect'];
+
+			unset($site['lang'], $site['device'], $site['groups']);
 			$sites[] = $site;
 		}
 
