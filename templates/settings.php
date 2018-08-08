@@ -25,6 +25,7 @@
 
 style('external', 'style');
 script('external', 'admin');
+script('settings', 'apps');
 
 /** @var array $_ */
 /** @var \OCP\IL10N $l */
@@ -47,7 +48,7 @@ script('external', 'admin');
 				<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="<?php p($l->t('URL')); ?>">
 				<a class="icon-more" href="#"></a>
 
-				<div class="options hidden-FIXME">
+				<div class="options hidden">
 					<div>
 						<label>
 							<span><?php p($l->t('Language')) ?></span>
