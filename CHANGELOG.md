@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.4 – 2018-08-10
+### Fixed
+ - Fix personal settings after removing a quota link 
+  [#108](https://github.com/nextcloud/external/pull/108)
+
 ## 3.0.3 – 2018-05-09
 ### Fixed
  - Bring back the quota link on the personal page
