@@ -27,6 +27,7 @@
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Er trad een fout op bij uploaden van het pictogram, zorg ervoor dat de datadirectory beschrijfbaar is",
     "External sites" : "Externe sites",
     "__language_name__" : "Nederlands",
+    "Add external sites to your Nextcloud navigation" : "Voeg externe sites toe aan je Nextcloud navigatie",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Voeg een website direct toe aan het app-overzocht in de topbalk. Dit is zichtbaar voor allen gebuikers en help om snel interne webapps of belangrijks sites te openen.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "De velden {email}, {uid} en {displayname} kunnen worden gebruikt en zijn vooringevuld met de gebruikerswaarden om de links te personaliseren.",
     "Name" : "Naam",
