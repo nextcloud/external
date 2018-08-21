@@ -2,7 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Nouveau site",
-    "Uploading…" : "Téléversement en cours...",
+    "Uploading…" : "Envoi en cours...",
     "Reloading icon list…" : "Rechargement de la liste d'icônes...",
     "Icon could not be uploaded" : "L'icône n'a pas pu être téléversée",
     "Select an icon" : "Sélectionner une icône",
