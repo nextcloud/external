@@ -1,7 +1,7 @@
 { "translations": {
     "New site" : "Nové stránky",
     "Uploading…" : "Nahrávání…",
-    "Reloading icon list…" : "Znovu načítání seznamu ikon ...",
+    "Reloading icon list…" : "Opětovné načítání seznamu ikon…",
     "Icon could not be uploaded" : "Ikona se nepodařilo nahrát",
     "Select an icon" : "Vybrat ikonu",
     "All languages" : "Všechny jazyky",
@@ -52,6 +52,7 @@
     "Setting" : "Nastavení",
     "Quota" : "Kvóta",
     "The given name is invalid" : "Zadané jméno je neplatné",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Tato aplikace umožňuje správcům přidávat další odkazy do nabídek Nextcloud.\nNásledováním odkazu se v Nextcloud rámci objeví vnější stránka.\nJe také možné přidat odkazy pouze pro daný jazyk a/nebo zařízení.\n\nDalší informace jsou k dispozici v dokumentaci k Vnějším stránkám.",
     "Add" : "Přidat",
     "Saving" : "Ukládá se",
     "Saved!" : "Uloženo!",
