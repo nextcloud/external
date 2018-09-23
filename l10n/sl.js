@@ -2,7 +2,7 @@ OC.L10N.register(
     "external",
     {
     "New site" : "Nova stran",
-    "Uploading…" : "Nalaganje...",
+    "Uploading…" : "Poteka pošiljanje ...",
     "Select an icon" : "Izbor ikone",
     "All languages" : "Vsi jeziki",
     "Header" : "Glava",
