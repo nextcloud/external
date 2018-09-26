@@ -4,7 +4,7 @@ OC.L10N.register(
     "New site" : "Nové stránky",
     "Uploading…" : "Nahrávání…",
     "Reloading icon list…" : "Opětovné načítání seznamu ikon…",
-    "Icon could not be uploaded" : "Ikona se nepodařilo nahrát",
+    "Icon could not be uploaded" : "Ikonu se nepodařilo nahrát",
     "Select an icon" : "Vybrat ikonu",
     "All languages" : "Všechny jazyky",
     "Header" : "Záhlaví",
