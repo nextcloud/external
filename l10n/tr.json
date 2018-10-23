@@ -46,7 +46,7 @@
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor.",
     "We highly recommend to test the configured sites above properly." : "Yukarıda ayarlanmış siteleri sınamanız önemli önerilir.",
     "Icons" : "Simgeler",
-    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png ya da test-dark.png adında iki dosya yüklerseniz, ikisi dosya tek simge olarak kullanılır. Mobil uygulamalarda beyaz simge beyaz art alan üzerinde görülemeyeceğinden mobil aygıtlarda koyu sürüm kullanılır.",
+    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png ya da test-dark.png adında iki dosya yüklerseniz, ikisi dosya tek simge olarak kullanılır. Mobil uygulamalarda beyaz simge beyaz arka plan üzerinde görülemeyeceğinden mobil aygıtlarda koyu sürüm kullanılır.",
     "Uploading an icon with the same name will replace the current icon." : "Aynı adlı bir simge yüklendiğinde geçerli simge değiştirilir.",
     "Upload new icon" : "Yeni simge yükle",
     "Normal" : "Normal",
