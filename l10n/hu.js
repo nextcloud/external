@@ -29,6 +29,7 @@ OC.L10N.register(
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Hiba az ikon feltöltésekor, győződj meg róla, hogy az adatmappa írható",
     "External sites" : "Külső oldalak",
     "__language_name__" : "__language_name__",
+    "Add external sites to your Nextcloud navigation" : "Külső oldal hozzáadása a NextCloud navigációdhoz",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adj hozzá egy weboldalt a felső sávban az app listához. Ez minden felhasználó számára megjelenik, megkönnyítve más belsőleg használt alkalmazás könnyebb elérését.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Az {email}, {uid} és {displayname} helyfoglalók használhatók a és behelyettesítésre kerülnek a megfelelő felhasználói adatokkal a link személyre szabásához",
     "Name" : "Név",
