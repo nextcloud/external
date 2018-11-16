@@ -93,8 +93,21 @@
 
 		$list: null,
 
-		_compiledSiteTemplate: null,
-		_compiledIconTemplate: null,
+		_renderSite: function(data) {
+			data.nameTXT = t('external', 'Name');
+			data.urlTXT = t('external', 'URL');
+			data.languageTXT = t('external', 'Language');
+			data.groupsTXT = t('external', 'Groups');
+			data.devicesTXT = t('external', 'Devices');
+			data.iconTXT = t('external', 'Icon');
+			data.positionTXT = t('external', 'Position');
+			data.redirectTXT = t('external', 'Redirect');
+			data.removeSiteTXT = t('external', 'Remove site')
+			data.noEmbedTXT = t('external', 'This site does not allow embedding');
+			data.deleteIMG = OC.imagePath('core', 'actions/delete.svg');
+
+			return OCA.External.Templates.site(data);
+		},
 
 		init: function() {
 			var self = this;
@@ -103,7 +116,7 @@
 			$('#add_external_site').click(function(e) {
 				e.preventDefault();
 
-				var $el = $(self._compiledSiteTemplate({
+				var $el = $(self._renderSite({
 					id: 'new-' + Date.now(),
 					name: t('external', 'New site'),
 					icon: 'external.svg',
@@ -115,8 +128,6 @@
 				$el.find('.options').removeClass('hidden');
 				self.$list.append($el);
 			});
-			this._compiledSiteTemplate = Handlebars.compile($('#site-template').html());
-			this._compiledIconTemplate = Handlebars.compile($('#icon-template').html());
 
 			this.load();
 		},
@@ -138,7 +149,7 @@
 					self.availableDevices = response.ocs.data.devices;
 
 					if (response.ocs.data.sites.length === 0) {
-						var $el = $(self._compiledSiteTemplate({
+						var $el = $(self._renderSite({
 							id: 'undefined'
 						}));
 						self._attachEvents($el);
@@ -154,7 +165,7 @@
 			var self = this;
 
 			_.each(this._sites.models, function(site) {
-				var $el = $(self._compiledSiteTemplate(site.attributes));
+				var $el = $(self._renderSite(site.attributes));
 				self._attachEvents($el);
 				self.$list.append($el);
 			});
@@ -287,8 +298,9 @@
 					return;
 				}
 
+				data.deleteTXT = t('external', 'Delete icon');
 
-				var $row = $(self._compiledIconTemplate(data));
+				var $row = $(OCA.External.Templates.icon(data));
 				self._attachEventsIcon($row);
 				$table.append($row);
 				icons.push(data);

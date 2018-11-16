@@ -17,6 +17,9 @@ create-tag:
 	git tag -s -a v$(version) -m "Tagging the $(version) release."
 	git push origin v$(version)
 
+js-templates:
+	handlebars -n OCA.External.Templates js/templates -f js/templates.js
+
 clean:
 	rm -rf $(build_dir)
 	rm -rf node_modules

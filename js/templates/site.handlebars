@@ -1,0 +1,85 @@
+<li data-site-id="{{id}}">
+	<input type="text" class="site-name trigger-save" name="site-name" value="{{name}}" placeholder="{{nameTXT}}">
+	<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="{{urlTXT}}">
+	<a class="icon-more" href="#"></a>
+
+	<div class="options hidden">
+		<div>
+			<label>
+				<span>{{languageTXT}}</span>
+				<select class="site-lang trigger-save">
+					{{#each (getLanguages lang)}}
+						{{#if (isSelected code ../lang)}}
+							<option value="{{code}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{code}}">{{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
+			</label>
+		</div>
+
+		<div>
+			<label>
+				<span>{{groupsTXT}}</span>
+				<input type="hidden" name="site-groups" class="site-groups" value="{{ join groups }}" style="width: 320px;" />
+			</label>
+		</div>
+
+		<div>
+			<label>
+				<span>{{devicesTXT}}</span>
+				<select class="site-device trigger-save">
+					{{#each (getDevices device)}}
+						{{#if (isSelected device ../device)}}
+							<option value="{{device}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{device}}">{{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
+			</label>
+		</div>
+
+		<div>
+			<label>
+				<span>{{iconTXT}}</span>
+				<select class="site-icon trigger-save">
+					{{#each (getIcons icon)}}
+						{{#if (isSelected icon ../icon)}}
+							<option value="{{icon}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{icon}}"><img class="svg action delete-button" src="{{deleteIMG}}" title="{{removeSiteTXT}}"> {{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
+			</label>
+		</div>
+
+		<div>
+			<label>
+				<span>{{positionTXT}}</span>
+				<select class="site-type trigger-save">
+					{{#each (getTypes type)}}
+						{{#if (isSelected type ../type)}}
+							<option value="{{type}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{type}}">{{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
+			</label>
+		</div>
+
+		<div class="site-redirect-box">
+			<label>
+				<span>{{redirectTXT}}</span>
+				<input type="checkbox" id="site_redirect_{{id}}" name="site_redirect_{{id}}"
+					   value="1" class="site-redirect checkbox trigger-save" {{#if redirect}} checked="checked"{{/if}} />
+				<label for="site_redirect_{{id}}">{{noEmbedTXT}}</label>
+			</label>
+		</div>
+
+		<div class="button delete-button">{{removeSiteTXT}}</div>
+	</div>
+</li>
