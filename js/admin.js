@@ -116,7 +116,7 @@
 			$('#add_external_site').click(function(e) {
 				e.preventDefault();
 
-				var $el = $(this._renderSite({
+				var $el = $(self._renderSite({
 					id: 'new-' + Date.now(),
 					name: t('external', 'New site'),
 					icon: 'external.svg',
@@ -165,7 +165,7 @@
 			var self = this;
 
 			_.each(this._sites.models, function(site) {
-				var $el = $(this._renderSite(site.attributes));
+				var $el = $(self._renderSite(site.attributes));
 				self._attachEvents($el);
 				self.$list.append($el);
 			});
