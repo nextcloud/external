@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.0 – 2018-11-16
+### Fixed
+ - Compatibility with Nextcloud 15
+
+## 3.1.0 – 2018-08-02
+### Fixed
+ - Compatibility with Nextcloud 14
+
+## 3.0.4 – 2018-08-10
+### Fixed
+ - Fix personal settings after removing a quota link [#108](https://github.com/nextcloud/external/pull/108)
+
 ## 3.0.3 – 2018-05-09
 ### Fixed
  - Bring back the quota link on the personal page
