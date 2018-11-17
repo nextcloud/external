@@ -1,10 +1,6 @@
 OC.L10N.register(
     "external",
     {
-    "Uploading…" : "Augšupielādē...",
-    "Select an icon" : "Izvēlies ikonu",
-    "All languages" : "Visas valodas",
-    "User quota" : "Lietotāja apjoms",
     "Name" : "Nosaukums",
     "URL" : "URL",
     "Language" : "Valoda",
@@ -13,6 +9,10 @@ OC.L10N.register(
     "Icon" : "Ikona",
     "Remove site" : "Izņemt vietni",
     "Delete icon" : "Noņemt ikonu",
+    "Uploading…" : "Augšupielādē...",
+    "Select an icon" : "Izvēlies ikonu",
+    "All languages" : "Visas valodas",
+    "User quota" : "Lietotāja apjoms",
     "Icons" : "Ikonas",
     "Upload new icon" : "Augšupielādēt jaunu ikonu",
     "Quota" : "Apjoms",
