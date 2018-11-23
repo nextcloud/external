@@ -45,14 +45,6 @@
     "We highly recommend to test the configured sites above properly." : "以下の設定でサイトが設定されているか、テストすることを強くお勧めします。",
     "Icons" : "アイコン",
     "Uploading an icon with the same name will replace the current icon." : "同じ名前のアイコンをアップロードすると、現在のアイコンが置き換えられます。",
-    "Upload new icon" : "新しいアイコンをアップロード",
-    "Normal" : "通常",
-    "Setting" : "設定",
-    "Quota" : "クォータ",
-    "The given name is invalid" : "指定された名前は無効です",
-    "Add" : "追加",
-    "Saving" : "保存中",
-    "Saved!" : "保存しました！",
-    "Can not save site" : "サイトを保存できません"
+    "Upload new icon" : "新しいアイコンをアップロード"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

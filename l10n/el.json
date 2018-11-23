@@ -38,14 +38,6 @@
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Επιπροσθέτως, παρακαλούμε να σημειώσετε ότι πολλές ιστοσελίδες δεν επιτρέπουν πλέον το iframing για λόγους ασφαλείας.",
     "We highly recommend to test the configured sites above properly." : "Συνιστούμε τον κατάλληλο έλεγχο των ιστοσελίδων που έχουν ρυθμιστεί παραπάνω. ",
     "Icons" : "Εικονίδια",
-    "Upload new icon" : "Μεταφόρτωση νέου εικονιδίου",
-    "Normal" : "Κανονικό",
-    "Setting" : "Ρύθμιση",
-    "Quota" : "Μερίδιο χώρου",
-    "The given name is invalid" : "Το όνομα που δόθηκε δεν είναι έγκυρο",
-    "Add" : "Προσθήκη",
-    "Saving" : "Αποθήκευση",
-    "Saved!" : "Αποθηκεύτηκε!",
-    "Can not save site" : "Αδυναμία αποθήκευσης ιστοσελίδας"
+    "Upload new icon" : "Μεταφόρτωση νέου εικονιδίου"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

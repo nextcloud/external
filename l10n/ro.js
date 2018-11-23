@@ -37,14 +37,6 @@ OC.L10N.register(
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adaugă un website direct în lista de aplicații din bara de sus. Acesta va fi vizibil pentru toți utilizatorii și este folositor pentru a ajunge rapid la alte aplicații web folosite sau pagini importante.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Rețineți că unele navigatoare Web vor bloca afișarea paginilor livrate prin trafic necriptat (HTTP) dacă accesați pagini prin protocolul criptat HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "În plus, vă rugăm să rețineți că în prezent multe site-uri Web interzic folosirea tehnicilor iframe din motive de securitate.",
-    "We highly recommend to test the configured sites above properly." : "Recomandăm insistent testarea riguroasă a paginilor configurate mai sus.",
-    "Normal" : "Normal",
-    "Setting" : "Setare",
-    "Quota" : "Procent",
-    "The given name is invalid" : "Numele respectiv nu este valid",
-    "Add" : "Adaugă",
-    "Saving" : "Se salvează",
-    "Saved!" : "Salvat!",
-    "Can not save site" : "Nu se poate salva pagina"
+    "We highly recommend to test the configured sites above properly." : "Recomandăm insistent testarea riguroasă a paginilor configurate mai sus."
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

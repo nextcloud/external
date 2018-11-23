@@ -48,15 +48,6 @@
     "Icons" : "图标",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果你上传了 test.png 和 test-dark.png 文件，它们将被视为一个图标使用。暗色版本将被用于手机设备，另外，白色图标在白色背景的手机应用中是不可见的。",
     "Uploading an icon with the same name will replace the current icon." : "上传同名图标将替换当前图标。",
-    "Upload new icon" : "上传新图标",
-    "Normal" : "普通",
-    "Setting" : "设置",
-    "Quota" : "限额",
-    "The given name is invalid" : "用户名无效",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "此应用允许管理员向 Nextcloud 菜单添加额外的超链接。\n点击链接，外部网站会在 Nextcloud 的窗口中显示。\n还可以针对特定的语言和设备类型。\n\n更多信息请查阅 External sites 文档。",
-    "Add" : "增加",
-    "Saving" : "保存中",
-    "Saved!" : "已保存",
-    "Can not save site" : "无法保存站点"
+    "Upload new icon" : "上传新图标"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
