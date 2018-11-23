@@ -48,15 +48,6 @@
     "Icons" : "Icônes",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si vous téléversez un fichier test.png et test-dark.png, les deux seront utilisés comme une seule icône. La version sombre sera utilisée sur les appareils mobiles, autrement l'icône claire ne sera pas visible sur l'arrière-plan blanc dans les applications mobiles.",
     "Uploading an icon with the same name will replace the current icon." : "Téléverser une icône avec le même nom va remplacer l'icône actuel.",
-    "Upload new icon" : "Téléverser une nouvelle icône",
-    "Normal" : "Normal",
-    "Setting" : "Paramètres",
-    "Quota" : "Quota",
-    "The given name is invalid" : "Le nom donné est invalide",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Cette application permet à un administrateur d'ajouter des liens externes au menu Nextcloud\nEn suivant l'un des liens, le contenu du site distant s'affiche dans la fenêtre Nextcloud.\nIl est également possible d'ajouter des liens uniquement pour une langue en particulier et/ou pour un type d'équipement.\n\nPlus d'informations sont disponible dans la documentation sur les sites externes.",
-    "Add" : "Ajouter",
-    "Saving" : "Enregistrement en cours",
-    "Saved!" : "Sauvegardé !",
-    "Can not save site" : "Impossible de sauvegarder le site"
+    "Upload new icon" : "Téléverser une nouvelle icône"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

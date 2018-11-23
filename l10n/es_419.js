@@ -46,14 +46,6 @@ OC.L10N.register(
     "Icons" : "Íconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si cargas un archivo test.png y uno test-dark.png, ambos serán usados como un único ícono. La versión obscura será usada en los dispositivos móviles, de lo contrario los íconos claros no son visibles en los fondos claros de estos dispositivos. ",
     "Uploading an icon with the same name will replace the current icon." : "Cargar un ícono con el mismo nombre reemplazará el ícono actual.",
-    "Upload new icon" : "Cargar nuevo ícono",
-    "Normal" : "Normal",
-    "Setting" : "Configuración",
-    "Quota" : "Cuota",
-    "The given name is invalid" : "El nombre dado es inválido",
-    "Add" : "Agregar",
-    "Saving" : "Guardando",
-    "Saved!" : "¡Guardado!",
-    "Can not save site" : "No es posible guardar el sitio"
+    "Upload new icon" : "Cargar nuevo ícono"
 },
 "nplurals=2; plural=(n != 1);");

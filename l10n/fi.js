@@ -44,14 +44,6 @@ OC.L10N.register(
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
     "We highly recommend to test the configured sites above properly." : "Suosittelemme testaamaan ylläolevien sivujen asetukset.",
     "Icons" : "Kuvakkeet",
-    "Upload new icon" : "Lähetä uusi kuvake",
-    "Normal" : "Normaali",
-    "Setting" : "Asetus",
-    "Quota" : "Kiintiö",
-    "The given name is invalid" : "Annettu nimi on virheellinen",
-    "Add" : "Lisää",
-    "Saving" : "Tallennetaan",
-    "Saved!" : "Tallennettu!",
-    "Can not save site" : "Sivua ei voida tallentaa"
+    "Upload new icon" : "Lähetä uusi kuvake"
 },
 "nplurals=2; plural=(n != 1);");

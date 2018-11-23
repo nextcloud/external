@@ -48,14 +48,6 @@ OC.L10N.register(
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ak nahráte súbory test.png a test-dark.png, obidva budú použité ako jedna ikona. Verzia dark sa použije na mobilných zariadeniach, v opačnom prípade biela ikona nie je viditeľná na bielom pozadí v mobilných aplikáciách.",
     "Uploading an icon with the same name will replace the current icon." : "Nahratie novej ikony s rovnakým názvom prepíše pôvodnú ikonu.",
-    "Upload new icon" : "Nahrať novú ikonu",
-    "Normal" : "Normálne",
-    "Setting" : "Nastavenie",
-    "Quota" : "Kvóta",
-    "The given name is invalid" : "Zadaný názov je neplatný",
-    "Add" : "Pridať",
-    "Saving" : "Ukladá sa",
-    "Saved!" : "Uložené",
-    "Can not save site" : "Stránku nie je možné uložiť"
+    "Upload new icon" : "Nahrať novú ikonu"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

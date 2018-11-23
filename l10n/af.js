@@ -25,10 +25,6 @@ OC.L10N.register(
     "The given icon does not exist" : "Die gegewe ikoon bestaan nie",
     "The site does not exist" : "Die werf bestaan nie",
     "External sites" : "Eksterne werwe",
-    "__language_name__" : "__taalnaam__",
-    "Normal" : "Normaal",
-    "Setting" : "Instelling",
-    "Quota" : "Kwota",
-    "The given name is invalid" : "Die gegewe naam is ongeldig"
+    "__language_name__" : "__taalnaam__"
 },
 "nplurals=2; plural=(n != 1);");

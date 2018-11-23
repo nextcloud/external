@@ -50,15 +50,6 @@ OC.L10N.register(
     "Icons" : "Ícones",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se você enviar um arquivo test.png e um teste-dark.png, ambos serão usados como um ícone. A versão escura será usada em dispositivos móveis pois o ícone branco não é visível no fundo branco nos aplicativos móveis.",
     "Uploading an icon with the same name will replace the current icon." : "Enviar um ícone com o mesmo nome substituirá o ícone atual.",
-    "Upload new icon" : "Enviar um novo ícone",
-    "Normal" : "Normal",
-    "Setting" : "Configuração",
-    "Quota" : "cota",
-    "The given name is invalid" : "O nome fornecido é inválido",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Este aplicativo permite ao administrador adicionar links nos menus do Nextcloud.\nApós um link, o site externo aparece no quadro Nextcloud.\nTambém é possível adicionar links apenas para determinado idioma e/ou dispositivo.\n\nMais informações estão disponíveis na documentação de Sites Externos.",
-    "Add" : "Adicionar",
-    "Saving" : "Salvando",
-    "Saved!" : "Salvo!",
-    "Can not save site" : "Não foi possível salvar o site"
+    "Upload new icon" : "Enviar um novo ícone"
 },
 "nplurals=2; plural=(n > 1);");

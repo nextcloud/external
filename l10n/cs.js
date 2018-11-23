@@ -50,15 +50,6 @@ OC.L10N.register(
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Pokud nahrajete soubor test.png a soubor test-dark.png, oba soubory budou použity jako jedna ikona. Tmavá verze bude použita v mobilních zařízeních, jinak by nebyla bílá ikona v mobilních aplikacích viditelná na bílém pozadí.",
     "Uploading an icon with the same name will replace the current icon." : "Nahrání ikony se stejným názvem nahradí ikonu aktuální.",
-    "Upload new icon" : "Nahrát novou ikonu",
-    "Normal" : "Normální",
-    "Setting" : "Nastavení",
-    "Quota" : "Kvóta",
-    "The given name is invalid" : "Zadané jméno není platné",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Tato aplikace umožňuje správcům přidávat další odkazy do nabídek Nextcloud.\nNásledováním odkazu se v Nextcloud rámci objeví vnější stránka.\nJe také možné přidat odkazy pouze pro daný jazyk a/nebo zařízení.\n\nDalší informace jsou k dispozici v dokumentaci k Vnějším stránkám.",
-    "Add" : "Přidat",
-    "Saving" : "Ukládá se",
-    "Saved!" : "Uloženo!",
-    "Can not save site" : "Stránka nelze uložit"
+    "Upload new icon" : "Nahrát novou ikonu"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

@@ -29,11 +29,6 @@ OC.L10N.register(
     "We highly recommend to test the configured sites above properly." : "Soovitame seadistatud saite põhjalikult testida.",
     "Icons" : "Ikoonid",
     "Uploading an icon with the same name will replace the current icon." : "Sama nimega ikooni üleslaadimine asendab olemasoleva ikooni.",
-    "Upload new icon" : "Lae üles uus ikoon",
-    "Quota" : "Kvoot",
-    "Add" : "Lisa",
-    "Saving" : "Salvestamine",
-    "Saved!" : "Salvestatud!",
-    "Can not save site" : "Saiti ei saa salvestada"
+    "Upload new icon" : "Lae üles uus ikoon"
 },
 "nplurals=2; plural=(n != 1);");

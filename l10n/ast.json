@@ -25,10 +25,6 @@
     "__language_name__" : "Asturianu",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Decátate de que dalgunos restoladores bloquiarán l'amuesa de sitios per http si tas executando https, por favor.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Amás decátate por favor de qu'anguaño munchos sitios nun permiten iframes por razones de seguranza.",
-    "We highly recommend to test the configured sites above properly." : "Aconseyamos muncho que pruebes afayadizamente los sitios configuraos enriba.",
-    "Normal" : "Normal",
-    "Add" : "Amestar",
-    "Saved!" : "¡Guardóse!",
-    "Can not save site" : "Nun pue guardase'l sitiu"
+    "We highly recommend to test the configured sites above properly." : "Aconseyamos muncho que pruebes afayadizamente los sitios configuraos enriba."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
