@@ -49,14 +49,6 @@ OC.L10N.register(
     "Icons" : "Ikonok",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ha feltöltesz egy test.png-t és egy test-dark.png-t egy ikonként lesz használva. A sötét verziót használjuk mobil eszközökön, másként a fehér ikon nem látszana a fehér háttereken.",
     "Uploading an icon with the same name will replace the current icon." : "Azonos nevű ikon feltöltése felülíráshoz vezet.",
-    "Upload new icon" : "Új ikon hozzáadása",
-    "Normal" : "Normál",
-    "Setting" : "Beállítás",
-    "Quota" : "Kvóta",
-    "The given name is invalid" : "A megadott név érvénytelen",
-    "Add" : "Hozzáadás",
-    "Saving" : "Mentés",
-    "Saved!" : "Elmentve",
-    "Can not save site" : "Nem lehet menteni az oldalt"
+    "Upload new icon" : "Új ikon hozzáadása"
 },
 "nplurals=2; plural=(n != 1);");

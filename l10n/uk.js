@@ -32,14 +32,6 @@ OC.L10N.register(
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Додайте веб-сайт безпосередньо до списку додатків верхньої панелі. Він буде показаний всім користувачам для швидкого пошуку інших використовуваних веб-додатків або важливих сайтів.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі браузери будуть блокувати відображення сайтів за допомогою HTTP, якщо ви працюєте за протоколом HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Крім того, будь ласка, зверніть увагу, що багато сайтів не дозволяють iframing з міркувань безпеки.",
-    "We highly recommend to test the configured sites above properly." : "Ми наполегливо радим перевірити правильність налаштування сайтів.",
-    "Normal" : "Звичайно",
-    "Setting" : "Налаштування",
-    "Quota" : "Обмеження",
-    "The given name is invalid" : "Вказане ім'я невірне",
-    "Add" : "Додати",
-    "Saving" : "Збереження",
-    "Saved!" : "Збережено!",
-    "Can not save site" : "Неможливо зберегти сайт"
+    "We highly recommend to test the configured sites above properly." : "Ми наполегливо радим перевірити правильність налаштування сайтів."
 },
 "nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);");

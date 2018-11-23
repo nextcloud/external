@@ -50,15 +50,6 @@ OC.L10N.register(
     "Icons" : "Pictogrammen",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Als je een test.png en een test-dark.png bestand uploadt, worden ze samen als één pictogram gebruikt. De donkere versie wordt gebruikt op mobiele apparaten, want anders is het witte pictogram niet zichtbaar op de witte achtergrond in de mobiele apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploaden van een pictogram met dezelfde naam vervangt het huidige pictogram.",
-    "Upload new icon" : "Uploaden nieuw pictogram",
-    "Normal" : "Normaal",
-    "Setting" : "Instellingen",
-    "Quota" : "Quota",
-    "The given name is invalid" : "De opgegeven naam is niet geldig",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Met deze app kan een beheerder aanvullende links in de Nextcloud menu's plaatsen.\nDoor de link te volgen, verschijnt de website in een Nextcloud frame.\nHet is ook mogelijk om links voor alleen een opgegeven taal en/of type apparaat.\n\nMeer informatie in de Externe Sites documentatie.",
-    "Add" : "Voeg toe",
-    "Saving" : "Opslaan",
-    "Saved!" : "Opgeslagen!",
-    "Can not save site" : "Kan niet opslaan"
+    "Upload new icon" : "Uploaden nieuw pictogram"
 },
 "nplurals=2; plural=(n != 1);");

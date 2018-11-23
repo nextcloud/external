@@ -50,15 +50,6 @@ OC.L10N.register(
     "Icons" : "Simgeler",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png ya da test-dark.png adında iki dosya yüklerseniz, ikisi dosya tek simge olarak kullanılır. Mobil uygulamalarda beyaz simge beyaz arka plan üzerinde görülemeyeceğinden mobil aygıtlarda koyu sürüm kullanılır.",
     "Uploading an icon with the same name will replace the current icon." : "Aynı adlı bir simge yüklendiğinde geçerli simge değiştirilir.",
-    "Upload new icon" : "Yeni simge yükle",
-    "Normal" : "Normal",
-    "Setting" : "Ayarlar",
-    "Quota" : "Kota",
-    "The given name is invalid" : "Belirtilen ad geçersiz",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Bu uygulama yöneticilerin Nextcloud menülerine çeşitli bağlantılar ekleyebilmesini sağlar.\nBağlantıya tıklandığında yönlendirilen web sitesi Nextcloud çerçevesi içinde görüntülenir.\nBağlantılar belirli bir dil ya da aygıt türü için eklenebilir.\n\nAyrıntılı bilgi almak için dış siteler uygulamasının belgelerine bakabilirsiniz.",
-    "Add" : "Ekle",
-    "Saving" : "Kaydediliyor",
-    "Saved!" : "Kaydedildi",
-    "Can not save site" : "Site kaydedilemedi"
+    "Upload new icon" : "Yeni simge yükle"
 },
 "nplurals=2; plural=(n > 1);");

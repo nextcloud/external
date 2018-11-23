@@ -48,15 +48,6 @@
     "Icons" : "Íconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si cargas un archivo test.png y uno test-dark.png, ambos serán usados como un único ícono. La versión obscura será usada en los dispositivos móviles, de lo contrario los íconos claros no son visibles en los fondos claros de estos dispositivos. ",
     "Uploading an icon with the same name will replace the current icon." : "Cargar un ícono con el mismo nombre reemplazará el ícono actual.",
-    "Upload new icon" : "Cargar nuevo ícono",
-    "Normal" : "Normal",
-    "Setting" : "Configuración",
-    "Quota" : "Cuota",
-    "The given name is invalid" : "El nombre dado es inválido",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language and/or device.\n\nMore information is available in the External sites documentation." : "Esta aplicación le permite a un adminsitrador agregar ligas adicionales en los menús de Nextcloud. \nAl seguir una liga, el sitio externo aparece en el frame de Nextcloud.\nTambién es posible agregar ligas solo para un idioma y/o dispositivo dado. \n\nHay más información disponible en la documentación de Sitios externios. ",
-    "Add" : "Agregar",
-    "Saving" : "Guardando",
-    "Saved!" : "¡Guardado!",
-    "Can not save site" : "No es posible guardar el sitio"
+    "Upload new icon" : "Cargar nuevo ícono"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

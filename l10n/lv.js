@@ -14,11 +14,6 @@ OC.L10N.register(
     "All languages" : "Visas valodas",
     "User quota" : "Lietotāja apjoms",
     "Icons" : "Ikonas",
-    "Upload new icon" : "Augšupielādēt jaunu ikonu",
-    "Quota" : "Apjoms",
-    "Add" : "Pievienot",
-    "Saving" : "Saglabā",
-    "Saved!" : "Saglabāts!",
-    "Can not save site" : "Neizdevās saglabāt saiti"
+    "Upload new icon" : "Augšupielādēt jaunu ikonu"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

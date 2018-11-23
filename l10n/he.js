@@ -49,14 +49,6 @@ OC.L10N.register(
     "Icons" : "סמלים",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "העלאה של test.png ו־test-dark.png תגרום לכך ששניהם יהפכו לסמל אחד. הגרסה הכהה תופיע בהתקנים ניידים, כיוון שלפעמים סמלים לבנים נבלעים כשיש רקע לבן ביישומונים לנייד.",
     "Uploading an icon with the same name will replace the current icon." : "העלאת סמל באותו השם תחליף את הסמל הנוכחי.",
-    "Upload new icon" : "העלאת סמל חדש",
-    "Normal" : "רגיל",
-    "Setting" : "הגדרות",
-    "Quota" : "מכסה",
-    "The given name is invalid" : "השם שצוין שגוי",
-    "Add" : "הוספה",
-    "Saving" : "בהליכי שמירה",
-    "Saved!" : "נשמר!",
-    "Can not save site" : "לא ניתן לשמור אתר"
+    "Upload new icon" : "העלאת סמל חדש"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
