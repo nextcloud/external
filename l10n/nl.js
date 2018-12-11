@@ -12,7 +12,7 @@ OC.L10N.register(
     "Remove site" : "Verwijder site",
     "This site does not allow embedding" : "Deze site accepteert geen inbedding",
     "New site" : "Nieuwe site",
-    "Delete icon" : "Verwijder icoon",
+    "Delete icon" : "Verwijder pictogram",
     "Uploading…" : "Uploaden…",
     "Reloading icon list…" : "Herladen pictogram lijst...",
     "Icon could not be uploaded" : "Pictogram kon niet worden opgeslagen",
