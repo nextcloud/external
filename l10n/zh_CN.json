@@ -20,8 +20,8 @@
     "Setting menu" : "设置菜单",
     "User quota" : "用户限额",
     "All devices" : "所有设备",
-    "Only in the Android app" : "仅在Android应用中",
-    "Only in the iOS app" : "仅在IOS应用中",
+    "Only in the Android app" : "仅在 Android 应用中",
+    "Only in the iOS app" : "仅在 iOS 应用中",
     "Only in the desktop client" : "仅在桌面客户端",
     "Only in the browser" : "仅在浏览器中",
     "The given label is invalid" : "标签无效",
@@ -46,7 +46,7 @@
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "另外请注意由于安全原因，部分站点禁用了 iFrame。",
     "We highly recommend to test the configured sites above properly." : "我们强烈建议测试一下配置的站点。",
     "Icons" : "图标",
-    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果你上传了 test.png 和 test-dark.png 文件，它们将被视为一个图标使用。暗色版本将被用于手机设备，另外，白色图标在白色背景的手机应用中是不可见的。",
+    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您上传了 test.png 和 test-dark.png 文件，它们将被视为一个图标使用。暗色版本将被用于手机设备，另外，白色图标在白色背景的手机应用中是不可见的。",
     "Uploading an icon with the same name will replace the current icon." : "上传同名图标将替换当前图标。",
     "Upload new icon" : "上传新图标"
 },"pluralForm" :"nplurals=1; plural=0;"
