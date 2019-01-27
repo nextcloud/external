@@ -7,7 +7,7 @@ OC.L10N.register(
     "Groups" : "Skupine",
     "Devices" : "Naprave",
     "Icon" : "Ikona",
-    "Position" : "Pozicija",
+    "Position" : "Položaj",
     "Redirect" : "Preusmeritev",
     "Remove site" : "Odstrani stran",
     "New site" : "Nova stran",
