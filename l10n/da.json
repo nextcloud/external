@@ -37,6 +37,7 @@
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Der skete en fejl under upload af ikon, sørg venligst for at data folderen er skrivbar",
     "External sites" : "Eksterne sider",
     "__language_name__" : "Dansk",
+    "Add external sites to your Nextcloud navigation" : "Føj eksterne sider til navigationen i Nextcloud",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Tilføj en hjemmeside direkte til app listen i top baren. Dette vil være synligt for alle brugere og brugbart for hurtigt at besøge andre interne web applikationer eller vigtige sider.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær opmærksom på at nogle browsere vil blokere sider via http://, hvis du kører https://",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "vær derudover opmærksom på at mange sites ikke tillader iframing idag, på grund af sikkerhedsmæssige årsager.",
