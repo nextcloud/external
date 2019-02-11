@@ -10,6 +10,7 @@ OC.L10N.register(
     "Position" : "Position",
     "Redirect" : "Omdiriger",
     "Remove site" : "Fjern site",
+    "This site does not allow embedding" : "Denne side tillader ike indlejrin",
     "New site" : "Ny side",
     "Delete icon" : "Slet ikon",
     "Uploading…" : "Uploader...",
