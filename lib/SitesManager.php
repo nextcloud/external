@@ -45,6 +45,7 @@ class SitesManager {
 	const TYPE_LINK = 'link';
 	const TYPE_SETTING = 'settings';
 	const TYPE_QUOTA = 'quota';
+	const TYPE_LOGIN = 'guest';
 
 	const DEVICE_ALL = '';
 	const DEVICE_ANDROID = 'android';
@@ -237,7 +238,7 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, self::TYPE_LOGIN], true)) {
 			throw new InvalidTypeException();
 		}
 
@@ -326,7 +327,7 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, self::TYPE_LOGIN], true)) {
 			throw new InvalidTypeException();
 		}
 
