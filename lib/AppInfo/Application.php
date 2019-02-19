@@ -53,7 +53,7 @@ class Application extends App {
 	 */
 	public function registerNavigationEntries(IServerContainer $server, array $sites) {
 		foreach ($sites as $id => $site) {
-			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING) {
+			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING && $site['type'] !== SitesManager::TYPE_LOGIN ) {
 				continue;
 			}
 

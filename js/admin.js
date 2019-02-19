@@ -167,6 +167,9 @@
 			_.each(this._sites.models, function(site) {
 				var $el = $(self._renderSite(site.attributes));
 				self._attachEvents($el);
+				if (site.attributes.type === 'guest') {
+					$el.find('.site-redirect-box').hide();
+				}
 				self.$list.append($el);
 			});
 		},
@@ -232,6 +235,11 @@
 
 			$site.removeClass('failure saved').addClass('saving');
 			$site.find('.invalid-value').removeClass('invalid-value');
+			if (data.type === 'guest') {
+				$site.find('.site-redirect-box').hide();
+			} else {
+				$site.find('.site-redirect-box').show();
+			}
 
 			if (!_.isUndefined(site)) {
 				site.save(data, {

@@ -35,6 +35,7 @@ use OCP\Files\NotFoundException;
 use OCP\Files\SimpleFS\ISimpleFile;
 use OCP\IConfig;
 use OCP\IGroupManager;
+use OCP\INavigationManager;
 use OCP\IRequest;
 use OCP\IUser;
 use OCP\IUserSession;
@@ -237,7 +238,7 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, INavigationManager::TYPE_GUEST], true)) {
 			throw new InvalidTypeException();
 		}
 
@@ -257,6 +258,10 @@ class SitesManager {
 		}
 		if (!in_array($icon, $icons, true)) {
 			throw new IconNotFoundException();
+		}
+
+		if ($type === INavigationManager::TYPE_GUEST) {
+			$redirect = true;
 		}
 
 		$sites = $this->getSites();
@@ -326,7 +331,7 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, INavigationManager::TYPE_GUEST], true)) {
 			throw new InvalidTypeException();
 		}
 
@@ -346,6 +351,10 @@ class SitesManager {
 		}
 		if (!in_array($icon, $icons, true)) {
 			throw new IconNotFoundException();
+		}
+
+		if ($type === INavigationManager::TYPE_GUEST) {
+			$redirect = true;
 		}
 
 		$sites[$id] = [

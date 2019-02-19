@@ -123,6 +123,7 @@ class APIController extends OCSController {
 			['type' => SitesManager::TYPE_LINK, 'name' => $this->l->t('Header')],
 			['type' => SitesManager::TYPE_SETTING, 'name' => $this->l->t('Setting menu')],
 			['type' => SitesManager::TYPE_QUOTA, 'name' => $this->l->t('User quota')],
+			['type' => SitesManager::TYPE_LOGIN, 'name' => $this->l->t('Public footer')],
 		];
 
 		$devices = [
