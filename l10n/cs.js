@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Záhlaví",
     "Setting menu" : "Nabídka nastavení",
     "User quota" : "Uživatelská kvóta",
+    "Public footer" : "Veřejné zápatí",
     "All devices" : "Všechna zařízení",
     "Only in the Android app" : "Pouze aplikace pro Android",
     "Only in the iOS app" : "Pouze aplikace pro iOS",

@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "En-tête",
     "Setting menu" : "Menu des paramètres",
     "User quota" : "Quota de l'utilisateur",
+    "Public footer" : "Pied de page public",
     "All devices" : "Tous les appareils",
     "Only in the Android app" : "Uniquement dans l'application Android",
     "Only in the iOS app" : "Uniquement dans l'application iOS",
