@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Kapo",
     "Setting menu" : "Agordo-menuo",
     "User quota" : "Uzantokvoto",
+    "Public footer" : "Publika paĝopiedo",
     "All devices" : "Ĉiuj aparatoj",
     "Only in the Android app" : "Nur en la Android-aplikaĵo",
     "Only in the iOS app" : "Nur en la iOS-aplikaĵo",

@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Cabeceira",
     "Setting menu" : "Menú de axustes",
     "User quota" : "Cota de usuario",
+    "Public footer" : "Rodapé público",
     "All devices" : "Todos os dispositivos",
     "Only in the Android app" : "Só na apli de Android",
     "Only in the iOS app" : "iOSAndroid",

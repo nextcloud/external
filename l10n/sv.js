@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Rubrik",
     "Setting menu" : "Inställningsmeny",
     "User quota" : "Användarutrymme",
+    "Public footer" : "Publik sidfot",
     "All devices" : "Alla enheter",
     "Only in the Android app" : "Bara i Android-appen",
     "Only in the iOS app" : "Bara i iOS-appen",

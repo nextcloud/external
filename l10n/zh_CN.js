@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "页眉",
     "Setting menu" : "设置菜单",
     "User quota" : "用户限额",
+    "Public footer" : "公共页脚",
     "All devices" : "所有设备",
     "Only in the Android app" : "仅在 Android 应用中",
     "Only in the iOS app" : "仅在 iOS 应用中",
