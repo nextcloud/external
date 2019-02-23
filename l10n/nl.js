@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Koptekst",
     "Setting menu" : "Instellingenmenu",
     "User quota" : "Gebruikersquota",
+    "Public footer" : "Openbare voettekst",
     "All devices" : "Alle apparaten",
     "Only in the Android app" : "Alleen in de Android app",
     "Only in the iOS app" : "Alleen in de iOS app",
