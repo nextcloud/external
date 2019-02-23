@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Kopfbereich",
     "Setting menu" : "Einstellungsmenü",
     "User quota" : "Speicherkontingent des Benutzers",
+    "Public footer" : "Öffentliche Fußzeile",
     "All devices" : "Alle Geräte",
     "Only in the Android app" : "Nur in der Android-App",
     "Only in the iOS app" : "Nur in der iOS-App",
