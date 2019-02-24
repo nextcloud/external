@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Заглавље",
     "Setting menu" : "Мени подешавања",
     "User quota" : "Корисничка квота",
+    "Public footer" : "Јавно подножје странице",
     "All devices" : "Сви уређаји",
     "Only in the Android app" : "Само у Андроид апликацији",
     "Only in the iOS app" : "Само у иОС апликацији",
