@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Üst Bilgi",
     "Setting menu" : "Ayarlar menüsü",
     "User quota" : "Kullanıcı kotası",
+    "Public footer" : "Herkese Açık Alt Bilgi",
     "All devices" : "Tüm aygıtlar",
     "Only in the Android app" : "Yalnız Android uygulamasında",
     "Only in the iOS app" : "Yalnız iOS uygulamasında",
