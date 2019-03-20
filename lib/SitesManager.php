@@ -35,7 +35,6 @@ use OCP\Files\NotFoundException;
 use OCP\Files\SimpleFS\ISimpleFile;
 use OCP\IConfig;
 use OCP\IGroupManager;
-use OCP\INavigationManager;
 use OCP\IRequest;
 use OCP\IUser;
 use OCP\IUserSession;
@@ -45,6 +44,7 @@ class SitesManager {
 
 	const TYPE_LINK = 'link';
 	const TYPE_SETTING = 'settings';
+	const TYPE_LOGIN = 'guest';
 	const TYPE_QUOTA = 'quota';
 
 	const DEVICE_ALL = '';
@@ -238,7 +238,7 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, INavigationManager::TYPE_GUEST], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, self::TYPE_LOGIN], true)) {
 			throw new InvalidTypeException();
 		}
 
@@ -260,7 +260,7 @@ class SitesManager {
 			throw new IconNotFoundException();
 		}
 
-		if ($type === INavigationManager::TYPE_GUEST) {
+		if ($type === self::TYPE_LOGIN) {
 			$redirect = true;
 		}
 
@@ -331,7 +331,7 @@ class SitesManager {
 			}
 		}
 
-		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, INavigationManager::TYPE_GUEST], true)) {
+		if (!in_array($type, [self::TYPE_LINK, self::TYPE_SETTING, self::TYPE_QUOTA, self::TYPE_LOGIN], true)) {
 			throw new InvalidTypeException();
 		}
 
@@ -353,7 +353,7 @@ class SitesManager {
 			throw new IconNotFoundException();
 		}
 
-		if ($type === INavigationManager::TYPE_GUEST) {
+		if ($type === self::TYPE_LOGIN) {
 			$redirect = true;
 		}
 
