@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Otsikko",
     "Setting menu" : "Asetusvalikko",
     "User quota" : "Käyttäjäkiintiö",
+    "Public footer" : "Julkinen alatunniste",
     "All devices" : "Kaikki laitteet",
     "Only in the Android app" : "Vain Android-sovelluksessa",
     "Only in the iOS app" : "Vain iOS-sovelluksessa",
