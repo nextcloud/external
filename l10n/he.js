@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "כותרת",
     "Setting menu" : "תפריט הגדרות",
     "User quota" : "מכסת משתמש",
+    "Public footer" : "תחתית עמוד ציבורית",
     "All devices" : "כל ההתקנים",
     "Only in the Android app" : "רק ביישומון ה־Android",
     "Only in the iOS app" : "רק ביישומון ה־iOS",
