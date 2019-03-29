@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.0 – 2019-03-29
+### Added
+ - Allow to add links to the login page [#111](https://github.com/nextcloud/external/pull/111)
+
+### Fixed
+ - Compatibility with Nextcloud 16
+
 ## 3.2.0 – 2018-11-16
 ### Fixed
  - Compatibility with Nextcloud 15
