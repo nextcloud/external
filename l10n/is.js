@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Haus",
     "Setting menu" : "Stillingavalmynd",
     "User quota" : "Kvóti notanda",
+    "Public footer" : "Opinber síðufótur",
     "All devices" : "Öll tæki",
     "Only in the Android app" : "Aðeins í Android-forritinu",
     "Only in the iOS app" : "Aðeins í iOS-forritinu",
