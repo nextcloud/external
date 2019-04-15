@@ -19,7 +19,6 @@ OC.L10N.register(
     "Select an icon" : "Pasirinkite piktogramą",
     "All languages" : "Visos kalbos",
     "Header" : "Antraštė",
-    "Setting menu" : "Nustatymai",
     "User quota" : "Naudotojui leidžiamas duomenų kiekis",
     "Public footer" : "Viešoji poraštė",
     "All devices" : "Visi įrenginiai",
