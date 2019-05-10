@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Fejléc",
     "Setting menu" : "Beállítás menü",
     "User quota" : "Felhasználói kvóta",
+    "Public footer" : "Nyilvános lábléc",
     "All devices" : "Minden eszköz",
     "Only in the Android app" : "Csak az Android alkalmazásban",
     "Only in the iOS app" : "Csak az iOS alkalmazásban",
