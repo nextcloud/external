@@ -26,4 +26,6 @@ style('external', 'style');
 
 /** @var array $_ */
 ?>
-<iframe id="ifm" src="<?php p($_['url']); ?>"></iframe>
+<div id="ifmWrapper">
+	<iframe id="ifm" src="<?php p($_['url']); ?>"></iframe>
+</div>
