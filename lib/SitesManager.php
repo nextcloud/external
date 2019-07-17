@@ -106,8 +106,8 @@ class SitesManager {
 			$email= $user instanceof IUser ? $user->getEMailAddress() : '';
 			$uid  = $user instanceof IUser ? $user->getUID() : '';
 			$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
-
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
+			$jwt="";
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}','{jwt}'], [$email, $uid, $displayName,$jwt], $site['url']);
 
 			return $site;
 		}
@@ -133,7 +133,7 @@ class SitesManager {
 		$email= $user instanceof IUser ? $user->getEMailAddress() : '';
 		$uid  = $user instanceof IUser ? $user->getUID() : '';
 		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
-
+		$jwt="";
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
@@ -148,7 +148,7 @@ class SitesManager {
 				continue;
 			}
 
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}','{jwt}'], [$email, $uid, $displayName,$jwt], $site['url']);
 
 			$langSites[$id] = $site;
 		}
@@ -189,6 +189,7 @@ class SitesManager {
 				'device' => self::DEVICE_ALL,
 				'groups' => [],
 				'redirect' => false,
+				'password' => '',
 			],
 			$site
 		);
@@ -212,7 +213,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect, $password) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -263,7 +264,10 @@ class SitesManager {
 		if ($type === self::TYPE_LOGIN) {
 			$redirect = true;
 		}
-
+		
+		if (!isset($password)){
+			$password="";
+		}
 		$sites = $this->getSites();
 		$sites[$id] = [
 			'id'   => $id,
@@ -275,6 +279,7 @@ class SitesManager {
 			'icon' => $icon,
 			'groups' => $groups,
 			'redirect' => $redirect,
+			'password' => $password,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 		$this->config->setAppValue('external', 'max_site', $id);
@@ -302,7 +307,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect, $password) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -356,7 +361,9 @@ class SitesManager {
 		if ($type === self::TYPE_LOGIN) {
 			$redirect = true;
 		}
-
+		if (!isset($password)){
+					$password="";
+				}
 		$sites[$id] = [
 			'id'   => $id,
 			'name' => $name,
@@ -367,6 +374,7 @@ class SitesManager {
 			'icon' => $icon,
 			'groups' => $groups,
 			'redirect' => $redirect,
+			'password' => $password,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 
