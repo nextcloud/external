@@ -64,7 +64,8 @@
 			type: 'link',
 			device: '',
 			icon: 'external.svg',
-			groups: []
+			groups: [],
+			password: '',
 		},
 
 		parse: function(response) {
@@ -105,6 +106,7 @@
 			data.removeSiteTXT = t('external', 'Remove site')
 			data.noEmbedTXT = t('external', 'This site does not allow embedding');
 			data.deleteIMG = OC.imagePath('core', 'actions/delete.svg');
+			data.passwordTXT = t('external','Password');
 
 			return OCA.External.Templates.site(data);
 		},
@@ -122,7 +124,8 @@
 					icon: 'external.svg',
 					type: 'link',
 					lang: '',
-					device: ''
+					device: '',
+					password: '',
 				}));
 				self._attachEvents($el);
 				$el.find('.options').removeClass('hidden');
@@ -230,7 +233,8 @@
 					device: $site.find('.site-device').val(),
 					redirect: $site.find('.site-redirect').prop("checked") ? 1 : 0,
 					groups: groups === '' ? [] : groups.split('|'),
-					icon: $site.find('.site-icon').val()
+					icon: $site.find('.site-icon').val(),
+					password: $site.finde('.site-password').val(),
 				};
 
 			$site.removeClass('failure saved').addClass('saving');
