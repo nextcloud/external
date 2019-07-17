@@ -70,6 +70,21 @@
 				</select>
 			</label>
 		</div>
+		
+		<div>
+			<label>
+				<span>{{passwordTXT}}</span>
+				<select class="site-password trigger-save">
+					{{#each (sgetPassword password)}}
+						{{#if (isSelected password ../password)}}
+							<option value="{{password}}" selected="selected">{{name}}</option>
+						{{else}}
+							<option value="{{password}}">{{name}}</option>
+						{{/if}}
+					{{/each}}
+				</select>
+			</label>
+		</div>
 
 		<div class="site-redirect-box">
 			<label>
