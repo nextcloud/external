@@ -1,6 +1,7 @@
 OC.L10N.register(
     "external",
     {
+	"Password" : "Passwort",
     "Name" : "Name",
     "URL" : "URL",
     "Language" : "Sprache",

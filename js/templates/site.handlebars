@@ -1,6 +1,8 @@
 <li data-site-id="{{id}}">
-	<input type="text" class="site-name trigger-save" name="site-name" value="{{name}}" placeholder="{{nameTXT}}">
-	<input type="text" class="site-url trigger-save"  name="site-url" value="{{url}}" placeholder="{{urlTXT}}">
+	<input type="text" class="site-name trigger-save"      name="site-name"     value="{{name}}"     placeholder="{{nameTXT}}">
+	<input type="text" class="site-url trigger-save"  	   name="site-url"      value="{{url}}"      placeholder="{{urlTXT}}">
+	<input type="text" class="site-password trigger-save"  name="site-password" value="{{password}}" placeholder="{{passwordTXT}}">
+
 	<a class="icon-more" href="#"></a>
 
 	<div class="options hidden">
@@ -65,21 +67,6 @@
 							<option value="{{type}}" selected="selected">{{name}}</option>
 						{{else}}
 							<option value="{{type}}">{{name}}</option>
-						{{/if}}
-					{{/each}}
-				</select>
-			</label>
-		</div>
-		
-		<div>
-			<label>
-				<span>{{passwordTXT}}</span>
-				<select class="site-password trigger-save">
-					{{#each (sgetPassword password)}}
-						{{#if (isSelected password ../password)}}
-							<option value="{{password}}" selected="selected">{{name}}</option>
-						{{else}}
-							<option value="{{password}}">{{name}}</option>
 						{{/if}}
 					{{/each}}
 				</select>

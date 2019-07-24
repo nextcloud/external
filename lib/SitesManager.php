@@ -40,6 +40,8 @@ use OCP\IUser;
 use OCP\IUserSession;
 use OCP\L10N\IFactory;
 
+define('IV_SIZE', mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC));
+
 class SitesManager {
 
 	const TYPE_LINK = 'link';
@@ -106,8 +108,17 @@ class SitesManager {
 			$email= $user instanceof IUser ? $user->getEMailAddress() : '';
 			$uid  = $user instanceof IUser ? $user->getUID() : '';
 			$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
-			$jwt="";
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}','{jwt}'], [$email, $uid, $displayName,$jwt], $site['url']);
+			
+			if(empty($site['password'])){
+				$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
+			}
+			else {
+				$jwt=$this->getJWT($email,$uid,$displayName,$site['password']);
+				$site['url'] = explode("?", $site['url'])[0];
+				$site['url'] = $site['url']."?jwt=".$jwt;
+			}
+
+			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
 
 			return $site;
 		}
@@ -148,7 +159,16 @@ class SitesManager {
 				continue;
 			}
 
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}','{jwt}'], [$email, $uid, $displayName,$jwt], $site['url']);
+			if(empty($site['password'])){
+				$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
+			}
+			else {
+				$jwt=$this->getJWT($email,$uid,$displayName,$site['password']);
+				$site['url'] = explode("?", $site['url'])[0];
+				$site['url'] = $site['url']."?jwt=".$jwt;
+				
+			}
+
 
 			$langSites[$id] = $site;
 		}
@@ -189,7 +209,6 @@ class SitesManager {
 				'device' => self::DEVICE_ALL,
 				'groups' => [],
 				'redirect' => false,
-				'password' => '',
 			],
 			$site
 		);
@@ -198,6 +217,7 @@ class SitesManager {
 	/**
 	 * @param string $name
 	 * @param string $url
+	 * @param string $password
 	 * @param string $lang
 	 * @param string $type
 	 * @param string $device
@@ -213,7 +233,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect, $password) {
+	public function addSite($name, $url, $password, $lang, $type, $device, $icon, array $groups, $redirect) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -268,10 +288,14 @@ class SitesManager {
 		if (!isset($password)){
 			$password="";
 		}
+		if (!$password){
+			$password="";
+		}
 		$sites = $this->getSites();
 		$sites[$id] = [
 			'id'   => $id,
 			'name' => $name,
+			'password' => $password,
 			'url'  => $url,
 			'lang' => $lang,
 			'type' => $type,
@@ -279,7 +303,6 @@ class SitesManager {
 			'icon' => $icon,
 			'groups' => $groups,
 			'redirect' => $redirect,
-			'password' => $password,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 		$this->config->setAppValue('external', 'max_site', $id);
@@ -291,6 +314,7 @@ class SitesManager {
 	 * @param int $id
 	 * @param string $name
 	 * @param string $url
+	 * @param string $password
 	 * @param string $lang
 	 * @param string $type
 	 * @param string $device
@@ -307,7 +331,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect, $password) {
+	public function updateSite($id, $name, $url, $password, $lang, $type, $device, $icon, array $groups, $redirect) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -364,17 +388,23 @@ class SitesManager {
 		if (!isset($password)){
 					$password="";
 				}
+	
+		
+		if (!$password){
+			$password="";
+		}
 		$sites[$id] = [
 			'id'   => $id,
 			'name' => $name,
 			'url'  => $url,
+			'password' => $password,
 			'lang' => $lang,
 			'type' => $type,
 			'device' => $device,
 			'icon' => $icon,
 			'groups' => $groups,
 			'redirect' => $redirect,
-			'password' => $password,
+			
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 
@@ -499,4 +529,71 @@ class SitesManager {
 		}
 		return self::DEVICE_BROWSER;
 	}
+	
+	/**
+	* @param string $email
+	* @param string $uid
+	* @param string $displayName
+	* @param string $password
+	* @return string
+	*/
+	protected function getJWT($email,$uid,$displayName,$password){
+		$data=Array(
+			'uid' => $uid,
+			'email' => $email,
+			'displayName' => $displayName,
+			);
+		$encrypted=$this->encrypt(json_encode($data),$password);
+		
+		
+		$payload=Array(
+			'iv' 	=> base64_encode($encrypted['iv']),
+			'data' 	=> $encrypted['data'],
+			'iat' 	=> time(),
+			'exp' 		=> time()+2,
+			);	
+		$header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+		$base64UrlHeader = $this->JWT_base64Encode($header);
+		$base64UrlPayload = $this->JWT_base64Encode(json_encode($payload));
+		$base64UrlSignature = $this->create_base64UrlSignature($base64UrlHeader,$base64UrlPayload, $password);	
+		$token=$base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
+		return $token;
+	} 	
+	
+	/**
+	* @param string $string
+	* @return string
+	*/
+	protected function JWT_base64Encode ($string){
+		return str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($string));
+	}
+	
+	/**
+	* @param string $base64UrlHeader
+	* @param string $basw64UrlPayload
+	* @param string $password
+	* @return string
+	*/
+	protected function create_base64UrlSignature($base64UrlHeader,$base64UrlPayload, $password){
+		$signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, $password, true);
+		return $this->JWT_base64Encode($signature);
+	}
+	
+	/**
+	* @param string $string
+	* @param string $password
+	* @return string
+	*/
+	protected function encrypt($string,$password) {
+		$encodedString=false;
+		$encrypt_method = "AES-256-CBC";
+		$secret_iv = openssl_random_pseudo_bytes(16);
+		$key = hash('sha256', $password,true);
+		$iv = substr(hash('sha256', $secret_iv), 0, 16);
+		$encodedString = openssl_encrypt($string, $encrypt_method, $key, 0, $iv);
+		$encodedString = base64_encode($encodedString);
+		return array('data' => $encodedString,'iv' => $secret_iv);
+	}
+	
+
 }

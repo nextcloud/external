@@ -9,6 +9,8 @@ templates['icon'] = template({"compiler":[7,">= 4.0.0"],"main":function(containe
     + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
     + "\">\n	</div>\n	<span class=\"name\">"
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+    + "</span>\n	<span class=\"password\">"
+    + alias4(((helper = (helper = helpers.password || (depth0 != null ? depth0.password : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"password","hash":{},"data":data}) : helper)))
     + "</span>\n	<span class=\"icon icon-delete\" title=\""
     + alias4(((helper = (helper = helpers.deleteTXT || (depth0 != null ? depth0.deleteTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"deleteTXT","hash":{},"data":data}) : helper)))
     + "\"></span>\n</li>\n";
@@ -112,7 +114,11 @@ templates['site'] = template({"1":function(container,depth0,helpers,partials,dat
     + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
     + "\" placeholder=\""
     + alias4(((helper = (helper = helpers.urlTXT || (depth0 != null ? depth0.urlTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"urlTXT","hash":{},"data":data}) : helper)))
-    + "\">\n	<a class=\"icon-more\" href=\"#\"></a>\n\n	<div class=\"options hidden\">\n		<div>\n			<label>\n				<span>"
+    + "\">\n	<input type=\"text\" class=\"site-password trigger-save\"  name=\"site-password\" value=\""
+    + alias4(((helper = (helper = helpers.password || (depth0 != null ? depth0.password : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"password","hash":{},"data":password}) : helper)))
+    + "\" placeholder=\""
+    + alias4(((helper = (helper = helpers.passwordTXT || (depth0 != null ? depth0.passwordTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"passwordTXT","hash":{},"data":data}) : helper)))
+    + "\">\n<a class=\"icon-more\" href=\"#\"></a>\n\n	<div class=\"options hidden\">\n		<div>\n			<label>\n				<span>"
     + alias4(((helper = (helper = helpers.languageTXT || (depth0 != null ? depth0.languageTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"languageTXT","hash":{},"data":data}) : helper)))
     + "</span>\n				<select class=\"site-lang trigger-save\">\n"
     + ((stack1 = helpers.each.call(alias1,(helpers.getLanguages || (depth0 && depth0.getLanguages) || alias2).call(alias1,(depth0 != null ? depth0.lang : depth0),{"name":"getLanguages","hash":{},"data":data}),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")

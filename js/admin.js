@@ -103,10 +103,10 @@
 			data.iconTXT = t('external', 'Icon');
 			data.positionTXT = t('external', 'Position');
 			data.redirectTXT = t('external', 'Redirect');
-			data.removeSiteTXT = t('external', 'Remove site')
+			data.removeSiteTXT = t('external', 'Remove site');
 			data.noEmbedTXT = t('external', 'This site does not allow embedding');
 			data.deleteIMG = OC.imagePath('core', 'actions/delete.svg');
-			data.passwordTXT = t('external','Password');
+			data.passwordTXT=t('external','Password');
 
 			return OCA.External.Templates.site(data);
 		},
@@ -170,9 +170,6 @@
 			_.each(this._sites.models, function(site) {
 				var $el = $(self._renderSite(site.attributes));
 				self._attachEvents($el);
-				if (site.attributes.type === 'guest') {
-					$el.find('.site-redirect-box').hide();
-				}
 				self.$list.append($el);
 			});
 		},
@@ -219,7 +216,6 @@
 
 		_saveSite: function(e) {
 			e.preventDefault();
-
 			var self = this,
 				$target = $(e.target),
 				$site = $target.closest('li'),
@@ -233,19 +229,15 @@
 					device: $site.find('.site-device').val(),
 					redirect: $site.find('.site-redirect').prop("checked") ? 1 : 0,
 					groups: groups === '' ? [] : groups.split('|'),
-					icon: $site.find('.site-icon').val(),
-					password: $site.finde('.site-password').val(),
+					icon: $site.find('.site-icon').val(),	
+					password: $site.find('.site-password').val(),
 				};
 
 			$site.removeClass('failure saved').addClass('saving');
 			$site.find('.invalid-value').removeClass('invalid-value');
-			if (data.type === 'guest') {
-				$site.find('.site-redirect-box').hide();
-			} else {
-				$site.find('.site-redirect-box').show();
-			}
 
 			if (!_.isUndefined(site)) {
+				console.log(data);
 				site.save(data, {
 					success: function() {
 						$site.removeClass('saving').addClass('saved');
