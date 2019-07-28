@@ -1,6 +1,6 @@
 <?php
 $result = testToken (password);
-unset ($_GET);
+
 
 if ($result[0]){
 	$_GET['uid']=$result[1]['uid'];
