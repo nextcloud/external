@@ -40,7 +40,6 @@ use OCP\IUser;
 use OCP\IUserSession;
 use OCP\L10N\IFactory;
 
-define('IV_SIZE', mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC));
 
 class SitesManager {
 
