@@ -38,7 +38,7 @@ OC.L10N.register(
     "No file uploaded" : "Żaden plik nie został wysłany",
     "Provided file is not an image" : "Wskazany plik nie jest obrazem",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Wskazany obraz nie jest kwadratem o szerokości 16, 24 lub 32 pikseli",
-    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Błąd wysyłanie ikony, upewnij się, że katalog data ma prawa do zapisu",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Wystąpił błąd podczas przesyłania ikony, upewnij się, że katalog danych jest do zapisu",
     "External sites" : "Zewnętrzne strony",
     "__language_name__" : "__language_name__",
     "Add external sites to your Nextcloud navigation" : "Dodaj zewnętrzne strony do nawigacji w serwisie Nextcloud",
