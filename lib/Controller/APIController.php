@@ -146,6 +146,10 @@ class APIController extends OCSController {
 	/**
 	 * @param string $name
 	 * @param string $url
+	 * @param string $loginurl
+	 * @param string $login
+	 * @param string $password
+	 * @param string $headers
 	 * @param string $lang
 	 * @param string $type
 	 * @param string $device
@@ -154,9 +158,9 @@ class APIController extends OCSController {
 	 * @param int $redirect
 	 * @return DataResponse
 	 */
-	public function add($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function add($name, $url, $loginurl, $login, $password, $headers, $lang, $type, $device, $icon, array $groups, $redirect) {
 		try {
-			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
+			return new DataResponse($this->sitesManager->addSite($name, $url, $loginurl, $login, $password, $headers, $lang, $type, $device, $icon, $groups, (bool) $redirect));
 		} catch (InvalidNameException $e) {
 			return new DataResponse(['error' => $this->l->t('The given label is invalid'), 'field' => 'name'], Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
@@ -178,6 +182,10 @@ class APIController extends OCSController {
 	 * @param int $id
 	 * @param string $name
 	 * @param string $url
+	 * @param string $loginurl
+	 * @param string $login
+	 * @param string $password
+	 * @param string $headers
 	 * @param string $lang
 	 * @param string $type
 	 * @param string $device
@@ -186,9 +194,9 @@ class APIController extends OCSController {
 	 * @param int $redirect
 	 * @return DataResponse
 	 */
-	public function update($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function update($id, $name, $url, $loginurl, $login, $password, $headers, $lang, $type, $device, $icon, array $groups, $redirect) {
 		try {
-			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
+			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $loginurl, $login, $password, $headers, $lang, $type, $device, $icon, $groups, (bool) $redirect));
 		} catch (SiteNotFoundException $e) {
 			return new DataResponse(['error' => $this->l->t('The site does not exist'), 'field' => 'site'], Http::STATUS_NOT_FOUND);
 		} catch (InvalidNameException $e) {

@@ -197,6 +197,10 @@ class SitesManager {
 	/**
 	 * @param string $name
 	 * @param string $url
+	 * @param string $loginurl
+	 * @param string $login
+	 * @param string $password
+	 * @param string $headers
 	 * @param string $lang
 	 * @param string $type
 	 * @param string $device
@@ -212,7 +216,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function addSite($name, $url, $loginurl, $login, $password, $headers, $lang, $type, $device, $icon, array $groups, $redirect) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -269,6 +273,10 @@ class SitesManager {
 			'id'   => $id,
 			'name' => $name,
 			'url'  => $url,
+			'loginurl' => $loginurl,
+			'login' => $login,
+			'password' => $password,
+			'headers' => $headers,
 			'lang' => $lang,
 			'type' => $type,
 			'device' => $device,
@@ -286,6 +294,10 @@ class SitesManager {
 	 * @param int $id
 	 * @param string $name
 	 * @param string $url
+	 * @param string $loginurl
+	 * @param string $login
+	 * @param string $password
+	 * @param string $headers
 	 * @param string $lang
 	 * @param string $type
 	 * @param string $device
@@ -302,7 +314,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function updateSite($id, $name, $url, $loginurl, $login, $password, $headers, $lang, $type, $device, $icon, array $groups, $redirect) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -361,6 +373,10 @@ class SitesManager {
 			'id'   => $id,
 			'name' => $name,
 			'url'  => $url,
+			'loginurl' => $loginurl,
+			'login' => $login,
+			'password' => $password,
+			'headers' => $headers,
 			'lang' => $lang,
 			'type' => $type,
 			'device' => $device,

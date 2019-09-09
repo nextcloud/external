@@ -26,4 +26,10 @@ style('external', 'style');
 
 /** @var array $_ */
 ?>
+<!-- <input type="hidden" id="external_authsecret" value="<?php p($_['authsecret']); ?>" /> -->
+<input type="hidden" id="external_url" value="<?php p($_['url']); ?>" />
+<input type="hidden" id="external_loginurl" value="<?php p($_['loginurl']); ?>" />
+<input type="hidden" id="external_username" value="<?php p($_['username']); ?>" />
+<input type="hidden" id="external_password" value="<?php p($_['password']); ?>" />
+<input type="hidden" id="external_headers" value="<?php p($_['headers']); ?>" />
 <iframe id="ifm" src="<?php p($_['url']); ?>"></iframe>

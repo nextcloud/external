@@ -113,6 +113,32 @@ templates['site'] = template({"1":function(container,depth0,helpers,partials,dat
     + "\" placeholder=\""
     + alias4(((helper = (helper = helpers.urlTXT || (depth0 != null ? depth0.urlTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"urlTXT","hash":{},"data":data}) : helper)))
     + "\">\n	<a class=\"icon-more\" href=\"#\"></a>\n\n	<div class=\"options hidden\">\n		<div>\n			<label>\n				<span>"
+
+    + alias4(((helper = (helper = helpers.authTXT || (depth0 != null ? depth0.authTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"authTXT","hash":{},"data":data}) : helper)))
+    + "</span>\n <input type=\"text\" class=\"site-loginurl trigger-save\"  name=\"site-loginurl\" value=\""
+    + alias4(((helper = (helper = helpers.loginurl || (depth0 != null ? depth0.loginurl : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"loginurl","hash":{},"data":data}) : helper)))
+    + "\" placeholder=\""
+    + alias4(((helper = (helper = helpers.loginUrlTXT || (depth0 != null ? depth0.loginUrlTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"loginUrlTXT","hash":{},"data":data}) : helper)))
+    + "\" style=\"width: 160px;\" />\n			</label>\n	<label>\n"
+
+    + "<input type=\"text\" class=\"site-login trigger-save\"  name=\"site-login\" value=\""
+    + alias4(((helper = (helper = helpers.login || (depth0 != null ? depth0.login : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"login","hash":{},"data":data}) : helper)))
+    + "\" placeholder=\""
+    + alias4(((helper = (helper = helpers.loginTXT || (depth0 != null ? depth0.loginTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"loginTXT","hash":{},"data":data}) : helper)))
+    + "\" style=\"width: 160px;\" />\n			</label>\n	<label>\n"
+
+    + "<input type=\"password\" class=\"site-password trigger-save\"  name=\"site-password\" value=\""
+    + alias4(((helper = (helper = helpers.password || (depth0 != null ? depth0.password : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"password","hash":{},"data":data}) : helper)))
+    + "\" placeholder=\""
+    + alias4(((helper = (helper = helpers.passwordTXT || (depth0 != null ? depth0.passwordTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"passwordTXT","hash":{},"data":data}) : helper)))
+    + "\" style=\"width: 160px;\" />\n			</label>\n	<label>\n"
+
+    + "<input type=\"text\" class=\"site-headers trigger-save\"  name=\"site-headers\" value=\""
+    + alias4(((helper = (helper = helpers.headers || (depth0 != null ? depth0.headers : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headers","hash":{},"data":data}) : helper)))
+    + "\" placeholder=\""
+    + alias4(((helper = (helper = helpers.headersTXT || (depth0 != null ? depth0.headersTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headersTXT","hash":{},"data":data}) : helper)))
+    + "\" style=\"width: 160px;\" />\n			</label>\n		</div>\n\n		<div>\n			<label>\n				<span>"
+
     + alias4(((helper = (helper = helpers.languageTXT || (depth0 != null ? depth0.languageTXT : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"languageTXT","hash":{},"data":data}) : helper)))
     + "</span>\n				<select class=\"site-lang trigger-save\">\n"
     + ((stack1 = helpers.each.call(alias1,(helpers.getLanguages || (depth0 && depth0.getLanguages) || alias2).call(alias1,(depth0 != null ? depth0.lang : depth0),{"name":"getLanguages","hash":{},"data":data}),{"name":"each","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
