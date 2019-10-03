@@ -32,7 +32,7 @@ More information is available in the External sites documentation.]]></descripti
 	<namespace>External</namespace>
 
 	<dependencies>
-		<nextcloud min-version="16" max-version="17" />
+		<nextcloud min-version="18" max-version="18" />
 	</dependencies>
 
 	<settings>
