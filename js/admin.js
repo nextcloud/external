@@ -43,7 +43,7 @@
 	});
 
 	Handlebars.registerHelper('getTypes', function() {
-		return OCA.External.App.availableTypes;
+		return OCA.External.App.availableTypes;z
 	});
 
 	Handlebars.registerHelper('getDevices', function() {
@@ -60,6 +60,10 @@
 		defaults: {
 			name: '',
 			url: '',
+      loginurl: '',
+      login: '',
+      password: '',
+      headers: '',
 			lang: '',
 			type: 'link',
 			device: '',
@@ -96,6 +100,11 @@
 		_renderSite: function(data) {
 			data.nameTXT = t('external', 'Name');
 			data.urlTXT = t('external', 'URL');
+      data.authTXT = t('external', 'Auth');
+      data.loginUrlTXT = t('external', 'LoginUrl');
+      data.loginTXT = t('external', 'Login');
+      data.passwordTXT = t('external', 'Password');
+      data.headersTXT = t('external', 'Headers');
 			data.languageTXT = t('external', 'Language');
 			data.groupsTXT = t('external', 'Groups');
 			data.devicesTXT = t('external', 'Devices');
@@ -225,6 +234,10 @@
 				data = {
 					name: $site.find('.site-name').val(),
 					url: $site.find('.site-url').val(),
+          loginurl: $site.find('.site-loginurl').val(),
+          login: $site.find('.site-login').val(),
+          password: $site.find('.site-password').val(),
+          headers: $site.find('.site-headers').val(),
 					lang: $site.find('.site-lang').val(),
 					type: $site.find('.site-type').val(),
 					device: $site.find('.site-device').val(),

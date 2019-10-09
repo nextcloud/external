@@ -3,7 +3,12 @@ OC.L10N.register(
     {
     "Name" : "Nom",
     "URL" : "URL",
-    "Language" : "Langue",
+    "Auth" : "Autorisation",
+    "LoginUrl" : "URL",
+    "Login" : "Identifiant",
+    "Password" : "Mot de passe",
+    "Headers" : "En-tête",
+    "Language" : "Langue",    
     "Groups" : "Groupes",
     "Devices" : "Appareils",
     "Icon" : "Icône",

@@ -6,6 +6,15 @@
 	<div class="options hidden">
 		<div>
 			<label>
+				<span>{{authTXT}}</span>
+				<input type="text" name="site-loginurl" class="site-auth trigger-save" value="" style="width: 160px;" />
+				<input type="text" name="site-login" class="site-auth trigger-save" value="" style="width: 160px;" />
+				<input type="password" name="site-password" class="site-auth trigger-save" value="" style="width: 160px;" />
+				<input type="text" name="site-headers" class="site-auth trigger-save" value="" style="width: 160px;" />
+			</label>
+		</div>
+		<div>
+			<label>
 				<span>{{languageTXT}}</span>
 				<select class="site-lang trigger-save">
 					{{#each (getLanguages lang)}}

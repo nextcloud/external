@@ -129,11 +129,17 @@ class SiteController extends Controller {
 
 		$response = new TemplateResponse('external', 'frame', [
 			'url' => $site['url'],
+			'loginurl' => $site['loginurl'],
+			//'authsecret' => base64_encode($site['login']. ":" . $site['password']),
+			'username' => $site['login'],
+			'password' => $site['password'],
+			'headers' => $site['headers'],
 		], 'user');
 
 		$policy = new ContentSecurityPolicy();
 		$policy->addAllowedChildSrcDomain('*');
 		$policy->addAllowedFrameDomain('*');
+		$policy->addAllowedConnectDomain('*');
 		$response->setContentSecurityPolicy($policy);
 
 		return $response;

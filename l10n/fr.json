@@ -1,6 +1,11 @@
 { "translations": {
     "Name" : "Nom",
     "URL" : "URL",
+    "Auth" : "Authorisation",
+    "LoginUrl" : "URL",
+    "Login" : "Identifiant",
+    "Password" : "Mot de passe",
+    "Headers" : "En-tête",
     "Language" : "Langue",
     "Groups" : "Groupes",
     "Devices" : "Appareils",

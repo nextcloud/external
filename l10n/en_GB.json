@@ -1,7 +1,12 @@
 { "translations": {
     "Name" : "Name",
     "URL" : "URL",
+    "Auth" : "Auth",
+    "LoginUrl" : "Login URL",
+    "Login" : "Login",
+    "Password" : "Password",
     "Language" : "Language",
+    "Headers" : "Headers",
     "Groups" : "Groups",
     "Devices" : "Devices",
     "Icon" : "Icon",
