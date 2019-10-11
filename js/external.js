@@ -13,4 +13,5 @@ $(document).ready(function () {
 
 	document.getElementById('ifm').onload = resizeIframe;
 	window.onresize = resizeIframe;
+	resizeIframe();
 });
