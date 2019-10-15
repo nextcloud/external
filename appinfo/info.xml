@@ -29,7 +29,7 @@ More information is available in the External sites documentation.]]></descripti
 	<bugs>https://github.com/nextcloud/external/issues</bugs>
 	<repository type="git">https://github.com/nextcloud/external.git</repository>
 
-	<version>3.2.0</version>
+	<version>3.2.1</version>
 	<namespace>External</namespace>
 
 	<dependencies>
