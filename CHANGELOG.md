@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.1 – 2019-10-15
+### Fixed
+ - Make sure the white icon is also shown in 32px width
+  [#161](https://github.com/nextcloud/external/pull/161)
+ - Add Content-Security-Policy to allow inline attributes on SVG icons
+  [#157](https://github.com/nextcloud/external/pull/157)
+ - Resize the iframe while it is still loading
+  [#154](https://github.com/nextcloud/external/pull/154)
+ - Allow to fullscreen the embeded content
+  [#151](https://github.com/nextcloud/external/pull/151)
+
 ## 3.2.0 – 2018-11-16
 ### Fixed
  - Compatibility with Nextcloud 15
