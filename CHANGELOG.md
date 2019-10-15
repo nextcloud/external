@@ -1,13 +1,25 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.4.1 – 2019-10-15
+### Fixed
+ - Make sure the white icon is also shown in 32px width
+  [#161](https://github.com/nextcloud/external/pull/161)
+ - Add Content-Security-Policy to allow inline attributes on SVG icons
+  [#157](https://github.com/nextcloud/external/pull/157)
+ - Resize the iframe while it is still loading
+  [#154](https://github.com/nextcloud/external/pull/154)
+ - Allow to fullscreen the embeded content
+  [#151](https://github.com/nextcloud/external/pull/151)
+
 ## 3.4.0 – 2019-09-03
 ### Fixed
  - Compatibility with Nextcloud 17
 
 ## 3.3.0 – 2019-03-29
 ### Added
- - Allow to add links to the login page [#111](https://github.com/nextcloud/external/pull/111)
+ - Allow to add links to the login page
+  [#111](https://github.com/nextcloud/external/pull/111)
 
 ### Fixed
  - Compatibility with Nextcloud 16
