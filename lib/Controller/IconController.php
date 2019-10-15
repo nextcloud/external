@@ -29,6 +29,7 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http\FileDisplayResponse;
+use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
@@ -171,6 +172,8 @@ class IconController extends Controller {
 		$expires->add(new \DateInterval('PT24H'));
 		$response->addHeader('Expires', $expires->format(\DateTime::RFC2822));
 		$response->addHeader('Pragma', 'cache');
+		$csp = new ContentSecurityPolicy();
+		$response->setContentSecurityPolicy($csp);
 		return $response;
 	}
 
