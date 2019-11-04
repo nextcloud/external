@@ -13,7 +13,7 @@ OC.L10N.register(
     "This site does not allow embedding" : "Tiu ĉi retejo ne permesas enkorpigadon",
     "New site" : "Nova retejo",
     "Delete icon" : "Forigi piktogramon",
-    "Uploading…" : "Alŝutante...",
+    "Uploading…" : "Alŝutado…",
     "Reloading icon list…" : "Reŝargo de la piktograma listo...",
     "Icon could not be uploaded" : "Piktogramo ne eblis alŝutiĝi",
     "Select an icon" : "Elektu bildeton",
