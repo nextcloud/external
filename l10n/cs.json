@@ -36,7 +36,7 @@
     "No file uploaded" : "Nebyl nahrán žádný soubor",
     "Provided file is not an image" : "Poskytnutý soubor není obrázkem",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Poskytnutý obrázek není čtverec o šířce 16, 24 nebo 32 pixelů",
-    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Při nahrávání ikony došlo k chybě, ujistěte se, že je adresář zapisovatelný",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Při nahrávání ikony došlo k chybě, ujistěte se, že je adresář data zapisovatelný",
     "External sites" : "Externí stránky",
     "__language_name__" : "Česky",
     "Add external sites to your Nextcloud navigation" : "Přidat externí stránky do navigace ve vašem Nextcloudu",
