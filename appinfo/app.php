@@ -19,5 +19,6 @@
  *
  */
 
-$app = new \OCA\External\AppInfo\Application();
+/** @var \OCA\External\AppInfo\Application $app */
+$app = \OC::$server->query(\OCA\External\AppInfo\Application::class);
 $app->register();
