@@ -1,11 +1,12 @@
 $(document).ready(function () {
 
-	var $p = $('<p>'),
+	var $p = document.createElement('p'),
 		$quotaLink = $('#external_quota_link'),
 		$quotaName = $('#external_quota_name');
-	$p.text($quotaName.val());
+	$p.innerText = $quotaName.val();
+	$p.setAttribute('style', 'margin-top: -22px');
 	$('li#quota').on('click', function() {
 		OC.redirect($quotaLink.val());
 	});
-	$('li#quota div.quota-container').after($p);
+	document.getElementById('quota').getElementsByTagName('a')[0].appendChild($p);
 });
