@@ -27,7 +27,7 @@ OC.L10N.register(
     "Only in the iOS app" : "Pouze aplikace pro iOS",
     "Only in the desktop client" : "Pouze desktopový klient",
     "Only in the browser" : "Pouze v prohlížeči",
-    "The given label is invalid" : "Zadaný popisek je neplatný",
+    "The given label is invalid" : "Zadaný štítek není platný",
     "The given URL is invalid" : "Zadaná URL je neplatná",
     "The given language does not exist" : "Zadaný jazyk neexistuje",
     "The given type is invalid" : "Zadaný typ není platný",
