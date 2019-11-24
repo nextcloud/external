@@ -220,7 +220,7 @@ class SitesManager {
 		}
 
 		if (filter_var($url, FILTER_VALIDATE_URL) === false ||
-			  strpos($url, 'http://') === strpos($url, 'https://')) {
+			  (strpos($url, 'http://') !== 0 && strpos($url, 'https://') !== 0 && strpos($url, 'mailto:') !== 0)) {
 			throw new InvalidURLException();
 		}
 
@@ -313,7 +313,7 @@ class SitesManager {
 		}
 
 		if (filter_var($url, FILTER_VALIDATE_URL) === false ||
-			  strpos($url, 'http://') === strpos($url, 'https://')) {
+			  (strpos($url, 'http://') !== 0 && strpos($url, 'https://') !== 0 && strpos($url, 'mailto:') !== 0)) {
 			throw new InvalidURLException();
 		}
 
