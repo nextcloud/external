@@ -14,7 +14,7 @@ OC.L10N.register(
     "New site" : "Novo sitio",
     "Delete icon" : "Eliminar a icona",
     "Uploading…" : "Enviando...",
-    "Reloading icon list…" : "Volvendo cargar a lista de iconas...",
+    "Reloading icon list…" : "Volvendo cargar a lista de iconas…",
     "Icon could not be uploaded" : "Non foi posíbel enviar a icona",
     "Select an icon" : "Escolla unha icona",
     "All languages" : "Todos os idiomas",
