@@ -21,6 +21,7 @@ OC.L10N.register(
     "Header" : "Goiburua",
     "Setting menu" : "Ezarpenen menua",
     "User quota" : "Erabiltzaile-kuota",
+    "Public footer" : "Oin publikoa",
     "All devices" : "Gailu guztiak",
     "Only in the Android app" : "Bakarrik Android aplikazioan",
     "Only in the iOS app" : "Bakarrik IOS aplikazioan",
