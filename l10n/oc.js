@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Name" : "Nom",
     "URL" : "URL",
+    "Language" : "Lenga",
+    "Groups" : "Gropes",
     "Remove site" : "Suprimir lo site",
     "Select an icon" : "Seleccionar una icòna",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Notatz que certans navigadors pòdon blocar l’afichatge dels sites via http se utilizatz https.",

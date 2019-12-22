@@ -2,9 +2,11 @@
     "Name" : "Nome",
     "URL" : "URL",
     "Language" : "Llingua",
+    "Groups" : "Grupos",
     "Devices" : "Preseos",
     "Icon" : "Iconu",
     "Position" : "Posición",
+    "Redirect" : "Redirixir",
     "Remove site" : "Desaniciar sitiu",
     "New site" : "Sitiu nuevu",
     "Uploading…" : "Xubiendo...",
@@ -20,11 +22,13 @@
     "The given device is invalid" : "El preséu dau nun ye válidu",
     "The given icon does not exist" : "El icono dau nun esiste",
     "The site does not exist" : "El sitiu nun esiste",
+    "No file uploaded" : "Nun se xubieron ficheros",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Asocedió un fallu mentanto se xubíu l'iconu, asegúrate que'l direutoriu de datos ye escribible",
     "External sites" : "Sitios esternos",
     "__language_name__" : "Asturianu",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Decátate de que dalgunos restoladores bloquiarán l'amuesa de sitios per http si tas executando https, por favor.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Amás decátate por favor de qu'anguaño munchos sitios nun permiten iframes por razones de seguranza.",
-    "We highly recommend to test the configured sites above properly." : "Aconseyamos muncho que pruebes afayadizamente los sitios configuraos enriba."
+    "We highly recommend to test the configured sites above properly." : "Aconseyamos muncho que pruebes afayadizamente los sitios configuraos enriba.",
+    "Icons" : "Iconos"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -1,6 +1,9 @@
 { "translations": {
     "Name" : "Nama",
     "URL" : "URL",
-    "Remove site" : "Buang laman"
+    "Language" : "Bahasa",
+    "Groups" : "Kumpulan",
+    "Remove site" : "Buang laman",
+    "__language_name__" : "Bahasa Melayu"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

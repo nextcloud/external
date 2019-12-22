@@ -3,6 +3,9 @@ OC.L10N.register(
     {
     "Name" : "பெயர்",
     "URL" : "URL",
-    "Remove site" : "தளத்தை அகற்றுக"
+    "Language" : "மொழி",
+    "Groups" : "குழுக்கள்",
+    "Remove site" : "தளத்தை அகற்றுக",
+    "__language_name__" : "தமிழ்"
 },
 "nplurals=2; plural=(n != 1);");

@@ -24,6 +24,8 @@ OC.L10N.register(
     "Only in the iOS app" : "Ainult iOS-i rakenduses",
     "Only in the desktop client" : "Ainult töölauakliendis",
     "Only in the browser" : "Ainult brauseris",
+    "No file uploaded" : "Faili ei laetud üles",
+    "__language_name__" : "Eesti",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Palun võta teadmiseks, et mõned brauserid blokeerivad saitide kuva üle http, kui sina kasutad https-i.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Lisaks pane tähele, et paljud saidid praegusel ajal ei võimalda  turvakaalutlustel iframing kasutust.",
     "We highly recommend to test the configured sites above properly." : "Soovitame seadistatud saite põhjalikult testida.",
