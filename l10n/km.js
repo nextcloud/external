@@ -3,6 +3,9 @@ OC.L10N.register(
     {
     "Name" : "ឈ្មោះ",
     "URL" : "URL",
-    "Remove site" : "លុប​វេបសាយ"
+    "Language" : "ភាសា",
+    "Groups" : "ក្រុ",
+    "Remove site" : "លុប​វេបសាយ",
+    "__language_name__" : "ភាសាខ្មែរ"
 },
 "nplurals=1; plural=0;");

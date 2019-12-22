@@ -34,6 +34,7 @@ OC.L10N.register(
     "Provided file is not an image" : "Избраният файл не е изображение.",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Избраното изображение не е квадратно, широко 16, 24 или 32 пиксела",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Възникна грешка при качването на иконата, уверете се че може да се пише в директорията за данни",
+    "__language_name__" : "Български",
     "Add external sites to your Nextcloud navigation" : "Добавя външни сайтове към лентата за навигация в Nextcloud",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Добавете уеб сайт към списъка с приложения. Добавените сайтове ще бъдат видими от всеки потребител и улесняват достъпа до други приложения и важни уеб сайтове.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Някои браузъри блокират съдържание достъпно чрез http ако същевременно използвате https.",
