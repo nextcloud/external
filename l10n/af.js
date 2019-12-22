@@ -4,6 +4,7 @@ OC.L10N.register(
     "Name" : "Naam",
     "URL" : "Bronadres",
     "Language" : "Taal",
+    "Groups" : "Groepe",
     "Devices" : "Toestelle",
     "Icon" : "Ikoon",
     "Position" : "Posisie",
@@ -24,6 +25,7 @@ OC.L10N.register(
     "The given device is invalid" : "Die gegewe toestel is ongeldig",
     "The given icon does not exist" : "Die gegewe ikoon bestaan nie",
     "The site does not exist" : "Die werf bestaan nie",
+    "No file uploaded" : "Geen lêer opgelaai",
     "External sites" : "Eksterne werwe",
     "__language_name__" : "__taalnaam__"
 },

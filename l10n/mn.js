@@ -4,6 +4,7 @@ OC.L10N.register(
     "Name" : "Нэр",
     "URL" : "URL",
     "Language" : "Хэл",
+    "Groups" : "бүлэгүүд",
     "Devices" : "Төхөөрөмжүүд",
     "Icon" : "Тэмдэгт ",
     "Position" : "Байр",
@@ -26,10 +27,12 @@ OC.L10N.register(
     "The given device is invalid" : "Өгөгдсөн хэрэгсэл  буруу байна",
     "The given icon does not exist" : "Өгөгдсөн  тэмдэг байхгүй байна",
     "The site does not exist" : "Энэ сайт байхгүй байна",
+    "No file uploaded" : "Файл илгээгдсэнгүй",
     "__language_name__" : "хэлний нэр",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Дээд талын цэсэнд байгаа програмын жагсаалтанд веб сайтаа нэмээрэй. Ингэснээр энэ нь бүх хэрэглэгчдэд харагдах ба бусад ашиглагдсан хуудас эсвэл чухал веб сайтруу ороход илүү хурдан амар болно",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "https ийг ажиллуулж байгаа тохиолдолд зарим http дээр ажилладаг сайтуудыг програм саад х ийх болно  үүнийг анхаараарай",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Үүнээс гадна ойрын үед маш олон сайтууд хуулбарлалт хийхийг аюулгүй байдлын шалтгааны улмаас хориглодог болсон",
-    "We highly recommend to test the configured sites above properly." : "Бид тань дээр тохируулагдсан веб сайтуудыг тестлэж үзэхийг санал болгож байна"
+    "We highly recommend to test the configured sites above properly." : "Бид тань дээр тохируулагдсан веб сайтуудыг тестлэж үзэхийг санал болгож байна",
+    "Icons" : "тэмдэгт"
 },
 "nplurals=2; plural=(n != 1);");

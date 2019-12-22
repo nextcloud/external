@@ -3,6 +3,10 @@ OC.L10N.register(
     {
     "Name" : "Անուն",
     "URL" : "URL",
-    "Remove site" : "Ջնջել կայքը"
+    "Language" : "Լեզու",
+    "Groups" : "Խմբեր",
+    "Remove site" : "Ջնջել կայքը",
+    "__language_name__" : "Հայերեն",
+    "Icons" : "լոգոտիպներ"
 },
 "nplurals=2; plural=(n != 1);");
