@@ -1,6 +1,9 @@
 { "translations": {
     "Name" : "Numm",
     "URL" : "URL",
-    "Remove site" : "Site läschen"
+    "Language" : "Sprooch",
+    "Groups" : "Gruppen",
+    "Remove site" : "Site läschen",
+    "__language_name__" : "Lëtzebuergesch"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

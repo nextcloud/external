@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Name" : "اسم",
     "URL" : "یو ار ایل",
-    "Remove site" : "سائٹ ہٹایں"
+    "Remove site" : "سائٹ ہٹایں",
+    "__language_name__" : "اردو"
 },
 "nplurals=2; plural=(n != 1);");

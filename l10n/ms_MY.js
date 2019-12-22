@@ -3,6 +3,9 @@ OC.L10N.register(
     {
     "Name" : "Nama",
     "URL" : "URL",
-    "Remove site" : "Buang laman"
+    "Language" : "Bahasa",
+    "Groups" : "Kumpulan",
+    "Remove site" : "Buang laman",
+    "__language_name__" : "Bahasa Melayu"
 },
 "nplurals=1; plural=0;");

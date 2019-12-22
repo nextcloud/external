@@ -3,6 +3,9 @@ OC.L10N.register(
     {
     "Name" : "Namn",
     "URL" : "Nettstad",
-    "Remove site" : "Fjern nettstad"
+    "Language" : "Språk",
+    "Groups" : "Grupper",
+    "Remove site" : "Fjern nettstad",
+    "__language_name__" : "Nynorsk"
 },
 "nplurals=2; plural=(n != 1);");
