@@ -25,7 +25,7 @@ OC.L10N.register(
     "All devices" : "Všechna zařízení",
     "Only in the Android app" : "Pouze v aplikaci pro Android",
     "Only in the iOS app" : "Pouze v aplikaci pro iOS",
-    "Only in the desktop client" : "Pouze desktopový klient",
+    "Only in the desktop client" : "Pouze v klientovi pro desktop",
     "Only in the browser" : "Pouze v prohlížeči",
     "The given label is invalid" : "Zadaný štítek není platný",
     "The given URL is invalid" : "Zadaná URL není platná",
