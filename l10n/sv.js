@@ -14,7 +14,7 @@ OC.L10N.register(
     "New site" : "Ny webbplats",
     "Delete icon" : "Ta bort ikon",
     "Uploading…" : "Laddar upp...",
-    "Reloading icon list…" : "Laddar om ikonlista...",
+    "Reloading icon list…" : "Uppdaterar ikonlista...",
     "Icon could not be uploaded" : "Ikon kunde inte laddas upp",
     "Select an icon" : "Välj en ikon",
     "All languages" : "Alla språk",
