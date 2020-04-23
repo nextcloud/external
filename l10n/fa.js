@@ -5,6 +5,7 @@ OC.L10N.register(
     "URL" : "آدرس",
     "Language" : "زبان",
     "Groups" : "گروه ها",
+    "Redirect" : "تغییر مسیر",
     "Remove site" : "حذف سایت",
     "New site" : "سایت جدید",
     "Uploading…" : "در حال آپلود...",
