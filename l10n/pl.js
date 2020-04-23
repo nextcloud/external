@@ -14,7 +14,7 @@ OC.L10N.register(
     "New site" : "Nowa strona",
     "Delete icon" : "Usuń ikonę",
     "Uploading…" : "Wysyłanie…",
-    "Reloading icon list…" : "Odświeżanie listy ikon…",
+    "Reloading icon list…" : "Ponowne ładowanie listy ikon…",
     "Icon could not be uploaded" : "Ikona cloud nie będzie wysłana",
     "Select an icon" : "Wybierz ikonę",
     "All languages" : "Wszystkie języki",
