@@ -9,7 +9,7 @@ OC.L10N.register(
     "Icon" : "Значок",
     "Position" : "Позиція",
     "Redirect" : "Перенаправлення",
-    "Remove site" : "Видалити сайт",
+    "Remove site" : "Вилучити сайт",
     "New site" : "Новий сайт",
     "Uploading…" : "Завантаження…",
     "Select an icon" : "Оберіть іконку",
