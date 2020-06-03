@@ -1,2 +1,6 @@
 # Exclude build stuff
 build
+
+# Node
+/node_modules
+/js/dist
