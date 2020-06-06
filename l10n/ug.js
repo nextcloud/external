@@ -7,4 +7,4 @@ OC.L10N.register(
     "Groups" : "گۇرۇپپا",
     "__language_name__" : "ئۇيغۇرچە"
 },
-"nplurals=1; plural=0;");
+"nplurals=2; plural=(n != 1);");
