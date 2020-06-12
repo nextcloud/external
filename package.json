@@ -5,7 +5,7 @@
 	"description": "",
 	"author": "Joas Schilling <coding@schilljs.com>",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test:unit": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint --ext .js,.vue src",
 		"lint:fix": "eslint --ext .js,.vue src --fix",
 		"build": "NODE_ENV=production npx webpack --progress",

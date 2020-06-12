@@ -9,9 +9,42 @@ package_name=$(app_name)
 cert_dir=$(HOME)/.nextcloud/certificates
 version+=2.0.2
 
-all: appstore
+all: appstore build-js-production
+
+dev-setup: clean-dev npm-init
 
 release: appstore create-tag
+
+build-js:
+	npm run dev
+
+build-js-production:
+	npm run build
+
+watch-js:
+	npm run watch
+
+test:
+	npm run test:unit
+
+lint:
+	npm run lint
+
+lint-fix:
+	npm run lint:fix
+
+npm-init:
+	npm install
+
+npm-update:
+	npm update
+
+clean:
+	rm -rf js/dist/*
+	rm -rf $(build_dir)
+
+clean-dev: clean
+	rm -rf node_modules
 
 create-tag:
 	git tag -s -a v$(version) -m "Tagging the $(version) release."
@@ -19,9 +52,6 @@ create-tag:
 
 js-templates:
 	handlebars -n OCA.External.Templates js/templates -f js/templates.js
-
-clean:
-	rm -rf $(build_dir)
 	rm -rf node_modules
 
 appstore: clean
