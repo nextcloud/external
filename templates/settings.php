@@ -24,7 +24,7 @@
  */
 
 style('external', 'style');
-script('external', 'admin');
+script('external', 'dist/admin');
 script('settings', 'apps');
 script('external', 'templates');
 
