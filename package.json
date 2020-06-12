@@ -6,8 +6,8 @@
 	"author": "Joas Schilling <coding@schilljs.com>",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"eslint": "npx eslint --ext .js,.vue src",
-		"eslint:fix": "npx eslint --ext .js,.vue src --fix",
+		"lint": "eslint --ext .js,.vue src",
+		"lint:fix": "eslint --ext .js,.vue src --fix",
 		"build": "NODE_ENV=production npx webpack --progress",
 		"dev": "npx webpack --progress",
 		"watch": "npx webpack --progress --watch"
