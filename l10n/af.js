@@ -1,16 +1,6 @@
 OC.L10N.register(
     "external",
     {
-    "Name" : "Naam",
-    "URL" : "Bronadres",
-    "Language" : "Taal",
-    "Groups" : "Groepe",
-    "Devices" : "Toestelle",
-    "Icon" : "Ikoon",
-    "Position" : "Posisie",
-    "Redirect" : "Herverwys",
-    "Remove site" : "Verwyder werf",
-    "New site" : "Nuwe werf",
     "Select an icon" : "Kies ’n ikoon",
     "All languages" : "Alle tale",
     "All devices" : "Alle toestelle",
@@ -27,6 +17,16 @@ OC.L10N.register(
     "The site does not exist" : "Die werf bestaan nie",
     "No file uploaded" : "Geen lêer opgelaai",
     "External sites" : "Eksterne werwe",
-    "__language_name__" : "__taalnaam__"
+    "__language_name__" : "__taalnaam__",
+    "Name" : "Naam",
+    "URL" : "Bronadres",
+    "Language" : "Taal",
+    "Groups" : "Groepe",
+    "Devices" : "Toestelle",
+    "Icon" : "Ikoon",
+    "Position" : "Posisie",
+    "Redirect" : "Herverwys",
+    "Remove site" : "Verwyder werf",
+    "New site" : "Nuwe werf"
 },
 "nplurals=2; plural=(n != 1);");
