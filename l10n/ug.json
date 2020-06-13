@@ -1,8 +1,8 @@
 { "translations": {
+    "__language_name__" : "ئۇيغۇرچە",
     "Name" : "ئاتى",
     "URL" : "URL",
     "Language" : "تىل",
-    "Groups" : "گۇرۇپپا",
-    "__language_name__" : "ئۇيغۇرچە"
+    "Groups" : "گۇرۇپپا"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
