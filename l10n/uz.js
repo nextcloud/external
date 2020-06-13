@@ -1,9 +1,9 @@
 OC.L10N.register(
     "external",
     {
+    "All languages" : "Barcha tillar",
     "Name" : "Ism...",
     "Groups" : "Guruhlar",
-    "Uploading…" : "Yuklanmoqda...",
-    "All languages" : "Barcha tillar"
+    "Uploading…" : "Yuklanmoqda..."
 },
 "nplurals=1; plural=0;");
