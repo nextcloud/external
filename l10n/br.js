@@ -1,6 +1,7 @@
 OC.L10N.register(
     "external",
     {
+    "All languages" : "Pep yezh",
     "__language_name__" : "Brezhoneg",
     "Name" : "Anv",
     "URL" : "URL",
