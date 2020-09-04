@@ -25,26 +25,35 @@ use OCA\External\Capabilities;
 use OCA\External\Settings\Personal;
 use OCA\External\SitesManager;
 use OCP\AppFramework\App;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\INavigationManager;
 use OCP\IServerContainer;
+use OCP\IURLGenerator;
+use OCP\Settings\IManager;
+use OCP\Util;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
-class Application extends App {
+class Application extends App implements IBootstrap {
+
+	public const APP_ID = 'external';
 
 	public function __construct() {
-		parent::__construct('external');
-
-		$this->getContainer()->registerCapability(Capabilities::class);
+		parent::__construct(self::APP_ID);
 	}
 
-	public function register() {
-		$server = $this->getContainer()->getServer();
+	public function register(IRegistrationContext $context): void {
+		$context->registerCapability(Capabilities::class);
+	}
 
+	public function boot(IBootContext $context): void {
 		/** @var SitesManager $sitesManager */
-		$sitesManager = $this->getContainer()->query(SitesManager::class);
+		$sitesManager = $context->getAppContainer()->get(SitesManager::class);
 		$sites = $sitesManager->getSitesToDisplay();
 
-		$this->registerNavigationEntries($server, $sites);
-		$this->registerPersonalPage($server, $sites);
+		$this->registerNavigationEntries($context->getServerContainer(), $sites);
+		$this->registerPersonalPage($context->getServerContainer(), $sites);
 	}
 
 	/**
@@ -57,8 +66,8 @@ class Application extends App {
 				continue;
 			}
 
-			$server->getNavigationManager()->add(function() use ($site, $server) {
-				$url = $server->getURLGenerator();
+			$server->get(INavigationManager::class)->add(function() use ($site, $server) {
+				$url = $server->get(IURLGenerator::class);
 
 				if ($site['icon'] !== '') {
 					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
@@ -90,7 +99,7 @@ class Application extends App {
 	public function registerPersonalPage(IServerContainer $server, array $sites) {
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$server->getSettingsManager()->registerSetting('personal', Personal::class);
+				$server->get(IManager::class)->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
 				$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function(GenericEvent $event) use ($server, $site) {
 					$url = $server->getURLGenerator();
 
@@ -103,7 +112,7 @@ class Application extends App {
 					$hiddenFields['external_quota_name'] = $site['name'];
 					$event->setArgument('hiddenFields', $hiddenFields);
 
-					\OCP\Util::addScript('external', 'quota-files-sidebar');
+					Util::addScript('external', 'quota-files-sidebar');
 				});
 				return;
 			}
