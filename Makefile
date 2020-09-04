@@ -68,13 +68,19 @@ appstore: clean
 	--exclude=/l10n/l10n.pl \
 	--exclude=/CONTRIBUTING.md \
 	--exclude=/issue_template.md \
+	--exclude=/node_modules \
+	--exclude=/src \
 	--exclude=/README.md \
 	--exclude=/.gitattributes \
 	--exclude=/.gitignore \
 	--exclude=/.scrutinizer.yml \
 	--exclude=/.travis.yml \
 	--exclude=/.drone.yml \
+	--exclude=/babel.config.js \
+	--exclude=/.eslintrc.js \
 	--exclude=/Makefile \
+	--exclude=/package.json \
+	--exclude=/webpack.config.js \
 	$(project_dir)/ $(sign_dir)/$(app_name)
 	tar -czf $(build_dir)/$(app_name)-$(version).tar.gz \
 		-C $(sign_dir) $(app_name)
