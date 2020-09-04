@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.7.0 – 2020-09-04
+### Fixed
+ - Compatibility with Nextcloud 20
+
+## 3.6.0 – 2020-06-03
+### Fixed
+ - Compatibility with Nextcloud 19
+
+## 3.5.0 – 2020-01-17
+### Fixed
+ - Compatibility with Nextcloud 18
+
 ## 3.4.1 – 2019-10-15
 ### Fixed
  - Make sure the white icon is also shown in 32px width
