@@ -21,6 +21,7 @@
 
 namespace OCA\External\AppInfo;
 
+use OCA\External\BeforeTemplateRenderedListener;
 use OCA\External\Capabilities;
 use OCA\External\Settings\Personal;
 use OCA\External\SitesManager;
@@ -28,6 +29,7 @@ use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
 use OCP\INavigationManager;
 use OCP\IServerContainer;
 use OCP\IURLGenerator;
@@ -45,6 +47,7 @@ class Application extends App implements IBootstrap {
 
 	public function register(IRegistrationContext $context): void {
 		$context->registerCapability(Capabilities::class);
+		$context->registerEventListener(BeforeTemplateRenderedEvent::class, BeforeTemplateRenderedListener::class);
 	}
 
 	public function boot(IBootContext $context): void {
@@ -52,44 +55,7 @@ class Application extends App implements IBootstrap {
 		$sitesManager = $context->getAppContainer()->get(SitesManager::class);
 		$sites = $sitesManager->getSitesToDisplay();
 
-		$this->registerNavigationEntries($context->getServerContainer(), $sites);
 		$this->registerPersonalPage($context->getServerContainer(), $sites);
-	}
-
-	/**
-	 * @param IServerContainer $server
-	 * @param array[] $sites
-	 */
-	public function registerNavigationEntries(IServerContainer $server, array $sites) {
-		foreach ($sites as $id => $site) {
-			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING && $site['type'] !== SitesManager::TYPE_LOGIN ) {
-				continue;
-			}
-
-			$server->get(INavigationManager::class)->add(function() use ($site, $server) {
-				$url = $server->get(IURLGenerator::class);
-
-				if ($site['icon'] !== '') {
-					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
-				} else {
-					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
-				}
-
-				$href = $site['url'];
-				if (!$site['redirect']) {
-					$href = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
-				}
-
-				return [
-					'id' => 'external_index' . $site['id'],
-					'order' =>  80 + $site['id'],
-					'href' => $href,
-					'icon' => $image,
-					'type' => $site['type'],
-					'name' => $site['name'],
-				];
-			});
-		}
 	}
 
 	/**
