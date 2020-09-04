@@ -25,6 +25,7 @@ use OCA\External\BeforeTemplateRenderedListener;
 use OCA\External\Capabilities;
 use OCA\External\Settings\Personal;
 use OCA\External\SitesManager;
+use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -48,6 +49,7 @@ class Application extends App implements IBootstrap {
 	public function register(IRegistrationContext $context): void {
 		$context->registerCapability(Capabilities::class);
 		$context->registerEventListener(BeforeTemplateRenderedEvent::class, BeforeTemplateRenderedListener::class);
+		$context->registerEventListener(LoadAdditionalScriptsEvent::class, BeforeTemplateRenderedListener::class);
 	}
 
 	public function boot(IBootContext $context): void {
@@ -55,32 +57,9 @@ class Application extends App implements IBootstrap {
 		$sitesManager = $context->getAppContainer()->get(SitesManager::class);
 		$sites = $sitesManager->getSitesToDisplay();
 
-		$this->registerPersonalPage($context->getServerContainer(), $sites);
-	}
-
-	/**
-	 * @param IServerContainer $server
-	 * @param array[] $sites
-	 */
-	public function registerPersonalPage(IServerContainer $server, array $sites) {
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$server->get(IManager::class)->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
-				$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function(GenericEvent $event) use ($server, $site) {
-					$url = $server->getURLGenerator();
-
-					$hiddenFields = $event->getArgument('hiddenFields');
-
-					$hiddenFields['external_quota_link'] = $site['url'];
-					if (!$site['redirect']) {
-						$hiddenFields['external_quota_link'] = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
-					}
-					$hiddenFields['external_quota_name'] = $site['name'];
-					$event->setArgument('hiddenFields', $hiddenFields);
-
-					Util::addScript('external', 'quota-files-sidebar');
-				});
-				return;
+				$context->getServerContainer()->get('SettingsManager')->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
 			}
 		}
 	}

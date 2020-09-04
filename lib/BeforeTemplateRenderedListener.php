@@ -23,11 +23,13 @@ declare(strict_types=1);
 
 namespace OCA\External;
 
+use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
+use OCP\Util;
 
 class BeforeTemplateRenderedListener implements IEventListener {
 
@@ -47,10 +49,35 @@ class BeforeTemplateRenderedListener implements IEventListener {
 	}
 
 	public function handle(Event $event): void {
-		if (!$event instanceof BeforeTemplateRenderedEvent) {
-			return;
+		if ($event instanceof BeforeTemplateRenderedEvent) {
+			$this->generateNavigationLinks();
 		}
 
+		if ($event instanceof LoadAdditionalScriptsEvent) {
+			$this->loadQuotaInformationOnFilesApp($event);
+		}
+	}
+
+	protected function loadQuotaInformationOnFilesApp(LoadAdditionalScriptsEvent $event): void {
+		$sites = $this->sitesManager->getSitesToDisplay();
+
+		foreach ($sites as $site) {
+			if ($site['type'] === SitesManager::TYPE_QUOTA) {
+				$link = $site['url'];
+				if (!$site['redirect']) {
+					$link = $this->urlGenerator->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+				}
+
+				$event->addHiddenField('external_quota_link', $link);
+				$event->addHiddenField('external_quota_name', $site['name']);
+
+				Util::addScript('external', 'quota-files-sidebar');
+				return;
+			}
+		}
+	}
+
+	protected function generateNavigationLinks(): void {
 		$sites = $this->sitesManager->getSitesToDisplay();
 
 		foreach ($sites as $id => $site) {
