@@ -8,9 +8,9 @@
 		"test:unit": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint --ext .js,.vue src",
 		"lint:fix": "eslint --ext .js,.vue src --fix",
-		"build": "NODE_ENV=production npx webpack --progress",
-		"dev": "npx webpack --progress",
-		"watch": "npx webpack --progress --watch"
+		"build": "NODE_ENV=production webpack --progress --hide-modules --config webpack.config.js",
+		"dev": "NODE_ENV=development webpack --progress --config webpack.config.js",
+		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.config.js"
 	},
 	"dependencies": {
 		"@nextcloud/router": "^1.1.0",
