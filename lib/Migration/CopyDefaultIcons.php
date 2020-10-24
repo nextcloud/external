@@ -84,7 +84,7 @@ class CopyDefaultIcons implements IRepairStep {
 	protected function copyDefaultIcon(IOutput $output, ISimpleFolder $folder, $file) {
 		try {
 			$folder->getFile($file);
-			$output->info('Icon %s already exists');
+			$output->info(sprintf('Icon %s already exists', $file));
 			return;
 		} catch (NotFoundException $exception) {
 		}
@@ -92,13 +92,13 @@ class CopyDefaultIcons implements IRepairStep {
 		// Default icon is missing, copy it from img/
 		$content = file_get_contents($this->appManager->getAppPath('external') . '/img/' . $file);
 		if ($content === false) {
-			$output->info('Could not read icon %s');
+			$output->info(sprintf('Could not read icon %s', $file));
 			return;
 		}
 
 		$externalSVG = $folder->newFile($file);
 		$externalSVG->putContent($content);
 
-		$output->info('Icon %s copied successfully');
+		$output->info(sprintf('Icon %s copied successfully', $file));
 	}
 }
