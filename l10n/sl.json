@@ -20,6 +20,8 @@
     "The site does not exist" : "Spletna stran ne obstaja",
     "No file uploaded" : "Ni poslanih datotek",
     "Provided file is not an image" : "Ponujena datoteka ni slikovna",
+    "Provided image is not a square of 16, 24 or 32 pixels width" : "Podana slika ni kvadratna s širino 16, 24 ali 32 točk.",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Prišlo je do napake med pošiljanjem ikone, prepričajte se, da je podatkovna mapa zapisljiva.",
     "External sites" : "Zunanje strani",
     "__language_name__" : "Slovenščina",
     "Name" : "Ime",
@@ -40,6 +42,8 @@
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Nekateri brskalniki onemogočajo prikazovanje spletišč prek protokola HTTP, če je zagnan varni protokol HTTPS!",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Pogosto spletne strani iz varnostnih razlogov onemogočajo tudi uporabo vstavljene kode s funkcijo iframe.",
     "Icons" : "Ikone",
+    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Če pošljete datoteki test.png in test-dark.png, bosta obe uporabljeni kot ena ikona. Temna različica bo uporabljena na mobilnih napravah, ker bela ni najbolje vidna na belem ozadju.",
+    "Uploading an icon with the same name will replace the current icon." : "Pošiljanje ikone z istim imenom zamenja obstoječo ikono.",
     "Upload new icon" : "Pošlji novo ikono"
 },"pluralForm" :"nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);"
 }
