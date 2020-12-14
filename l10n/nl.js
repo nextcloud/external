@@ -43,7 +43,7 @@ OC.L10N.register(
     "Uploading…" : "Uploaden…",
     "Reloading icon list…" : "Herladen pictogram lijst...",
     "Icon could not be uploaded" : "Pictogram kon niet worden opgeslagen",
-    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Voeg een website direct toe aan het app-overzocht in de topbalk. Dit is zichtbaar voor allen gebuikers en help om snel interne webapps of belangrijks sites te openen.",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Voeg een website direct toe aan het app-overzicht in de topbalk. Dit is zichtbaar voor alle gebuikers en helpt om snel interne webapps of belangrijke sites te openen.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "De velden {email}, {uid} en {displayname} kunnen worden gebruikt en zijn vooringevuld met de gebruikerswaarden om de links te personaliseren.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Let op dat sommige browsers http sites niet tonen als je https gebruikt.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Let er ook op dat veel sites het gebruik van iframes wegens beveiligingsredenen tegengaan.",
