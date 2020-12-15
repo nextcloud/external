@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /**
- * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
+ * @copyright Copyright (c) 2020 Joas Schilling <coding@schilljs.com>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -33,6 +33,8 @@ use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
+use OCP\INavigationManager;
+use OCP\IURLGenerator;
 use OCP\Settings\IManager;
 
 class Application extends App implements IBootstrap {
@@ -50,14 +52,49 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function boot(IBootContext $context): void {
-		/** @var SitesManager $sitesManager */
-		$sitesManager = $context->getAppContainer()->get(SitesManager::class);
+		$context->injectFn([$this, 'registerSites']);
+	}
+
+	public function registerSites(
+		SitesManager $sitesManager,
+		IManager $settingsManager,
+		INavigationManager $navigationManager,
+		IURLGenerator $url): void {
 		$sites = $sitesManager->getSitesToDisplay();
 
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$context->getServerContainer()->get('SettingsManager')->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
+				$settingsManager->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
+				continue;
 			}
+
+			if ($site['type'] !== SitesManager::TYPE_LINK
+				&& $site['type'] !== SitesManager::TYPE_SETTING
+				&& $site['type'] !== SitesManager::TYPE_LOGIN) {
+				continue;
+			}
+
+			$navigationManager->add(function() use ($site, $url) {
+				if ($site['icon'] !== '') {
+					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
+				} else {
+					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
+				}
+
+				$href = $site['url'];
+				if (!$site['redirect']) {
+					$href = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+				}
+
+				return [
+					'id' => 'external_index' . $site['id'],
+					'order' =>  80 + $site['id'],
+					'href' => $href,
+					'icon' => $image,
+					'type' => $site['type'],
+					'name' => $site['name'],
+				];
+			});
 		}
 	}
 }
