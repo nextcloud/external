@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.8.0 – 2020-12-15
+### Fixed
+- Compatibility with Nextcloud 21
+
 ## 3.7.1 – 2020-10-07
 ### Fixed
  - Fix missing compiled JS
