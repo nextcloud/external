@@ -1,6 +1,8 @@
 <?php
+
+declare(strict_types=1);
 /**
- * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
+ * @copyright Copyright (c) 2020 Joas Schilling <coding@schilljs.com>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -21,45 +23,58 @@
 
 namespace OCA\External\AppInfo;
 
+use OCA\External\BeforeTemplateRenderedListener;
 use OCA\External\Capabilities;
 use OCA\External\Settings\Personal;
 use OCA\External\SitesManager;
+use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCP\AppFramework\App;
-use OCP\IServerContainer;
-use Symfony\Component\EventDispatcher\GenericEvent;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
+use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
+use OCP\INavigationManager;
+use OCP\IURLGenerator;
+use OCP\Settings\IManager;
 
-class Application extends App {
+class Application extends App implements IBootstrap {
+
+	public const APP_ID = 'external';
 
 	public function __construct() {
-		parent::__construct('external');
-
-		$this->getContainer()->registerCapability(Capabilities::class);
+		parent::__construct(self::APP_ID);
 	}
 
-	public function register() {
-		$server = $this->getContainer()->getServer();
+	public function register(IRegistrationContext $context): void {
+		$context->registerCapability(Capabilities::class);
+		$context->registerEventListener(BeforeTemplateRenderedEvent::class, BeforeTemplateRenderedListener::class);
+		$context->registerEventListener(LoadAdditionalScriptsEvent::class, BeforeTemplateRenderedListener::class);
+	}
 
-		/** @var SitesManager $sitesManager */
-		$sitesManager = $this->getContainer()->query(SitesManager::class);
+	public function boot(IBootContext $context): void {
+		$context->injectFn([$this, 'registerSites']);
+	}
+
+	public function registerSites(
+		SitesManager $sitesManager,
+		IManager $settingsManager,
+		INavigationManager $navigationManager,
+		IURLGenerator $url): void {
 		$sites = $sitesManager->getSitesToDisplay();
 
-		$this->registerNavigationEntries($server, $sites);
-		$this->registerPersonalPage($server, $sites);
-	}
-
-	/**
-	 * @param IServerContainer $server
-	 * @param array[] $sites
-	 */
-	public function registerNavigationEntries(IServerContainer $server, array $sites) {
-		foreach ($sites as $id => $site) {
-			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING && $site['type'] !== SitesManager::TYPE_LOGIN ) {
+		foreach ($sites as $site) {
+			if ($site['type'] === SitesManager::TYPE_QUOTA) {
+				$settingsManager->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
 				continue;
 			}
 
-			$server->getNavigationManager()->add(function() use ($site, $server) {
-				$url = $server->getURLGenerator();
+			if ($site['type'] !== SitesManager::TYPE_LINK
+				&& $site['type'] !== SitesManager::TYPE_SETTING
+				&& $site['type'] !== SitesManager::TYPE_LOGIN) {
+				continue;
+			}
 
+			$navigationManager->add(function() use ($site, $url) {
 				if ($site['icon'] !== '') {
 					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
 				} else {
@@ -80,33 +95,6 @@ class Application extends App {
 					'name' => $site['name'],
 				];
 			});
-		}
-	}
-
-	/**
-	 * @param IServerContainer $server
-	 * @param array[] $sites
-	 */
-	public function registerPersonalPage(IServerContainer $server, array $sites) {
-		foreach ($sites as $site) {
-			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$server->getSettingsManager()->registerSetting('personal', Personal::class);
-				$server->getEventDispatcher()->addListener('OCA\Files::loadAdditionalScripts', function(GenericEvent $event) use ($server, $site) {
-					$url = $server->getURLGenerator();
-
-					$hiddenFields = $event->getArgument('hiddenFields');
-
-					$hiddenFields['external_quota_link'] = $site['url'];
-					if (!$site['redirect']) {
-						$hiddenFields['external_quota_link'] = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
-					}
-					$hiddenFields['external_quota_name'] = $site['name'];
-					$event->setArgument('hiddenFields', $hiddenFields);
-
-					\OCP\Util::addScript('external', 'quota-files-sidebar');
-				});
-				return;
-			}
 		}
 	}
 }
