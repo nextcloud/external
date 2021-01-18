@@ -347,7 +347,7 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 	}
 })(OC, OCA, _, OC.Backbone)
 
-$(document).ready(function() {
+window.addEventListener('DOMContentLoaded', function() {
 	OCA.External.App.init()
 
 	const uploadParamsLogo = {

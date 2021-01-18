@@ -34,7 +34,7 @@ lint-fix:
 	npm run lint:fix
 
 npm-init:
-	npm install
+	npm ci
 
 npm-update:
 	npm update
@@ -54,7 +54,7 @@ js-templates:
 	handlebars -n OCA.External.Templates js/templates -f js/templates.js
 	rm -rf node_modules
 
-appstore: clean
+appstore: clean npm-init build-js-production
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=/build \
