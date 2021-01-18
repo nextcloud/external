@@ -54,7 +54,7 @@ js-templates:
 	handlebars -n OCA.External.Templates js/templates -f js/templates.js
 	rm -rf node_modules
 
-appstore: clean
+appstore: clean npm-init build-js-production
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=/build \
