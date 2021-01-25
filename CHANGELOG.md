@@ -1,9 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.8.1 – 2021-01-25
+### Fixed
+- Fix "Fileupload not a function on chrome"
+
 ## 3.8.0 – 2020-12-15
 ### Fixed
 - Compatibility with Nextcloud 21
+
+## 3.7.2 – 2021-01-25
+### Fixed
+- Fix "Fileupload not a function on chrome"
 
 ## 3.7.1 – 2020-10-07
 ### Fixed
