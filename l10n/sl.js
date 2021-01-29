@@ -42,6 +42,7 @@ OC.L10N.register(
     "Reloading icon list…" : "Poteka ponovno nalaganje seznama ikon ...",
     "Icon could not be uploaded" : "Ikone ni mogoče poslati",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Spletno mesto se pokaže med programi v vrhnji vrstici. Spremema je vidna vsem uporabnikom in omogoča hiter dostop do drugih notranjih programov in pomembnih spletnih mest.",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Uporabiti je mogoče vsebnike {email}, {uid} in {displayname}, ki zapolnijo vrednosti uporabnika za prilagoditev povezav po meri.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Nekateri brskalniki onemogočajo prikazovanje spletišč prek protokola HTTP, če je zagnan varni protokol HTTPS!",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Pogosto spletne strani iz varnostnih razlogov onemogočajo tudi uporabo vstavljene kode s funkcijo iframe.",
     "We highly recommend to test the configured sites above properly." : "Priporočljivo je natančno preizkusiti nastavitve in delovanje navedenih strani.",
