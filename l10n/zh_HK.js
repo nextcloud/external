@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "提供的圖片尺寸並非 16, 24 或 32 像素寬的正方形",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "上傳圖示時發生錯誤，請確認資料目錄可寫入",
     "External sites" : "外部站台",
-    "__language_name__" : "正體中文（臺灣）",
+    "__language_name__" : "正體中文（香港）",
     "Add external sites to your Nextcloud navigation" : "加入外部站台到您的 Nextcloud 導航列",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "本應用程式允許管理員在 Nextcloud 主選單中加入額外的連結，點開連結時，外部的網站將會在 Nextcloud 的頁框中開啟。\n也可以指定僅針對特定語言、裝置類型或是使用者群組加入連結。\n\n詳細資訊請至「外部站台 (External sites)」說明文件中瞭解。",
     "Name" : "名稱",
