@@ -18,7 +18,7 @@
     "At least one of the given groups does not exist" : "Co najmniej jedna z podanych grup nie istnieje",
     "The given icon does not exist" : "Podana ikona nie istnieje",
     "The site does not exist" : "Miejsce nie istnieje",
-    "No file uploaded" : "Żaden plik nie został wysłany",
+    "No file uploaded" : "Nie wysłano żadnego pliku",
     "Provided file is not an image" : "Wskazany plik nie jest obrazem",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Wskazany obraz nie jest kwadratem o szerokości 16, 24 lub 32 pikseli",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Wystąpił błąd podczas przesyłania ikony, upewnij się, że katalog danych jest do zapisu",
