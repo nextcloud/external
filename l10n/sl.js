@@ -26,6 +26,8 @@ OC.L10N.register(
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Prišlo je do napake med pošiljanjem ikone, prepričajte se, da je podatkovna mapa zapisljiva.",
     "External sites" : "Zunanje strani",
     "__language_name__" : "Slovenščina",
+    "Add external sites to your Nextcloud navigation" : "Dodaj zunanja spletna mesta v okolje Nextcloud",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Program omogoča skrbniku dodajanje povezav v menije Nextcloud.\nPovezava odpre zunanje spletno mesto znotraj okna Nextcloud.\nPrav tako je mogoče dodati povezave samo za določen jezik, vrsto naprave ali uporabniško skupino.\n\nVeč informacij je na voljo v dokumentaciji na zunanjem spletnem mestu.",
     "Name" : "Ime",
     "URL" : "Naslov URL",
     "Language" : "Jezik",
