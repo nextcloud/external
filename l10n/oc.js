@@ -2,6 +2,8 @@ OC.L10N.register(
     "external",
     {
     "Select an icon" : "Seleccionar una icòna",
+    "All languages" : "Totas las lengas",
+    "The given language does not exist" : "La lenga especificada existís pas",
     "Name" : "Nom",
     "URL" : "URL",
     "Language" : "Lenga",
