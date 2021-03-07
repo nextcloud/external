@@ -21,7 +21,7 @@ OC.L10N.register(
     "The given icon does not exist" : "選定的圖示不存在",
     "The site does not exist" : "該站台不存在",
     "No file uploaded" : "未上傳檔案",
-    "Provided file is not an image" : "選擇的檔案不是圖片檔",
+    "Provided file is not an image" : "選擇的檔案不是圖像檔",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "提供的圖片尺寸並非 16, 24 或 32 像素寬的正方形",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "上傳圖示時發生錯誤，請確認資料目錄可寫入",
     "External sites" : "外部站台",
