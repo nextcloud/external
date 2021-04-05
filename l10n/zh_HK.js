@@ -40,7 +40,7 @@ OC.L10N.register(
     "This site does not allow embedding" : "此網站不允許被嵌入",
     "New site" : "新網站",
     "Delete icon" : "刪除圖示",
-    "Uploading…" : "上傳中。。。",
+    "Uploading…" : "上傳中...",
     "Reloading icon list…" : "重新讀取圖示列表",
     "Icon could not be uploaded" : "圖示無法上傳",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "可直接在最上方應用功能選單列新增網址，讓所有用戶從內部顯示連結，連往一些網路應用程式或者重要的網站。",
