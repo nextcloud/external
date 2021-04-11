@@ -97,19 +97,10 @@ class SitesManager {
 	 * @throws SiteNotFoundException
 	 */
 	public function getSiteById($id) {
-		$sites = $this->getSites();
+		$sites = $this->getSitesToDisplay();
 
 		if (isset($sites[$id])) {
-			$site = $sites[$id];
-
-			$user = $this->userSession->getUser();
-			$email= $user instanceof IUser ? $user->getEMailAddress() : '';
-			$uid  = $user instanceof IUser ? $user->getUID() : '';
-			$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
-
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
-
-			return $site;
+			return $sites[$id];
 		}
 
 		throw new SiteNotFoundException();
