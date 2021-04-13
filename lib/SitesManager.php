@@ -148,7 +148,11 @@ class SitesManager {
 				continue;
 			}
 
-			$site['url'] = str_replace(['{email}', '{uid}', '{displayname}'], [$email, $uid, $displayName], $site['url']);
+			$site['url'] = str_replace(
+				['{email}', '{uid}', '{displayname}'],
+				array_map('urlencode', [$email, $uid, $displayName]),
+				$site['url']
+			);
 
 			$langSites[$id] = $site;
 		}
