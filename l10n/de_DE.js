@@ -43,7 +43,7 @@ OC.L10N.register(
     "Uploading…" : "Lade hoch…",
     "Reloading icon list…" : "Symbolliste wird neu geladen…",
     "Icon could not be uploaded" : "Symbol konnte nicht hochgeladen werden",
-    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Fügen Sie eine Internetseite zur Liste der Apps in die Leiste oben ein. Die Seite ist sichtbar für alle Benutzer. Dies ist nützlich zum Erreichen anderer internen Web-Anwendungen oder wichtiger Seiten.",
+    "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Fügen Sie eine Webseite zur Liste der Apps in die Leiste oben ein. Die Seite ist sichtbar für alle Benutzer. Dies ist nützlich zum Erreichen anderer internen Web-Anwendungen oder wichtiger Seiten.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid} und {displayname} können benutzt werden, um den Link mit den Benutzerdaten zu füllen.",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Bitte beachten Sie, dass einige Browser die Anzeige der Seiten über http sperren, wenn Sie https verwenden.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachten Sie bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",
