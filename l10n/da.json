@@ -17,7 +17,7 @@
     "At least one of the given groups does not exist" : "Mindst en af de angivne grupper eksisterer ikke",
     "The given icon does not exist" : "Ikonet findes ikke",
     "The site does not exist" : "Siden findes ikke",
-    "No file uploaded" : "Ingen fil uploaded",
+    "No file uploaded" : "Ingen fil uploadet",
     "Provided file is not an image" : "Den valgte fil er ikke et billede.",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Det valgte billede er ikke firkantet med en bredde på 16, 24 eller 32 pixels",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Der skete en fejl under upload af ikon, sørg venligst for at data folderen er skrivbar",
