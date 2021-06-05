@@ -26,4 +26,4 @@ style('external', 'style');
 
 /** @var array $_ */
 ?>
-<iframe id="ifm" src="<?php p($_['url']); ?>" allowfullscreen></iframe>
+<iframe id="ifm" src="<?php p($_['url']); ?>" allow="camera; microphone; fullscreen; display-capture"></iframe>
