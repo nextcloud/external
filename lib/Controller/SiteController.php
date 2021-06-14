@@ -129,6 +129,7 @@ class SiteController extends Controller {
 
 		$response = new TemplateResponse('external', 'frame', [
 			'url' => $site['url'],
+			'name' => $site['name'],
 		], 'user');
 
 		$policy = new ContentSecurityPolicy();
