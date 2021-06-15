@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.7.3 – 2021-06-15
+### Fixed
+- Accessibility Issue: Inline frames must have a unique, non-empty 'title' attribute
+  [#260](https://github.com/nextcloud/external/pull/260)
+- Use prepared list of pages to redirect to the page
+  [#246](https://github.com/nextcloud/external/pull/246)
+- urlencode the parameters
+  [#249](https://github.com/nextcloud/external/pull/249)
+
 ## 3.7.2 – 2021-01-25
 ### Fixed
  - Fix "Fileupload not a function on chrome"
