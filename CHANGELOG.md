@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
   [#244](https://github.com/nextcloud/external/pull/244)
 - urlencode the parameters
   [#243](https://github.com/nextcloud/external/pull/243)
-- Compatibility with Nextcloud 21
+- Compatibility with Nextcloud 22
 
 ## 3.8.2 – 2021-06-15
 ### Fixed
