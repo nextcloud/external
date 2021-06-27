@@ -49,7 +49,7 @@ OC.L10N.register(
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，出於安全性考量，現今許多網站不允許 iframe （頁框）。",
     "We highly recommend to test the configured sites above properly." : "我們強烈建議您測試上述配置的網站是否正確。",
     "Icons" : "圖示",
-    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您同時上傳 test。png 和 test-dark。png 文檔，兩者會被當做同一個圖標。後者為深色版本，將用於流動裝置上，而前者為淺色版本，在移動應用程式的白色背景上會無法看見。",
+    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您同時上傳 test.png 和 test-dark.png 文檔，兩者會被當做同一個圖標。後者為深色版本，將用於流動裝置上，而前者為淺色版本，在移動應用程式的白色背景上會無法看見。",
     "Uploading an icon with the same name will replace the current icon." : "若上傳與目前名稱相同的圖示，將會取代它",
     "Upload new icon" : "上傳新圖示"
 },
