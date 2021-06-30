@@ -56,7 +56,7 @@ class Personal implements ISettings {
 		}
 
 		$url = $quotaLink['url'];
-		if (!$quotaLink['redirect']) {
+		if (!$quotaLink['redirect'] && !$quotaLink['target']) {
 			$url = $this->url->linkToRoute('external.site.showPage', ['id'=> $quotaLink['id']]);
 		}
 

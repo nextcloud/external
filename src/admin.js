@@ -106,6 +106,8 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 			data.iconTXT = t('external', 'Icon')
 			data.positionTXT = t('external', 'Position')
 			data.redirectTXT = t('external', 'Redirect')
+			data.targetTXT = t('external', 'New Tab')
+			data.OpenTabTXT = t('external', 'External links open in a new tab')
 			data.removeSiteTXT = t('external', 'Remove site')
 			data.noEmbedTXT = t('external', 'This site does not allow embedding')
 			data.deleteIMG = imagePath('core', 'actions/delete.svg')
@@ -173,6 +175,7 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 				self._attachEvents($el)
 				if (site.attributes.type === 'guest') {
 					$el.find('.site-redirect-box').hide()
+					$el.find('.site-target-box').hide()
 				}
 				self.$list.append($el)
 			})
@@ -231,6 +234,7 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 				type: $site.find('.site-type').val(),
 				device: $site.find('.site-device').val(),
 				redirect: $site.find('.site-redirect').prop('checked') ? 1 : 0,
+				target: $site.find('.site-target').prop('checked') ? 1 : 0,
 				groups: groups === '' ? [] : groups.split('|'),
 				icon: $site.find('.site-icon').val(),
 			}
@@ -239,8 +243,10 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 			$site.find('.invalid-value').removeClass('invalid-value')
 			if (data.type === 'guest') {
 				$site.find('.site-redirect-box').hide()
+				$site.find('.site-target-box').hide()
 			} else {
 				$site.find('.site-redirect-box').show()
+				$site.find('.site-target-box').show()
 			}
 
 			if (!_.isUndefined(site)) {
