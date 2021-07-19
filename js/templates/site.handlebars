@@ -80,6 +80,16 @@
 			</label>
 		</div>
 
+		<div class="site-target-box">
+			<label>
+				<span>{{targetTXT}}</span>
+				<input type="checkbox" id="site_target_{{id}}" name="site_target_{{id}}"
+					   value="1" class="site-target checkbox trigger-save" {{#if target}} checked="checked"{{/if}} />
+				<label for="site_target_{{id}}">{{OpenTabTXT}}</label>
+			</label>
+		</div>
+
+
 		<div class="button delete-button">{{removeSiteTXT}}</div>
 	</div>
 </li>

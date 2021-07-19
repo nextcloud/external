@@ -43,6 +43,7 @@ class Capabilities implements ICapability {
 					'device',
 					'groups',
 					'redirect',
+					'target'
 				],
 			],
 		];

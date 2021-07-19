@@ -82,7 +82,7 @@ class Application extends App implements IBootstrap {
 				}
 
 				$href = $site['url'];
-				if (!$site['redirect']) {
+				if (!$site['redirect'] && !$site['target']) {
 					$href = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
 				}
 
@@ -93,6 +93,7 @@ class Application extends App implements IBootstrap {
 					'icon' => $image,
 					'type' => $site['type'],
 					'name' => $site['name'],
+					'target' => $site['target'],
 				];
 			});
 		}

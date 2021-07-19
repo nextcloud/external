@@ -184,6 +184,7 @@ class SitesManager {
 				'device' => self::DEVICE_ALL,
 				'groups' => [],
 				'redirect' => false,
+				'target' => false,
 			],
 			$site
 		);
@@ -198,6 +199,7 @@ class SitesManager {
 	 * @param string $icon
 	 * @param string[] $groups
 	 * @param bool $redirect
+	 * @param bool $target
 	 * @return array
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
@@ -207,7 +209,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect, $target) {
 		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
 
 		if ($name === '') {
@@ -259,6 +261,7 @@ class SitesManager {
 
 		if ($type === self::TYPE_LOGIN) {
 			$redirect = true;
+			$target = true;
 		}
 
 		$sites = $this->getSites();
@@ -272,6 +275,7 @@ class SitesManager {
 			'icon' => $icon,
 			'groups' => $groups,
 			'redirect' => $redirect,
+			'target' => $target
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 		$this->config->setAppValue('external', 'max_site', $id);
@@ -289,6 +293,7 @@ class SitesManager {
 	 * @param string $icon
 	 * @param string[] $groups
 	 * @param bool $redirect
+	 * @param bool $target
 	 * @return array
 	 * @throws SiteNotFoundException
 	 * @throws InvalidNameException
@@ -299,7 +304,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect, $target) {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
@@ -354,6 +359,7 @@ class SitesManager {
 
 		if ($type === self::TYPE_LOGIN) {
 			$redirect = true;
+			$target = true;
 		}
 
 		$sites[$id] = [
@@ -366,6 +372,7 @@ class SitesManager {
 			'icon' => $icon,
 			'groups' => $groups,
 			'redirect' => $redirect,
+			'target' => $target
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
 

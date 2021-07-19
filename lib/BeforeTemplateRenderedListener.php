@@ -64,7 +64,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
 				$link = $site['url'];
-				if (!$site['redirect']) {
+				if (!$site['redirect'] && !$site['target']) {
 					$link = $this->urlGenerator->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
 				}
 
@@ -93,7 +93,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 				}
 
 				$href = $site['url'];
-				if (!$site['redirect']) {
+				if (!$site['redirect'] && !$site['target']) {
 					$href = $this->urlGenerator->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
 				}
 
@@ -104,6 +104,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 					'icon' => $image,
 					'type' => $site['type'],
 					'name' => $site['name'],
+					'target' => $site['target'],
 				];
 			});
 		}
