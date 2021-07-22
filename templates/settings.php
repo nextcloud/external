@@ -48,7 +48,7 @@ script('external', 'templates');
 		</script>
 
 		<p>
-			<em><?php p($l->t('Please note that some browsers will block displaying of sites via http if you are running https.')); ?></em>
+			<em><?php p($l->t('Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS.')); ?></em>
 			<br>
 			<em><?php p($l->t('Furthermore please note that many sites these days disallow iframing due to security reasons.')); ?></em>
 			<br>
