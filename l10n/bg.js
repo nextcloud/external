@@ -37,12 +37,12 @@ OC.L10N.register(
     "Reloading icon list…" : "Презареждане на списъка с икони...",
     "Icon could not be uploaded" : "Иконата не може да бъде качена",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Добавете уеб сайт към списъка с приложения. Добавените сайтове ще бъдат видими от всеки потребител и улесняват достъпа до други приложения и важни уеб сайтове.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Някои браузъри блокират съдържание достъпно чрез http ако същевременно използвате https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Много сайтове не позволяват ползването на iframe поради съображения за сигурност.",
     "We highly recommend to test the configured sites above properly." : "Препоръчително е да тествате всеки сайт, който настроите.",
     "Icons" : "Икони",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ако качите два файла: test.png и test-dark.png те ще бъдат ползвани като две версии на една икона. Тъмната версия се ползва за мобилни устройства, защото белите икони не са видими когато фонът е светъл.",
     "Uploading an icon with the same name will replace the current icon." : "Качването на икона с име на вече съществуваща такава ще доведе до презаписване на съществуващата икона.",
-    "Upload new icon" : "Качи нова икона"
+    "Upload new icon" : "Качи нова икона",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Някои браузъри блокират съдържание достъпно чрез http ако същевременно използвате https."
 },
 "nplurals=2; plural=(n != 1);");

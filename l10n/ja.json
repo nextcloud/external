@@ -43,12 +43,12 @@
     "Icon could not be uploaded" : "アイコンをアップロードできませんでした",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "上のバーにウェブサイトを直接追加します。これにより重要なサイトや内部で利用する他のウェブアプリに簡単に移動することができるようになって便利です。",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "プレースホルダ {email},{uid}および{displayname} を使用でき、リンクをカスタマイズするためのユーザーの値が入力されます。",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "ブラウザーによっては、https で動作している時に http で接続するとブロックされてしまうことがあるのでご注意ください。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "さらに、今日セキュリティ上の理由から多くのサイトで iframe の使用が禁止されているのでご注意ください。",
     "We highly recommend to test the configured sites above properly." : "以下の設定でサイトが設定されているか、テストすることを強くお勧めします。",
     "Icons" : "アイコン",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.pngとtest-dark.pngファイルをアップロードすると、両方が1つのアイコンとして使用されます。暗いバージョンはモバイルデバイスで使用され、モバイルアプリの白い背景に白いアイコンは表示されません。",
     "Uploading an icon with the same name will replace the current icon." : "同じ名前のアイコンをアップロードすると、現在のアイコンが置き換えられます。",
-    "Upload new icon" : "新しいアイコンをアップロード"
+    "Upload new icon" : "新しいアイコンをアップロード",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "ブラウザーによっては、https で動作している時に http で接続するとブロックされてしまうことがあるのでご注意ください。"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -40,12 +40,12 @@
     "Icon could not be uploaded" : "პიქტოგრამა ვერ აიტვირთა",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "აპლიკაციის სიას დაუმატეთ ვებ-საიტი პირდაპირ ზედა ბარში. ეს გამოჩნდება ყველა მომხმარებელთან და დაგეხმარებათ სწრაფი წვდომა იქონიოთ სხვა შიდა გამოყენებულ ვებ-აპლიკაციებთან ან მნიშვნელოვან საიტებთან.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "შესაძლებელია {email}, {uid} და {displayname} \"პლეისჰოლდერების\" მოხმარება, ისინი ბმულებში შეიცვლებიან მომხმარებლის მონაცემებით.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "გთხოვთ შენიშნოთ, რომ იმ შემთხვევაში თუ იყენებთ https-ს, ზოგი ბრაუზერი დაბლოკავს საიტების ჩვენებას http-თი.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "ასევე მიაქციათ ყურადღება იმას, რომ მრავალი საიტი დღევანდელ დღეს უსაფრთხოების მიზნით iframe-ის გამოყენების უფლებას არ მოგცემთ.",
     "We highly recommend to test the configured sites above properly." : "ჩვენი რეკომენდაცია იქნება, ზედმიწევნით შამოწმოთ ზემოთ კონფიგურირებული საიტები.",
     "Icons" : "პიქტოგრამები",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "თუ ატვირთავთ test.png-ს და test-dark.png ფაილებს, ორივე გამოყენებული იქნება ერთ პიქტოგრამად. მუქი ვერსია გამოყენებულ იქნება მობილურებისთვის, სხვა შემთხვევაში თეთრი პიქტოგრამა მობილურ აპლიკაციებში, თეთრ ფონზე, ხილვადი არ იქნება.",
     "Uploading an icon with the same name will replace the current icon." : "პიქტოგრამის ატვირთვა იგივე სახელით ჩაანაცვლებს არსებულს.",
-    "Upload new icon" : "ახალი პიქტოგრამის ატვირთვა"
+    "Upload new icon" : "ახალი პიქტოგრამის ატვირთვა",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "გთხოვთ შენიშნოთ, რომ იმ შემთხვევაში თუ იყენებთ https-ს, ზოგი ბრაუზერი დაბლოკავს საიტების ჩვენებას http-თი."
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

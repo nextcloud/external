@@ -43,12 +43,12 @@
     "Icon could not be uploaded" : "Не удалось обновить значок",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Добавьте сайт непосредственно в список приложений в верхней панели. Это будет доступно для всех пользователей и полезно для быстрого доступа к другим  используемым веб-приложениям или важным сайтам.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Поля  {email}, {uid} и {displayname} могут быть использованы и заполнены пользовательскими значениями для индивидуализации ссылок.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Имейте ввиду, что некоторые браузеры не отображают сайты доступные по http, если вы используете https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Кроме того, имейте ввиду, что многие сайты не разрешают iframe в целях безопасности.",
     "We highly recommend to test the configured sites above properly." : "Мы настойчиво рекомендуем правильно протестировать настроенные выше сайты.",
     "Icons" : "Значки",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "При отправке изображений «test.png» и «dark-test.png», они оба будут использоваться как один значок. Тёмная версия будет использоваться для мобильных устройств, так как светлая версия не будет видна на белом фоне приложений для мобильных устройств.",
     "Uploading an icon with the same name will replace the current icon." : "Загрузка значка с таким же именем заменит существующий.",
-    "Upload new icon" : "Загрузить новый значок"
+    "Upload new icon" : "Загрузить новый значок",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Имейте ввиду, что некоторые браузеры не отображают сайты доступные по http, если вы используете https."
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
 }

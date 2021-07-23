@@ -45,12 +45,12 @@ OC.L10N.register(
     "Icon could not be uploaded" : "图标无法上传",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "将网站直接添加到顶栏的应用列表中。这将对所有用户可见，同时这可以快速访问内部其他的 Web 应用或重要的站点。",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "{email}、{uid} 和 {displayname} 占位符可以用来自定义用户的链接。",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "请注意当运行 HTTPS 环境下时，部分浏览器将会屏蔽显示 HTTP 网站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "另外请注意由于安全原因，部分站点禁用了 iFrame。",
     "We highly recommend to test the configured sites above properly." : "我们强烈建议测试一下配置的站点。",
     "Icons" : "图标",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您上传了 test.png 和 test-dark.png 文件，它们将被视为一个图标使用。暗色版本将被用于手机设备，另外，白色图标在白色背景的手机应用中是不可见的。",
     "Uploading an icon with the same name will replace the current icon." : "上传同名图标将替换当前图标。",
-    "Upload new icon" : "上传新图标"
+    "Upload new icon" : "上传新图标",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "请注意当运行 HTTPS 环境下时，部分浏览器将会屏蔽显示 HTTP 网站。"
 },
 "nplurals=1; plural=0;");

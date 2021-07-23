@@ -28,9 +28,9 @@ OC.L10N.register(
     "Remove site" : "Desaniciar sitiu",
     "New site" : "Sitiu nuevu",
     "Uploading…" : "Xubiendo...",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Decátate de que dalgunos restoladores bloquiarán l'amuesa de sitios per http si tas executando https, por favor.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Amás decátate por favor de qu'anguaño munchos sitios nun permiten iframes por razones de seguranza.",
     "We highly recommend to test the configured sites above properly." : "Aconseyamos muncho que pruebes afayadizamente los sitios configuraos enriba.",
-    "Icons" : "Iconos"
+    "Icons" : "Iconos",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Decátate de que dalgunos restoladores bloquiarán l'amuesa de sitios per http si tas executando https, por favor."
 },
 "nplurals=2; plural=(n != 1);");
