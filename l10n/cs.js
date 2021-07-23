@@ -45,12 +45,12 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Ikonu se nepodařilo nahrát",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Přidejte webovou stránku přímo do seznamu aplikací v horní liště. Bude viditelná všem uživatelům a hodí se jako místo na odkazy na další interní stránky, nebo užitečné aplikace.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Odkazy je možné přizpůsobovat pomocí zástupných vyjádření {email}, {uid} (identif. uživatele) a {displayname} (zobrazované jméno), za které jsou dosazovány hodnoty pro daného uživatele.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vezměte prosím na vědomí, že některé prohlížeče nebudou zobrazovat weby prostřednictvím http, pokud používáte https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Mnoho stránek také z bezpečnostních důvodů neumožňuje zobrazení v iframe.",
     "We highly recommend to test the configured sites above properly." : "Velmi doporučujeme výše nastavené stránky pořádně otestovat.",
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Pokud nahrajete soubor test.png a soubor test-dark.png, oba soubory budou použity jako jedna ikona. Tmavá verze bude použita v mobilních zařízeních, jinak by nebyla bílá ikona v mobilních aplikacích viditelná na bílém pozadí.",
     "Uploading an icon with the same name will replace the current icon." : "Nahrání ikony se stejným názvem nahradí ikonu aktuální.",
-    "Upload new icon" : "Nahrát novou ikonu"
+    "Upload new icon" : "Nahrát novou ikonu",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vezměte prosím na vědomí, že některé prohlížeče nebudou zobrazovat weby prostřednictvím http, pokud používáte https."
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

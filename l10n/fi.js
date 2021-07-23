@@ -41,10 +41,10 @@ OC.L10N.register(
     "Reloading icon list…" : "Ladataan uudelleen kuvakelistaa…",
     "Icon could not be uploaded" : "Kuvaketta ei voitu lähettää",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lisää verkkosivusto suoraan sovellusluetteloon yläpalkissa. Se näkyy kaikille käyttäjille ja on hyödyllinen mahdollistamalla sisäisten verkko-ohjelmien tai tärkeiden verkkosivustojen avaamisen nopeasti.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Huomioi, että jotkin selaimet estävät http-protokollaa käyttävien sivustojen näyttämisen, jos käytät itse https-protokollaa.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
     "We highly recommend to test the configured sites above properly." : "Suosittelemme testaamaan ylläolevien sivujen asetukset.",
     "Icons" : "Kuvakkeet",
-    "Upload new icon" : "Lähetä uusi kuvake"
+    "Upload new icon" : "Lähetä uusi kuvake",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Huomioi, että jotkin selaimet estävät http-protokollaa käyttävien sivustojen näyttämisen, jos käytät itse https-protokollaa."
 },
 "nplurals=2; plural=(n != 1);");

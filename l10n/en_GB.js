@@ -45,12 +45,12 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Icon could not be uploaded",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Furthermore please note that many sites these days disallow iframing due to security reasons.",
     "We highly recommend to test the configured sites above properly." : "We highly recommend to test the configured sites above properly.",
     "Icons" : "Icons",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploading an icon with the same name will replace the current icon.",
-    "Upload new icon" : "Upload new icon"
+    "Upload new icon" : "Upload new icon",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS."
 },
 "nplurals=2; plural=(n != 1);");
