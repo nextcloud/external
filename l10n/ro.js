@@ -41,11 +41,11 @@ OC.L10N.register(
     "Reloading icon list…" : "Reîncarc lista de pictograme...",
     "Icon could not be uploaded" : "Pictograma nu a putut fi încărcată",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adaugă un website direct în lista de aplicații din bara de sus. Acesta va fi vizibil pentru toți utilizatorii și este folositor pentru a ajunge rapid la alte aplicații web folosite sau pagini importante.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Rețineți că unele navigatoare Web vor bloca afișarea paginilor livrate prin trafic necriptat (HTTP) dacă accesați pagini prin protocolul criptat HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "În plus, vă rugăm să rețineți că în prezent multe site-uri Web interzic folosirea tehnicilor iframe din motive de securitate.",
     "We highly recommend to test the configured sites above properly." : "Recomandăm insistent testarea riguroasă a paginilor configurate mai sus.",
     "Icons" : "Pictograme",
     "Uploading an icon with the same name will replace the current icon." : "Încărcarea pictogramei cu aceelași nume va înlocui pictograma curentă.",
-    "Upload new icon" : "Încarcă o nouă pictogramă"
+    "Upload new icon" : "Încarcă o nouă pictogramă",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Rețineți că unele navigatoare Web vor bloca afișarea paginilor livrate prin trafic necriptat (HTTP) dacă accesați pagini prin protocolul criptat HTTPS."
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");
