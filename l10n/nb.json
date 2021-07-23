@@ -42,12 +42,12 @@
     "Icon could not be uploaded" : "Ikonet kunne ikke lastes opp",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Legg til en nettside til app-listen i toppfeltet. Dette vil bli synlig for alle brukere, og er nyttig for å raskt nå andre internt brukte web-apps eller viktige sider.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Erstatningsmerkene {email}, {uid} og {displayname} kan benyttes og blir erstattet med informasjon om bruker for å tilpasse lenker.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær oppmerksom på at noen nettlesere blokkerer visning av sider via HTTP hvis du kjører HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Vær også oppmerksom på at mange sider nå ikke tillater iframing av sikkerhetshensyn.",
     "We highly recommend to test the configured sites above properly." : "Vi anbefaler sterkt at du tester de oppsatte sidene ovenfor på rett vis.",
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Hvis du laster opp en test.png og en test-dark.png -fil, vil begge bli brukt som ett ikon. Den mørke versjonen vil bli brukt på mobile enheter, ellers vil det hvite ikonet ikke vises på den hvite bakgrunnen i mobilapper.",
     "Uploading an icon with the same name will replace the current icon." : "Å laste opp et ikon med samme navn vil erstatte nåværende ikon.",
-    "Upload new icon" : "Last opp nytt ikon"
+    "Upload new icon" : "Last opp nytt ikon",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær oppmerksom på at noen nettlesere blokkerer visning av sider via HTTP hvis du kjører HTTPS."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

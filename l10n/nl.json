@@ -43,12 +43,12 @@
     "Icon could not be uploaded" : "Pictogram kon niet worden opgeslagen",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Voeg een website direct toe aan het app-overzicht in de topbalk. Dit is zichtbaar voor alle gebuikers en helpt om snel interne webapps of belangrijke sites te openen.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "De velden {email}, {uid} en {displayname} kunnen worden gebruikt en zijn vooringevuld met de gebruikerswaarden om de links te personaliseren.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Let op dat sommige browsers http sites niet tonen als je https gebruikt.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Let er ook op dat veel sites het gebruik van iframes wegens beveiligingsredenen tegengaan.",
     "We highly recommend to test the configured sites above properly." : "We adviseren om de hierboven geconfigureerde sites goed te testen.",
     "Icons" : "Pictogrammen",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Als je een test.png en een test-dark.png bestand uploadt, worden ze samen als één pictogram gebruikt. De donkere versie wordt gebruikt op mobiele apparaten, want anders is het witte pictogram niet zichtbaar op de witte achtergrond in de mobiele apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploaden van een pictogram met dezelfde naam vervangt het huidige pictogram.",
-    "Upload new icon" : "Uploaden nieuw pictogram"
+    "Upload new icon" : "Uploaden nieuw pictogram",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Let op dat sommige browsers http sites niet tonen als je https gebruikt."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

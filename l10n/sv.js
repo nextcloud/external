@@ -45,12 +45,12 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Ikon kunde inte laddas upp",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lägg till en webbplats direkt i applistan i menyn. Detta kommer bli synligt för alla användare och är användbart för att snabbt nå andra internt använda webbappar och viktiga siter.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Platshållarna {email}, {uid} och {displayname} kan användas och fylls med användarvärdena för att anpassa länkarna.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Notera dessutom att många platser inte tillåter inramning i 'iframe' på grund av säkerhetsskäl.",
     "We highly recommend to test the configured sites above properly." : "Vi rekommenderar starkt att testa de ovan konfigurerade platserna ordentligt.",
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Om du laddar upp filerna test.png och test-dark.png kommer båda användas som en ikon. Den mörka versionen kommer användas på mobila enheter eftersom den vita ikonen inte är synlig mot vit bakgrund i mobilappar.",
     "Uploading an icon with the same name will replace the current icon." : "Uppladdning av en ikon med samma namn kommer ersätta den nuvarande ikonen.",
-    "Upload new icon" : "Ladda upp ny ikon"
+    "Upload new icon" : "Ladda upp ny ikon",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https."
 },
 "nplurals=2; plural=(n != 1);");
