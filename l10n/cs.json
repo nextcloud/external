@@ -43,6 +43,7 @@
     "Icon could not be uploaded" : "Ikonu se nepodařilo nahrát",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Přidejte webovou stránku přímo do seznamu aplikací v horní liště. Bude viditelná všem uživatelům a hodí se jako místo na odkazy na další interní stránky, nebo užitečné aplikace.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Odkazy je možné přizpůsobovat pomocí zástupných vyjádření {email}, {uid} (identif. uživatele) a {displayname} (zobrazované jméno), za které jsou dosazovány hodnoty pro daného uživatele.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Upozorňujeme, že když používáte HTTPS (což je správně) některé prohlížeče pak budou blokovat zobrazování dalšího obsahu, načítaného přes nezabezpečené HTTP.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Mnoho stránek také z bezpečnostních důvodů neumožňuje zobrazení v iframe.",
     "We highly recommend to test the configured sites above properly." : "Velmi doporučujeme výše nastavené stránky pořádně otestovat.",
     "Icons" : "Ikony",
