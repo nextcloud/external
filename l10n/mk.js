@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Иконата неможе да се прикачи",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Додајте веб-страница директно во списокот со апликации во горната лента. Ова ќе биде видливо за сите корисници и е корисно за брз пристап до други внатрешно користени веб-апликации или поважни страници.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Ознаките за {email}, {uid} и {displayname} можат да се користат и да бидат пополнети од страна корисникот за да ги прилагоди линковите.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Ако работите на HTTPS, некои прелистувачи ќе блокираат прикажување на страници преку HTTP.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Покрај тоа, имајте во предвид дека многу страници деновиве не дозволуваат iframing заради безбедносни причини.",
     "We highly recommend to test the configured sites above properly." : "Препорачуваме правилно да ги тестирате конфигурираните страници.",
     "Icons" : "Икони",
