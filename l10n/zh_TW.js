@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "圖示無法上傳",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "可直接在最上方應用功能選單列新增網址，讓所有使用者從內部顯示連結，連往一些網路應用程式或者重要的網站。",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "可以使用佔位字串 {email}、{uid} 與 {displayname}，並以使用者的值來自訂連結。",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "請注意當使用 HTTPS 時，部分瀏覽器將會封鎖 HTTP 的網站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，出於安全性考量，現今許多網站不允許 iframe （頁框）。",
     "We highly recommend to test the configured sites above properly." : "我們強烈建議您測試上述配置的網站是否正確。",
     "Icons" : "圖示",
