@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "图标无法上传",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "将网站直接添加到顶栏的应用列表中。这将对所有用户可见，同时这可以快速访问内部其他的 Web 应用或重要的站点。",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "{email}、{uid} 和 {displayname} 占位符可以用来自定义用户的链接。",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "请注意，如果你运行的是 HTTPS，有些浏览器会阻止通过 HTTP 显示网站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "另外请注意由于安全原因，部分站点禁用了 iFrame。",
     "We highly recommend to test the configured sites above properly." : "我们强烈建议测试一下配置的站点。",
     "Icons" : "图标",
