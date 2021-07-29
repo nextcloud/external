@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Ikonoa ezin da igo",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Gehitu zuzenean webgune bat aplikazioari goiko barran. Hau ikusgai izango da erabiltzaile guztientzat eta erabilgarria da iristeko azkar barne erabilerako web aplikazioetarako edo leku garrantzitsuetarako.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Posizio-markatzaileak  {email}, {uid} eta {displayname} erabil daitezke, eta erabiltzailearen balioekin osatzen dira bere estekak pertsonalizatzeko.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Hartu kontuan nabigatzaile batzuk HTTP bidez orriak erakustea blokeatuko dutela HTTPS erabiltzen ari bazara.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Gainera kontuan izan egun hauetan zenbait gunek ez dutela iframing onartzen seguritatea arrazoiengatik.",
     "We highly recommend to test the configured sites above properly." : "Guztiz gomendatzen dugu behar bezala probatzea azpian konfiguratutako guneak.",
     "Icons" : "Ikonoak",
