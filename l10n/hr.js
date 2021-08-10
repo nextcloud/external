@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Ikonu nije moguće otpremiti",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Dodajte web-mjesto izravno na popis aplikacija u gornjoj traci. Tako će biti vidljivo svim korisnicima i može se brzo pristupiti interno korištenim web aplikacijama ili važnim web-mjestima.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Možete se koristiti praznim oznakama {email}, {uid} i {displayname} koje ispunite korisničkim vrijednostima kako biste prilagodili poveznice.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Imajte na umu da će neki preglednici blokirati prikazivanje web-mjesta putem protokola HTTP ako vam je dostupan HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Također imajte na umu da mnoga web-mjesta danas onemogućuju iframing zbog sigurnosnih razloga.",
     "We highly recommend to test the configured sites above properly." : "Preporučujemo da pravilno i temeljito testirate konfigurirana web-mjesta.",
     "Icons" : "Ikone",
