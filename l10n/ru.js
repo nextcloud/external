@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Не удалось обновить значок",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Добавьте сайт непосредственно в список приложений в верхней панели. Это будет доступно для всех пользователей и полезно для быстрого доступа к другим  используемым веб-приложениям или важным сайтам.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Поля  {email}, {uid} и {displayname} могут быть использованы и заполнены пользовательскими значениями для индивидуализации ссылок.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Имейте ввиду, что некоторые браузеры блокируют отображение сайтов через HTTP, если вы используете HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Кроме того, имейте ввиду, что многие сайты не разрешают iframe в целях безопасности.",
     "We highly recommend to test the configured sites above properly." : "Мы настойчиво рекомендуем правильно протестировать настроенные выше сайты.",
     "Icons" : "Значки",
