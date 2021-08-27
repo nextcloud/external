@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Symbol konnte nicht hochgeladen werden",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Füge eine Internetseite zur Liste der Apps in die Leiste oben ein. Die Seite ist sichtbar für alle Benutzer. Dies ist nützlich zum Erreichen anderer internen Web-Anwendungen oder wichtiger Seiten.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid} und {displayname} können benutzt werden, um den Link mit den Benutzerdaten zu füllen.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Bitte beachte, dass einige Browser die Anzeige der Seiten über HTTP sperren, wenn Sie HTTPS verwenden.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachte bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",
     "We highly recommend to test the configured sites above properly." : "Wir empfehlen dringend, die oben konfigurierten Seiten ausführlich zu testen.",
     "Icons" : "Symbole",
