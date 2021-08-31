@@ -23,7 +23,7 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Belirtilen görsel 16, 24 ya da 32 piksel genişliğinde bir kare değil",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Simge yüklenirken bir sorun çıktı. Lütfen veri klasörünün yazılabilir olduğundan emin olun",
     "External sites" : "Dış siteler",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Türkçe",
     "Add external sites to your Nextcloud navigation" : "Nextcloud gezinme bölümüne dış siteleri ekler",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Bu uygulama yöneticilerin Nextcloud menülerine çeşitli bağlantılar ekleyebilmesini sağlar.\nBağlantıya tıklandığında yönlendirilen web sitesi Nextcloud çerçevesi içinde görüntülenir.\nBağlantılar belirli bir dil, aygıt türü ya da kullanıcı grubu için eklenebilir.\n\nAyrıntılı bilgi almak için dış siteler uygulamasının belgelerine bakabilirsiniz.",
     "Name" : "Ad",

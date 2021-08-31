@@ -4,6 +4,7 @@ OC.L10N.register(
     "Select an icon" : "Seleccionar una icòna",
     "All languages" : "Totas las lengas",
     "The given language does not exist" : "La lenga especificada existís pas",
+    "__language_name__" : "Occitan",
     "Name" : "Nom",
     "URL" : "URL",
     "Language" : "Lenga",

@@ -20,7 +20,7 @@ OC.L10N.register(
     "The site does not exist" : "Kjo faqe nuk ekziston ",
     "No file uploaded" : "Asnjë skedar i ngarkuar",
     "External sites" : "Faqe të jashtme",
-    "__language_name__" : "__gjuha_emri__",
+    "__language_name__" : "Shqip",
     "Name" : "Emër",
     "URL" : "URL",
     "Language" : "Gjuha",
