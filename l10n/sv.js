@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Bilden är inte kvadratisk med 16, 24 eller 32 pixlars bredd",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Ett fel inträffade vid uppladdning av ikonen, vänligen kontrollera att datamappen är skrivbar",
     "External sites" : "Externa webbplatser",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Svenska",
     "Add external sites to your Nextcloud navigation" : "Lägga till externa webbplatser till din Nextcloud navigering",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Appen ger admin-användare möjlighet att lägga till länkar i Nextcloud-menyer.\nGenom att följa en länk så visas den externa webbplatsen i Nextcloud-ramen.\nDet är möjligt att lägga till länkar för ett specifikt språk, apparattyp, eller användargrupp.\n\nMer information finns i appdokumentationen.",
     "Name" : "Namn",

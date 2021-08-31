@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Übergebenes Bild ist nicht quadratisch mit einer Kantenlänge von 16, 24 oder 32 Pixeln",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Beim Hochladen des Symbols ist ein Fehler aufgetreten. Bitte stellen Sie sicher, dass das Datenverzeichnis beschreibbar ist",
     "External sites" : "Externe Seiten",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Deutsch (Förmlich: Sie)",
     "Add external sites to your Nextcloud navigation" : "Externe Seiten zur Nextcloud-Navigation hinzufügen",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Diese Anwendung erlaubt es einem Administrator Links in die Nextcloud Menüs hinzuzufügen.\nFolgt man einem Link öffnet sich die externe Webseite in Nextcloud. \nEs ist ebenso möglich Links nur für eine bestimmte Sprache, Gerätetyp oder eine Benutzergruppe hinzuzufügen.\nWeitere Informationen finden Sie in der Dokumentation für externe Seiten.",
     "Name" : "Name",

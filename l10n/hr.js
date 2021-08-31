@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Ova slika nije kvadrat širine 16, 24 ili 32 piksela",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Došlo je do pogreške prilikom otpremanja ikone, provjerite može li se pisati u podatkovni direktorij",
     "External sites" : "Vanjska web-mjesta",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Hrvatski",
     "Add external sites to your Nextcloud navigation" : "Dodaj vanjska web-mjesta u svoju navigaciju Nextcloudom",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Ova aplikacija omogućuje administratoru dodavanje dodatnih poveznica u izbornike Nextclouda.\nKlikom na poveznicu otvorit će se vanjske web-mjesto unutar Nextcloudovog okvira.\nTakođer je moguće dodati poveznice samo za određeni jezik, vrstu uređaja ili grupu korisnika.\n\nViše informacija dostupno je u dokumentaciji o vanjskim web-mjestima.",
     "Name" : "Ime",

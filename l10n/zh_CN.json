@@ -23,7 +23,7 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "提供的图片不是一个 16、24 或 32 像素宽的正方形",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "上传图标时出错，请确认数据目录可写",
     "External sites" : "外部站点",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "简体中文",
     "Add external sites to your Nextcloud navigation" : "向 Nextcloud 导航添加外部网站",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "此应用允许管理员向 Nextcloud 菜单添加额外的超链接。\n点击链接，外部网站会在 Nextcloud 的窗口中显示。\n还可以针对特定的语言、设备类型或用户组添加超链接。\n\n更多信息请查阅 External sites 文档。",
     "Name" : "名称",

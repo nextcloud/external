@@ -23,7 +23,7 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Η επιλεγμένη εικόνα δεν είναι τετράγωνο πλάτους 16, 24 ή 32 pixel",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Παρουσιάστηκε σφάλμα κατά τη φόρτωση του εικονιδίου, βεβαιωθείτε ότι ο κατάλογος δεδομένων είναι εγγράψιμος",
     "External sites" : "Εξωτερικές σελίδες",
-    "__language_name__" : "__όνομα_γλώσσας__",
+    "__language_name__" : "Ελληνικά",
     "Add external sites to your Nextcloud navigation" : "Προσθέστε εξωτερικούς ιστότοπους στην πλοήγησή του Nextcloud σας",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Αυτή η εφαρμογή επιτρέπει σε έναν διαχειριστή να προσθέσει επιπλέον συνδέσμους στα μενού Nextcloud.\nΜετά από μια σύνδεση, ο εξωτερικός ιστότοπος εμφανίζεται στο πλαίσιο Nextcloud.\nΕίναι επίσης δυνατή η προσθήκη συνδέσμων μόνο για μια δεδομένη γλώσσα, τύπο συσκευής ή ομάδα χρηστών.\n\nΠερισσότερες πληροφορίες διατίθενται στην τεκμηρίωση Εξωτερικές τοποθεσίες.",
     "Name" : "Όνομα",
