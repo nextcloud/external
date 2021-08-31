@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Select an icon" : "Selecione um ícone",
     "No file uploaded" : "Nenhum ficheiro carregado",
-    "__language_name__" : "__nome_da_linguagem__",
+    "__language_name__" : "Português",
     "Name" : "Nome",
     "URL" : "URL",
     "Language" : "Idioma",

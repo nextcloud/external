@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Надане зображення не є квадратом шириною 16, 24 або 32 пікселя",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Помилка під час завантаження значка. Перевірте, чи тека з даними доступна для запису",
     "External sites" : "Зовнішні сайти",
-    "__language_name__" : "__назва_мови__",
+    "__language_name__" : "Українська",
     "Add external sites to your Nextcloud navigation" : "Додати зовнішній сайт до навігації у Nextcloud",
     "Name" : "Ім'я",
     "URL" : "URL",

@@ -6,7 +6,7 @@ OC.L10N.register(
     "User quota" : "حصة المستخدم",
     "All devices" : "كافة الأجهزة",
     "No file uploaded" : "لم يتم رفع الملف",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "اَللُّغَةُ اَلْعَرَبِيَّة",
     "Name" : "اسم",
     "URL" : "عنوان الموقع",
     "Language" : "اللغة",
