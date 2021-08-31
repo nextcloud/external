@@ -17,7 +17,7 @@ OC.L10N.register(
     "The site does not exist" : "Die werf bestaan nie",
     "No file uploaded" : "Geen lêer opgelaai",
     "External sites" : "Eksterne werwe",
-    "__language_name__" : "__taalnaam__",
+    "__language_name__" : "Afrikaans",
     "Name" : "Naam",
     "URL" : "Bronadres",
     "Language" : "Taal",
