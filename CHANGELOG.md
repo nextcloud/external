@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.10.0 – 2021-11-09
+### Fixed
+- Compatibility with Nextcloud 23
+
 ## 3.9.0 – 2021-06-15
 ### Fixed
 - Accessibility Issue: Inline frames must have a unique, non-empty 'title' attribute
