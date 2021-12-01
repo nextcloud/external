@@ -45,12 +45,13 @@ OC.L10N.register(
     "Icon could not be uploaded" : "La icona no s'ha pogut carregar",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Afegiu un lloc web directament a la llista d'aplicacions a la barra superior. Això serà visible per a tots els usuaris i és útil per arribar ràpidament a altres aplicacions web utilitzades internament o llocs importants.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Els marcadors de posició {email}, {uid} i {displayname} es poden fer servir i s'emplenen amb les dades de l’usuari per personalitzar els enllaços.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Si us plau, tingueu en compte que alguns navegadors poden bloquejar les webs amb http quan feu servir https.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Tingueu en compte que alguns navegadors bloquejaran la visualització de llocs amb HTTP si utilitzeu HTTPS. ",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "A més a més, tingueu en compte que actualment molts llocs web estan deshabilitant els iframes per motius de seguretat.",
     "We highly recommend to test the configured sites above properly." : "Us recomanem que proveu els llocs configurats anteriorment correctament.",
     "Icons" : "Icones",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si carregueu un fitxer test.png i test-dark.png, s’utilitzaran tots dos com una icona. La versió més fosca s’utilitzarà als dispositius mòbils; sinó la icona blanca no seria visible en el fons blanc de les aplicacions mòbils.",
     "Uploading an icon with the same name will replace the current icon." : "Si carregueu una icona amb el mateix nom sobreescriureu la icona actual.",
-    "Upload new icon" : "Carrega una nova icona"
+    "Upload new icon" : "Carrega una nova icona",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Si us plau, tingueu en compte que alguns navegadors poden bloquejar les webs amb http quan feu servir https."
 },
 "nplurals=2; plural=(n != 1);");

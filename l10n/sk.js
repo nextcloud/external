@@ -45,12 +45,13 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Ikona sa nedá nahrať",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Pridajte webovú stránku priamo do zoznamu aplikácií v hornom paneli. Toto bude viditeľné pre všetkých používateľov. Je to užitočné pre rýchly dosah na iné interné webové aplikácie alebo dôležité stránky.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Môžu byť použité premenné {email}, {uid} a {displayname}, ktoré sú naplnené hodnotami používateľa pre prispôsobenie odkazov.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Niektoré prezerače môžu blokovať zobrazovanie http stránok ak používate https.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Prosím zoberte do úvahy že niektoré prehliadače môžu blokovať zobrazovanie HTTP stránok ak používate HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Funkcia iframe býva často z bezpečnostných dôvodov zakázaná.",
     "We highly recommend to test the configured sites above properly." : "Odporúčame vám dôkladne otestovať vyššie nastavené stránky.",
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ak nahráte súbory test.png a test-dark.png, obidva budú použité ako jedna ikona. Verzia dark sa použije na mobilných zariadeniach, v opačnom prípade biela ikona nie je viditeľná na bielom pozadí v mobilných aplikáciách.",
     "Uploading an icon with the same name will replace the current icon." : "Nahratie novej ikony s rovnakým názvom prepíše pôvodnú ikonu.",
-    "Upload new icon" : "Nahrať novú ikonu"
+    "Upload new icon" : "Nahrať novú ikonu",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Niektoré prezerače môžu blokovať zobrazovanie http stránok ak používate https."
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

@@ -18,7 +18,7 @@
     "The site does not exist" : "Kjo faqe nuk ekziston ",
     "No file uploaded" : "Asnjë skedar i ngarkuar",
     "External sites" : "Faqe të jashtme",
-    "__language_name__" : "__gjuha_emri__",
+    "__language_name__" : "Shqip",
     "Name" : "Emër",
     "URL" : "URL",
     "Language" : "Gjuha",
@@ -31,10 +31,10 @@
     "New site" : "Faqe e re",
     "Uploading…" : "Po ngarkohet…",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Shto një faqe interneti direkt në listën e aplikacioneve në shiritin e sipërm. Kjo do të jetë e dukshme për të gjithë përdoruesit dhe është e dobishme për të shpejt të arritur aplikacione të tjera të përdorura brenda vendit ose faqe të rëndësishme.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Ju lutemi, kini parasysh që disa shfletues do të bllokojnë shfaqjen e sajteve përmes http-je, nëse xhironi https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Për më tepër, ju lutemi, kini parasysh që mjaft sajte në këto kohë s’lejojnë iframing, për arsye sigurie.",
     "We highly recommend to test the configured sites above properly." : "Ne rekomandojmë të testoni faqeve e konfiguruara më lart siç duhet.",
     "Icons" : "Ikona",
-    "Upload new icon" : "Ngarko ikonë të re"
+    "Upload new icon" : "Ngarko ikonë të re",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Ju lutemi, kini parasysh që disa shfletues do të bllokojnë shfaqjen e sajteve përmes http-je, nëse xhironi https."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -3,7 +3,7 @@ OC.L10N.register(
     {
     "Select an icon" : "Selecione um ícone",
     "No file uploaded" : "Nenhum ficheiro carregado",
-    "__language_name__" : "__nome_da_linguagem__",
+    "__language_name__" : "Português",
     "Name" : "Nome",
     "URL" : "URL",
     "Language" : "Idioma",
@@ -12,8 +12,8 @@ OC.L10N.register(
     "Remove site" : "Remover site",
     "New site" : "Novo site",
     "Uploading…" : "A enviar…",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Por favor, note que alguns navegadores irão bloquear a exibição dos sites via http se estiver a utilizar https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Além disso, por favor, note que muitos sites nestes dias desautorizam iframing, por motivos de segurança.",
-    "Icons" : "Ícones"
+    "Icons" : "Ícones",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Por favor, note que alguns navegadores irão bloquear a exibição dos sites via http se estiver a utilizar https."
 },
 "nplurals=2; plural=(n != 1);");

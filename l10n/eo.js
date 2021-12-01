@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Provizita bildo ne estas kvadrato de 16-, 24- aŭ 32-piksela larĝo",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Eraro okazis dum alŝuto de la piktogramo; bv. certigi, ke la datuma dosierujo estas skribebla.",
     "External sites" : "Eksteraj retejoj",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Esperanto",
     "Add external sites to your Nextcloud navigation" : "Aldoni eksterajn retejojn al via Nextcloud-navigado",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Administranto povas aldoni, pere de tiu aplikaĵo, pliajn ligilojn al la menuoj de Nextcoud.\nKiam oni vizitas ligilon, la ekstera retejo aperas ene de la Nextcloud-kadro.\nEblas ankaŭ aldoni ligilojn nur por certaj ligvoj, aparatoj aŭ uzantgrupoj.\n\nPliaj informoj disponeblas en la dokumentaro.",
     "Name" : "Nomo",
@@ -45,12 +45,12 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Piktogramo ne eblis alŝutiĝi",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Aldonu retejon rekte al la aplikaĵa listo en la supra breto. Tion videblos ĉiu uzantoj, kaj tio utilas por rapide aliri al aliaj retaplikaĵoj uzitaj interne aŭ al gravaj retejoj.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Oni povas uzi la parametrojn {email}, {uid} kaj {displayname}; ilin anstataŭigis valoroj el la uzanto por adapti la ligilojn.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Bv. noti, ke retumiloj ĝenerale baros montron de retejoj per http, se via Nextcloud uzas protokolon https.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Cetere, bv. noti, ke multaj retejoj nuntempe malpermesas esti enkorpigitaj, pro sekurigaj kialoj.",
     "We highly recommend to test the configured sites above properly." : "Ni tre rekomendas provi la ĉi-suprajn agorditajn retejojn.",
     "Icons" : "Piktogramoj",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se vi alŝutas dosierojn „test.png“ kaj „test-dark.png“, ambaŭ uziĝos kiel unu piktogramo. La malhela (angle „dark“) uziĝos ĉe porteblaj aparatoj, ĉar la hela piktogramo ne videblas ĉe hela fono el porteblaj aplikaĵoj.",
     "Uploading an icon with the same name will replace the current icon." : "Alŝutado de samnoma piktogramo anstataŭigos la nunan piktogramon.",
-    "Upload new icon" : "Alŝuti novan piktogramon"
+    "Upload new icon" : "Alŝuti novan piktogramon",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Bv. noti, ke retumiloj ĝenerale baros montron de retejoj per http, se via Nextcloud uzas protokolon https."
 },
 "nplurals=2; plural=(n != 1);");

@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Belirtilen görsel 16, 24 ya da 32 piksel genişliğinde bir kare değil",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Simge yüklenirken bir sorun çıktı. Lütfen veri klasörünün yazılabilir olduğundan emin olun",
     "External sites" : "Dış siteler",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Türkçe",
     "Add external sites to your Nextcloud navigation" : "Nextcloud gezinme bölümüne dış siteleri ekler",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Bu uygulama yöneticilerin Nextcloud menülerine çeşitli bağlantılar ekleyebilmesini sağlar.\nBağlantıya tıklandığında yönlendirilen web sitesi Nextcloud çerçevesi içinde görüntülenir.\nBağlantılar belirli bir dil, aygıt türü ya da kullanıcı grubu için eklenebilir.\n\nAyrıntılı bilgi almak için dış siteler uygulamasının belgelerine bakabilirsiniz.",
     "Name" : "Ad",
@@ -45,12 +45,13 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Simge yüklenemedi",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Bir web sitesini doğrudan üst çubuktaki uygulama listesine ekler. Bu site tüm kullanıcılara görüntülenir ve sık kullanılan web uygulaması ya da önemli sitelerin tüm kullanıcılara sunulması için kullanışlıdır.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "{email}, {uid} ve {displayname} kodları bağlantıları özelleştirmek için kullanıcının değerleri ile doldurulur.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "https kullanıyorsanız, bazı tarayıcıların sitelerin http ile görüntülenmesini engelleyeceğini unutmayın.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "HTTPS kullanıyorsanız, bazı tarayıcıların sitelerin HTTP ile görüntülenmesini engelleyeceğini unutmayın.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ayrıca, günümüzdeki çoğu site, güvenlik nedeniyle iframe özelliğine izin vermiyor.",
     "We highly recommend to test the configured sites above properly." : "Yukarıda ayarlanmış siteleri sınamanız önemli önerilir.",
     "Icons" : "Simgeler",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png ya da test-dark.png adında iki dosya yüklerseniz, ikisi dosya tek simge olarak kullanılır. Mobil uygulamalarda beyaz simge beyaz arka plan üzerinde görülemeyeceğinden mobil aygıtlarda koyu sürüm kullanılır.",
     "Uploading an icon with the same name will replace the current icon." : "Aynı adlı bir simge yüklendiğinde geçerli simge değiştirilir.",
-    "Upload new icon" : "Yeni simge yükle"
+    "Upload new icon" : "Yeni simge yükle",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "https kullanıyorsanız, bazı tarayıcıların sitelerin http ile görüntülenmesini engelleyeceğini unutmayın."
 },
 "nplurals=2; plural=(n > 1);");

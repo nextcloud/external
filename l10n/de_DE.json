@@ -23,7 +23,7 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Übergebenes Bild ist nicht quadratisch mit einer Kantenlänge von 16, 24 oder 32 Pixeln",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Beim Hochladen des Symbols ist ein Fehler aufgetreten. Bitte stellen Sie sicher, dass das Datenverzeichnis beschreibbar ist",
     "External sites" : "Externe Seiten",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Deutsch (Förmlich: Sie)",
     "Add external sites to your Nextcloud navigation" : "Externe Seiten zur Nextcloud-Navigation hinzufügen",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Diese Anwendung erlaubt es einem Administrator Links in die Nextcloud Menüs hinzuzufügen.\nFolgt man einem Link öffnet sich die externe Webseite in Nextcloud. \nEs ist ebenso möglich Links nur für eine bestimmte Sprache, Gerätetyp oder eine Benutzergruppe hinzuzufügen.\nWeitere Informationen finden Sie in der Dokumentation für externe Seiten.",
     "Name" : "Name",
@@ -43,12 +43,13 @@
     "Icon could not be uploaded" : "Symbol konnte nicht hochgeladen werden",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Fügen Sie eine Webseite zur Liste der Apps in die Leiste oben ein. Die Seite ist sichtbar für alle Benutzer. Dies ist nützlich zum Erreichen anderer internen Web-Anwendungen oder wichtiger Seiten.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid} und {displayname} können benutzt werden, um den Link mit den Benutzerdaten zu füllen.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Bitte beachten Sie, dass einige Browser die Anzeige der Seiten über http sperren, wenn Sie https verwenden.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Bitte beachten Sie, dass einige Browser die Anzeige der Seiten über HTTP sperren, wenn Sie HTTPS verwenden.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachten Sie bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",
     "We highly recommend to test the configured sites above properly." : "Wir empfehlen dringend, die oben konfigurierten Seiten ausführlich zu testen.",
     "Icons" : "Symbole",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Laden Sie eine Datei \"test.png\" und eine Datei \"test-dark.png\" hoch. Beide Dateien werden für ein Symbol verwendet. Die dunkle Version wird auf Mobilgeräten verwendet, die helle Version ist auf den hellen Hintergründen der mobilen Apps nicht sichtbar.",
     "Uploading an icon with the same name will replace the current icon." : "Das Hochladen eines Symbols mit gleichem Namen wird das existierende Symbol ersetzen.",
-    "Upload new icon" : "Neues Symbol hochladen"
+    "Upload new icon" : "Neues Symbol hochladen",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Bitte beachten Sie, dass einige Browser die Anzeige der Seiten über http sperren, wenn Sie https verwenden."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

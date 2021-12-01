@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Bilden är inte kvadratisk med 16, 24 eller 32 pixlars bredd",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Ett fel inträffade vid uppladdning av ikonen, vänligen kontrollera att datamappen är skrivbar",
     "External sites" : "Externa webbplatser",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Svenska",
     "Add external sites to your Nextcloud navigation" : "Lägga till externa webbplatser till din Nextcloud navigering",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Appen ger admin-användare möjlighet att lägga till länkar i Nextcloud-menyer.\nGenom att följa en länk så visas den externa webbplatsen i Nextcloud-ramen.\nDet är möjligt att lägga till länkar för ett specifikt språk, apparattyp, eller användargrupp.\n\nMer information finns i appdokumentationen.",
     "Name" : "Namn",
@@ -45,12 +45,13 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Ikon kunde inte laddas upp",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lägg till en webbplats direkt i applistan i menyn. Detta kommer bli synligt för alla användare och är användbart för att snabbt nå andra internt använda webbappar och viktiga siter.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Platshållarna {email}, {uid} och {displayname} kan användas och fylls med användarvärdena för att anpassa länkarna.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via HTTP om du kör HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Notera dessutom att många platser inte tillåter inramning i 'iframe' på grund av säkerhetsskäl.",
     "We highly recommend to test the configured sites above properly." : "Vi rekommenderar starkt att testa de ovan konfigurerade platserna ordentligt.",
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Om du laddar upp filerna test.png och test-dark.png kommer båda användas som en ikon. Den mörka versionen kommer användas på mobila enheter eftersom den vita ikonen inte är synlig mot vit bakgrund i mobilappar.",
     "Uploading an icon with the same name will replace the current icon." : "Uppladdning av en ikon med samma namn kommer ersätta den nuvarande ikonen.",
-    "Upload new icon" : "Ladda upp ny ikon"
+    "Upload new icon" : "Ladda upp ny ikon",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vänligen notera att vissa webbläsare kommer blockera visning av platser via http om du kör https."
 },
 "nplurals=2; plural=(n != 1);");

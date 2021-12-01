@@ -23,7 +23,7 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Ova slika nije kvadrat širine 16, 24 ili 32 piksela",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Došlo je do pogreške prilikom otpremanja ikone, provjerite može li se pisati u podatkovni direktorij",
     "External sites" : "Vanjska web-mjesta",
-    "__language_name__" : "__language_name__",
+    "__language_name__" : "Hrvatski",
     "Add external sites to your Nextcloud navigation" : "Dodaj vanjska web-mjesta u svoju navigaciju Nextcloudom",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Ova aplikacija omogućuje administratoru dodavanje dodatnih poveznica u izbornike Nextclouda.\nKlikom na poveznicu otvorit će se vanjske web-mjesto unutar Nextcloudovog okvira.\nTakođer je moguće dodati poveznice samo za određeni jezik, vrstu uređaja ili grupu korisnika.\n\nViše informacija dostupno je u dokumentaciji o vanjskim web-mjestima.",
     "Name" : "Ime",
@@ -43,12 +43,13 @@
     "Icon could not be uploaded" : "Ikonu nije moguće otpremiti",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Dodajte web-mjesto izravno na popis aplikacija u gornjoj traci. Tako će biti vidljivo svim korisnicima i može se brzo pristupiti interno korištenim web aplikacijama ili važnim web-mjestima.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Možete se koristiti praznim oznakama {email}, {uid} i {displayname} koje ispunite korisničkim vrijednostima kako biste prilagodili poveznice.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Imajte na umu da će neki preglednici blokirati prikazivanje web-mjesta putem protokola http ako vam je dostupan https.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Imajte na umu da će neki preglednici blokirati prikazivanje web-mjesta putem protokola HTTP ako vam je dostupan HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Također imajte na umu da mnoga web-mjesta danas onemogućuju iframing zbog sigurnosnih razloga.",
     "We highly recommend to test the configured sites above properly." : "Preporučujemo da pravilno i temeljito testirate konfigurirana web-mjesta.",
     "Icons" : "Ikone",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ako otpremite datoteke test.png i test-dark.png, obje će se koristiti kao jedna ikona. Tamna inačica upotrebljavat će se na mobilnim uređajima jer bijela ikona nije vidljiva na bijeloj pozadini mobilnih aplikacija.",
     "Uploading an icon with the same name will replace the current icon." : "Otpremanje ikone s istim nazivom zamijenit će trenutnu ikonu.",
-    "Upload new icon" : "Otpremi novu ikonu"
+    "Upload new icon" : "Otpremi novu ikonu",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Imajte na umu da će neki preglednici blokirati prikazivanje web-mjesta putem protokola http ako vam je dostupan https."
 },"pluralForm" :"nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;"
 }

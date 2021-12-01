@@ -45,12 +45,13 @@ OC.L10N.register(
     "Icon could not be uploaded" : "L'icône n'a pas pu être téléversée",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Ajoutez un site directement à la liste des applications dans la barre supérieure. Celui-ci sera visible par tous les utilisateurs et sera utile pour accéder rapidement à n'importe quel site web interne ou externe important.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Les paramètres {email}, {uid} et {displayname} peuvent être utilisés et sont remplacés avec les valeurs de l'utilisateur pour personnaliser les liens.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via HTTP si vous utilisez HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Par ailleurs, veuillez noter que de nombreux sites interdisent l’utilisation des iframes pour des raisons de sécurité.",
     "We highly recommend to test the configured sites above properly." : "Nous recommandons vivement de tester le bon fonctionnement des sites ci-dessus.",
     "Icons" : "Icônes",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si vous téléversez un fichier test.png et test-dark.png, les deux seront utilisés comme une seule icône. La version sombre sera utilisée sur les appareils mobiles, autrement l'icône claire ne sera pas visible sur l'arrière-plan blanc dans les applications mobiles.",
     "Uploading an icon with the same name will replace the current icon." : "Téléverser une icône avec le même nom va remplacer l'icône actuel.",
-    "Upload new icon" : "Téléverser une nouvelle icône"
+    "Upload new icon" : "Téléverser une nouvelle icône",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https."
 },
 "nplurals=2; plural=(n > 1);");

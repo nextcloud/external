@@ -23,7 +23,7 @@
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Надане зображення не є квадратом шириною 16, 24 або 32 пікселя",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Помилка під час завантаження значка. Перевірте, чи тека з даними доступна для запису",
     "External sites" : "Зовнішні сайти",
-    "__language_name__" : "__назва_мови__",
+    "__language_name__" : "Українська",
     "Add external sites to your Nextcloud navigation" : "Додати зовнішній сайт до навігації у Nextcloud",
     "Name" : "Ім'я",
     "URL" : "URL",
@@ -41,11 +41,11 @@
     "Reloading icon list…" : "Перевантаження списку значків...",
     "Icon could not be uploaded" : "Неможливо завантажити значок",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Додайте вебсайт безпосередньо до списку застосунків у верхній панелі. Його буде показано усім користувачам для швидкого пошуку інших використовуваних вебзастосунків або важливих сайтів.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі переглядачі блокуватимуть показ сайтів через протокол HTTP, якщо ви працюєте за протоколом HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Крім того, будь ласка, зверніть увагу, що багато сайтів не дозволяють iframing з міркувань безпеки.",
     "We highly recommend to test the configured sites above properly." : "Ми наполегливо радим перевірити правильність налаштування сайтів.",
     "Icons" : "Значки",
     "Uploading an icon with the same name will replace the current icon." : "Завантаження значка з таким же ім'ям замінить поточний значок.",
-    "Upload new icon" : "Завантажити новий значок"
+    "Upload new icon" : "Завантажити новий значок",
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі переглядачі блокуватимуть показ сайтів через протокол HTTP, якщо ви працюєте за протоколом HTTPS."
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
 }
