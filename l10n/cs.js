@@ -25,7 +25,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Poskytnutý obrázek není čtverec o šířce 16, 24 nebo 32 pixelů",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Při nahrávání ikony došlo k chybě, ujistěte se, že je adresář data zapisovatelný",
     "External sites" : "Externí stránky",
-    "__language_name__" : "čeština",
+    "__language_name__" : "Čeština",
     "Add external sites to your Nextcloud navigation" : "Přidat externí stránky do navigace ve vašem Nextcloud",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Tato aplikace správcům umožňuje přidávat do nabídek Nextcloud další odkazy.\nNásledování odkazu se externí stránka objeví v rámci Nextcloud.\nJe také možné přidávat odkazy pouze pro daný jazyk, typ zařízení nebo skupinu uživatelů.\n\nVíce informací je k dispozici v dokumentaci k Externí weby.",
     "Name" : "Název",
