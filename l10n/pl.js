@@ -41,7 +41,7 @@ OC.L10N.register(
     "New site" : "Nowa strona",
     "Delete icon" : "Usuń ikonę",
     "Uploading…" : "Wysyłanie…",
-    "Reloading icon list…" : "Ponowne ładowanie listy ikon…",
+    "Reloading icon list…" : "Ponowne wczytywanie listy ikon…",
     "Icon could not be uploaded" : "Ikona cloud nie będzie wysłana",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Dodaj stronę bezpośrednio do listy aplikacji na górnym pasku. Będzie ona widoczna dla wszystkich użytkowników i jest użyteczna kiedy potrzeba szybko sięgnąć do zewnętrznych aplikacji lub ważnych stron.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Można użyć symboli zastępczych {email}, {uid} i {displayname}, które są wypełniane wartościami użytkownika w celu dostosowania linków.",
