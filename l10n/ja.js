@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "アイコンをアップロードできませんでした",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "上のバーにウェブサイトを直接追加します。これにより重要なサイトや内部で利用する他のウェブアプリに簡単に移動することができるようになって便利です。",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "プレースホルダ {email},{uid}および{displayname} を使用でき、リンクをカスタマイズするためのユーザーの値が入力されます。",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "HTTPSで動かしている場合、一部のブラウザではHTTP経由のサイトの表示をブロックすることに注意してください。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "さらに、今日セキュリティ上の理由から多くのサイトで iframe の使用が禁止されているのでご注意ください。",
     "We highly recommend to test the configured sites above properly." : "以下の設定でサイトが設定されているか、テストすることを強くお勧めします。",
     "Icons" : "アイコン",
