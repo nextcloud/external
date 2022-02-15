@@ -93,6 +93,7 @@ class Application extends App implements IBootstrap {
 					'icon' => $image,
 					'type' => $site['type'],
 					'name' => $site['name'],
+					'target' => $site['redirect'],
 				];
 			});
 		}
