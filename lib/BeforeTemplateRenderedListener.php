@@ -104,6 +104,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 					'icon' => $image,
 					'type' => $site['type'],
 					'name' => $site['name'],
+					'target' => $site['redirect'],
 				];
 			});
 		}
