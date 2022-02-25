@@ -21,7 +21,7 @@
     "No file uploaded" : "Keine Datei hochgeladen",
     "Provided file is not an image" : "Übergebene Datei ist kein Bild",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Übergebenes Bild ist nicht quadratisch mit einer Kantenlänge von 16, 24 oder 32 Pixeln",
-    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Beim Hochladen des Symbols ist ein Fehler aufgetreten. Bitte stelle sicher, dass das Datenverzeichnis beschreibbar ist",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Es ist ein Fehler beim Hochladen des Symbols aufgetreten. Bitte stelle sicher, dass das Datenverzeichnis beschreibbar ist.",
     "External sites" : "Externe Seiten",
     "__language_name__" : "Deutsch (Persönlich: Du)",
     "Add external sites to your Nextcloud navigation" : "Externe Seiten zur Nextcloud-Navigation hinzufügen",
