@@ -51,5 +51,5 @@
     "Uploading an icon with the same name will replace the current icon." : "Téléverser une icône avec le même nom va remplacer l'icône actuel.",
     "Upload new icon" : "Téléverser une nouvelle icône",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Veuillez noter que certains navigateurs peuvent bloquer l’affichage des sites via http si vous utilisez https."
-},"pluralForm" :"nplurals=2; plural=(n > 1);"
+},"pluralForm" :"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
