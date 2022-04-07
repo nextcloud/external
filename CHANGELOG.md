@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 – 2022-04-07
+### Fixed
+- Accessibility Issue: Inline frames must have a unique, non-empty 'title' attribute
+  [#287](https://github.com/nextcloud/external/pull/287)
+- Require Nextcloud 24
+
 ## 3.10.2 – 2021-11-09
 ### Fixed
 - Compatibility with Nextcloud 23
