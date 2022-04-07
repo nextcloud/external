@@ -27,7 +27,7 @@ jobs:
 
       - name: Set app env
         run: |
-          # Split and keep last 
+          # Split and keep last
           echo "APP_NAME=${GITHUB_REPOSITORY##*/}" >> $GITHUB_ENV
           echo "APP_VERSION=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
@@ -116,6 +116,11 @@ jobs:
         with:
           repository: nextcloud/server
           path: nextcloud
+
+      - name: Sleep for 10s
+        uses: juliangruber/sleep-action@v1
+        with:
+          time: 10s
 
       - name: Sign app
         run: |
