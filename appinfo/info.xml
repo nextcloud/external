@@ -29,11 +29,11 @@ More information is available in the External sites documentation.]]></descripti
 	<bugs>https://github.com/nextcloud/external/issues</bugs>
 	<repository>https://github.com/nextcloud/external.git</repository>
 
-	<version>4.0.0</version>
+	<version>4.1.0</version>
 	<namespace>External</namespace>
 
 	<dependencies>
-		<nextcloud min-version="24" max-version="24" />
+		<nextcloud min-version="25" max-version="25" />
 	</dependencies>
 
 	<settings>
