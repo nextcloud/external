@@ -23,6 +23,7 @@ OC.L10N.register(
     "Position" : "ตำแหน่ง",
     "Redirect" : "เปลี่ยนเส้นทาง",
     "Remove site" : "ลบเว็บไซต์ออก",
+    "Uploading…" : "กำลังอัปโหลด…",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "นอกจากนี้โปรดทราบว่าหลายเว็บไซต์ในปัจจุบันไม่อนุญาตให้ใช้ iframe เนื่องจากเหตุผลด้านความปลอดภัย",
     "Icons" : "ไอคอน",
     "Upload new icon" : "อัปโหลดไอคอนใหม่",
