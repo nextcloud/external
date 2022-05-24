@@ -9,6 +9,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Language" : "Bahasa",
     "Groups" : "Grup",
+    "Redirect" : "Mengalihkan",
     "Remove site" : "Hapus situs",
     "Uploading…" : "Menunggah…",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Lebih lanjut perlu diketahui bahwa banyak situs saat ini tidak mengizinkan iframing karena alasan keamanan.",

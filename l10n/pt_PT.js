@@ -16,4 +16,4 @@ OC.L10N.register(
     "Icons" : "Ícones",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Por favor, note que alguns navegadores irão bloquear a exibição dos sites via http se estiver a utilizar https."
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
