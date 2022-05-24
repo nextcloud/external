@@ -54,4 +54,4 @@ OC.L10N.register(
     "Upload new icon" : "Subir nuevo icono",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Tenga en cuenta que algunos navegadores no mostrarán sitios vía http si está usando https."
 },
-"nplurals=2; plural=(n != 1);");
+"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
