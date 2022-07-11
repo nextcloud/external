@@ -69,6 +69,7 @@ appstore: clean npm-init build-js-production
 	--exclude=/tests \
 	--exclude=/translationfiles \
 	--exclude=/vendor \
+	--exclude=/vendor-bin \
 	--exclude=.php-cs-fixer.cache \
 	--exclude=.php-cs-fixer.dist.php \
 	--exclude=/composer.json \

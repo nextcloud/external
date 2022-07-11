@@ -30,6 +30,7 @@ use OCA\External\Exceptions\InvalidURLException;
 use OCA\External\Exceptions\LanguageNotFoundException;
 use OCA\External\Exceptions\SiteNotFoundException;
 use OCP\App\IAppManager;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
 use OCP\Files\SimpleFS\ISimpleFile;
@@ -70,6 +71,9 @@ class SitesManager {
 	/** @var IUserSession */
 	protected $userSession;
 
+	/** @var JWTManager */
+	protected $JWTManager;
+
 	/** @var IAppData */
 	protected $appData;
 
@@ -80,6 +84,7 @@ class SitesManager {
 		IGroupManager $groupManager,
 		IUserSession $userSession,
 		IFactory $languageFactory,
+		JWTManager $JWTManager,
 		IAppData $appData) {
 		$this->request = $request;
 		$this->config = $config;
@@ -87,6 +92,7 @@ class SitesManager {
 		$this->groupManager = $groupManager;
 		$this->userSession = $userSession;
 		$this->languageFactory = $languageFactory;
+		$this->JWTManager = $JWTManager;
 		$this->appData = $appData;
 	}
 
@@ -125,6 +131,12 @@ class SitesManager {
 		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
 		$email = $email ?? '';
 
+		$jwt = '';
+		if ($user instanceof IUser) {
+			$payload = ['email' => $email, 'uid' => $uid, 'displayName' => $displayName];
+			$jwt = $this->JWTManager->getToken($payload);
+		}
+
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
@@ -140,8 +152,8 @@ class SitesManager {
 			}
 
 			$site['url'] = str_replace(
-				['{email}', '{uid}', '{displayname}'],
-				array_map('rawurlencode', [$email, $uid, $displayName]),
+				['{email}', '{uid}', '{displayname}', '{jwt}'],
+				array_map('rawurlencode', [$email, $uid, $displayName, $jwt]),
 				$site['url']
 			);
 
