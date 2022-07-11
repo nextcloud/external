@@ -21,6 +21,7 @@
 
 namespace OCA\External;
 
+use DateTime;
 use OCA\External\Exceptions\GroupNotFoundException;
 use OCA\External\Exceptions\IconNotFoundException;
 use OCA\External\Exceptions\InvalidDeviceException;
@@ -107,6 +108,41 @@ class SitesManager {
 	}
 
 	/**
+	 * @param string $data
+	 * @return string
+	 */
+	public static function base64UrlEncode($data) {
+		return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
+	}
+
+	/**
+	 * @param array $payload
+	 * @return string
+	 */
+	public function buildJwt($payload) {
+		$secret = $this->config->getSystemValue('external_jwt_secret');
+
+		if ($secret === '') {
+			return '';
+		}
+
+		$now = (new DateTime())->getTimestamp();
+		$payload = array_merge($payload, ['iat' => $now]);
+
+		$headers = ['alg' => 'HS256', 'typ' => 'JWT'];
+		$headersEncoded = self::base64UrlEncode(json_encode($headers));
+
+		$payloadEncoded = self::base64UrlEncode(json_encode($payload));
+
+		$sig = hash_hmac('SHA256', "$headersEncoded.$payloadEncoded", $secret, true);
+		$sigEncoded = self::base64UrlEncode($sig);
+
+		$jwt = "$headersEncoded.$payloadEncoded.$sigEncoded";
+
+		return $jwt;
+	}
+
+	/**
 	 * @return array[]
 	 */
 	public function getSitesToDisplay() {
@@ -125,6 +161,9 @@ class SitesManager {
 		$uid  = $user instanceof IUser ? $user->getUID() : '';
 		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
 
+		$payload = ['email' => $email, 'uid' => $uid, 'displayName' => $displayName];
+		$jwt = $this->buildJwt($payload);
+
 		$langSites = [];
 		foreach ($sites as $id => $site) {
 			if ($site['lang'] !== '' && $site['lang'] !== $lang) {
@@ -140,8 +179,8 @@ class SitesManager {
 			}
 
 			$site['url'] = str_replace(
-				['{email}', '{uid}', '{displayname}'],
-				array_map('urlencode', [$email, $uid, $displayName]),
+				['{email}', '{uid}', '{displayname}', '{jwt}'],
+				array_map('urlencode', [$email, $uid, $displayName, $jwt]),
 				$site['url']
 			);
 

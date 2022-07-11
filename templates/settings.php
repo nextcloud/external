@@ -36,6 +36,7 @@ script('external', 'templates');
 		<h2><?php p($l->t('External sites'));?></h2>
 		<p class="settings-hint"><?php p($l->t('Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.')); ?></p>
 		<p class="settings-hint"><?php p($l->t('The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links.')); ?></p>
+		<p class="settings-hint"><?php p($l->t('A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. The HS256 secret used for signing the JWT should be defined in the "external_jwt_secret" configuration parameter.')); ?></p>
 
 		<div id="loading_sites" class="icon-loading-small"></div>
 
