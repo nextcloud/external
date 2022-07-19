@@ -33,38 +33,24 @@ use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;
 
 class CopyDefaultIcons implements IRepairStep {
+	protected IL10N $l;
+	protected IAppManager $appManager;
+	protected IAppData $appData;
 
-	/** @var IL10N */
-	protected $l;
-	/** @var IAppManager */
-	protected $appManager;
-	/** @var IAppData */
-	protected $appData;
-
-	/**
-	 * @param IL10N $l
-	 * @param IAppManager $appManager
-	 * @param IAppData $appData
-	 */
 	public function __construct(IL10N $l, IAppManager $appManager, IAppData $appData) {
 		$this->l = $l;
 		$this->appManager = $appManager;
 		$this->appData = $appData;
 	}
 
-	/**
-	 * @return string
-	 * @since 9.1.0
-	 */
-	public function getName() {
+	public function getName(): string {
 		return 'Copy default images to the app data directory';
 	}
 
 	/**
-	 * @param IOutput $output
 	 * @throws \Exception in case of failure
 	 */
-	public function run(IOutput $output) {
+	public function run(IOutput $output): void {
 		try {
 			$folder = $this->appData->getFolder('icons');
 		} catch (NotFoundException $e) {
@@ -76,12 +62,7 @@ class CopyDefaultIcons implements IRepairStep {
 		$this->copyDefaultIcon($output, $folder, 'settings.svg');
 	}
 
-	/**
-	 * @param IOutput $output
-	 * @param ISimpleFolder $folder
-	 * @param string $file
-	 */
-	protected function copyDefaultIcon(IOutput $output, ISimpleFolder $folder, $file) {
+	protected function copyDefaultIcon(IOutput $output, ISimpleFolder $folder, string $file): void {
 		try {
 			$folder->getFile($file);
 			$output->info(sprintf('Icon %s already exists', $file));

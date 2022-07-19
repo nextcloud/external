@@ -1,0 +1,26 @@
+{
+	"require-dev": {
+		"christophwurst/nextcloud": "dev-master",
+		"nextcloud/coding-standard": "^1",
+		"vimeo/psalm": "^4.24",
+		"php-parallel-lint/php-parallel-lint": "^1.2",
+		"phpunit/phpunit": "^9.5"
+	},
+	"scripts": {
+		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+		"cs:check": "php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "php-cs-fixer fix",
+		"psalm": "psalm.phar --threads=1",
+		"psalm:update-baseline": "psalm --threads=1 --update-baseline",
+		"psalm:clear": "psalm--clear-cache && psalm --clear-global-cache",
+		"psalm:fix": "psalm --alter --issues=InvalidReturnType,InvalidNullableReturnType,MissingParamType,InvalidFalsableReturnType"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/package-versions-deprecated": true
+		},
+		"platform": {
+			"php": "7.4"
+		}
+	}
+}

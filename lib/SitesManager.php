@@ -116,7 +116,7 @@ class SitesManager {
 
 		$user = $this->userSession->getUser();
 		if ($user instanceof IUser) {
-			$groups = $this->groupManager->getUserGroupIds($this->userSession->getUser());
+			$groups = $this->groupManager->getUserGroupIds($user);
 		} else {
 			$groups = [];
 		}
@@ -174,10 +174,8 @@ class SitesManager {
 
 	/**
 	 * Adds default values for new attributes of sites
-	 * @param array $site
-	 * @return array
 	 */
-	protected function fillSiteArray(array $site) {
+	protected function fillSiteArray(array $site): array {
 		return array_merge([
 				'icon' => 'external.svg',
 				'lang' => '',
@@ -209,7 +207,7 @@ class SitesManager {
 	 * @throws IconNotFoundException
 	 */
 	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
-		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', 0);
+		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', '0');
 
 		if ($name === '') {
 			throw new InvalidNameException();
@@ -275,7 +273,7 @@ class SitesManager {
 			'redirect' => $redirect,
 		];
 		$this->config->setAppValue('external', 'sites', json_encode($sites));
-		$this->config->setAppValue('external', 'max_site', $id);
+		$this->config->setAppValue('external', 'max_site', (string)$id);
 
 		return $sites[$id];
 	}
@@ -373,10 +371,7 @@ class SitesManager {
 		return $sites[$id];
 	}
 
-	/**
-	 * @param int $id
-	 */
-	public function deleteSite($id) {
+	public function deleteSite(int $id): void {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			return;
@@ -387,13 +382,12 @@ class SitesManager {
 	}
 
 	/**
-	 * @param array[] $sites
-	 * @return array[]
+	 * @param array<int, array> $sites
+	 * @return array<int, array>
 	 */
-	protected function getSitesFromOldConfig($sites) {
+	protected function getSitesFromOldConfig(array $sites): array {
 		$fixedSites = [];
 
-		/** @var array[] $sites */
 		foreach ($sites as $id => $site) {
 			$fixedSites[$id + 1] = $this->fillSiteArray([
 				'id'   => $id + 1,
@@ -404,7 +398,7 @@ class SitesManager {
 		}
 
 		$this->config->setAppValue('external', 'sites', json_encode($fixedSites));
-		$this->config->setAppValue('external', 'max_site', max(array_keys($fixedSites)));
+		$this->config->setAppValue('external', 'max_site', (string)max(array_keys($fixedSites)));
 		return $fixedSites;
 	}
 
@@ -446,7 +440,7 @@ class SitesManager {
 
 		$commonLangCodes = ['en', 'es', 'fr', 'de', 'de_DE', 'ja', 'ar', 'ru', 'nl', 'it', 'pt_BR', 'pt_PT', 'da', 'fi_FI', 'nb_NO', 'sv', 'tr', 'zh_CN', 'ko'];
 
-		usort($languages, function ($a, $b) use ($commonLangCodes) {
+		usort($languages, function (array $a, array $b) use ($commonLangCodes): int {
 			$aC = array_search($a['code'], $commonLangCodes, true);
 			$bC = array_search($b['code'], $commonLangCodes, true);
 

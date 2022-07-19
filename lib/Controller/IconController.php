@@ -126,7 +126,7 @@ class IconController extends Controller {
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
-		$target->putContent(file_get_contents($icon['tmp_name'], 'r'));
+		$target->putContent(file_get_contents($icon['tmp_name'], false));
 
 		return new DataResponse([
 			'id' => $target->getName(),
