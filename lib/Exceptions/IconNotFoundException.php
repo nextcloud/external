@@ -21,4 +21,5 @@
 
 namespace OCA\External\Exceptions;
 
-class IconNotFoundException extends \OutOfBoundsException {}
+class IconNotFoundException extends \OutOfBoundsException {
+}

@@ -21,4 +21,5 @@
 
 namespace OCA\External\Exceptions;
 
-class InvalidNameException extends \UnexpectedValueException {}
+class InvalidNameException extends \UnexpectedValueException {
+}

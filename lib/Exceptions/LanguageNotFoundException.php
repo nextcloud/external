@@ -21,4 +21,5 @@
 
 namespace OCA\External\Exceptions;
 
-class LanguageNotFoundException extends \OutOfBoundsException {}
+class LanguageNotFoundException extends \OutOfBoundsException {
+}

@@ -23,7 +23,6 @@
 
 namespace OCA\External\Migration;
 
-
 use OCP\App\IAppManager;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;

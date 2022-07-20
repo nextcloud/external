@@ -41,8 +41,8 @@ class BeforeTemplateRenderedListener implements IEventListener {
 	protected $urlGenerator;
 
 	public function __construct(SitesManager $sitesManager,
-								INavigationManager $navigationManager,
-								IURLGenerator $urlGenerator) {
+		INavigationManager $navigationManager,
+		IURLGenerator $urlGenerator) {
 		$this->sitesManager = $sitesManager;
 		$this->navigationManager = $navigationManager;
 		$this->urlGenerator = $urlGenerator;
@@ -65,7 +65,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
 				$link = $site['url'];
 				if (!$site['redirect']) {
-					$link = $this->urlGenerator->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+					$link = $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id']]);
 				}
 
 				$event->addHiddenField('external_quota_link', $link);
@@ -81,11 +81,11 @@ class BeforeTemplateRenderedListener implements IEventListener {
 		$sites = $this->sitesManager->getSitesToDisplay();
 
 		foreach ($sites as $id => $site) {
-			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING && $site['type'] !== SitesManager::TYPE_LOGIN ) {
+			if ($site['type'] !== SitesManager::TYPE_LINK && $site['type'] !== SitesManager::TYPE_SETTING && $site['type'] !== SitesManager::TYPE_LOGIN) {
 				continue;
 			}
 
-			$this->navigationManager->add(function() use ($site) {
+			$this->navigationManager->add(function () use ($site) {
 				if ($site['icon'] !== '') {
 					$image = $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
 				} else {
@@ -94,7 +94,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 
 				$href = $site['url'];
 				if (!$site['redirect']) {
-					$href = $this->urlGenerator->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+					$href = $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id']]);
 				}
 
 				return [

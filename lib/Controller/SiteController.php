@@ -42,12 +42,12 @@ class SiteController extends Controller {
 	protected IL10N $l10n;
 
 	public function __construct(string $appName,
-								IRequest $request,
-								IConfig $config,
-								INavigationManager $navigationManager,
-								SitesManager $sitesManager,
-								IURLGenerator $url,
-								IL10N $l10n) {
+		IRequest $request,
+		IConfig $config,
+		INavigationManager $navigationManager,
+		SitesManager $sitesManager,
+		IURLGenerator $url,
+		IL10N $l10n) {
 		parent::__construct($appName, $request);
 		$this->config = $config;
 		$this->sitesManager = $sitesManager;

@@ -21,4 +21,5 @@
 
 namespace OCA\External\Exceptions;
 
-class GroupNotFoundException extends \OutOfBoundsException {}
+class GroupNotFoundException extends \OutOfBoundsException {
+}

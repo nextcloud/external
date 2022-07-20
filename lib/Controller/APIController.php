@@ -36,7 +36,6 @@ use OCP\AppFramework\OCSController;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IURLGenerator;
-use OCP\IUser;
 use OCP\IUserSession;
 
 class APIController extends OCSController {
@@ -107,7 +106,7 @@ class APIController extends OCSController {
 	 * @return DataResponse
 	 */
 	public function getAdmin() {
-		$icons = array_map(function($icon) {
+		$icons = array_map(function ($icon) {
 			return [
 				'icon' => $icon,
 				'name' => $icon,

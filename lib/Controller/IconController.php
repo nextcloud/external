@@ -150,10 +150,10 @@ class IconController extends Controller {
 		}
 
 		if (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
-				IRequest::USER_AGENT_CLIENT_ANDROID,
-				IRequest::USER_AGENT_CLIENT_IOS,
-				IRequest::USER_AGENT_CLIENT_DESKTOP,
-			])) {
+			IRequest::USER_AGENT_CLIENT_ANDROID,
+			IRequest::USER_AGENT_CLIENT_IOS,
+			IRequest::USER_AGENT_CLIENT_DESKTOP,
+		])) {
 			// Check if there is a dark icon as well
 			$basename = pathinfo($iconFile->getName(), PATHINFO_FILENAME);
 			$basename .= '-dark.';

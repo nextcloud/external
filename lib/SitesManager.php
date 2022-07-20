@@ -41,17 +41,16 @@ use OCP\IUserSession;
 use OCP\L10N\IFactory;
 
 class SitesManager {
+	public const TYPE_LINK = 'link';
+	public const TYPE_SETTING = 'settings';
+	public const TYPE_LOGIN = 'guest';
+	public const TYPE_QUOTA = 'quota';
 
-	const TYPE_LINK = 'link';
-	const TYPE_SETTING = 'settings';
-	const TYPE_LOGIN = 'guest';
-	const TYPE_QUOTA = 'quota';
-
-	const DEVICE_ALL = '';
-	const DEVICE_ANDROID = 'android';
-	const DEVICE_IOS = 'ios';
-	const DEVICE_DESKTOP = 'desktop';
-	const DEVICE_BROWSER = 'browser';
+	public const DEVICE_ALL = '';
+	public const DEVICE_ANDROID = 'android';
+	public const DEVICE_IOS = 'ios';
+	public const DEVICE_DESKTOP = 'desktop';
+	public const DEVICE_BROWSER = 'browser';
 
 	/** @var IRequest */
 	protected $request;
@@ -76,12 +75,12 @@ class SitesManager {
 
 
 	public function __construct(IRequest $request,
-								IConfig $config,
-								IAppManager $appManager,
-								IGroupManager $groupManager,
-								IUserSession $userSession,
-								IFactory $languageFactory,
-								IAppData $appData) {
+		IConfig $config,
+		IAppManager $appManager,
+		IGroupManager $groupManager,
+		IUserSession $userSession,
+		IFactory $languageFactory,
+		IAppData $appData) {
 		$this->request = $request;
 		$this->config = $config;
 		$this->appManager = $appManager;
@@ -122,7 +121,7 @@ class SitesManager {
 		}
 
 		$email = $user instanceof IUser ? $user->getEMailAddress() : '';
-		$uid  = $user instanceof IUser ? $user->getUID() : '';
+		$uid = $user instanceof IUser ? $user->getUID() : '';
 		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
 		$email = $email ?? '';
 
@@ -177,13 +176,13 @@ class SitesManager {
 	 */
 	protected function fillSiteArray(array $site): array {
 		return array_merge([
-				'icon' => 'external.svg',
-				'lang' => '',
-				'type' => self::TYPE_LINK,
-				'device' => self::DEVICE_ALL,
-				'groups' => [],
-				'redirect' => false,
-			],
+			'icon' => 'external.svg',
+			'lang' => '',
+			'type' => self::TYPE_LINK,
+			'device' => self::DEVICE_ALL,
+			'groups' => [],
+			'redirect' => false,
+		],
 			$site
 		);
 	}
@@ -262,9 +261,9 @@ class SitesManager {
 
 		$sites = $this->getSites();
 		$sites[$id] = [
-			'id'   => $id,
+			'id' => $id,
 			'name' => $name,
-			'url'  => $url,
+			'url' => $url,
 			'lang' => $lang,
 			'type' => $type,
 			'device' => $device,
@@ -356,9 +355,9 @@ class SitesManager {
 		}
 
 		$sites[$id] = [
-			'id'   => $id,
+			'id' => $id,
 			'name' => $name,
-			'url'  => $url,
+			'url' => $url,
 			'lang' => $lang,
 			'type' => $type,
 			'device' => $device,
@@ -390,9 +389,9 @@ class SitesManager {
 
 		foreach ($sites as $id => $site) {
 			$fixedSites[$id + 1] = $this->fillSiteArray([
-				'id'   => $id + 1,
+				'id' => $id + 1,
 				'name' => $site[0],
-				'url'  => $site[1],
+				'url' => $site[1],
 				'icon' => isset($site[2]) ? $site[2] : 'external.svg',
 			]);
 		}
@@ -409,7 +408,7 @@ class SitesManager {
 		try {
 			$folder = $this->appData->getFolder('icons');
 			$icons = $folder->getDirectoryListing();
-			return array_map(function(ISimpleFile $icon) {
+			return array_map(function (ISimpleFile $icon) {
 				return $icon->getName();
 			}, $icons);
 		} catch (NotFoundException $e) {
@@ -431,7 +430,7 @@ class SitesManager {
 			$ln = ['code' => $lang, 'name' => $lang];
 			if ($l->getLanguageCode() === $lang && strpos($potentialName, '_') !== 0) {
 				$ln = ['code' => $lang, 'name' => $potentialName];
-			} else if ($lang === 'en') {
+			} elseif ($lang === 'en') {
 				$ln = ['code' => $lang, 'name' => 'English (US)'];
 			}
 

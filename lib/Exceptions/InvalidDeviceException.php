@@ -21,4 +21,5 @@
 
 namespace OCA\External\Exceptions;
 
-class InvalidDeviceException extends \UnexpectedValueException {}
+class InvalidDeviceException extends \UnexpectedValueException {
+}
