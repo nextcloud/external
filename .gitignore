@@ -4,3 +4,5 @@ build
 # Node
 /node_modules
 /js/dist
+/vendor
+.php-cs-fixer.cache
