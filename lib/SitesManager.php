@@ -121,9 +121,10 @@ class SitesManager {
 			$groups = [];
 		}
 
-		$email= $user instanceof IUser ? $user->getEMailAddress() : '';
+		$email = $user instanceof IUser ? $user->getEMailAddress() : '';
 		$uid  = $user instanceof IUser ? $user->getUID() : '';
 		$displayName = $user instanceof IUser ? $user->getDisplayName() : '';
+		$email = $email ?? '';
 
 		$langSites = [];
 		foreach ($sites as $id => $site) {
