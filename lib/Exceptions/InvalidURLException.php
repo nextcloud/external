@@ -21,4 +21,5 @@
 
 namespace OCA\External\Exceptions;
 
-class InvalidURLException extends \UnexpectedValueException {}
+class InvalidURLException extends \UnexpectedValueException {
+}

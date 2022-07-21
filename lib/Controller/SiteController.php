@@ -35,36 +35,19 @@ use OCP\IRequest;
 use OCP\IURLGenerator;
 
 class SiteController extends Controller {
+	protected IConfig $config;
+	protected SitesManager $sitesManager;
+	protected INavigationManager $navigationManager;
+	protected IURLGenerator $url;
+	protected IL10N $l10n;
 
-	/** @var IConfig */
-	protected $config;
-	/** @var SitesManager */
-	protected $sitesManager;
-	/** @var INavigationManager */
-	protected $navigationManager;
-	/** @var IURLGenerator */
-	protected $url;
-	/** @var IL10N */
-	protected $l10n;
-
-	/**
-	 * SiteController constructor.
-	 *
-	 * @param string $appName
-	 * @param IRequest $request
-	 * @param IConfig $config
-	 * @param INavigationManager $navigationManager
-	 * @param SitesManager $sitesManager
-	 * @param IURLGenerator $url
-	 * @param IL10N $l10n
-	 */
-	public function __construct($appName,
-								IRequest $request,
-								IConfig $config,
-								INavigationManager $navigationManager,
-								SitesManager $sitesManager,
-								IURLGenerator $url,
-								IL10N $l10n) {
+	public function __construct(string $appName,
+		IRequest $request,
+		IConfig $config,
+		INavigationManager $navigationManager,
+		SitesManager $sitesManager,
+		IURLGenerator $url,
+		IL10N $l10n) {
 		parent::__construct($appName, $request);
 		$this->config = $config;
 		$this->sitesManager = $sitesManager;
@@ -77,10 +60,9 @@ class SiteController extends Controller {
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 *
-	 * @param int $id
 	 * @return TemplateResponse|RedirectResponse
 	 */
-	public function showPage($id) {
+	public function showPage(int $id) {
 		try {
 			$site = $this->sitesManager->getSiteById($id);
 			return $this->createResponse($id, $site);
@@ -119,12 +101,7 @@ class SiteController extends Controller {
 		return new RedirectResponse($this->url->getAbsoluteURL('/index.php/apps/files/'));
 	}
 
-	/**
-	 * @param int $id
-	 * @param array $site
-	 * @return RedirectResponse|TemplateResponse
-	 */
-	protected function createResponse($id, array $site) {
+	protected function createResponse(int $id, array $site): TemplateResponse {
 		$this->navigationManager->setActiveEntry('external_index' . $id);
 
 		$response = new TemplateResponse('external', 'frame', [
@@ -133,7 +110,7 @@ class SiteController extends Controller {
 		], 'user');
 
 		$policy = new ContentSecurityPolicy();
-		$policy->addAllowedChildSrcDomain('*');
+		$policy->addAllowedWorkerSrcDomain('*');
 		$policy->addAllowedFrameDomain('*');
 		$response->setContentSecurityPolicy($policy);
 

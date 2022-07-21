@@ -126,7 +126,7 @@ class IconController extends Controller {
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
-		$target->putContent(file_get_contents($icon['tmp_name'], 'r'));
+		$target->putContent(file_get_contents($icon['tmp_name'], false));
 
 		return new DataResponse([
 			'id' => $target->getName(),
@@ -150,10 +150,10 @@ class IconController extends Controller {
 		}
 
 		if (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
-				IRequest::USER_AGENT_CLIENT_ANDROID,
-				IRequest::USER_AGENT_CLIENT_IOS,
-				IRequest::USER_AGENT_CLIENT_DESKTOP,
-			])) {
+			IRequest::USER_AGENT_CLIENT_ANDROID,
+			IRequest::USER_AGENT_CLIENT_IOS,
+			IRequest::USER_AGENT_CLIENT_DESKTOP,
+		])) {
 			// Check if there is a dark icon as well
 			$basename = pathinfo($iconFile->getName(), PATHINFO_FILENAME);
 			$basename .= '-dark.';

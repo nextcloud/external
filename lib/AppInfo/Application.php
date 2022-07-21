@@ -38,7 +38,6 @@ use OCP\IURLGenerator;
 use OCP\Settings\IManager;
 
 class Application extends App implements IBootstrap {
-
 	public const APP_ID = 'external';
 
 	public function __construct() {
@@ -74,7 +73,7 @@ class Application extends App implements IBootstrap {
 				continue;
 			}
 
-			$navigationManager->add(function() use ($site, $url) {
+			$navigationManager->add(function () use ($site, $url) {
 				if ($site['icon'] !== '') {
 					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
 				} else {
@@ -83,12 +82,12 @@ class Application extends App implements IBootstrap {
 
 				$href = $site['url'];
 				if (!$site['redirect']) {
-					$href = $url->linkToRoute('external.site.showPage', ['id'=> $site['id']]);
+					$href = $url->linkToRoute('external.site.showPage', ['id' => $site['id']]);
 				}
 
 				return [
 					'id' => 'external_index' . $site['id'],
-					'order' =>  80 + $site['id'],
+					'order' => 80 + $site['id'],
 					'href' => $href,
 					'icon' => $image,
 					'type' => $site['type'],
