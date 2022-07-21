@@ -57,19 +57,22 @@ js-templates:
 appstore: clean npm-init build-js-production
 	mkdir -p $(sign_dir)
 	rsync -a \
+	--exclude=/.git \
+	--exclude=/.github \
+	--exclude=/.tx \
 	--exclude=/build \
 	--exclude=/docs \
-	--exclude=/translationfiles \
-	--exclude=/.tx \
-	--exclude=/tests \
-	--exclude=/.git \
-	--exclude=/screenshots \
-	--exclude=/.github \
 	--exclude=/l10n/l10n.pl \
-	--exclude=/CONTRIBUTING.md \
-	--exclude=/issue_template.md \
 	--exclude=/node_modules \
+	--exclude=/screenshots \
 	--exclude=/src \
+	--exclude=/tests \
+	--exclude=/translationfiles \
+	--exclude=/vendor \
+	--exclude=.php-cs-fixer.cache \
+	--exclude=.php-cs-fixer.dist.php \
+	--exclude=/composer.json \
+	--exclude=/composer.lock \
 	--exclude=/README.md \
 	--exclude=/.gitattributes \
 	--exclude=/.gitignore \
@@ -80,6 +83,8 @@ appstore: clean npm-init build-js-production
 	--exclude=/.eslintrc.js \
 	--exclude=/Makefile \
 	--exclude=/package.json \
+	--exclude=/package-lock.json \
+	--exclude=/psalm.xml \
 	--exclude=/webpack.config.js \
 	$(project_dir)/ $(sign_dir)/$(app_name)
 	tar -czf $(build_dir)/$(app_name).tar.gz \
