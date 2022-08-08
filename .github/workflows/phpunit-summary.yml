@@ -7,14 +7,15 @@ name: PHPUnit
 
 on:
   pull_request:
-    paths-ignore:
-      - 'appinfo/**'
-      - 'lib/**'
-      - 'templates/**'
-      - 'tests/**'
-      - '.php-cs-fixer.dist.php'
-      - 'composer.json'
-      - 'composer.lock'
+    paths:
+      - '**'
+      - '!appinfo/**'
+      - '!lib/**'
+      - '!templates/**'
+      - '!tests/**'
+      - '!.php-cs-fixer.dist.php'
+      - '!composer.json'
+      - '!composer.lock'
 
   push:
     branches:
