@@ -1,0 +1,73 @@
+# This workflow is provided via the organization template repository
+#
+# https://github.com/nextcloud/.github
+# https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization
+
+name: PHPUnit
+
+on:
+  pull_request:
+    paths-ignore:
+      - 'appinfo/**'
+      - 'lib/**'
+      - 'templates/**'
+      - 'tests/**'
+      - '.php-cs-fixer.dist.php'
+      - 'composer.json'
+      - 'composer.lock'
+
+  push:
+    branches:
+      - main
+      - master
+      - stable*
+
+permissions:
+  contents: read
+
+jobs:
+  sqlite-summary:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+
+    name: phpunit-sqlite-summary
+
+    steps:
+      - name: Fake summary status
+        run: echo "No actual summary as PHP was skipped"
+
+  mysql-summary:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+
+    name: phpunit-mysql-summary
+
+    steps:
+      - name: Fake summary status
+        run: echo "No actual summary as PHP was skipped"
+
+
+  pgsql-summary:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+
+    name: phpunit-pgsql-summary
+
+    steps:
+      - name: Fake summary status
+        run: echo "No actual summary as PHP was skipped"
+
+
+  oci-summary:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+
+    name: phpunit-oci-summary
+
+    steps:
+      - name: Fake summary status
+        run: echo "No actual summary as PHP was skipped"
