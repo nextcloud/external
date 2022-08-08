@@ -8,5 +8,4 @@ require_once __DIR__ . '/../../../lib/base.php';
 \OC::$composerAutoloader->addPsr4('Tests\\', OC::$SERVERROOT . '/tests/', true);
 
 OC_App::loadApp('external');
-
 OC_Hook::clear();
