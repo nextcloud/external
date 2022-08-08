@@ -8,7 +8,6 @@ name: PHPUnit
 on:
   pull_request:
     paths:
-      - '.github/workflows/**'
       - 'appinfo/**'
       - 'lib/**'
       - 'templates/**'
