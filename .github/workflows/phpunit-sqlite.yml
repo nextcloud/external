@@ -1,11 +1,30 @@
+# This workflow is provided via the organization template repository
+#
+# https://github.com/nextcloud/.github
+# https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization
+
 name: PHPUnit
 
 on:
   pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'appinfo/**'
+      - 'lib/**'
+      - 'templates/**'
+      - 'tests/**'
+      - '.php-cs-fixer.dist.php'
+      - 'composer.json'
+      - 'composer.lock'
+
   push:
     branches:
+      - main
       - master
       - stable*
+
+permissions:
+  contents: read
 
 env:
   # Location of the phpunit.xml and phpunit.integration.xml files
@@ -89,6 +108,8 @@ jobs:
         run: ./vendor/phpunit/phpunit/phpunit -c ${{ env.PHPUNIT_INTEGRATION_CONFIG }}
 
   summary:
+    permissions:
+      contents: none
     runs-on: ubuntu-latest
     needs: phpunit-sqlite
 
