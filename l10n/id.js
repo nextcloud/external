@@ -4,6 +4,7 @@ OC.L10N.register(
     "Select an icon" : "Pilih ikon",
     "All languages" : "Semua bahasa",
     "No file uploaded" : "Tidak ada file diunggah",
+    "External sites" : "Situs eksternal",
     "__language_name__" : "Bahasa Indonesia",
     "Name" : "Nama",
     "URL" : "URL",
