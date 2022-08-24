@@ -47,5 +47,5 @@
     "Uploading an icon with the same name will replace the current icon." : "Cargar un ícono con el mismo nombre reemplazará el ícono actual.",
     "Upload new icon" : "Cargar nuevo ícono",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Por favor considera que algunos navegadores no desplegarán páginas http si estás usando https."
-},"pluralForm" :"nplurals=2; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
+},"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
