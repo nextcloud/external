@@ -141,7 +141,7 @@ class SitesManager {
 
 			$site['url'] = str_replace(
 				['{email}', '{uid}', '{displayname}'],
-				array_map('urlencode', [$email, $uid, $displayName]),
+				array_map('rawurlencode', [$email, $uid, $displayName]),
 				$site['url']
 			);
 

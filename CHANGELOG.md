@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.1.0 – 2022-09-14
+### Fixed
+- Use rawurlencode to encode the URL parameters
+  [#298](https://github.com/nextcloud/external/pull/298)
+- Require Nextcloud 25
+
 ## 4.0.0 – 2022-04-07
 ### Fixed
 - Accessibility Issue: Inline frames must have a unique, non-empty 'title' attribute
