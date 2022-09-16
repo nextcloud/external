@@ -29,7 +29,6 @@ use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
 
 class Personal implements ISettings {
-
 	/** @var SitesManager */
 	protected $sitesManager;
 

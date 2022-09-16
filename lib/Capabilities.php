@@ -29,7 +29,6 @@ use OCP\Capabilities\ICapability;
  * @package OCA\External
  */
 class Capabilities implements ICapability {
-
 	/**
 	 * Return this classes capabilities
 	 *

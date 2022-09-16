@@ -28,7 +28,6 @@ use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
-
 	/** @var IURLGenerator */
 	protected $url;
 
