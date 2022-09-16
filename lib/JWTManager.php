@@ -59,6 +59,8 @@ class JWTManager {
 
 		$alg = $this->getTokenAlgorithm();
 		$secret = $this->getTokenPrivateKey($alg);
+
+		/** @psalm-suppress UndefinedClass */
 		return JWT::encode($data, $secret, $alg);
 	}
 
