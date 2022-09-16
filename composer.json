@@ -6,7 +6,7 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"OCP\\": "vendor/nextcloud/ocp/OCP"
+			"OCP\\": "vendor/christophwurst/nextcloud/OCP"
 		}
 	},
 	"require-dev": {
