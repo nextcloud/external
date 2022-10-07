@@ -30,7 +30,7 @@ OC.L10N.register(
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Aquesta aplicació permet a un administrador afegir enllaços addicionals als menús de Nextcloud.\nSeguint a un enllaç, el lloc web extern apareix al marc Nextcloud.\nTambé és possible afegir enllaços només per a un idioma determinat, tipus de dispositiu o grup d’usuaris.\n\nPodeu trobar més informació a la documentació de llocs externs.",
     "Name" : "Nom",
     "URL" : "URL",
-    "Language" : "Idioma",
+    "Language" : "Llengua",
     "Groups" : "Grups",
     "Devices" : "Dispositiu",
     "Icon" : "Icones",
