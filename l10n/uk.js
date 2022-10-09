@@ -49,7 +49,7 @@ OC.L10N.register(
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Крім того, будь ласка, зверніть увагу, що багато сайтів не дозволяють iframing з міркувань безпеки.",
     "We highly recommend to test the configured sites above properly." : "Ми наполегливо радим перевірити правильність налаштування сайтів.",
     "Icons" : "Значки",
-    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Якщо ви завантажите файли test.png і test-dark.png, обидва використовуватимуться як один значок. Темна версія використовуватиметься на мобільних пристроях, інакше білий значок не буде видно на білому тлі мобільних додатків.",
+    "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Якщо ви завантажите файли test.png і test-dark.png, обидва використовуватимуться як один значок. Темна версія використовуватиметься на мобільних пристроях, інакше білий значок не буде видно на білому тлі мобільних застосунків.",
     "Uploading an icon with the same name will replace the current icon." : "Завантаження значка з таким же ім'ям замінить поточний значок.",
     "Upload new icon" : "Завантажити новий значок",
     "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі переглядачі блокуватимуть показ сайтів через протокол HTTP, якщо ви працюєте за протоколом HTTPS."
