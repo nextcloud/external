@@ -26,7 +26,6 @@ use OCA\External\SitesManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\RedirectResponse;
-use OCP\AppFramework\Http\RedirectToDefaultAppResponse;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\IL10N;
@@ -67,7 +66,7 @@ class SiteController extends Controller {
 			$site = $this->sitesManager->getSiteById($id);
 			return $this->createResponse($id, $site);
 		} catch (SiteNotFoundException $e) {
-			return new RedirectToDefaultAppResponse();
+			return new RedirectResponse($this->url->linkToDefaultPageUrl());
 		}
 	}
 
@@ -90,7 +89,7 @@ class SiteController extends Controller {
 
 		// Redirect to default page when it's not the external sites app
 		if ($this->config->getSystemValue('defaultapp', 'files') !== 'external') {
-			return new RedirectToDefaultAppResponse();
+			return new RedirectResponse($this->url->linkToDefaultPageUrl());
 		}
 
 		// Fall back to the files app
