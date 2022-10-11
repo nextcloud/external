@@ -23,7 +23,7 @@
 		"@nextcloud/eslint-config": "^2.0.0",
 		"@nextcloud/eslint-plugin": "^1.4.0",
 		"babel-eslint": "^10.1.0",
-		"babel-loader": "^8.1.0",
+		"babel-loader": "^8.2.5",
 		"eslint": "^7.1.0",
 		"eslint-plugin-import": "^2.20.2",
 		"eslint-plugin-node": "^11.1.0",
