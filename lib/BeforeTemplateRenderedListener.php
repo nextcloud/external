@@ -32,7 +32,6 @@ use OCP\IURLGenerator;
 use OCP\Util;
 
 class BeforeTemplateRenderedListener implements IEventListener {
-
 	/** @var SitesManager */
 	protected $sitesManager;
 	/** @var INavigationManager */

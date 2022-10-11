@@ -1,10 +1,17 @@
 {
+	"autoload": {
+		"psr-4": {
+			"OCA\\External\\\\": "lib/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"OCP\\": "vendor/christophwurst/nextcloud/OCP"
+		}
+	},
 	"require-dev": {
-		"nextcloud/coding-standard": "^1",
-		"vimeo/psalm": "^4.24",
-		"php-parallel-lint/php-parallel-lint": "^1.2",
-		"phpunit/phpunit": "^9.5",
-		"nextcloud/ocp": "dev-master"
+		"nextcloud/ocp": "dev-master",
+		"roave/security-advisories": "dev-latest"
 	},
 	"scripts": {
 		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
@@ -13,19 +20,44 @@
 		"psalm": "psalm --threads=1",
 		"psalm:update-baseline": "psalm --threads=1 --update-baseline",
 		"psalm:clear": "psalm --clear-cache && psalm --clear-global-cache",
-		"psalm:fix": "psalm --alter --issues=InvalidReturnType,InvalidNullableReturnType,MissingParamType,InvalidFalsableReturnType"
+		"psalm:fix": "psalm --alter --issues=InvalidReturnType,InvalidNullableReturnType,MissingParamType,InvalidFalsableReturnType",
+		"post-install-cmd": [
+			"@composer bin all install --ansi",
+			"\"vendor/bin/mozart\" compose",
+			"composer dump-autoload"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi",
+			"\"vendor/bin/mozart\" compose",
+			"composer dump-autoload"
+		]
 	},
 	"config": {
 		"allow-plugins": {
+			"bamarni/composer-bin-plugin": true,
 			"composer/package-versions-deprecated": true
 		},
+		"autoloader-suffix": "Talk",
+		"classmap-authoritative": true,
+		"optimize-autoloader": true,
 		"platform": {
 			"php": "7.4"
+		},
+		"sort-packages": true
+	},
+	"extra": {
+		"mozart": {
+			"dep_namespace": "OCA\\External\\Vendor\\",
+			"dep_directory": "/lib/Vendor/",
+			"classmap_directory": "/lib/autoload/",
+			"classmap_prefix": "NEXTCLOUDEXTERNALSITES_",
+			"packages": [
+				"firebase/php-jwt"
+			]
 		}
 	},
-	"autoload-dev": {
-		"psr-4": {
-			"OCP\\": "vendor/nextcloud/ocp/OCP"
-		}
+	"require": {
+		"bamarni/composer-bin-plugin": "^1.8",
+		"firebase/php-jwt": "^6.3"
 	}
 }

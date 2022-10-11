@@ -11,7 +11,7 @@ version+=master
 
 all: appstore build-js-production
 
-dev-setup: clean-dev npm-init
+dev-setup: clean-dev composer-install-dev npm-init
 
 release: appstore create-tag
 
@@ -23,6 +23,12 @@ build-js-production:
 
 watch-js:
 	npm run watch
+
+composer-install-dev:
+	composer install
+
+composer-install-production:
+	composer install --no-dev
 
 test:
 	npm run test:unit
@@ -54,7 +60,7 @@ js-templates:
 	handlebars -n OCA.External.Templates js/templates -f js/templates.js
 	rm -rf node_modules
 
-appstore: clean npm-init build-js-production
+appstore: clean composer-install-production npm-init build-js-production
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=/.git \
@@ -69,6 +75,7 @@ appstore: clean npm-init build-js-production
 	--exclude=/tests \
 	--exclude=/translationfiles \
 	--exclude=/vendor \
+	--exclude=/vendor-bin \
 	--exclude=.php-cs-fixer.cache \
 	--exclude=.php-cs-fixer.dist.php \
 	--exclude=/composer.json \
