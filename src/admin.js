@@ -84,7 +84,7 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 
 	OCA.External.Models.SiteCollection = Backbone.Collection.extend({
 		model: OCA.External.Models.Site,
-		url: generateOcsUrl('apps/external/api/v1', 2) + 'sites',
+		url: generateOcsUrl('apps/external/api/v1/sites'),
 
 		parse: function(response) {
 			return response.ocs.data.sites
