@@ -45,6 +45,7 @@ OC.L10N.register(
     "Icon could not be uploaded" : "圖示無法上傳",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "可直接在最上方應用功能選單列新增網址，讓所有用戶從內部顯示連結，連往一些網路應用程式或者重要的網站。",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "可以使用佔位字串 {email}、{uid} 與 {displayname}，並以用戶的值來自訂連結。",
+    "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "可以使用 {jwt} 佔位字串將包含使用者電子郵件、uid 與顯示名稱的 JSON Web 權杖嵌入到連結中。請參閱{linkstart}文件{linkend}如何對其進行解碼。",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "請注意當使用 HTTPS 時，部分瀏覽器將會封鎖 HTTP 的網站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "此外請注意，出於安全性考量，現今許多網站不允許 iframe （頁框）。",
     "We highly recommend to test the configured sites above properly." : "我們強烈建議您測試上述配置的網站是否正確。",
