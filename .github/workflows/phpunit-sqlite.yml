@@ -102,7 +102,7 @@ jobs:
         # Only run if phpunit config file exists
         if: steps.check_phpunit.outputs.files_exists == 'true'
         working-directory: apps/${{ env.APP_NAME }}
-        run: ./vendor/phpunit/phpunit/phpunit -c ${{ env.PHPUNIT_CONFIG }}
+        run: ./vendor-bin/phpunit/vendor/phpunit/phpunit/phpunit -c ${{ env.PHPUNIT_CONFIG }}
 
       - name: Check PHPUnit integration config file existence
         id: check_integration
@@ -119,7 +119,7 @@ jobs:
         # Only run if phpunit integration config file exists
         if: steps.check_integration.outputs.files_exists == 'true'
         working-directory: apps/${{ env.APP_NAME }}
-        run: ./vendor/phpunit/phpunit/phpunit -c ${{ env.PHPUNIT_INTEGRATION_CONFIG }}
+        run: ./vendor-bin/phpunit/vendor/phpunit/phpunit/phpunit -c ${{ env.PHPUNIT_INTEGRATION_CONFIG }}
 
   summary:
     permissions:
