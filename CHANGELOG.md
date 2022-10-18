@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.0.0 – 2022-10-18
+### Added
+- Added support for JWT [See documentation](https://github.com/nextcloud/external/blob/master/docs/jwt-sample.php)
+
 ## 4.1.0 – 2022-09-14
 ### Fixed
 - Use rawurlencode to encode the URL parameters
