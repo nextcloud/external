@@ -34,7 +34,7 @@ More information is available in the External sites documentation.]]></descripti
 	<screenshot>https://github.com/nextcloud/external/raw/master/docs/page-sample.png</screenshot>
 
 	<dependencies>
-		<nextcloud min-version="26" max-version="26" />
+		<nextcloud min-version="25" max-version="25" />
 	</dependencies>
 
 	<repair-steps>
