@@ -10,7 +10,7 @@ It is also possible to add links only for a given language, device type or user 
 
 More information is available in the External sites documentation.]]></description>
 
-	<version>5.0.0</version>
+	<version>5.1.0-dev.1</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>
