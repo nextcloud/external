@@ -12,6 +12,10 @@ on:
       - master
       - stable*
 
+concurrency:
+  group: dependabot-approve-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -21,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       # for hmarr/auto-approve-action to approve PRs
-      pull-requests: write 
+      pull-requests: write
 
     steps:
       # Github actions bot approve
