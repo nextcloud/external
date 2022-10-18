@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.19.3",
-		"@babel/preset-env": "^7.10.2",
+		"@babel/preset-env": "^7.19.4",
 		"@nextcloud/browserslist-config": "^2.3.0",
 		"@nextcloud/eslint-config": "^2.0.0",
 		"@nextcloud/eslint-plugin": "^1.5.0",
