@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae31627ed569b80b6d83a5440f0914d2",
+    "content-hash": "e0a3dc7d83b83b3c44b76c3c91f46a64",
     "packages": [
         {
             "name": "bamarni/composer-bin-plugin",
@@ -129,16 +129,16 @@
     "packages-dev": [
         {
             "name": "nextcloud/ocp",
-            "version": "dev-master",
+            "version": "dev-stable25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextcloud-deps/ocp.git",
-                "reference": "c564b7c4cae07ebf8cb02a84ac49b3a24b6e6d8c"
+                "reference": "ffe5a1b756ff59c03a50f082332d95f4a06688c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/c564b7c4cae07ebf8cb02a84ac49b3a24b6e6d8c",
-                "reference": "c564b7c4cae07ebf8cb02a84ac49b3a24b6e6d8c",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/ffe5a1b756ff59c03a50f082332d95f4a06688c4",
+                "reference": "ffe5a1b756ff59c03a50f082332d95f4a06688c4",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,6 @@
                 "psr/event-dispatcher": "^1.0",
                 "psr/log": "^1.1"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -167,9 +166,9 @@
             "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
             "support": {
                 "issues": "https://github.com/nextcloud-deps/ocp/issues",
-                "source": "https://github.com/nextcloud-deps/ocp/tree/master"
+                "source": "https://github.com/nextcloud-deps/ocp/tree/stable25"
             },
-            "time": "2022-10-15T00:56:00+00:00"
+            "time": "2022-10-15T00:55:51+00:00"
         },
         {
             "name": "psr/container",

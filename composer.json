@@ -10,7 +10,7 @@
 		}
 	},
 	"require-dev": {
-		"nextcloud/ocp": "dev-master",
+		"nextcloud/ocp": "dev-stable25",
 		"roave/security-advisories": "dev-latest"
 	},
 	"scripts": {
