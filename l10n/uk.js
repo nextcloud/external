@@ -52,6 +52,6 @@ OC.L10N.register(
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Якщо ви завантажите файли test.png і test-dark.png, обидва використовуватимуться як один значок. Темна версія використовуватиметься на мобільних пристроях, інакше білий значок не буде видно на білому тлі мобільних застосунків.",
     "Uploading an icon with the same name will replace the current icon." : "Завантаження значка з таким же ім'ям замінить поточний значок.",
     "Upload new icon" : "Завантажити новий значок",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі переглядачі блокуватимуть показ сайтів через протокол HTTP, якщо ви працюєте за протоколом HTTPS."
+    "Please note that some browsers will block displaying of sites via http if you are running https." : "Зверніть увагу, що деякі бравзери блокуватимуть показ сайтів через протокол HTTP, якщо у вас встановлено HTTPS."
 },
 "nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);");
