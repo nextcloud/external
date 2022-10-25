@@ -17,20 +17,13 @@
 		"escape-html": "^1.0.3"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.19.3",
+		"@babel/core": "^7.19.6",
 		"@babel/preset-env": "^7.19.4",
 		"@nextcloud/browserslist-config": "^2.3.0",
-		"@nextcloud/eslint-config": "^2.0.0",
-		"@nextcloud/eslint-plugin": "^1.5.0",
+		"@nextcloud/eslint-config": "^8.1.2",
+		"@nextcloud/eslint-plugin": "^2.0.0",
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.2.5",
-		"eslint": "^8.25.0",
-		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^4.3.1",
-		"eslint-plugin-standard": "^4.1.0",
-		"eslint-plugin-vue": "^6.2.2",
-		"standard": "^17.0.0",
 		"webpack": "^5.74.0",
 		"webpack-cli": "^4.10.0"
 	},
