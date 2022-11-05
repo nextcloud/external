@@ -50,7 +50,6 @@
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ak nahráte súbory test.png a test-dark.png, obidva budú použité ako jedna ikona. Verzia dark sa použije na mobilných zariadeniach, v opačnom prípade biela ikona nie je viditeľná na bielom pozadí v mobilných aplikáciách.",
     "Uploading an icon with the same name will replace the current icon." : "Nahratie novej ikony s rovnakým názvom prepíše pôvodnú ikonu.",
-    "Upload new icon" : "Nahrať novú ikonu",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Niektoré prezerače môžu blokovať zobrazovanie http stránok ak používate https."
+    "Upload new icon" : "Nahrať novú ikonu"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);"
 }

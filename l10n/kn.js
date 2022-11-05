@@ -8,7 +8,6 @@ OC.L10N.register(
     "Language" : "﻿ಭಾಷೆ",
     "Groups" : "﻿ಗುಂಪುಗಳು",
     "Remove site" : " ಅಂತರ್ಜಾಲದ ತಾಣವನ್ನು ತೆಗೆದುಹಾಕಿ",
-    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "ಇದಲ್ಲದೆ ಈ ದಿನಗಳಲ್ಲಿ  ಭದ್ರತೆ ಕಾರಣಗಳಿಂದಾಗಿ ಅನೇಕ ತಾಣಗಳು  IFRAME ಗಳನ್ನು  ತಡೆಹಿಡಿಯಬಹುದೆಂದು  ಗಮನಿಸಿ.",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "ದಯವಿಟ್ಟು ಗಮನಿಸಿ, ಕೆಲವು ಅಂತರ್ಜಾಲವನ್ನು ಶೋಧಿಸುವ ತಂತ್ರಾಂಶಗಳು HTTPS ಮೂಲದ ಸುರಕ್ಷಿತ ತಾಣಗಳನ್ನು ತೆರೆಯುವಾಗ ಸಾಧಾರಣ HTTP ಸಂಬಂಧಿತ ಕೊಂಡಿಗಳನ್ನು  ನಿರ್ಬಂಧಿಸುತ್ತವೆ."
+    "Furthermore please note that many sites these days disallow iframing due to security reasons." : "ಇದಲ್ಲದೆ ಈ ದಿನಗಳಲ್ಲಿ  ಭದ್ರತೆ ಕಾರಣಗಳಿಂದಾಗಿ ಅನೇಕ ತಾಣಗಳು  IFRAME ಗಳನ್ನು  ತಡೆಹಿಡಿಯಬಹುದೆಂದು  ಗಮನಿಸಿ."
 },
 "nplurals=2; plural=(n > 1);");

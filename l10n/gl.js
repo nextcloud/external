@@ -50,7 +50,6 @@ OC.L10N.register(
     "Icons" : "Iconas",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se envía un ficheiro test.png e outro test-dark.png, ambos usaranse coma unha icona. A versión escura (dark) usarase en dispositivos móbiles, doutro xeito a icona branca non é visíbel no fondo branco dos aplis móbiles.",
     "Uploading an icon with the same name will replace the current icon." : "Enviar unha icona co mesmo nome sobrescribirá a icona actual.",
-    "Upload new icon" : "Enviar unha nova icona",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Teña en conta que algúns navegadores bloquean o acceso a sitios a través de http se está executando https."
+    "Upload new icon" : "Enviar unha nova icona"
 },
 "nplurals=2; plural=(n != 1);");

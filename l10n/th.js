@@ -26,7 +26,6 @@ OC.L10N.register(
     "Uploading…" : "กำลังอัปโหลด…",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "นอกจากนี้โปรดทราบว่าหลายเว็บไซต์ในปัจจุบันไม่อนุญาตให้ใช้ iframe เนื่องจากเหตุผลด้านความปลอดภัย",
     "Icons" : "ไอคอน",
-    "Upload new icon" : "อัปโหลดไอคอนใหม่",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "โปรดทราบว่าเบราว์เซอร์จะปิดกั้นการแสดงเว็บไซต์บางส่วนผ่าน HTTP ถ้าคุณใช้ HTTPS"
+    "Upload new icon" : "อัปโหลดไอคอนใหม่"
 },
 "nplurals=1; plural=0;");

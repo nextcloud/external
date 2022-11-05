@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "Icones",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si carregueu un fitxer test.png i test-dark.png, s’utilitzaran tots dos com una icona. La versió més fosca s’utilitzarà als dispositius mòbils; sinó la icona blanca no seria visible en el fons blanc de les aplicacions mòbils.",
     "Uploading an icon with the same name will replace the current icon." : "Si carregueu una icona amb el mateix nom sobreescriureu la icona actual.",
-    "Upload new icon" : "Carrega una nova icona",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Si us plau, tingueu en compte que alguns navegadors poden bloquejar les webs amb http quan feu servir https."
+    "Upload new icon" : "Carrega una nova icona"
 },
 "nplurals=2; plural=(n != 1);");

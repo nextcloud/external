@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "Iconas",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si càrrigas un'archìviu test.png o unu test-dark.png, ant a èssere impreados ambos a una icona. Sa versione iscura at a èssere impreada in dispositivos mòbiles, si nono s'icona bianca no est visìbile in s'isfundu de is aplicatziones mòbiles.",
     "Uploading an icon with the same name will replace the current icon." : "Carrigare un'icona cun su pròpiu nùmene dd'at a cambiare cun cussa atuale.",
-    "Upload new icon" : "Càrriga icona noa",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Càstia ca carchi navigadore at a blocare sa visualizatzione de is sitos tràmite http si ses impreende https."
+    "Upload new icon" : "Càrriga icona noa"
 },
 "nplurals=2; plural=(n != 1);");
