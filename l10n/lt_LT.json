@@ -49,7 +49,6 @@
     "Icons" : "Piktogramos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Jeigu įkelsite test.png ir test-dark.png failą, tuomet jie abu bus naudojami kaip viena piktograma. Tamsi versija bus naudojama mobiliuosiuose įrenginiuose, tuo tarpu balta piktograma mobiliosiose programėlėse ant balto fono nėra matoma.",
     "Uploading an icon with the same name will replace the current icon." : "Įkėlus piktogramą tokiu pačiu pavadinimu, bus pakeista esama piktograma.",
-    "Upload new icon" : "Įkelti naują piktogramą",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Turėkite omenyje, kad kai kurios naršyklės blokuos http svetainių rodymą tuo atveju, jeigu naudojate https."
+    "Upload new icon" : "Įkelti naują piktogramą"
 },"pluralForm" :"nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);"
 }

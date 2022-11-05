@@ -45,7 +45,6 @@ OC.L10N.register(
     "We highly recommend to test the configured sites above properly." : "Recomandăm insistent testarea riguroasă a paginilor configurate mai sus.",
     "Icons" : "Pictograme",
     "Uploading an icon with the same name will replace the current icon." : "Încărcarea pictogramei cu aceelași nume va înlocui pictograma curentă.",
-    "Upload new icon" : "Încarcă o nouă pictogramă",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Rețineți că unele navigatoare Web vor bloca afișarea paginilor livrate prin trafic necriptat (HTTP) dacă accesați pagini prin protocolul criptat HTTPS."
+    "Upload new icon" : "Încarcă o nouă pictogramă"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");
