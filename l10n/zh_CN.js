@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "图标",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您上传了 test.png 和 test-dark.png 文件，它们将被视为一个图标使用。暗色版本将被用于手机设备，另外，白色图标在白色背景的手机应用中是不可见的。",
     "Uploading an icon with the same name will replace the current icon." : "上传同名图标将替换当前图标。",
-    "Upload new icon" : "上传新图标",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "请注意当运行 HTTPS 环境下时，部分浏览器将会屏蔽显示 HTTP 网站。"
+    "Upload new icon" : "上传新图标"
 },
 "nplurals=1; plural=0;");

@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "Икони",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ако прикачите датотека test.png и датотека test-dark.png, и двете ќе се користат како една икона. Темната верзија ќе се користи на мобилни уреди, инаку белата икона не е видлива на бела позадина во мобилните апликации.",
     "Uploading an icon with the same name will replace the current icon." : "Прикачување на икона со исто име ќе ја преклопи постоечката икона.",
-    "Upload new icon" : "Прикачи нова икона",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Некои прелистувачи ќе блокираат прикажување на страници преку http, ако работите на https."
+    "Upload new icon" : "Прикачи нова икона"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

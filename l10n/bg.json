@@ -50,7 +50,6 @@
     "Icons" : "Икони",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ако качите два файла: test.png и test-dark.png те ще бъдат ползвани като две версии на една икона. Тъмната версия се ползва за мобилни устройства, защото белите икони не са видими когато фонът е светъл.",
     "Uploading an icon with the same name will replace the current icon." : "Качването на икона с име на вече съществуваща такава ще доведе до презаписване на съществуващата икона.",
-    "Upload new icon" : "Качи нова икона",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Някои браузъри блокират съдържание достъпно чрез http ако същевременно използвате https."
+    "Upload new icon" : "Качи нова икона"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

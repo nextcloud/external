@@ -49,7 +49,6 @@
     "Icons" : "Ikonoak",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png eta test-dark.png fitxategiak igotzen badira ikono bat bezala erabiliko dira.Ilundutakoa mugikorretan erabiliko da, bestela txuria ez da ikusten atzealde txuridun aplikazio mugikorretan",
     "Uploading an icon with the same name will replace the current icon." : "Ikonoa izen berdinarekin igotzean aurreko ikonoa ordeztuko du.",
-    "Upload new icon" : "Ikono berria igo",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Egin kontu zenbait nabigatzailek blokea dezaketela guneen http bidezko bistaratzea https erabiltzen ari bazara."
+    "Upload new icon" : "Ikono berria igo"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
