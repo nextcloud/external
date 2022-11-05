@@ -50,7 +50,6 @@
     "Icons" : "Ícones",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se você enviar um arquivo test.png e um teste-dark.png, ambos serão usados como um ícone. A versão escura será usada em dispositivos móveis pois o ícone branco não é visível no fundo branco nos aplicativos móveis.",
     "Uploading an icon with the same name will replace the current icon." : "Enviar um ícone com o mesmo nome substituirá o ícone atual.",
-    "Upload new icon" : "Enviar um novo ícone",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Por favor, note que alguns navegadores irão bloquear a exibição de sites via http, se você estiver executando o https."
+    "Upload new icon" : "Enviar um novo ícone"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

@@ -50,7 +50,6 @@ OC.L10N.register(
     "Icons" : "Piktogramoj",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se vi alŝutas dosierojn „test.png“ kaj „test-dark.png“, ambaŭ uziĝos kiel unu piktogramo. La malhela (angle „dark“) uziĝos ĉe porteblaj aparatoj, ĉar la hela piktogramo ne videblas ĉe hela fono el porteblaj aplikaĵoj.",
     "Uploading an icon with the same name will replace the current icon." : "Alŝutado de samnoma piktogramo anstataŭigos la nunan piktogramon.",
-    "Upload new icon" : "Alŝuti novan piktogramon",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Bv. noti, ke retumiloj ĝenerale baros montron de retejoj per http, se via Nextcloud uzas protokolon https."
+    "Upload new icon" : "Alŝuti novan piktogramon"
 },
 "nplurals=2; plural=(n != 1);");

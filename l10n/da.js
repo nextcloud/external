@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Hvis du uploader et test.png og et test-dark.png fil, så vil begge blive brugt som ikon. Det mørke version vil blive brugt på mobilenheder, fordi det hvide ikon ikke er synligt på en hvid baggrund på mobil apps.",
     "Uploading an icon with the same name will replace the current icon." : "Upload et ikon med det samme navn for at udskifte det nuværende ikon.",
-    "Upload new icon" : "Upload nyt ikon",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Vær opmærksom på at nogle browsere vil blokere sider via http://, hvis du kører https://"
+    "Upload new icon" : "Upload nyt ikon"
 },
 "nplurals=2; plural=(n != 1);");

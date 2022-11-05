@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "Εικονίδια",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Εάν μεταφορτώσετε ένα αρχείο test.png και ένα αρχείο test-dark.png, και τα δύο θα χρησιμοποιηθούν ως ένα εικονίδιο. Η σκούρα έκδοση θα χρησιμοποιηθεί σε κινητές συσκευές, διαφορετικά το λευκό εικονίδιο δεν είναι ορατό σε λευκό φόντο στις εφαρμογές για κινητά.",
     "Uploading an icon with the same name will replace the current icon." : "Η μεταφόρτωση ενός εικονιδίου με το ίδιο όνομα θα αντικαταστήσει το τρέχον εικονίδιο.",
-    "Upload new icon" : "Μεταφόρτωση νέου εικονιδίου",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "Παρακαλούμε σημειώστε ότι μερικοί φυλλομετρητές θα εμποδίσουν την εμφάνιση σελίδων μέσω http αν χρησιμοποιήτε https."
+    "Upload new icon" : "Μεταφόρτωση νέου εικονιδίου"
 },
 "nplurals=2; plural=(n != 1);");

@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "아이콘",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png, test-dark.png 파일을 업로드하면 두 파일을 하나의 아이콘으로 사용합니다. 모바일 장치에서는 어두운 버전을 사용하며, 사용할 수 없는 경우에는 흰색 아이콘이 모바일 앱의 흰색 배경에서 보이지 않을 수도 있습니다.",
     "Uploading an icon with the same name will replace the current icon." : "같은 이름의 아이콘을 새로 업로드하면 현재 아이콘을 대체합니다.",
-    "Upload new icon" : "새 아이콘 업로드",
-    "Please note that some browsers will block displaying of sites via http if you are running https." : "일부 웹 브라우저에서는 HTTPS로 접속한 사이트 내에서 HTTP 사이트를 표시하는 것을 거부할 수도 있습니다."
+    "Upload new icon" : "새 아이콘 업로드"
 },
 "nplurals=1; plural=0;");
