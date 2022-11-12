@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Select an icon" : "Izvēlies ikonu",
     "All languages" : "Visas valodas",
+    "Setting menu" : "Iestatījumu izvēlne",
     "User quota" : "Lietotāja apjoms",
     "No file uploaded" : "Nav augšupielādēta datne",
     "__language_name__" : "Latviešu",
