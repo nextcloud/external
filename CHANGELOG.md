@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.1 – 2022-11-22
+### Fixed
+- Fix compatibility with PHP 8.1
+  [#303](https://github.com/nextcloud/external/pull/303)
+
 ## 4.0.0 – 2022-04-07
 ### Fixed
 - Accessibility Issue: Inline frames must have a unique, non-empty 'title' attribute
