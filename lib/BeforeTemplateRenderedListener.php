@@ -31,6 +31,9 @@ use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\Util;
 
+/**
+ * @template-implements IEventListener<Event>
+ */
 class BeforeTemplateRenderedListener implements IEventListener {
 	/** @var SitesManager */
 	protected $sitesManager;
