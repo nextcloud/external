@@ -91,6 +91,7 @@ class JWTManager {
 		if (strpos($alg, 'ES') === 0) {
 			$privKey = openssl_pkey_new([
 				'curve_name' => 'prime256v1',
+				'private_key_bits' => 2048,
 				'private_key_type' => OPENSSL_KEYTYPE_EC,
 			]);
 			$pubKey = openssl_pkey_get_details($privKey);
