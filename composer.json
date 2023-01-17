@@ -21,6 +21,7 @@
 		"psalm:update-baseline": "psalm --threads=1 --update-baseline",
 		"psalm:clear": "psalm --clear-cache && psalm --clear-global-cache",
 		"psalm:fix": "psalm --alter --issues=InvalidReturnType,InvalidNullableReturnType,MissingParamType,InvalidFalsableReturnType",
+		"test:unit": "vendor/bin/phpunit -c tests/phpunit.xml",
 		"post-install-cmd": [
 			"@composer bin all install --ansi",
 			"\"vendor/bin/mozart\" compose",
@@ -37,11 +38,11 @@
 			"bamarni/composer-bin-plugin": true,
 			"composer/package-versions-deprecated": true
 		},
-		"autoloader-suffix": "Talk",
+		"autoloader-suffix": "External",
 		"classmap-authoritative": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "7.4"
+			"php": "8.0"
 		},
 		"sort-packages": true
 	},
