@@ -59,6 +59,7 @@ class CopyDefaultIcons implements IRepairStep {
 		$this->copyDefaultIcon($output, $folder, 'external.svg');
 		$this->copyDefaultIcon($output, $folder, 'external-dark.svg');
 		$this->copyDefaultIcon($output, $folder, 'settings.svg');
+		$this->copyDefaultIcon($output, $folder, 'settings-dark.svg');
 	}
 
 	protected function copyDefaultIcon(IOutput $output, ISimpleFolder $folder, string $file): void {
