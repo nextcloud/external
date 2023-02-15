@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 5.0.1 – 2023-02-15
+## 5.0.2 – 2023-02-15
 ### Fixed
 - Fix dark/bright mode icon for the default settings icon
   [#412](https://github.com/nextcloud/external/pull/412)
