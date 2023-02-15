@@ -5,7 +5,7 @@
 		 timeoutForLargeTests="900"
 		 verbose="true"
 		 convertDeprecationsToExceptions="true"
-		 xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+		 xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.6/phpunit.xsd">
   <coverage>
     <include>
       <directory suffix=".php">../</directory>
