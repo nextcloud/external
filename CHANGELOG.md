@@ -8,6 +8,11 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Fix dark/bright mode icon for the default settings icon
 
+## 5.0.1 – 2023-02-15
+### Fixed
+- Fix dark/bright mode icon for the default settings icon
+  [#412](https://github.com/nextcloud/external/pull/412)
+
 ## 5.0.0 – 2022-10-18
 ### Added
 - Added support for JWT [See documentation](https://github.com/nextcloud/external/blob/master/docs/jwt-sample.php)
