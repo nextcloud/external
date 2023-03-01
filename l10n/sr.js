@@ -45,6 +45,8 @@ OC.L10N.register(
     "Icon could not be uploaded" : "Иконица не може да се отпреми",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Додајте сајт директно у листу апликација на врху. Ово ће бити видљиво свим корисницима и корисно је када брзо треба отићи на неки другу интерну апликацију у организацији или неки други битан сајт.",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Да бисте прилагодили везе, можете користити замене  {email}, {uid} и {displayname}, које ће бити замењене са вредностима датог корисника.",
+    "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "JSON веб жетон који у свом корисном садржају носи корисников и-мејл, uid и име за приказa може да се угради у линк употербом {jwt} чувара места. Погледајте {linkstart}документацију{linkend} у вези тога како да га декодујете.",
+    "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Молимо вас да имате на уму да ће неки прегледачи блокирати приказивање сајтова HTTP протоколом ако користите HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Даље знајте да многи сајтови не дозвољавају уоквиривање (iframing) из безбедносних разлога.",
     "We highly recommend to test the configured sites above properly." : "Саветујемо Вам да добро истестирате горе конфигурисане сајтове.",
     "Icons" : "Иконе",
