@@ -49,7 +49,7 @@ class JWTManager {
 	 * @return string
 	 */
 	public function getToken(array $userdata): string {
-		$timestamp = $this->timeFactory->getTime();
+		$timestamp = $this->timeFactory->now()->getTimestamp();
 		$data = [
 			'iss' => $this->urlGenerator->getAbsoluteURL(''),
 			'iat' => $timestamp,
