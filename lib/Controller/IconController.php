@@ -167,10 +167,9 @@ class IconController extends Controller {
 
 		$response = new FileDisplayResponse($iconFile, Http::STATUS_OK, ['Content-Type' => $iconFile->getMimeType()]);
 		$response->cacheFor(86400);
-		$expires = new \DateTime();
-		$expires->setTimestamp($this->timeFactory->getTime());
+		$expires = \DateTime::createFromImmutable($this->timeFactory->now());
 		$expires->add(new \DateInterval('PT24H'));
-		$response->addHeader('Expires', $expires->format(\DateTime::RFC2822));
+		$response->addHeader('Expires', $expires->format(\DateTimeInterface::RFC2822));
 		$response->addHeader('Pragma', 'cache');
 		$csp = new ContentSecurityPolicy();
 		$response->setContentSecurityPolicy($csp);
