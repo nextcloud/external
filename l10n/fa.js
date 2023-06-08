@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Select an icon" : "یک آیکون انتخاب کنید",
     "All languages" : "همه زبانها",
+    "Setting menu" : "فهرست تنظیمات",
     "No file uploaded" : "هیچ پرونده‌ای بارگذاری نشد",
     "__language_name__" : "فارسى",
     "Name" : "نام",
