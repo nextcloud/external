@@ -1,0 +1,21 @@
+name: 'Ask for feedback on PRs'
+on:
+  schedule:
+    - cron: '30 1 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: marcelklehr/pr-feedback-action@main
+        with:
+          feedback-message: |
+            Hello there,
+            Thank you so much for taking the time and effort to create a pull request to our Nextcloud project. 
+
+            We hope that the reviewing process is going smooth and is helpful for you. We want to ensure your pull request is reviewed to your satisfaction. If you have a moment, we would appreciate your feedback on your experience with our community management team. 
+
+            Your feedback is valuable to us as we continuously strive to improve our community developer experience. Please take a moment to complete our short survey by clicking on the following link: https://cloud.nextcloud.com/apps/forms/s/i9Ago4EQRZ7TWxjfmeEpPkf6
+
+            Thank you for contributing to Nextcloud and we hope to hear from you soon!
+          days-before-feedback: 14
