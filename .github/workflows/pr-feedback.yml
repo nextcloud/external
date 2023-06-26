@@ -26,4 +26,5 @@ jobs:
             Thank you for contributing to Nextcloud and we hope to hear from you soon!
           days-before-feedback: 14
           start-date: "2023-05-01"
-          exempt-authors: "${{ steps.scrape.outputs.users }},app/backportbot-nextcloud,app/dependabot,app/renovate"
+          exempt-authors: "${{ steps.scrape.outputs.users }}"
+          exempt-bots: true
