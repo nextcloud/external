@@ -36,8 +36,8 @@ class JWTManager {
 	protected IURLGenerator $urlGenerator;
 
 	public function __construct(IConfig $config,
-								ITimeFactory $timeFactory,
-								IURLGenerator $urlGenerator) {
+		ITimeFactory $timeFactory,
+		IURLGenerator $urlGenerator) {
 		$this->config = $config;
 		$this->timeFactory = $timeFactory;
 		$this->urlGenerator = $urlGenerator;
