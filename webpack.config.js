@@ -3,6 +3,7 @@ const path = require('path')
 module.exports = {
 	entry: {
 		admin: path.join(__dirname, 'src', 'admin.js'),
+		'quota-files-sidebar': path.join(__dirname, 'src', 'quota-files-sidebar.js'),
 	},
 	output: {
 		path: path.join(__dirname, 'js', 'dist'),
