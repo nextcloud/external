@@ -22,10 +22,10 @@
 return [
 	'routes' => [
 		['name' => 'site#showDefaultPage', 'url' => '/', 'verb' => 'GET'],
-		['name' => 'site#showPage', 'url' => '/{id}', 'verb' => 'GET'],
 		['name' => 'icon#uploadIcon', 'url' => '/icons', 'verb' => 'POST'],
 		['name' => 'icon#showIcon', 'url' => '/icons/{icon}', 'verb' => 'GET'],
 		['name' => 'icon#deleteIcon', 'url' => '/icons/{icon}', 'verb' => 'DELETE'],
+		['name' => 'site#showPage', 'url' => '/{id}/{path}', 'verb' => 'GET', 'requirements' => ['path' => '.*']],
 	],
 	'ocs' => [
 		['name' => 'API#get', 'url' => '/api/{apiVersion}', 'verb' => 'GET', 'requirements' => ['apiVersion' => 'v1']],

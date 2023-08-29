@@ -61,10 +61,10 @@ class SiteController extends Controller {
 	 *
 	 * @return TemplateResponse|RedirectResponse
 	 */
-	public function showPage(int $id) {
+	public function showPage(int $id, string $path) {
 		try {
 			$site = $this->sitesManager->getSiteById($id);
-			return $this->createResponse($id, $site);
+			return $this->createResponse($id, $site, $path);
 		} catch (SiteNotFoundException $e) {
 			return new RedirectResponse($this->url->linkToDefaultPageUrl());
 		}
@@ -100,11 +100,16 @@ class SiteController extends Controller {
 		return new RedirectResponse($this->url->getAbsoluteURL('/index.php/apps/files/'));
 	}
 
-	protected function createResponse(int $id, array $site): TemplateResponse {
+	protected function createResponse(int $id, array $site, string $path = ''): TemplateResponse {
 		$this->navigationManager->setActiveEntry('external_index' . $id);
 
+		if ($path !== '') {
+			// Check whether we need to suffix the site URL with a slash, or not.
+			$path = $site['url'][-1] == '/' ? $path : '/' . $path;
+		}
+
 		$response = new TemplateResponse('external', 'frame', [
-			'url' => $site['url'],
+			'url' => $site['url'] . $path,
 			'name' => $site['name'],
 		], 'user');
 
