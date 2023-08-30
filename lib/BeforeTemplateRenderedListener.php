@@ -25,6 +25,7 @@ namespace OCA\External;
 
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
+use OCP\AppFramework\Services\IInitialState;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\INavigationManager;
@@ -39,12 +40,18 @@ class BeforeTemplateRenderedListener implements IEventListener {
 	/** @var IURLGenerator */
 	protected $urlGenerator;
 
-	public function __construct(SitesManager $sitesManager,
+	/** @var IInitialState */
+	private $initialState;
+
+	public function __construct(
+		SitesManager $sitesManager,
 		INavigationManager $navigationManager,
-		IURLGenerator $urlGenerator) {
+		IURLGenerator $urlGenerator,
+		IInitialState $initialState) {
 		$this->sitesManager = $sitesManager;
 		$this->navigationManager = $navigationManager;
 		$this->urlGenerator = $urlGenerator;
+		$this->initialState = $initialState;
 	}
 
 	public function handle(Event $event): void {
@@ -60,20 +67,36 @@ class BeforeTemplateRenderedListener implements IEventListener {
 	protected function loadQuotaInformationOnFilesApp(LoadAdditionalScriptsEvent $event): void {
 		$sites = $this->sitesManager->getSitesToDisplay();
 
+		$data = [];
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$link = $site['url'];
-				if (!$site['redirect']) {
-					$link = $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id']]);
-				}
+				$image = $this->generateImageLink($site);
+				$href = $this->getHref($site);
 
-				$event->addHiddenField('external_quota_link', $link);
-				$event->addHiddenField('external_quota_name', $site['name']);
-
-				Util::addScript('external', 'quota-files-sidebar');
-				return;
+				$data[] = ['name' => $site['name'], 'href' => $href, 'image' => $image];
 			}
 		}
+
+		if (count($data) > 0) {
+			$this->initialState->provideInitialState('external-quota-sites', $data);
+			Util::addScript('external', 'dist/quota-files-sidebar');
+		}
+	}
+
+	protected function generateImageLink(array $site): string {
+		if ($site['icon'] !== '') {
+			return $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
+		}
+
+		return $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
+	}
+
+	protected function getHref(array $site): string {
+		if (!$site['redirect']) {
+			return $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id']]);
+		}
+
+		return $site['url'];
 	}
 
 	protected function generateNavigationLinks(): void {
@@ -85,16 +108,8 @@ class BeforeTemplateRenderedListener implements IEventListener {
 			}
 
 			$this->navigationManager->add(function () use ($site) {
-				if ($site['icon'] !== '') {
-					$image = $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
-				} else {
-					$image = $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
-				}
-
-				$href = $site['url'];
-				if (!$site['redirect']) {
-					$href = $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id']]);
-				}
+				$image = $this->generateImageLink($site);
+				$href = $this->getHref($site);
 
 				return [
 					'id' => 'external_index' . $site['id'],
