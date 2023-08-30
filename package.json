@@ -13,6 +13,7 @@
     "watch": "NODE_ENV=development webpack --progress --watch --config webpack.config.js"
   },
   "dependencies": {
+    "@nextcloud/initial-state": "^2.1.0",
     "@nextcloud/router": "^2.1.2",
     "escape-html": "^1.0.3"
   },
