@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.0.3 - 2023-09-04
+### Fixed
+- Fix quota links
+
 ## 5.0.2 – 2023-02-15
 ### Fixed
 - Fix dark/bright mode icon for the default settings icon
