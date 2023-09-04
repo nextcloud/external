@@ -1,9 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.2.1 - 2023-09-04
+### Fixed
+- Fix quota links
+
 ## 5.2.0 – 2023-05-16
 ### Changed
 - Require Nextcloud 27
+
+## 5.1.1 - 2023-09-04
+### Fixed
+- Fix quota links
 
 ## 5.1.0 – 2023-02-15
 ### Changed
@@ -11,6 +19,10 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - Fix dark/bright mode icon for the default settings icon
+
+## 5.0.3 - 2023-09-04
+### Fixed
+- Fix quota links
 
 ## 5.0.1 – 2023-02-15
 ### Fixed
