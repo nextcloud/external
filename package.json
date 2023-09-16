@@ -18,7 +18,7 @@
     "escape-html": "^1.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.17",
+    "@babel/core": "^7.22.19",
     "@babel/preset-env": "^7.22.15",
     "@nextcloud/browserslist-config": "^3.0.0",
     "@nextcloud/eslint-config": "^8.2.1",
