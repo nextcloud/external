@@ -13,7 +13,7 @@ OC.L10N.register(
     "Only in the desktop client" : "เฉพาะในไคลเอ็นต์เดสก์ท็อป",
     "Only in the browser" : "เฉพาะในเบราว์เซอร์",
     "External sites" : "เว็บไซต์ภายนอก",
-    "__language_name__" : "ภาษาไทย - Thai",
+    "__language_name__" : "ไทย",
     "Name" : "ชื่อ",
     "URL" : "URL",
     "Language" : "ภาษา",
