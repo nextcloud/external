@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Name" : "Enw",
     "URL" : "URL",
+    "Language" : "Iaith",
     "Groups" : "Grwpiau",
     "Redirect" : "Ailgyfeirio",
     "Remove site" : "Gwaredu safle",
