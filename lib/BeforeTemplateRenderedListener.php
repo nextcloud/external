@@ -97,7 +97,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 
 	protected function getHref(array $site): string {
 		if (!$site['redirect']) {
-			return $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id']]);
+			return $this->urlGenerator->linkToRoute('external.site.showPage', ['id' => $site['id'], 'path' => '']);
 		}
 
 		return $site['url'];
