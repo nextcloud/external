@@ -8,6 +8,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Language" : "Ngôn ngữ",
     "Groups" : "Nhóm",
+    "Icon" : "Biểu tượng",
     "Redirect" : "Chuyển hướng",
     "Remove site" : "Xóa URL",
     "Uploading…" : "Đang tải lên…",
