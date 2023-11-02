@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.3.0 - 2023-11-02
+### Added
+- Forward URL path segments [#545](https://github.com/nextcloud/external/pull/545)
+
+### Changed
+- Require Nextcloud 28
+
 ## 5.2.1 - 2023-09-04
 ### Fixed
 - Fix quota links
