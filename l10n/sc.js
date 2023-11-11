@@ -44,13 +44,13 @@ OC.L10N.register(
     "Reloading icon list…" : "Torrende a carrigare sa lista de iconas...",
     "Icon could not be uploaded" : "No at fatu a carrigare s'icona",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Agiunghe unu situ web deretu in sa lista de aplicatziones in s'istanga in subra. At a èssere visìbile pro totu is utentes e ùtile pro lòmpere a lestru a is aplicatziones impreadas o sitos importantes.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Is marcalogu {email}, {uid} e {displayname} si podent impreare e sunt cambiados cun is valores de s'utente pro personalizare is ligòngios.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Càstia ca carchi navigadore at a blocare sa visualizatzione de is sitos tràmite HTTP si ses impreende HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "In prus càstia ca sitos medas immoe non permitint s'impreu de iframe pro resones de seguresa.",
     "We highly recommend to test the configured sites above properly." : "Racumendamus de proare is sitos cunfigurados in subra",
     "Icons" : "Iconas",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si càrrigas un'archìviu test.png o unu test-dark.png, ant a èssere impreados ambos a una icona. Sa versione iscura at a èssere impreada in dispositivos mòbiles, si nono s'icona bianca no est visìbile in s'isfundu de is aplicatziones mòbiles.",
     "Uploading an icon with the same name will replace the current icon." : "Carrigare un'icona cun su pròpiu nùmene dd'at a cambiare cun cussa atuale.",
-    "Upload new icon" : "Càrriga icona noa"
+    "Upload new icon" : "Càrriga icona noa",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Is marcalogu {email}, {uid} e {displayname} si podent impreare e sunt cambiados cun is valores de s'utente pro personalizare is ligòngios."
 },
 "nplurals=2; plural=(n != 1);");
