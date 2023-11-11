@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Volviendo a cargar la lista de iconos...",
     "Icon could not be uploaded" : "No se ha podido subir el icono",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Añade un sitio web directamente a la lista de apps en la barra superior. Será visible por todos los usuarios y es útil para alcanzar rápidamente otras apps web o sitios importantes que se usen internamente.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Se pueden usar los parámetros {email}, {uid} y {displayname} y se rellenan con los valores del usuario para personalizar los enlaces.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Un token web JSON que contenga el correo electrónico del usuario, uid y nombre a mostrar en su payload puede ser embebido en el link utilizando el marcador de posición {jwt}. Véase la {linkstart}documentación{linkend} de manera de entender el proceso de decodificación.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Tenga en cuenta que algunos navegadores no mostrarán sitios vía HTTP si está usando HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Además tenga en cuenta que, por motivos de seguridad, hoy en día muchos sitios no permiten el uso de iframes.",
@@ -52,6 +51,7 @@ OC.L10N.register(
     "Icons" : "Iconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si subes un archivo test.png y otro test-dark.png, ambos se usarán como un icono. La versión oscura, dark, se usará en dispositivos móviles, de otra forma el icono blanco no es visible en el fondo blanco de las apps móviles.",
     "Uploading an icon with the same name will replace the current icon." : "Subir un icono con el mismo nombre sobreescribirá el icono actual.",
-    "Upload new icon" : "Subir nuevo icono"
+    "Upload new icon" : "Subir nuevo icono",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Se pueden usar los parámetros {email}, {uid} y {displayname} y se rellenan con los valores del usuario para personalizar los enlaces."
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

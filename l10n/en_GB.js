@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Reloading icon list…",
     "Icon could not be uploaded" : "Icon could not be uploaded",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "A JSON Web Token containing the user´s email, UID and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} on how to decode it.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Furthermore please note that many sites these days disallow iframing due to security reasons.",
@@ -52,6 +51,7 @@ OC.L10N.register(
     "Icons" : "Icons",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploading an icon with the same name will replace the current icon.",
-    "Upload new icon" : "Upload new icon"
+    "Upload new icon" : "Upload new icon",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links."
 },
 "nplurals=2; plural=(n != 1);");

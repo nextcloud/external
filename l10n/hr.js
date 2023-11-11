@@ -44,13 +44,13 @@ OC.L10N.register(
     "Reloading icon list…" : "Ponovno učitavanje popisa ikona…",
     "Icon could not be uploaded" : "Ikonu nije moguće otpremiti",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Dodajte web-mjesto izravno na popis aplikacija u gornjoj traci. Tako će biti vidljivo svim korisnicima i može se brzo pristupiti interno korištenim web aplikacijama ili važnim web-mjestima.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Možete se koristiti praznim oznakama {email}, {uid} i {displayname} koje ispunite korisničkim vrijednostima kako biste prilagodili poveznice.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Imajte na umu da će neki preglednici blokirati prikazivanje web-mjesta putem protokola HTTP ako vam je dostupan HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Također imajte na umu da mnoga web-mjesta danas onemogućuju iframing zbog sigurnosnih razloga.",
     "We highly recommend to test the configured sites above properly." : "Preporučujemo da pravilno i temeljito testirate konfigurirana web-mjesta.",
     "Icons" : "Ikone",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ako otpremite datoteke test.png i test-dark.png, obje će se koristiti kao jedna ikona. Tamna inačica upotrebljavat će se na mobilnim uređajima jer bijela ikona nije vidljiva na bijeloj pozadini mobilnih aplikacija.",
     "Uploading an icon with the same name will replace the current icon." : "Otpremanje ikone s istim nazivom zamijenit će trenutnu ikonu.",
-    "Upload new icon" : "Otpremi novu ikonu"
+    "Upload new icon" : "Otpremi novu ikonu",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Možete se koristiti praznim oznakama {email}, {uid} i {displayname} koje ispunite korisničkim vrijednostima kako biste prilagodili poveznice."
 },
 "nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;");
