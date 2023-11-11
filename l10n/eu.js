@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Ikono zerrenda birkargatzen...",
     "Icon could not be uploaded" : "Ezin izan da ikonoa igo",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Gehitu zuzenean webgune bat aplikazioari goiko barran. Ikusgai izango da erabiltzaile guztientzat eta erabilgarria da azkar iristeko barne erabilerako web aplikazioetara edo leku garrantzitsuetarako.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "{email}, {uid} eta {displayname} posizio-markatzaileak erabil daitezke eta erabiltzailearen balioekin osatzen dira bere estekak pertsonalizatzeko.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Erabiltzailearen posta elektronikoa, uid-a eta bistaratze-izena dituen JSON Web Token bat estekan txerta daiteke {jwt} leku-marka erabiliz. Ikusi {linkstart}dokumentazioa{linkend} nola deskodetu jakiteko.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Kontuan izan nabigatzaile batzuek HTTP bidez orriak erakustea blokeatuko dutela HTTPS erabiltzen ari bazara.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Are gehiago, kontuan izan gaur egun gune askok ez dutela iframing onartzen segurtasun arrazoiengatik.",
@@ -52,6 +51,7 @@ OC.L10N.register(
     "Icons" : "Ikonoak",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png eta test-dark.png fitxategiak igotzen badituzu, ikono bakar gisa erabiliko dira. Bertsio iluna erabiliko da mugikorretan, bestela zuria ez da ikusten atzeko plano zuria duten mugikorreko aplikazioetan.",
     "Uploading an icon with the same name will replace the current icon." : "Ikonoa izen berdinarekin igotzean aurreko ikonoa ordeztuko du.",
-    "Upload new icon" : "Igo ikono berria"
+    "Upload new icon" : "Igo ikono berria",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "{email}, {uid} eta {displayname} posizio-markatzaileak erabil daitezke eta erabiltzailearen balioekin osatzen dira bere estekak pertsonalizatzeko."
 },
 "nplurals=2; plural=(n != 1);");
