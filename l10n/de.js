@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Symbolliste wird neu geladen …",
     "Icon could not be uploaded" : "Symbol konnte nicht hochgeladen werden",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Füge eine Internetseite zur Liste der Apps in die Leiste oben ein. Die Seite ist sichtbar für alle Benutzer. Dies ist nützlich zum Erreichen anderer internen Web-Anwendungen oder wichtiger Seiten.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid} und {displayname} können benutzt werden, um den Link mit den Benutzerdaten zu füllen.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Ein JSON-Web-Token, das die E-Mail-Adresse, UID und den Anzeigenamen des Benutzers in seiner Nutzlast enthält, kann mithilfe des Platzhalters {jwt} in den Link eingebettet werden. Sieh in der {linkstart}Dokumentation{linkend} nach, wie es dekodiert wird.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Bitte beachte, dass einige Browser die Anzeige der Seiten über HTTP sperren, wenn du HTTPS verwendest.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Außerdem beachte bitte, dass viele Seiten heutzutage das Einbetten von IFrames aus Sicherheitsgründen nicht erlauben.",
@@ -52,6 +51,7 @@ OC.L10N.register(
     "Icons" : "Symbole",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Lade eine Datei \"test.png\" und eine Datei \"test-dark.png\" hoch. Beide Dateien werden für ein Symbol verwendet. Die dunkle Version wird auf Mobilgeräten verwendet, die helle Version ist auf den hellen Hintergründen der mobilen Apps nicht sichtbar.",
     "Uploading an icon with the same name will replace the current icon." : "Das Hochladen eines Symbols mit gleichem Namen wird das existierende Symbol ersetzen.",
-    "Upload new icon" : "Neues Symbol hochladen"
+    "Upload new icon" : "Neues Symbol hochladen",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid} und {displayname} können benutzt werden, um den Link mit den Benutzerdaten zu füllen."
 },
 "nplurals=2; plural=(n != 1);");

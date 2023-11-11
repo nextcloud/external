@@ -42,13 +42,13 @@
     "Reloading icon list…" : "Ladataan uudelleen kuvakelistaa…",
     "Icon could not be uploaded" : "Kuvaketta ei voitu lähettää",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Lisää verkkosivusto suoraan sovellusluetteloon. Se näkyy kaikille käyttäjille ja on hyödyllinen mahdollistamalla sisäisten verkko-ohjelmien tai tärkeiden verkkosivustojen avaamisen nopeasti.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Muuttujia {email}, {uid} ja {displayname} voidaan käyttää linkkien osina.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Huomioi, että jotkin selaime estävät sivujen latauksen HTTP-protokollan kautta, jos käytössä on HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Ota myös huomioon, että monet sivustot estävät iframe-käytön tietoturvasyistä.",
     "We highly recommend to test the configured sites above properly." : "Suosittelemme testaamaan ylläolevien sivujen asetukset.",
     "Icons" : "Kuvakkeet",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Jos lataat tiedostot nimillä test.png ja test-dark.png, niitä käytetään yhtenä kuvakkeena. Tummaa versiota käytetään mobiililaitteilla, koska vaalea kuvake ei näkyisi mobiilisovelluksien vaalealla taustalla.",
     "Uploading an icon with the same name will replace the current icon." : "Jo olemassa oleva kuvake korvataan, jos samanniminen tiedosto ladataan palvelimelle.",
-    "Upload new icon" : "Lähetä uusi kuvake"
+    "Upload new icon" : "Lähetä uusi kuvake",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Muuttujia {email}, {uid} ja {displayname} voidaan käyttää linkkien osina."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

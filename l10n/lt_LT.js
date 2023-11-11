@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Iš naujo įkeliamas piktogramų sąrašas…",
     "Icon could not be uploaded" : "Nepavyko įkelti piktogramos",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Pridėti svetainę į įskiepių sąrašą viršuje. Svetainę galės naudoti visi naudotojai ir nuoroda bus naudinga, kai reiks pasiekti tam tikras internetines svetaines ar portalus.",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Gali būti naudojami vietaženkliai {email}, {uid} ir {displayname}, jie bus užpildyti naudotojo reikšmėmis, skirtomis tinkinti nuorodas.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "JSON interneto prieigos raktas, susidedantis iš vartotojo el. pašto, UID ir rodomo vardo, gali būti įterptas į nuorodą naudojant {jwt} skirtuką. Daugiau informacijos, kaip iššifruoti {linkstart}dokumentacijoje{linkend}",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Turėkite omenyje, kad kai kurios naršyklės blokuos svetainių atvaizdavimą per HTTP tuo atveju, jeigu naudojate HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Be to, turėkite omenyje, kad šiomis dienomis daugelis svetainių saugumo sumetimais neleidžia naudoti iframe.",
@@ -52,6 +51,7 @@ OC.L10N.register(
     "Icons" : "Piktogramos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Jeigu įkelsite test.png ir test-dark.png failą, tuomet jie abu bus naudojami kaip viena piktograma. Tamsi versija bus naudojama mobiliuosiuose įrenginiuose, tuo tarpu balta piktograma mobiliosiose programėlėse ant balto fono nėra matoma.",
     "Uploading an icon with the same name will replace the current icon." : "Įkėlus piktogramą tokiu pačiu pavadinimu, bus pakeista esama piktograma.",
-    "Upload new icon" : "Įkelti naują piktogramą"
+    "Upload new icon" : "Įkelti naują piktogramą",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Gali būti naudojami vietaženkliai {email}, {uid} ir {displayname}, jie bus užpildyti naudotojo reikšmėmis, skirtomis tinkinti nuorodas."
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");

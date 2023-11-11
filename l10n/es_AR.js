@@ -44,12 +44,12 @@ OC.L10N.register(
     "Reloading icon list…" : "Recargando lista de íconos",
     "Icon could not be uploaded" : "El ícono no se pudo subir",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Agregue un sitio web directamente a la lista de la aplicación en la barra superior. Esto será visible para todos los usuarios y es útil para llegar rápidamente a otras aplicaciones web usadas internamente o sitios importantes. ",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Los marcadores {email}, {uid} y {displayname} se pueden usar y se rellenan con los valores del usuario para personalizar los enlaces.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Además, tenga en cuenta que muchos sitios en estos días no permiten el uso de iframes por razones de seguridad.",
     "We highly recommend to test the configured sites above properly." : "Recomendamos encarecidamente probar correctamente los sitios configurados anteriormente.",
     "Icons" : "Íconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si sube un archivo test.png y un archivo test-dark.png, ambos se utilizarán como un solo ícono. La versión oscura se utilizará en dispositivos móviles; de lo contrario, el ícono blanco no es visible sobre el fondo blanco en las aplicaciones móviles.",
     "Uploading an icon with the same name will replace the current icon." : "Subiendo un ícono con el mismo nombre reemplazará al ícono actual.",
-    "Upload new icon" : "Subir nuevo ícono"
+    "Upload new icon" : "Subir nuevo ícono",
+    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Los marcadores {email}, {uid} y {displayname} se pueden usar y se rellenan con los valores del usuario para personalizar los enlaces."
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
