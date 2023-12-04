@@ -13,7 +13,7 @@ OC.L10N.register(
     "Only in the desktop client" : "Лише у клієнті для робочих станцій",
     "Only in the browser" : "Лише у переглядачі браузері",
     "The given label is invalid" : "Надана мітка неправильна",
-    "The given URL is invalid" : "Зазначене посилання неправильне",
+    "The given URL is invalid" : "Зазначена URL-адреса недійсна",
     "The given language does not exist" : "Зазначена мова відсутня",
     "The given type is invalid" : "Зазначено неправильний тип",
     "The given device is invalid" : "Зазначено неправильний пристрій",
