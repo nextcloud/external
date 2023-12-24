@@ -9,6 +9,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Language" : "Lenga",
     "Groups" : "Gropes",
+    "Devices" : "Periferics",
     "Position" : "Posicion",
     "Remove site" : "Suprimir lo site",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "D'una autra costat, notatz que fòrça sites interdison l’utilizacion dels iframes per de rasons de seguretat.",
