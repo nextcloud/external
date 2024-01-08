@@ -10,7 +10,7 @@
 		}
 	},
 	"require-dev": {
-		"nextcloud/ocp": "dev-master",
+		"nextcloud/ocp": "dev-stable28",
 		"roave/security-advisories": "dev-latest"
 	},
 	"scripts": {
@@ -42,7 +42,7 @@
 		"classmap-authoritative": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "8.0"
+			"php": "8.0.2"
 		},
 		"sort-packages": true
 	},
