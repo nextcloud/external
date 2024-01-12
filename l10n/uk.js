@@ -1,7 +1,7 @@
 OC.L10N.register(
     "external",
     {
-    "Select an icon" : "Оберіть іконку",
+    "Select an icon" : "Оберіть значок",
     "All languages" : "Всі мови",
     "Header" : "Заголовок",
     "Setting menu" : "Налаштування меню",
