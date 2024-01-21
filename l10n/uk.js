@@ -27,7 +27,7 @@ OC.L10N.register(
     "External sites" : "Зовнішні сайти",
     "__language_name__" : "Українська",
     "Add external sites to your Nextcloud navigation" : "Додати зовнішній сайт до навігації у Nextcloud",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Ця програма дозволяє адміністратору додавати додаткові посилання в меню Nextcloud. \nПерейшовши за посиланням, зовнішній веб-сайт з’явиться у фреймі Nextcloud. Також можна додавати посилання лише для певної мови, типу пристрою чи групи користувачів. \n\nДодаткову інформацію можна знайти в документації зовнішніх сайтів.",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Цей застосунок дозволяє адміністратору додавати додаткові посилання в меню Nextcloud. \nПерейшовши за посиланням, зовнішній веб-сайт з’явиться у фреймі Nextcloud. Також можна додавати посилання лише для певної мови, типу пристрою чи групи користувачів. \n\nДодаткову інформацію можна знайти в документації зовнішніх сайтів.",
     "Name" : "Ім'я",
     "URL" : "URL",
     "Language" : "Мова",
