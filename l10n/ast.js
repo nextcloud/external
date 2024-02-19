@@ -18,6 +18,7 @@ OC.L10N.register(
     "Provided file is not an image" : "El ficheru forníu nun ye una imaxe",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Prodúxose un error mentanto se xubía l'iconu, asegúrate de que'l direutoriu de datos ye d'escritura",
     "External sites" : "Sitios esternos",
+    "__language_name__" : "Asturianu",
     "Name" : "Nome",
     "URL" : "URL",
     "Language" : "Llingua",
