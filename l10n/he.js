@@ -52,4 +52,4 @@ OC.L10N.register(
     "Upload new icon" : "העלאת סמל חדש",
     "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "בממלאי המקום {email},‏ {uid} ו־{displayname} ניתן להשתמש ולמלא בהם את ערכי המשתמש כדי ליצור קישורים מותאמים."
 },
-"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;");
+"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;");
