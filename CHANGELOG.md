@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.4.0 - 2024-03-13
+### Changed
+- Require Nextcloud 29
+
 ## 5.3.1 - 2023-11-10
 ### Added
 - Groups placeholder [#581](https://github.com/nextcloud/external/pull/581)
