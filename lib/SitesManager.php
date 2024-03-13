@@ -33,7 +33,7 @@ use OCP\App\IAppManager;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
 use OCP\Files\SimpleFS\ISimpleFile;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IGroupManager;
 use OCP\IRequest;
 use OCP\IUser;
@@ -55,7 +55,7 @@ class SitesManager {
 	/** @var IRequest */
 	protected $request;
 
-	/** @var IConfig */
+	/** @var IAppConfig */
 	protected $config;
 
 	/** @var IFactory */
@@ -78,7 +78,7 @@ class SitesManager {
 
 
 	public function __construct(IRequest $request,
-		IConfig $config,
+		IAppConfig $config,
 		IAppManager $appManager,
 		IGroupManager $groupManager,
 		IUserSession $userSession,
@@ -166,7 +166,7 @@ class SitesManager {
 	 * @return array[]
 	 */
 	public function getSites() {
-		$jsonEncodedList = $this->config->getAppValue('external', 'sites', '');
+		$jsonEncodedList = $this->config->getValueString('external', 'sites', '');
 		$sites = json_decode($jsonEncodedList, true);
 
 		if (!is_array($sites) || empty($sites)) {
@@ -217,7 +217,7 @@ class SitesManager {
 	 * @throws IconNotFoundException
 	 */
 	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
-		$id = 1 + (int) $this->config->getAppValue('external', 'max_site', '0');
+		$id = 1 + $this->config->getValueInt('external', 'max_site');
 
 		if ($name === '') {
 			throw new InvalidNameException();
@@ -282,8 +282,8 @@ class SitesManager {
 			'groups' => $groups,
 			'redirect' => $redirect,
 		];
-		$this->config->setAppValue('external', 'sites', json_encode($sites));
-		$this->config->setAppValue('external', 'max_site', (string)$id);
+		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueInt('external', 'max_site', $id);
 
 		return $sites[$id];
 	}
@@ -376,7 +376,7 @@ class SitesManager {
 			'groups' => $groups,
 			'redirect' => $redirect,
 		];
-		$this->config->setAppValue('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites));
 
 		return $sites[$id];
 	}
@@ -388,7 +388,7 @@ class SitesManager {
 		}
 
 		unset($sites[$id]);
-		$this->config->setAppValue('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites));
 	}
 
 	/**
@@ -407,8 +407,8 @@ class SitesManager {
 			]);
 		}
 
-		$this->config->setAppValue('external', 'sites', json_encode($fixedSites));
-		$this->config->setAppValue('external', 'max_site', (string)max(array_keys($fixedSites)));
+		$this->config->setValueString('external', 'sites', json_encode($fixedSites));
+		$this->config->setValueInt('external', 'max_site', max(array_keys($fixedSites)));
 		return $fixedSites;
 	}
 

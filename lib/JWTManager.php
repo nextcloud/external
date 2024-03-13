@@ -27,15 +27,15 @@ namespace OCA\External;
 use OCA\External\AppInfo\Application;
 use OCA\External\Vendor\Firebase\JWT\JWT;
 use OCP\AppFramework\Utility\ITimeFactory;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IURLGenerator;
 
 class JWTManager {
-	protected IConfig $config;
+	protected IAppConfig $config;
 	protected ITimeFactory $timeFactory;
 	protected IURLGenerator $urlGenerator;
 
-	public function __construct(IConfig $config,
+	public function __construct(IAppConfig $config,
 		ITimeFactory $timeFactory,
 		IURLGenerator $urlGenerator) {
 		$this->config = $config;
@@ -70,7 +70,7 @@ class JWTManager {
 		}
 		$this->ensureTokenKeys($alg);
 
-		return $this->config->getAppValue(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg));
+		return $this->config->getValueString(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg));
 	}
 
 	protected function getTokenPrivateKey(?string $alg = null): string {
@@ -79,11 +79,11 @@ class JWTManager {
 		}
 		$this->ensureTokenKeys($alg);
 
-		return $this->config->getAppValue(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg));
+		return $this->config->getValueString(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg));
 	}
 
 	protected function ensureTokenKeys(string $alg): void {
-		$secret = $this->config->getAppValue(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg));
+		$secret = $this->config->getValueString(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg));
 		if ($secret) {
 			return;
 		}
@@ -117,11 +117,11 @@ class JWTManager {
 			throw new \Exception('Unsupported algorithm ' . $alg);
 		}
 
-		$this->config->setAppValue(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg), $secret);
-		$this->config->setAppValue(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg), $public);
+		$this->config->setValueString(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg), $secret);
+		$this->config->setValueString(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg), $public);
 	}
 
 	protected function getTokenAlgorithm(): string {
-		return $this->config->getAppValue(Application::APP_ID, 'jwt_token_alg', 'ES256');
+		return $this->config->getValueString(Application::APP_ID, 'jwt_token_alg', 'ES256');
 	}
 }
