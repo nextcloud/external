@@ -65,7 +65,7 @@ class JWTManager {
 	}
 
 	public function getTokenPublicKey(?string $alg = null): string {
-		if (!$alg) {
+		if ($alg === null) {
 			$alg = $this->getTokenAlgorithm();
 		}
 		$this->ensureTokenKeys($alg);
@@ -74,7 +74,7 @@ class JWTManager {
 	}
 
 	protected function getTokenPrivateKey(?string $alg = null): string {
-		if (!$alg) {
+		if ($alg === null) {
 			$alg = $this->getTokenAlgorithm();
 		}
 		$this->ensureTokenKeys($alg);
