@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nextcloud/initial-state": "^2.1.0",
-    "@nextcloud/router": "^2.2.1",
+    "@nextcloud/router": "^3.0.0",
     "escape-html": "^1.0.3"
   },
   "devDependencies": {
