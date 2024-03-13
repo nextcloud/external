@@ -63,7 +63,7 @@ class Application extends App implements IBootstrap {
 
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$settingsManager->registerSetting(IManager::KEY_PERSONAL_SETTINGS, Personal::class);
+				$settingsManager->registerSetting(IManager::SETTINGS_PERSONAL, Personal::class);
 				continue;
 			}
 
