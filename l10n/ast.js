@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "All languages" : "Toles llingües",
     "Header" : "Testera",
+    "Setting menu" : "Menú d'opciones",
+    "Public footer" : "Pie públicu",
     "All devices" : "Tolos preseos",
     "Only in the Android app" : "Namás na aplicación p'Android",
     "Only in the iOS app" : "Namás na aplicación pa iOS",
