@@ -24,7 +24,7 @@ OC.L10N.register(
     "Provided image is not a square of 16, 24 or 32 pixels width" : "La imagen proporcionada no es un cuadrato de 16, 24 ó 32 pixeles de lado ",
     "An error occurred while uploading the icon, please make sure the data directory is writable" : "Se presentó un error al cargar el ícono, por favor asegurate de que se pueda escribir al directorio de datos ",
     "External sites" : "Sitios externos",
-    "__language_name__" : "Español (México)",
+    "__language_name__" : "Español (Chile)",
     "Name" : "Nombre",
     "URL" : "URL",
     "Language" : "Idioma",
