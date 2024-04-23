@@ -4,6 +4,7 @@ OC.L10N.register(
     "__language_name__" : "Srpski",
     "Name" : "naziv",
     "URL" : "Url",
+    "Language" : "Jezik",
     "Groups" : "Grupe",
     "Uploading…" : "Otpremam…",
     "Icons" : "Ikone"
