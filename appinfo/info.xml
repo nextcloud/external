@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+<!--
+SPDX-FileCopyrightText: 2017 Joas Schilling <coding@schilljs.com>
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 	<id>external</id>
 	<name>External sites</name>
 	<summary>Add external sites to your Nextcloud navigation</summary>
