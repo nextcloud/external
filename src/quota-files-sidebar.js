@@ -1,3 +1,11 @@
+/**
+ * @copyright Copyright (c) 2023 Kate <jld3103yt@gmail.com>
+ * @license GNU AGPL version 3 or any later version
+ *
+ * SPDX-FileCopyrightText: 2023 Kate <jld3103yt@gmail.com>
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 import {loadState} from '@nextcloud/initial-state'
 
 document.addEventListener('DOMContentLoaded', () => {
