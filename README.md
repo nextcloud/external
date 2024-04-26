@@ -1,5 +1,7 @@
 # External sites
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/external)](https://api.reuse.software/info/github.com/nextcloud/external)
+
 This application allows an admin to add a link in the Nextcloud web interface
 Apps menu that points to an external website. By simply entering the URL and
 the name for the external site, an icon appears. When this icon is clicked by a
