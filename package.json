@@ -21,7 +21,7 @@
     "@babel/core": "^7.24.4",
     "@babel/preset-env": "^7.24.4",
     "@nextcloud/browserslist-config": "^3.0.1",
-    "@nextcloud/eslint-config": "^8.3.0",
+    "@nextcloud/eslint-config": "^8.4.1",
     "@nextcloud/eslint-plugin": "^2.2.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.3",
