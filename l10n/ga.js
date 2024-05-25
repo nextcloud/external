@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "No file uploaded" : "Níor uaslódáladh aon chomhad",
     "Name" : "Ainm",
+    "URL" : "URL",
     "Language" : "Teanga",
     "Groups" : "Grúpaí",
     "Icon" : "Deilbhín"
