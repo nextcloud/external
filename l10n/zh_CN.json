@@ -43,6 +43,7 @@
     "Icon could not be uploaded" : "图标无法上传",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "将网站直接添加到顶栏的应用列表中。这将对所有用户可见，同时这可以快速访问内部其他的 Web 应用或重要的站点。",
     "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "{email}、{uid}、{displayname} 和 {groups} 占位符可以用来自定义用户的链接。",
+    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "通过 Nextcloud 链接访问外部网站时，路径参数将被发送至外部网站。所以，你可以创建深度链接（比如 \"mycloud.com/external/1/pageA\" 将指向 \"externalsite.com/pageA\" ）",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "可通过使用 {jwt} 占位符将包含用户邮箱、uid和显示名称的JSON Web Token嵌入链接。参阅{linkstart}文档{linkend}了解如何对其解码。",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "请注意，如果你运行的是 HTTPS，有些浏览器会阻止通过 HTTP 显示网站。",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "另外请注意由于安全原因，部分站点禁用了 iFrame。",
