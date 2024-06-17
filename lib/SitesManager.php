@@ -84,11 +84,10 @@ class SitesManager {
 	}
 
 	/**
-	 * @param int $id
 	 * @return array
 	 * @throws SiteNotFoundException
 	 */
-	public function getSiteById($id) {
+	public function getSiteById(int $id) {
 		$sites = $this->getSitesToDisplay();
 
 		if (isset($sites[$id])) {
@@ -187,15 +186,7 @@ class SitesManager {
 	}
 
 	/**
-	 * @param string $name
-	 * @param string $url
-	 * @param string $lang
-	 * @param string $type
-	 * @param string $device
-	 * @param string $icon
 	 * @param string[] $groups
-	 * @param bool $redirect
-	 * @return array
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
 	 * @throws LanguageNotFoundException
@@ -204,7 +195,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function addSite($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function addSite(string $name, string $url, string $lang, string $type, string $device, string $icon, array $groups, bool $redirect): array {
 		$id = 1 + $this->config->getValueInt('external', 'max_site');
 
 		if ($name === '') {
@@ -277,16 +268,7 @@ class SitesManager {
 	}
 
 	/**
-	 * @param int $id
-	 * @param string $name
-	 * @param string $url
-	 * @param string $lang
-	 * @param string $type
-	 * @param string $device
-	 * @param string $icon
 	 * @param string[] $groups
-	 * @param bool $redirect
-	 * @return array
 	 * @throws SiteNotFoundException
 	 * @throws InvalidNameException
 	 * @throws InvalidURLException
@@ -296,7 +278,7 @@ class SitesManager {
 	 * @throws GroupNotFoundException
 	 * @throws IconNotFoundException
 	 */
-	public function updateSite($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function updateSite(int $id, string $name, string $url, string $lang, string $type, string $device, string $icon, array $groups, bool $redirect): array {
 		$sites = $this->getSites();
 		if (!isset($sites[$id])) {
 			throw new SiteNotFoundException();
