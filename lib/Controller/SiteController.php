@@ -46,10 +46,8 @@ class SiteController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
-	 *
-	 * @return TemplateResponse|RedirectResponse
 	 */
-	public function showPage(int $id, string $path) {
+	public function showPage(int $id, string $path): TemplateResponse|RedirectResponse {
 		try {
 			$site = $this->sitesManager->getSiteById($id);
 			return $this->createResponse($id, $site, $path);
@@ -63,10 +61,8 @@ class SiteController extends Controller {
 	 * @NoCSRFRequired
 	 *
 	 * This is used when the app is set as default app
-	 *
-	 * @return TemplateResponse|RedirectResponse
 	 */
-	public function showDefaultPage() {
+	public function showDefaultPage(): TemplateResponse|RedirectResponse {
 		// Show first available page when there is one
 		$sites = $this->sitesManager->getSitesToDisplay();
 		if (!empty($sites)) {

@@ -65,10 +65,8 @@ class IconController extends Controller {
 
 	/**
 	 * Upload an icon to the appdata folder
-	 *
-	 * @return DataResponse
 	 */
-	public function uploadIcon() {
+	public function uploadIcon(): DataResponse {
 		$icon = $this->request->getUploadedFile('uploadicon');
 		if (empty($icon)) {
 			return new DataResponse([
@@ -125,11 +123,8 @@ class IconController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
-	 *
-	 * @param string $icon
-	 * @return FileDisplayResponse
 	 */
-	public function showIcon($icon) {
+	public function showIcon(string $icon): FileDisplayResponse {
 		$folder = $this->appData->getFolder('icons');
 		try {
 			$iconFile = $folder->getFile($icon);
@@ -164,11 +159,7 @@ class IconController extends Controller {
 		return $response;
 	}
 
-	/**
-	 * @param string $icon
-	 * @return DataResponse
-	 */
-	public function deleteIcon($icon) {
+	public function deleteIcon(string $icon): DataResponse {
 		$folder = $this->appData->getFolder('icons');
 
 		try {
@@ -188,12 +179,9 @@ class IconController extends Controller {
 	}
 
 	/**
-	 * @param ISimpleFolder $folder
-	 * @param string $file
-	 * @return ISimpleFile
 	 * @throws NotFoundException
 	 */
-	protected function getDefaultIcon(ISimpleFolder $folder, $file) {
+	protected function getDefaultIcon(ISimpleFolder $folder, string $file): ISimpleFile {
 		try {
 			return $folder->getFile($file);
 		} catch (NotFoundException $exception) {

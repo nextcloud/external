@@ -59,10 +59,8 @@ class APIController extends OCSController {
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
-	 *
-	 * @return DataResponse
 	 */
-	public function get() {
+	public function get(): DataResponse {
 		$data = $this->sitesManager->getSitesToDisplay();
 
 		$sites = [];
@@ -90,10 +88,8 @@ class APIController extends OCSController {
 
 	/**
 	 * @NoCSRFRequired
-	 *
-	 * @return DataResponse
 	 */
-	public function getAdmin() {
+	public function getAdmin(): DataResponse {
 		$icons = array_map(function ($icon) {
 			return [
 				'icon' => $icon,
@@ -131,17 +127,9 @@ class APIController extends OCSController {
 	}
 
 	/**
-	 * @param string $name
-	 * @param string $url
-	 * @param string $lang
-	 * @param string $type
-	 * @param string $device
-	 * @param string $icon
 	 * @param string[] $groups
-	 * @param int $redirect
-	 * @return DataResponse
 	 */
-	public function add($name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function add(string $name, string $url, string $lang, string $type, string $device, string $icon, array $groups, int $redirect): DataResponse {
 		try {
 			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
 		} catch (InvalidNameException $e) {
@@ -162,18 +150,9 @@ class APIController extends OCSController {
 	}
 
 	/**
-	 * @param int $id
-	 * @param string $name
-	 * @param string $url
-	 * @param string $lang
-	 * @param string $type
-	 * @param string $device
-	 * @param string $icon
 	 * @param string[] $groups
-	 * @param int $redirect
-	 * @return DataResponse
 	 */
-	public function update($id, $name, $url, $lang, $type, $device, $icon, array $groups, $redirect) {
+	public function update(int $id, string $name, string $url, string $lang, string $type, string $device, string $icon, array $groups, int $redirect): DataResponse {
 		try {
 			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
 		} catch (SiteNotFoundException $e) {
@@ -195,11 +174,7 @@ class APIController extends OCSController {
 		}
 	}
 
-	/**
-	 * @param int $id
-	 * @return DataResponse
-	 */
-	public function delete($id) {
+	public function delete(int $id): DataResponse {
 		$this->sitesManager->deleteSite($id);
 		return new DataResponse();
 	}
