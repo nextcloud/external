@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.5.0 - 2024-07-24
+### Changed
+- Require Nextcloud 30
+
 ## 5.4.0 - 2024-03-13
 ### Changed
 - Require Nextcloud 29
