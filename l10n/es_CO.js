@@ -46,7 +46,6 @@ OC.L10N.register(
     "Icons" : "Íconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si cargas un archivo test.png y uno test-dark.png, ambos serán usados como un único ícono. La versión obscura será usada en los dispositivos móviles, de lo contrario los íconos claros no son visibles en los fondos claros de estos dispositivos. ",
     "Uploading an icon with the same name will replace the current icon." : "Cargar un ícono con el mismo nombre reemplazará el ícono actual.",
-    "Upload new icon" : "Cargar nuevo ícono",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Los marcadores de posición {emial}, {uid} y {displayname} pueden ser usados y se llenan con los valores del usuario para personalizar las ligas."
+    "Upload new icon" : "Cargar nuevo ícono"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

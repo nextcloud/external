@@ -48,7 +48,6 @@
     "Icons" : "Pictogrammen",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Als je een test.png en een test-dark.png bestand uploadt, worden ze samen als één pictogram gebruikt. De donkere versie wordt gebruikt op mobiele apparaten, want anders is het witte pictogram niet zichtbaar op de witte achtergrond in de mobiele apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploaden van een pictogram met dezelfde naam vervangt het huidige pictogram.",
-    "Upload new icon" : "Uploaden nieuw pictogram",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "De velden {email}, {uid} en {displayname} kunnen worden gebruikt en zijn vooringevuld met de gebruikerswaarden om de links te personaliseren."
+    "Upload new icon" : "Uploaden nieuw pictogram"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

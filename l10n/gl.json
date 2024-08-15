@@ -52,7 +52,6 @@
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se envía un ficheiro test.png e outro test-dark.png, ambos usaranse coma unha icona. A versión escura (dark) usarase en dispositivos móbiles, doutro xeito a icona branca non é visíbel no fondo branco das aplicacións móbiles.",
     "Uploading an icon with the same name will replace the current icon." : "Enviar unha icona co mesmo nome sobrescribirá a icona actual.",
     "Upload new icon" : "Enviar unha nova icona",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Poden empregarse os marcadores de posición {email}, {uid} e {displayname} e enchéronse cos valores do usuario para personalizar as ligazóns.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Ao acceder ao sitio externo a través da ligazón Nextcloud, os parámetros da ruta enviaranse ao sitio externo. Así que tamén pode crear ligazóns profundas (p. ex., «mycloud.com/external/1/pageA» levará a Nextcloud co iframe apuntado cara a «externalsite.com/pageA»)."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

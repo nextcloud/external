@@ -47,7 +47,6 @@
     "Icons" : "Piktogramoj",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se vi alŝutas dosierojn „test.png“ kaj „test-dark.png“, ambaŭ uziĝos kiel unu piktogramo. La malhela (angle „dark“) uziĝos ĉe porteblaj aparatoj, ĉar la hela piktogramo ne videblas ĉe hela fono el porteblaj aplikaĵoj.",
     "Uploading an icon with the same name will replace the current icon." : "Alŝutado de samnoma piktogramo anstataŭigos la nunan piktogramon.",
-    "Upload new icon" : "Alŝuti novan piktogramon",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Oni povas uzi la parametrojn {email}, {uid} kaj {displayname}; ilin anstataŭigis valoroj el la uzanto por adapti la ligilojn."
+    "Upload new icon" : "Alŝuti novan piktogramon"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
