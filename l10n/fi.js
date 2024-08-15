@@ -50,7 +50,6 @@ OC.L10N.register(
     "Icons" : "Kuvakkeet",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Jos lataat tiedostot nimillä test.png ja test-dark.png, niitä käytetään yhtenä kuvakkeena. Tummaa versiota käytetään mobiililaitteilla, koska vaalea kuvake ei näkyisi mobiilisovelluksien vaalealla taustalla.",
     "Uploading an icon with the same name will replace the current icon." : "Jo olemassa oleva kuvake korvataan, jos samanniminen tiedosto ladataan palvelimelle.",
-    "Upload new icon" : "Lähetä uusi kuvake",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Muuttujia {email}, {uid} ja {displayname} voidaan käyttää linkkien osina."
+    "Upload new icon" : "Lähetä uusi kuvake"
 },
 "nplurals=2; plural=(n != 1);");
