@@ -54,7 +54,6 @@ OC.L10N.register(
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Lade eine Datei \"test.png\" und eine Datei \"test-dark.png\" hoch. Beide Dateien werden für ein Symbol verwendet. Die dunkle Version wird auf Mobilgeräten verwendet, die helle Version ist auf den hellen Hintergründen der mobilen Apps nicht sichtbar.",
     "Uploading an icon with the same name will replace the current icon." : "Das Hochladen eines Symbols mit gleichem Namen wird das existierende Symbol ersetzen.",
     "Upload new icon" : "Neues Symbol hochladen",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid} und {displayname} können benutzt werden, um den Link mit den Benutzerdaten zu füllen.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Beim Zugriff auf die externe Seite über den Nextcloud-Link werden Pfadparameter an die externe Seite weitergeleitet. Du kannst also auch Deep Links erstellen (z. B. 'mycloud.com/external/1/pageA' führt zu Nextcloud, wobei der Iframe auf 'externalsite.com/pageA' zeigt)."
 },
 "nplurals=2; plural=(n != 1);");

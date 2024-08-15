@@ -49,7 +49,6 @@
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Om du laddar upp filerna test.png och test-dark.png kommer båda användas som en ikon. Den mörka versionen kommer användas på mobila enheter eftersom den vita ikonen inte är synlig mot vit bakgrund i mobilappar.",
     "Uploading an icon with the same name will replace the current icon." : "Uppladdning av en ikon med samma namn kommer ersätta den nuvarande ikonen.",
-    "Upload new icon" : "Ladda upp ny ikon",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Platshållarna {email}, {uid} och {displayname} kan användas och fylls med användarvärdena för att anpassa länkarna."
+    "Upload new icon" : "Ladda upp ny ikon"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

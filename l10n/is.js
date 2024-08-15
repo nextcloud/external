@@ -51,7 +51,6 @@ OC.L10N.register(
     "Icons" : "Táknmyndir",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ef þú sendir inn prufa.png og prufa-dark.png skrár, verða báðar notaðar sem ein táknmynd. Dökka útgáfan verður notuð á farsímum/spjaldtölvum, annars yrði hvíta útgáfa táknmyndarinnar ekki sýnileg á hvítum bakgrunni farsíma/spjaldtölvuforritanna.",
     "Uploading an icon with the same name will replace the current icon." : "Ef send er inn táknmynd með sama heiti mun hún koma í stað þeirrar sem nú er í notkun.",
-    "Upload new icon" : "Senda inn nýja táknmynd",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Hægt er að nota frátökutáknin {email}, {uid} og {displayname} og eru þau fyllt með upplýsingum um notandann til að sérsníða veftenglana."
+    "Upload new icon" : "Senda inn nýja táknmynd"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

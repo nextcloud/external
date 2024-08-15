@@ -54,7 +54,6 @@ OC.L10N.register(
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Če pošljete datoteki test.png in test-dark.png, bosta obe uporabljeni kot ena ikona. Temna različica bo uporabljena na mobilnih napravah, ker bela ni najbolje vidna na belem ozadju.",
     "Uploading an icon with the same name will replace the current icon." : "Pošiljanje ikone z istim imenom zamenja obstoječo ikono.",
     "Upload new icon" : "Pošlji novo ikono",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Uporabiti je mogoče vsebnike {email}, {uid} in {displayname}, ki zapolnijo vrednosti uporabnika za prilagoditev povezav po meri.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Pri dostopu do zunanjega spletnega mesta s povezavo Nextcloud bodo parametri poti posredovani zunanjemu spletnemu mestu. Tako je mogoče pripraviti tudi globoke povezave (npr. 'mojoblak.si/zunanje/1/stranA' ki vodijo do vstavljenega mesta 'zunanjastran.si/stranA')."
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");
