@@ -50,7 +50,6 @@ OC.L10N.register(
     "Icons" : "Ikone",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ako otpremite datoteke test.png i test-dark.png, obje će se koristiti kao jedna ikona. Tamna inačica upotrebljavat će se na mobilnim uređajima jer bijela ikona nije vidljiva na bijeloj pozadini mobilnih aplikacija.",
     "Uploading an icon with the same name will replace the current icon." : "Otpremanje ikone s istim nazivom zamijenit će trenutnu ikonu.",
-    "Upload new icon" : "Otpremi novu ikonu",
-    "The placeholders {email}, {uid} and {displayname} can be used and are filled with the user´s values to customize the links." : "Možete se koristiti praznim oznakama {email}, {uid} i {displayname} koje ispunite korisničkim vrijednostima kako biste prilagodili poveznice."
+    "Upload new icon" : "Otpremi novu ikonu"
 },
 "nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;");
