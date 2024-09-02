@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+version = 1
+SPDX-PackageName = "external"
+SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
+SPDX-PackageDownloadLocation = "https://github.com/nextcloud/external"
+
+[[annotations]]
+path = [".github/**", ".editorconfig", "babel.config.js", ".php-cs-fixer.dist.php", "package-lock.json", "package.json", "composer.json", "composer.lock", "README.md", "img/app-dark.svg", "img/app.svg", "webpack.js", "stylelint.config.js", ".eslintrc.js", ".gitignore", ".jshintrc", ".l10nignore", "action/.gitignore", "action/package.json", "action/package-lock.json", "action/dist/index.js", "tests/**", "psalm.xml", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "webpack.config.js"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["l10n/**.js", "l10n/**.json", "js/**.js.map", "js/**.js", "js/templates/**.handlebars", "img/external-dark.svg", "img/external.svg", "img/settings-dark.svg", "img/settings.svg"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2017-2024 Nextcloud contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
