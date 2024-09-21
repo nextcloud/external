@@ -71,7 +71,7 @@ class APIController extends OCSController {
 				$site['icon'] = $this->url->linkToRouteAbsolute('external.icon.showIcon', ['icon' => 'external.svg']);
 			}
 
-			$site['redirect'] = (int) $site['redirect'];
+			$site['redirect'] = (int)$site['redirect'];
 
 			unset($site['lang'], $site['device'], $site['groups']);
 			$sites[] = $site;
@@ -131,7 +131,7 @@ class APIController extends OCSController {
 	 */
 	public function add(string $name, string $url, string $lang, string $type, string $device, string $icon, array $groups, int $redirect): DataResponse {
 		try {
-			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
+			return new DataResponse($this->sitesManager->addSite($name, $url, $lang, $type, $device, $icon, $groups, (bool)$redirect));
 		} catch (InvalidNameException $e) {
 			return new DataResponse(['error' => $this->l->t('The given label is invalid'), 'field' => 'name'], Http::STATUS_BAD_REQUEST);
 		} catch (InvalidURLException $e) {
@@ -154,7 +154,7 @@ class APIController extends OCSController {
 	 */
 	public function update(int $id, string $name, string $url, string $lang, string $type, string $device, string $icon, array $groups, int $redirect): DataResponse {
 		try {
-			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, $groups, (bool) $redirect));
+			return new DataResponse($this->sitesManager->updateSite($id, $name, $url, $lang, $type, $device, $icon, $groups, (bool)$redirect));
 		} catch (SiteNotFoundException $e) {
 			return new DataResponse(['error' => $this->l->t('The site does not exist'), 'field' => 'site'], Http::STATUS_NOT_FOUND);
 		} catch (InvalidNameException $e) {

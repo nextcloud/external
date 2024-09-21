@@ -53,7 +53,7 @@ class IconController extends Controller {
 		IL10N $l,
 		IAppData $appData,
 		IAppManager $appManager,
-		ITimeFactory $timeFactory
+		ITimeFactory $timeFactory,
 	) {
 		parent::__construct($appName, $request);
 
