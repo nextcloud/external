@@ -40,6 +40,7 @@ More information is available in the External sites documentation.]]></descripti
 	<repair-steps>
 		<post-migration>
 			<step>OCA\External\Migration\CopyDefaultIcons</step>
+			<step>OCA\External\Migration\JWTTokenPrivateKeySensitive</step>
 		</post-migration>
 		<install>
 			<step>OCA\External\Migration\CopyDefaultIcons</step>
