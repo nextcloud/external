@@ -36,7 +36,7 @@ OC.L10N.register(
     "Icon" : "الأيقونة",
     "Position" : "الموقع",
     "Redirect" : "إعادة توجيه",
-    "Remove site" : "ازل الموقع",
+    "Remove site" : "حذف الموقع",
     "This site does not allow embedding" : "هذا الموقع لا يسمح بالتضمين",
     "New site" : "موقع جديد",
     "Delete icon" : "حذف أيقونة",
