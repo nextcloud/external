@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.4.1 - 2024-10-21
+### Fixed
+- JWT credential encryption
+
 ## 5.4.0 - 2024-03-13
 ### Changed
 - Require Nextcloud 29
