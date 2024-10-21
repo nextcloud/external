@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 5.5.2 - 2024-10-21
+### Fixed
+- JWT credential encryption
+
 ## 5.5.1 - 2024-07-24
 ### Fixed
 - Release workflow
