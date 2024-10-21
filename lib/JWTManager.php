@@ -105,7 +105,7 @@ class JWTManager {
 			throw new \Exception('Unsupported algorithm ' . $alg);
 		}
 
-		$this->config->setValueString(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg), $secret);
+		$this->config->setValueString(Application::APP_ID, 'jwt_token_privkey_' . strtolower($alg), $secret, sensitive: true);
 		$this->config->setValueString(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg), $public);
 	}
 
