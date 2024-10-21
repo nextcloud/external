@@ -10,7 +10,7 @@ It is also possible to add links only for a given language, device type or user 
 
 More information is available in the External sites documentation.]]></description>
 
-	<version>5.4.0</version>
+	<version>5.4.1</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>
@@ -40,6 +40,7 @@ More information is available in the External sites documentation.]]></descripti
 	<repair-steps>
 		<post-migration>
 			<step>OCA\External\Migration\CopyDefaultIcons</step>
+			<step>OCA\External\Migration\JWTTokenPrivateKeySensitive</step>
 		</post-migration>
 		<install>
 			<step>OCA\External\Migration\CopyDefaultIcons</step>
