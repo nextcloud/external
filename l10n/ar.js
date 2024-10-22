@@ -31,7 +31,7 @@ OC.L10N.register(
     "Name" : "اسم",
     "URL" : "عنوان الموقع",
     "Language" : "اللغة",
-    "Groups" : "الفِرَق",
+    "Groups" : "المجموعات",
     "Devices" : "الأجهزة",
     "Icon" : "الأيقونة",
     "Position" : "الموقع",
