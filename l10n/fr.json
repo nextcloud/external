@@ -40,7 +40,7 @@
     "Delete icon" : "Supprimer l'icône",
     "Uploading…" : "Envoi en cours...",
     "Reloading icon list…" : "Rechargement de la liste d'icônes...",
-    "Icon could not be uploaded" : "L'icône n'a pas pu être téléversée",
+    "Icon could not be uploaded" : "L'icône n'a pas pu être téléversée",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Ajoutez un site directement à la liste des applications dans la barre supérieure. Celui-ci sera visible par tous les utilisateurs et sera utile pour accéder rapidement à n'importe quel site web interne ou externe important.",
     "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Les paramètres {email}, {uid}, {displayname} et {groups} peuvent être utilisés et sont remplacés avec les valeurs de l'utilisateur pour personnaliser les liens.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "En accédant au site externe par un lien Nextcloud, les paramètres du chemin seront transmis au site externe. Vous pouvez donc également créer des liens permanents (par ex. \"mycloud.com/external/1/pageA\" va rediriger vers Nextcloud avec un iframe pointant sur \"externalsite.com/pageA\").",
