@@ -29,58 +29,27 @@ use OCP\IUserSession;
 use OCP\L10N\IFactory;
 
 class SitesManager {
-	public const TYPE_LINK = 'link';
-	public const TYPE_SETTING = 'settings';
-	public const TYPE_LOGIN = 'guest';
-	public const TYPE_QUOTA = 'quota';
+	public const string TYPE_LINK = 'link';
+	public const string TYPE_SETTING = 'settings';
+	public const string TYPE_LOGIN = 'guest';
+	public const string TYPE_QUOTA = 'quota';
 
-	public const DEVICE_ALL = '';
-	public const DEVICE_ANDROID = 'android';
-	public const DEVICE_IOS = 'ios';
-	public const DEVICE_DESKTOP = 'desktop';
-	public const DEVICE_BROWSER = 'browser';
+	public const string DEVICE_ALL = '';
+	public const string DEVICE_ANDROID = 'android';
+	public const string DEVICE_IOS = 'ios';
+	public const string DEVICE_DESKTOP = 'desktop';
+	public const string DEVICE_BROWSER = 'browser';
 
-	/** @var IRequest */
-	protected $request;
-
-	/** @var IAppConfig */
-	protected $config;
-
-	/** @var IFactory */
-	protected $languageFactory;
-
-	/** @var IAppManager */
-	protected $appManager;
-
-	/** @var IGroupManager */
-	protected $groupManager;
-
-	/** @var IUserSession */
-	protected $userSession;
-
-	/** @var JWTManager */
-	protected $JWTManager;
-
-	/** @var IAppData */
-	protected $appData;
-
-
-	public function __construct(IRequest $request,
-		IAppConfig $config,
-		IAppManager $appManager,
-		IGroupManager $groupManager,
-		IUserSession $userSession,
-		IFactory $languageFactory,
-		JWTManager $JWTManager,
-		IAppData $appData) {
-		$this->request = $request;
-		$this->config = $config;
-		$this->appManager = $appManager;
-		$this->groupManager = $groupManager;
-		$this->userSession = $userSession;
-		$this->languageFactory = $languageFactory;
-		$this->JWTManager = $JWTManager;
-		$this->appData = $appData;
+	public function __construct(
+		protected IRequest $request,
+		protected IAppConfig $config,
+		protected IAppManager $appManager,
+		protected IGroupManager $groupManager,
+		protected IUserSession $userSession,
+		protected IFactory $languageFactory,
+		protected JWTManager $JWTManager,
+		protected IAppData $appData,
+	) {
 	}
 
 	/**
