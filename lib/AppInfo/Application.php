@@ -26,7 +26,7 @@ use OCP\IURLGenerator;
 use OCP\Settings\IManager;
 
 class Application extends App implements IBootstrap {
-	public const APP_ID = 'external';
+	public const string APP_ID = 'external';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);
