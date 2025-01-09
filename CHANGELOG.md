@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 6.0.1 - 2025-01-09
+### Changed
+- Require Nextcloud 31
+
 ## 5.5.2 - 2024-10-21
 ### Fixed
 - JWT credential encryption
