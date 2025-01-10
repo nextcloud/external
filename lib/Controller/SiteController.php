@@ -100,6 +100,7 @@ class SiteController extends Controller {
 		$policy = new ContentSecurityPolicy();
 		$policy->addAllowedWorkerSrcDomain('*');
 		$policy->addAllowedFrameDomain('*');
+		$policy->addAllowedFrameDomain('blob:');
 		$response->setContentSecurityPolicy($policy);
 
 		return $response;
