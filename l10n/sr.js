@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Иконе",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ако отпремите и test.png и test-dark.png фајлове, оба слике ће бити искоришћене као једна икона. Тамна верзија ће бити коришћена на мобилним уређајима, јер у супротном светла верзија некад не може да се види на белим позадинама на мобилним уређајима.",
     "Uploading an icon with the same name will replace the current icon." : "Отпремање иконе са истим именом замењује оригиналну икону.",
-    "Upload new icon" : "Отпреми нову икону",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Када се спољном сајту приступа кроз Nextcloud линк, проследиће му се параметри путање. Тако да можете да креирате и дубоке линкове (нпр. ’mycloud.com/external/1/pageA’ ће да води на Nextcloud тако да  iframe указује на ’externalsite.com/pageA)."
+    "Upload new icon" : "Отпреми нову икону"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

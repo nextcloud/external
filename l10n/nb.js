@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Hvis du laster opp en test.png og en test-dark.png -fil, vil begge bli brukt som ett ikon. Den mørke versjonen vil bli brukt på mobile enheter, ellers vil det hvite ikonet ikke vises på den hvite bakgrunnen i mobilapper.",
     "Uploading an icon with the same name will replace the current icon." : "Å laste opp et ikon med samme navn vil erstatte nåværende ikon.",
-    "Upload new icon" : "Last opp nytt ikon",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Når du får tilgang til det eksterne nettstedet via Nextcloud-lenken, vil baneparametere bli videresendt til det eksterne nettstedet. Så du kan også lage dype lenker (f.eks 'mycloud.com/external/1/pageA' vil føre til Nextcloud med iframe pekt på 'externalsite.com/pageA')."
+    "Upload new icon" : "Last opp nytt ikon"
 },
 "nplurals=2; plural=(n != 1);");

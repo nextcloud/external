@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Pokud nahrajete soubor test.png a test-dark.png, oba budou použity jako jedna ikona. Tmavá verze bude použita na mobilních zařízeních, jinak by nebyla bílá ikona v mobilních aplikacích viditelná na bílém pozadí.",
     "Uploading an icon with the same name will replace the current icon." : "Nahrání ikony se stejným názvem nahradí tu stávající.",
-    "Upload new icon" : "Nahrát novou ikonu",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Při přístupu k externím stránkám přes Nextcloud odkaz budou parametry popisu umístění přeposlány externím stránkám. Takže je také možné vytvářet tzv. hluboké odkazy (např. „mujcloud.example.com/external/1/strankaA“ povede na Nextcloud s iframe odkázaným na „external/1/strankaA“)."
+    "Upload new icon" : "Nahrát novou ikonu"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");
