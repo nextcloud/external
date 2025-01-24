@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "圖示",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您同時上傳 test.png 和 test-dark.png 文檔，兩者會被當做同一個圖標。後者為深色版本，將用於流動裝置上，而前者為淺色版本，在移動應用程式的白色背景上會無法看見。",
     "Uploading an icon with the same name will replace the current icon." : "若上傳與目前名稱相同的圖示，將會取代它",
-    "Upload new icon" : "上傳新圖示",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "通过 Nextcloud 链接访问外部网站时，路径参数将被发送至外部网站。所以，你可以创建深度链接（比如 'mycloud.com/external/1/pageA' 将指向 'externalsite.com/pageA' ）"
+    "Upload new icon" : "上傳新圖示"
 },
 "nplurals=1; plural=0;");
