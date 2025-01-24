@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "سىنبەلگە",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "ئەگەر test.png ۋە test-dark.png ھۆججىتىنى يۈكلىسىڭىز ، ھەر ئىككىسى بىر سىنبەلگە سۈپىتىدە ئىشلىتىلىدۇ. قاراڭغۇ نۇسخىسى كۆچمە ئۈسكۈنىلەردە ئىشلىتىلىدۇ ، بولمىسا ئاق سىنبەلگە كۆچمە ئەپلەردە ئاق تەگلىكتە كۆرۈنمەيدۇ.",
     "Uploading an icon with the same name will replace the current icon." : "ئوخشاش ئىسىمدىكى سىنبەلگىنى يۈكلەش نۆۋەتتىكى سىنبەلگىنىڭ ئورنىنى ئالىدۇ.",
-    "Upload new icon" : "يېڭى سىنبەلگە يۈكلەڭ",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Nextcloud ئۇلىنىشى ئارقىلىق سىرتقى بېكەتكە كىرگەندە ، يول پارامېتىرلىرى سىرتقى بېكەتكە يوللىنىدۇ. شۇڭا سىز يەنە چوڭقۇر ئۇلىنىش قۇرالايسىز (مەسىلەن: 'mycloud.com/external/1/pageA' 'externalsite.com/pageA' نى كۆرسىتىپ بەرگەن iframe بىلەن Nextcloud نى كەلتۈرۈپ چىقىرىدۇ)."
+    "Upload new icon" : "يېڭى سىنبەلگە يۈكلەڭ"
 },
 "nplurals=2; plural=(n != 1);");
