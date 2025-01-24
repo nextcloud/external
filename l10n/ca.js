@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Icones",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si pugeu un fitxer test.png i test-dark.png, s'utilitzaran tots dos com una única icona. La versió fosca s'utilitzarà en els dispositius mòbils; si no, la icona clara no seria visible sobre el fons blanc de les aplicacions mòbils.",
     "Uploading an icon with the same name will replace the current icon." : "Si pugeu una icona amb el mateix nom, sobreescriureu la icona actual.",
-    "Upload new icon" : "Puja una icona nova",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Quan accediu al lloc extern mitjançant l'enllaç del Nextcloud, els paràmetres de camí es reenviaran al lloc extern. D'aquesta manera, també podeu crear enllaços profunds (p. ex., «mycloud.com/external/1/pàginaA» dirigirà al Nextcloud amb l'iframe a «llocextern.com/pàginaA»)."
+    "Upload new icon" : "Puja una icona nova"
 },
 "nplurals=2; plural=(n != 1);");

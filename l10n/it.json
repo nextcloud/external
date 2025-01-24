@@ -51,7 +51,6 @@
     "Icons" : "Icone",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Se carichi un file test.png e test-dark.png, entrambi saranno utilizzati come icona. La versione scura sarà utilizzata sui dispositivi mobili, altrimenti l'icona bianca non è visibile sullo sfondo bianco delle applicazioni mobili.",
     "Uploading an icon with the same name will replace the current icon." : "Il caricamento di un'icona con lo stesso nome sostituirà l'icona attuale.",
-    "Upload new icon" : "Caricata nuova icona",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "Quando si accede al sito esterno tramite il collegamento Nextcloud, i parametri del percorso verranno inoltrati al sito esterno. Perciò puoi creare anche collegamenti profondi (es. \"miocloud.it/esterno/1/paginaA\" porterà a Nextcloud con l'iframe puntato a \"sitoesterno.it/paginaA\")."
+    "Upload new icon" : "Caricata nuova icona"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "الأيقونات",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "إذا قمت بتحميل ملف test.png وملف test-dark.png ، فسيتم استخدام كلاهما كأيقونة واحدة. سيتم استخدام الإصدار الغامق على الأجهزة المحمولة ، وإلا فلن تكون الأيقونة البيضاء مرئية على الخلفية البيضاء في تطبيقات الهاتف المحمول.",
     "Uploading an icon with the same name will replace the current icon." : "سيؤدي رفع أيقونة بنفس الاسم إلى استبدال الأيقونة الحالية.",
-    "Upload new icon" : "إرسال أيقونة جديدة",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "عند محاولة الوصول إلى الموقع الخارجي من خلال رابط نكست كلاود، سيتم إعادة توجيه بارامترات المسار إلى الموقع الخارجي. لذلك يمكنك أيضاً إنشاء روابط عميقة (على سبيل المثال، سيؤدي \"mycloud.com/external/1/pageA\" إلى نكست كلاود مع الإشارة إلى إطار iframe في \"externalsite.com/pageA\")."
+    "Upload new icon" : "إرسال أيقونة جديدة"
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");

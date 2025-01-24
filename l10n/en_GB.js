@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Icons",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploading an icon with the same name will replace the current icon.",
-    "Upload new icon" : "Upload new icon",
-    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')." : "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. 'mycloud.com/external/1/pageA' will lead to Nextcloud with the iframe pointed at 'externalsite.com/pageA')."
+    "Upload new icon" : "Upload new icon"
 },
 "nplurals=2; plural=(n != 1);");
