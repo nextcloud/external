@@ -138,8 +138,8 @@ class SitesManager {
 			}
 
 			$site['url'] = str_replace(
-				['{email}', '{uid}', '{displayname}', '{jwt}', '{groups}'],
-				array_map('rawurlencode', [$email, $uid, $displayName, $jwt, implode(',', $groups)]),
+			    ['{email}', '{uid}', '{displayname}', '{jwt}', '{groups}', '{language}'],
+			    array_map('rawurlencode', [$email, $uid, $displayName, $jwt, implode(',', $groups), $lang]),
 				$site['url']
 			);
 
