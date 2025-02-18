@@ -23,7 +23,7 @@ script('external', 'templates');
 	<div class="section">
 		<h2><?php p($l->t('External sites'));?></h2>
 		<p class="settings-hint"><?php p($l->t('Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.')); ?></p>
-		<p class="settings-hint"><?php p($l->t('The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links.')); ?></p>
+		<p class="settings-hint"><?php p($l->t('The placeholders {email}, {uid}, {displayname}, {groups}, {language} and {locale} can be used and are filled with the user´s values to customize the links.')); ?></p>
 		<p class="settings-hint"><?php p($l->t('When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. "mycloud.com/external/1/pageA" will lead to Nextcloud with the iframe pointed at "externalsite.com/pageA").')); ?></p>
 		<p class="settings-hint"><?php print_unescaped(str_replace(
 			['{linkstart}', '{linkend}'],
