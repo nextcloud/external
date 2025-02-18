@@ -1,7 +1,7 @@
 OC.L10N.register(
     "external",
     {
-    "Select an icon" : "Izvēlies ikonu",
+    "Select an icon" : "Atlasīt ikonu",
     "All languages" : "Visas valodas",
     "Setting menu" : "Iestatījumu izvēlne",
     "User quota" : "Lietotāja apjoms",
