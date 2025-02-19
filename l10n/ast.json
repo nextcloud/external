@@ -42,7 +42,6 @@
     "Reloading icon list…" : "Volviendo cargar la llista d'iconos…",
     "Icon could not be uploaded" : "Nun se pudo xubir l'iconu",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Amiesta un sitiu web direutamente a la llista d'aplicaciones de la barra cimera. Va ser visible pa tolos usuarios y ye útil p'acceder aína a otres aplicaciones web internes o sitios importantes.",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Pues usar los marcadores de posición {email}, {uid}, {displayname} y {groups} y van rellenase colos valores del usuariu pa personalizar los enllaces.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "Al acceder al sitiu esternu pente l'enllaz de Nextcloud, los parámetros del camín reúnviense al sitiu esternu. D'esta forma, pues crear enllaces fondos (por exemplu, «mionube.com/external/1/paxinaA» lleva a Nextcloud col iframe qu'apunta a «sitiuesternu./paxinaA»)",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "El pase web JSON contién la direición de corréu electrónicu, l'UID y el nome visible del usuariu que se puen incrustar nel enllaz col marcador de posición {jwt}. Mira la {linkstart}documentación{linkend} pa saber cómo descodificalu.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Dećatate que dalgunos restoladores bloquien l'amuesa de sitios per HTTP si executes HTTPS.",
@@ -51,6 +50,7 @@
     "Icons" : "Iconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si xubes «prueba.png» y «prueba-dark.png», van usase como un iconu. La versión escura úsase en preseos móviles d'otra miente l'iconu blancu nun ye visible col fondu blancu nes aplicaciones móviles.",
     "Uploading an icon with the same name will replace the current icon." : "Al xubir un iconu col mesmu nome troques l'iconu actual.",
-    "Upload new icon" : "Xubir un iconu nuevu"
+    "Upload new icon" : "Xubir un iconu nuevu",
+    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Pues usar los marcadores de posición {email}, {uid}, {displayname} y {groups} y van rellenase colos valores del usuariu pa personalizar los enllaces."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

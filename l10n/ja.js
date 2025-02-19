@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "アイコンリストの再読み込み中…",
     "Icon could not be uploaded" : "アイコンをアップロードできませんでした",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "上のバーにウェブサイトを直接追加します。これにより重要なサイトや内部で利用する他のウェブアプリに簡単に移動することができるようになって便利です。",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "プレースホルダーには {email}、{uid}、{displayname}、および {groups} が使用できます。リンクにはカスタマイズされた各ユーザーの値が入ります。",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "Nextcloudリンクを通じて外部サイトにアクセスする際、パスパラメータが外部サイトに転送されます。そのため、ディープリンクを作成することもできます。（例えば、\"mycloud.com/external/1/pageA\"は、iframeが \"externalsite.com/pageA\"を指しているNextcloudにつながります）",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "ユーザーのメールアドレス、uid、表示名をペイロードに含むJSONウェブトークンは、{jwt}プレースホルダーを使用してリンクに埋め込むことができます。デコード方法については{linkstart}ドキュメント{linkend}を参照してください。",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "HTTPSで動かしている場合、一部のブラウザではHTTP経由のサイトの表示をブロックすることに注意してください。",
@@ -53,6 +52,7 @@ OC.L10N.register(
     "Icons" : "アイコン",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.pngとtest-dark.pngファイルをアップロードすると、両方が1つのアイコンとして使用されます。暗いバージョンはモバイルデバイスで使用され、モバイルアプリの白い背景に白いアイコンは表示されません。",
     "Uploading an icon with the same name will replace the current icon." : "同じ名前のアイコンをアップロードすると、現在のアイコンが置き換えられます。",
-    "Upload new icon" : "新しいアイコンをアップロード"
+    "Upload new icon" : "新しいアイコンをアップロード",
+    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "プレースホルダーには {email}、{uid}、{displayname}、および {groups} が使用できます。リンクにはカスタマイズされた各ユーザーの値が入ります。"
 },
 "nplurals=1; plural=0;");
