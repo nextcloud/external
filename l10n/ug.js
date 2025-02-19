@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "سىنبەلگە تىزىملىكىنى قايتا يۈكلە…",
     "Icon could not be uploaded" : "سىنبەلگە يۈكلەنمىدى",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "ئۈستى بالداقتىكى ئەپ تىزىملىكىگە بىۋاسىتە توربېكەت قوشۇڭ. بۇ بارلىق ئىشلەتكۈچىلەر ئۈچۈن كۆرۈنىدۇ ھەمدە باشقا ئىچكى قىسىمدا ئىشلىتىلگەن تور ئەپلىرى ياكى مۇھىم تور بېكەتلەرگە تېزرەك ئېرىشىشكە پايدىلىق.",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "ئورۇن ئىگىلىرى {email} خەت} ، {uid} ، {displayname} ئىسمى} ۋە {groups} نى ئىشلىتىشكە بولىدۇ ھەمدە ئۇلانمىلارنى خاسلاشتۇرۇش ئۈچۈن ئىشلەتكۈچىنىڭ قىممىتى بىلەن تولدۇرۇلىدۇ.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "Nextcloud ئۇلىنىشى ئارقىلىق سىرتقى بېكەتكە كىرگەندە ، يول پارامېتىرلىرى سىرتقى بېكەتكە يوللىنىدۇ. شۇڭا سىز يەنە چوڭقۇر ئۇلىنىشلارنى قۇرالايسىز (مەسىلەن: \"mycloud.com/external/1/pageA\" \"externalsite.com/pageA\" دا كۆرسىتىلگەن iframe بىلەن Nextcloud نى كەلتۈرۈپ چىقىرىدۇ).",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "ئىشلەتكۈچىنىڭ ئېلېكترونلۇق خەت ساندۇقى ، uid ۋە كۆرسىتىش يۈكىنى ئۆز ئىچىگە ئالغان JSON تور توكەننى {jwt} ئورۇن ئىگىسى ئارقىلىق ئۇلىنىشقا قىستۇرغىلى بولىدۇ. ئۇنى قانداق يېشىش ئۈچۈن {linkstart} ھۆججەت {linkend} دىن كۆرۈڭ.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "شۇنىڭغا دىققەت قىلىڭكى ، ئەگەر سىز HTTPS نى ئىجرا قىلسىڭىز ، بەزى توركۆرگۈچلەر HTTP ئارقىلىق تور بېكەتلەرنىڭ كۆرسىتىلىشىنى چەكلەيدۇ.",
@@ -53,6 +52,7 @@ OC.L10N.register(
     "Icons" : "سىنبەلگە",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "ئەگەر test.png ۋە test-dark.png ھۆججىتىنى يۈكلىسىڭىز ، ھەر ئىككىسى بىر سىنبەلگە سۈپىتىدە ئىشلىتىلىدۇ. قاراڭغۇ نۇسخىسى كۆچمە ئۈسكۈنىلەردە ئىشلىتىلىدۇ ، بولمىسا ئاق سىنبەلگە كۆچمە ئەپلەردە ئاق تەگلىكتە كۆرۈنمەيدۇ.",
     "Uploading an icon with the same name will replace the current icon." : "ئوخشاش ئىسىمدىكى سىنبەلگىنى يۈكلەش نۆۋەتتىكى سىنبەلگىنىڭ ئورنىنى ئالىدۇ.",
-    "Upload new icon" : "يېڭى سىنبەلگە يۈكلەڭ"
+    "Upload new icon" : "يېڭى سىنبەلگە يۈكلەڭ",
+    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "ئورۇن ئىگىلىرى {email} خەت} ، {uid} ، {displayname} ئىسمى} ۋە {groups} نى ئىشلىتىشكە بولىدۇ ھەمدە ئۇلانمىلارنى خاسلاشتۇرۇش ئۈچۈن ئىشلەتكۈچىنىڭ قىممىتى بىلەن تولدۇرۇلىدۇ."
 },
 "nplurals=2; plural=(n != 1);");
