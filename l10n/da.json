@@ -42,7 +42,6 @@
     "Reloading icon list…" : "Indlæser ikonliste...",
     "Icon could not be uploaded" : "Ikon kunne ikke uploades",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Tilføj en hjemmeside direkte til app listen i top baren. Dette vil være synligt for alle brugere og brugbart for hurtigt at besøge andre interne web applikationer eller vigtige sider.",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Pladsholderne {email}, {uid}, {displayname} og {groups} kan bruges og er fyldt med brugerens værdier for at brugerdefineret linksene.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "Når du får adgang til det eksterne websted via Nextcloud-linket, vil stiparametre blive videresendt til det eksterne websted. Så du kan også oprette dybe links (f.eks. \"mycloud.com/external/1/pageA\" vil føre til Nextcloud med iframen peget på \"externalsite.com/pageA\").",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Et JSON-webtoken, der indeholder brugerens e-mail, uid og visningsnavn i dets nyttelast, kan indlejres i linket ved hjælp af {jwt}-pladsholderen. Se {linkstart}dokumentationen{linkend}, hvordan du afkoder det.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Bemærk venligst, at nogle browsere vil blokere visning af websteder via HTTP, hvis du kører HTTPS.",
@@ -51,6 +50,7 @@
     "Icons" : "Ikoner",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Hvis du uploader et test.png og et test-dark.png fil, så vil begge blive brugt som ikon. Det mørke version vil blive brugt på mobilenheder, fordi det hvide ikon ikke er synligt på en hvid baggrund på mobil apps.",
     "Uploading an icon with the same name will replace the current icon." : "Upload et ikon med det samme navn for at udskifte det nuværende ikon.",
-    "Upload new icon" : "Upload nyt ikon"
+    "Upload new icon" : "Upload nyt ikon",
+    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Pladsholderne {email}, {uid}, {displayname} og {groups} kan bruges og er fyldt med brugerens værdier for at brugerdefineret linksene."
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

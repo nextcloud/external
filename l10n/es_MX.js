@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Recargando la lista de íconos...",
     "Icon could not be uploaded" : "El ícono no pudo ser cargado",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Agrega un sitio web directamente a la lista de la aplicación en la barra superiror. Esto será visible para todos los usuarios y es útil para llegar rápidamente a otras aplicaciones web usadas internamente o sitios importantes. ",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Los marcadores de posición {email}, {uid}, {displayname} y {groups} se pueden utilizar y se llenan con los valores del usuario para personalizar los enlaces.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Un token web JSON que contenga el correo electrónico del usuario, uid y nombre a mostrar en su payload puede ser embebido en el link utilizando el marcador de posición {jwt}. Véase la {linkstart}documentación{linkend} de manera de entender el proceso de decodificación.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Tenga en cuenta que algunos navegadores no mostrarán sitios vía HTTP si está usando HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Adicionalmente, por favor considera que actualmente muchos sitios no permiten el uso de iframes debido temas de seguridad. ",
@@ -52,6 +51,7 @@ OC.L10N.register(
     "Icons" : "Íconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si cargas un archivo test.png y uno test-dark.png, ambos serán usados como un único ícono. La versión obscura será usada en los dispositivos móviles, de lo contrario los íconos claros no son visibles en los fondos claros de estos dispositivos. ",
     "Uploading an icon with the same name will replace the current icon." : "Cargar un ícono con el mismo nombre reemplazará el ícono actual.",
-    "Upload new icon" : "Cargar nuevo ícono"
+    "Upload new icon" : "Cargar nuevo ícono",
+    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Los marcadores de posición {email}, {uid}, {displayname} y {groups} se pueden utilizar y se llenan con los valores del usuario para personalizar los enlaces."
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
