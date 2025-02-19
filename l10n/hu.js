@@ -44,7 +44,6 @@ OC.L10N.register(
     "Reloading icon list…" : "Ikonlista újratöltése…",
     "Icon could not be uploaded" : "Az ikon nem tölthető fel",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Adjon hozzá egy weboldalt a felső sávban az alkalmazáslistához. Ez minden felhasználó számára megjelenik, így megkönnyítve a többi belső használatú alkalmazás elérését.",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Az {email}, {uid} és {displayname} és {groups} helykitöltők használhatók, és behelyettesítésre kerülnek a megfelelő felhasználói adatokkal, hogy személyre szabják a hivatkozásokat.",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "Ha a külső oldalt egy nextcloudos hivatkozással éri el, akkor az útvonal-paraméterek továbbítva lesznek a külső oldal felé. Így mély hivatkozásokat is létrehozhat (például a „mycloud.com/external/1/pageA” egy olyan Nextcloud-oldalra vezet, ahol az iframe erre a címre mutat: „externalsite.com/pageA”).",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "A felhasználó e-mail-címét, uid azonosítóját és megjelenítendő nevét tartalmazó JSON webes token beágyazható a {jwt} helykitöltő használatával. A dekódolásának módjához nézze meg a {linkstart}dokumentációt{linkend}.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Tartsa szem előtt, hogy néhány böngésző blokkolja a HTTP-t használó weboldalak megjelenítését, ha HTTPS-t használ.",
@@ -53,6 +52,7 @@ OC.L10N.register(
     "Icons" : "Ikonok",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ha feltölt egy test.png és egy test-dark.png fájlt, akkor egy ikonként lesznek használva. A sötét verzió mobileszközökön lesz használva, mert különben a fehér ikon nem látszana a mobilalkalmazások fehér hátterén.",
     "Uploading an icon with the same name will replace the current icon." : "Egy megegyező nevű ikon feltöltése a jelenlegi ikon cseréjéhez vezet.",
-    "Upload new icon" : "Új ikon feltöltése"
+    "Upload new icon" : "Új ikon feltöltése",
+    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Az {email}, {uid} és {displayname} és {groups} helykitöltők használhatók, és behelyettesítésre kerülnek a megfelelő felhasználói adatokkal, hogy személyre szabják a hivatkozásokat."
 },
 "nplurals=2; plural=(n != 1);");
