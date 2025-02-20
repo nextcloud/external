@@ -44,6 +44,7 @@ OC.L10N.register(
     "Reloading icon list…" : "重新讀取圖示列表",
     "Icon could not be uploaded" : "圖示無法上傳",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "可直接在最上方應用功能選單列新增網址，讓所有使用者從內部顯示連結，連往一些網路應用程式或者重要的網站。",
+    "The placeholders {email}, {uid}, {displayname}, {groups}, {language} and {locale} can be used and are filled with the user´s values to customize the links." : "可以使用佔位字串 {email}、{uid}、{displayname}、{groups}、{language} 與 {locale}，並以使用者的值來自訂連結。",
     "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "透過 Nextcloud 連結存取外部網站時，路徑參數將被轉送到外部網站。因此，您也可以建立深層連結（例如，「mycloud.com/external/1/pageA」將導向至 Nextcloud，iframe 指向「externalsite.com/pageA」）。",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "可以使用 {jwt} 佔位字串將包含使用者電子郵件、uid 與顯示名稱的 JSON Web 權杖嵌入到連結中。請參閱{linkstart}文件{linkend}如何對其進行解碼。",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "請注意當使用 HTTPS 時，部分瀏覽器將會封鎖 HTTP 的網站。",
