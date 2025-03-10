@@ -61,7 +61,7 @@ script('external', 'templates');
 		<ul class="icon-list">
 		</ul>
 
-		<form class="uploadButton" method="post" action="<?php p($_['uploadRoute']); ?>">
+		<form class="uploadButton">
 			<input id="uploadicon" class="hidden" name="uploadicon" type="file" />
 			<label for="uploadicon">
 				<span class="button">
