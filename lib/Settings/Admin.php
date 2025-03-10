@@ -25,9 +25,7 @@ class Admin implements ISettings {
 	 * @return TemplateResponse
 	 */
 	public function getForm() {
-		return new TemplateResponse('external', 'settings', [
-			'uploadRoute' => $this->url->linkToRoute('external.icon.uploadIcon'),
-		], 'blank');
+		return new TemplateResponse('external', 'settings', [], 'blank');
 	}
 
 	/**
