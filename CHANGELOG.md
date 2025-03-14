@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 6.0.2 - 2025-03-14
+### Fixed
+- Fix icon file upload
+
 ## 6.0.1 - 2025-01-09
 ### Changed
 - Require Nextcloud 31
