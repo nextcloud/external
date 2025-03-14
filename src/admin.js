@@ -339,27 +339,36 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 window.addEventListener('DOMContentLoaded', function() {
 	OCA.External.App.init()
 
-	const uploadParamsLogo = {
-		pasteZone: null,
-		dropZone: null,
-		submit: function() {
+	const input = document.getElementById('uploadicon')
+
+	input.onchange = function() {
+		if ('files' in input && input.files.length > 0) {
 			OC.msg.startAction('form.uploadButton span.msg', t('external', 'Uploading…'))
 			$('label#uploadlogo').removeClass('icon-upload').addClass('icon-loading-small')
-		},
-		done: function() {
-			OCA.External.App.load()
-			OC.msg.finishedSuccess('form.uploadButton span.msg', t('external', 'Reloading icon list…'))
-			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small')
-		},
-		fail: function(e, result) {
-			if (_.isUndefined(result.jqXHR.responseJSON.error)) {
-				OC.msg.finishedError('form.uploadButton span.msg', t('external', 'Icon could not be uploaded'))
-			} else {
-				OC.msg.finishedError('form.uploadButton span.msg', result.jqXHR.responseJSON.error)
-			}
-			$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small')
-		},
-	}
 
-	$('#uploadicon').fileupload(uploadParamsLogo)
+			const formData = new FormData()
+			formData.append('uploadicon', input.files[0])
+
+			$.ajax({
+				type: 'POST',
+				url: generateUrl('/apps/external/icons'),
+				data: formData,
+				processData: false,
+				contentType: false,
+				success: () => {
+					OCA.External.App.load()
+					OC.msg.finishedSuccess('form.uploadButton span.msg', t('external', 'Reloading icon list…'))
+					$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small')
+				},
+				error: (jqXHR) => {
+					if (_.isUndefined(jqXHR.responseJSON.error)) {
+						OC.msg.finishedError('form.uploadButton span.msg', t('external', 'Icon could not be uploaded'))
+					} else {
+						OC.msg.finishedError('form.uploadButton span.msg', jqXHR.responseJSON.error)
+					}
+					$('label#uploadlogo').addClass('icon-upload').removeClass('icon-loading-small')
+				},
+			})
+		}
+	}
 })
