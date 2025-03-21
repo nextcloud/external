@@ -14,4 +14,8 @@ $(document).ready(function () {
 	document.getElementById('ifm').onload = resizeIframe;
 	window.onresize = resizeIframe;
 	resizeIframe();
+	// hash routing support
+	if(window.location.hash && window.location.hash.length) {
+		document.getElementById('ifm').src = document.getElementById('ifm').src + window.location.hash;
+	}
 });
