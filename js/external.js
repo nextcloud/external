@@ -16,6 +16,16 @@ $(document).ready(function () {
 	resizeIframe();
 	// hash routing support
 	if(window.location.hash && window.location.hash.length) {
-		document.getElementById('ifm').src = document.getElementById('ifm').src + window.location.hash;
+		updateHash();
+	}
+
+	window.addEventListener("hashchange", function(event) {
+		updateHash();
+	});
+
+	function updateHash() {
+		const iframeURL = new URL(document.getElementById('ifm').src);
+		iframeURL.hash = window.location.hash;
+		document.getElementById('ifm').src = iframeURL.toString();
 	}
 });
