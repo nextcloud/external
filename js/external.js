@@ -14,4 +14,18 @@ $(document).ready(function () {
 	document.getElementById('ifm').onload = resizeIframe;
 	window.onresize = resizeIframe;
 	resizeIframe();
+	// hash routing support
+	if(window.location.hash && window.location.hash.length) {
+		updateHash();
+	}
+
+	window.addEventListener("hashchange", function(event) {
+		updateHash();
+	});
+
+	function updateHash() {
+		const iframeURL = new URL(document.getElementById('ifm').src);
+		iframeURL.hash = window.location.hash;
+		document.getElementById('ifm').src = iframeURL.toString();
+	}
 });
