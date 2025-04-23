@@ -5,6 +5,7 @@ OC.L10N.register(
     "Name" : "Name",
     "Language" : "Language",
     "Groups" : "Groups",
-    "Uploading…" : "Uploading…"
+    "Uploading…" : "Uploading…",
+    "Icons" : "Belgilar"
 },
 "nplurals=1; plural=0;");
