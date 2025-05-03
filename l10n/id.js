@@ -10,6 +10,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Language" : "Bahasa",
     "Groups" : "Grup",
+    "Position" : "Posisi",
     "Redirect" : "Mengalihkan",
     "Remove site" : "Hapus situs",
     "Uploading…" : "Menunggah…",
