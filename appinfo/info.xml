@@ -20,6 +20,10 @@ More information is available in the External sites documentation.]]></descripti
 	<author>Joas Schilling</author>
 
 	<namespace>External</namespace>
+	
+	<types>
+		<prevent_group_restriction/>
+	</types>
 
 	<documentation>
 		<admin>https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/external_sites.html</admin>
