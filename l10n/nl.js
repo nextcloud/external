@@ -39,9 +39,9 @@ OC.L10N.register(
     "Remove site" : "Verwijder site",
     "This site does not allow embedding" : "Deze site accepteert geen inbedding",
     "New site" : "Nieuwe site",
-    "Delete icon" : "Verwijder pictogram",
+    "Delete icon" : "Pictogram verwijderen",
     "Uploading…" : "Uploaden…",
-    "Reloading icon list…" : "Herladen pictogram lijst...",
+    "Reloading icon list…" : "Pictogrammenlijst opnieuw laden…",
     "Icon could not be uploaded" : "Pictogram kon niet worden opgeslagen",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Voeg een website direct toe aan het app-overzicht in de topbalk. Dit is zichtbaar voor alle gebuikers en helpt om snel interne webapps of belangrijke sites te openen.",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Let op dat sommige browsers HTTP sites niet tonen als je HTTPS gebruikt.",
@@ -50,6 +50,6 @@ OC.L10N.register(
     "Icons" : "Pictogrammen",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Als je een test.png en een test-dark.png bestand uploadt, worden ze samen als één pictogram gebruikt. De donkere versie wordt gebruikt op mobiele apparaten, want anders is het witte pictogram niet zichtbaar op de witte achtergrond in de mobiele apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploaden van een pictogram met dezelfde naam vervangt het huidige pictogram.",
-    "Upload new icon" : "Uploaden nieuw pictogram"
+    "Upload new icon" : "Nieuw pictogram uploaden"
 },
 "nplurals=2; plural=(n != 1);");
