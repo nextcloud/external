@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Name" : "Jina",
     "URL" : "Url",
+    "Language" : "Lugha",
     "Groups" : "Makundi",
     "Icons" : "Aikono"
 },
