@@ -8,6 +8,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Language" : "Idioma",
     "Groups" : "Grupos",
+    "Position" : "Position",
     "Redirect" : "Redirecionar",
     "Remove site" : "Remover site",
     "New site" : "Novo site",
