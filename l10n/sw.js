@@ -1,6 +1,7 @@
 OC.L10N.register(
     "external",
     {
+    "__language_name__" : "_lugha_jina_",
     "Name" : "Jina",
     "URL" : "Url",
     "Language" : "Lugha",
