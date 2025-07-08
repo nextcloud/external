@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @copyright Copyright (c) 2017 Joas Schilling <coding@schilljs.com>
  * @license GNU AGPL version 3 or any later version
@@ -77,8 +78,8 @@ class SiteController extends Controller {
 		}
 
 		// Fall back to the files app
-		if ($this->config->getSystemValue('htaccess.IgnoreFrontController', false) === true ||
-			getenv('front_controller_active') === 'true') {
+		if ($this->config->getSystemValue('htaccess.IgnoreFrontController', false) === true
+			|| getenv('front_controller_active') === 'true') {
 			return new RedirectResponse($this->url->getAbsoluteURL('/apps/files/'));
 		}
 		return new RedirectResponse($this->url->getAbsoluteURL('/index.php/apps/files/'));
