@@ -14,7 +14,7 @@ OC.L10N.register(
     "Devices" : "Ierīces",
     "Icon" : "Ikona",
     "Redirect" : "Novirzīt",
-    "Remove site" : "Izņemt vietni",
+    "Remove site" : "Noņemt vietni",
     "Delete icon" : "Noņemt ikonu",
     "Uploading…" : "Augšupielādē...",
     "Icons" : "Ikonas",
