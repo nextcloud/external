@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "__language_name__" : "Беларуская",
+    "Name" : "Назва",
     "URL" : "URL-адрас",
     "Language" : "Мова"
 },
