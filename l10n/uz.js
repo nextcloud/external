@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "All languages" : "All languages",
     "Name" : "Name",
+    "URL" : "URL",
     "Language" : "Language",
     "Groups" : "Groups",
     "Uploading…" : "Uploading…",
