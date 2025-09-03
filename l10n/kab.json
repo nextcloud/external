@@ -1,5 +1,6 @@
 { "translations": {
     "Name" : "Nom",
+    "URL" : "URL",
     "Groups" : "Igrawen",
     "Uploading…" : "Asali …"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
