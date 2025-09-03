@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "Name" : "Nom",
+    "URL" : "URL",
     "Groups" : "Igrawen",
     "Uploading…" : "Asali …"
 },
