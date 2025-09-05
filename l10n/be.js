@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Select an icon" : "Выберыце значок",
     "All languages" : "Усе мовы",
+    "User quota" : "Квота карыстальніка",
     "All devices" : "Усе прылады",
     "The given language does not exist" : "Гэта мова не існуе",
     "__language_name__" : "Беларуская",
