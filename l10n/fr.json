@@ -21,7 +21,7 @@
     "No file uploaded" : "Aucun fichier téléversé",
     "Provided file is not an image" : "Ce fichier n'est pas une image",
     "Provided image is not a square of 16, 24 or 32 pixels width" : "Cette image n'est pas un carré de taille 16, 24 ou 32 pixels",
-    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Une erreur s'est produite lors de l'envoi de l'icône, merci de vérifier qu'il est possible d'écrire dans le dossier de destination",
+    "An error occurred while uploading the icon, please make sure the data directory is writable" : "Une erreur est survenue lors de l'envoi de l'icône, merci de vérifier qu'il est possible d'écrire dans le dossier de destination",
     "External sites" : "Sites externes",
     "__language_name__" : "Français",
     "Add external sites to your Nextcloud navigation" : "Ajouter des sites externes à votre menu Nextcloud",
