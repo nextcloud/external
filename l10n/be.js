@@ -17,6 +17,7 @@ OC.L10N.register(
     "Uploading…" : "Запампоўванне…",
     "Reloading icon list…" : "Перазагрузка спісу значкоў…",
     "Icon could not be uploaded" : "Не ўдалося запампаваць значок",
+    "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "JSON-токен, які змяшчае адрас электроннай пошты, UID і імя карыстальніка ў сваёй карыснай нагрузцы, можа быць убудаваны ў спасылку з дапамогай запаўняльніка {jwt}. Паглядзіце ў {linkstart}дакументацыі{linkend}, як яго расшыфраваць.",
     "Icons" : "Значкі",
     "Upload new icon" : "Запампаваць новы значок"
 },
