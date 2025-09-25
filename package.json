@@ -13,6 +13,7 @@
     "watch": "NODE_ENV=development webpack --progress --watch --config webpack.config.js"
   },
   "dependencies": {
+    "@nextcloud/auth": "^2.5.2",
     "@nextcloud/initial-state": "^3.0.0",
     "@nextcloud/router": "^3.0.1",
     "backbone": "^1.6.1",
