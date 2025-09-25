@@ -10,9 +10,10 @@
 
 import escapeHTML from 'escape-html'
 import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
+import Backbone from 'backbone';
 
 /* global _, Handlebars, $ */
-(function(OC, OCA, _, Backbone) {
+(function(OC, OCA, _) {
 	if (!OCA.External) {
 		/**
 		 * @namespace
@@ -334,7 +335,7 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 			OC.Settings.Apps.rebuildNavigation()
 		},
 	}
-})(OC, OCA, _, OC.Backbone)
+})(OC, OCA, _)
 
 window.addEventListener('DOMContentLoaded', function() {
 	OCA.External.App.init()
