@@ -36,7 +36,7 @@ OC.L10N.register(
     "Icon" : "Икона",
     "Position" : "Позиција",
     "Redirect" : "Пренасочи",
-    "Remove site" : "Острани страна",
+    "Remove site" : "Отстрани страна",
     "This site does not allow embedding" : "Оваа страница не дозволува вметнување",
     "New site" : "Нова страна",
     "Delete icon" : "Избриши икона",
