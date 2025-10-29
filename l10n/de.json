@@ -25,7 +25,7 @@
     "External sites" : "Externe Seiten",
     "__language_name__" : "Deutsch (Persönlich: Du)",
     "Add external sites to your Nextcloud navigation" : "Externe Seiten zur Nextcloud-Navigation hinzufügen",
-    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Diese Anwendung ermöglicht es einem Administrator, zusätzliche Links in die Nextcloud-Menüs einzufügen.\nNach dem Anklicken eines Links erscheint die externe Website im Nextcloud-Frame.\nEs ist auch möglich, Links nur für eine bestimmte Sprache, einen Gerätetyp oder ein Benutzergruppe hinzuzufügen.\n\nWeitere Informationen findest du in der Dokumentation Externe Seiten.",
+    "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Diese Anwendung ermöglicht es der Administration, zusätzliche Links in die Nextcloud-Menüs einzufügen.\nNach dem Anklicken eines Links erscheint die externe Website im Nextcloud-Frame.\nEs ist auch möglich, Links nur für eine bestimmte Sprache, einen Gerätetyp oder ein Benutzergruppe hinzuzufügen.\n\nWeitere Informationen findest du in der Dokumentation zu Externe Seiten.",
     "Name" : "Name",
     "URL" : "URL",
     "Language" : "Sprache",
