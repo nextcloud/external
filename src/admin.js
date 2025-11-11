@@ -9,10 +9,22 @@
  */
 
 import escapeHTML from 'escape-html'
+import $ from 'jquery'
 import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
+import { getRequestToken } from '@nextcloud/auth'
+import Backbone from 'backbone';
 
-/* global _, Handlebars, $ */
-(function(OC, OCA, _, Backbone) {
+Backbone.$ = $;
+
+/* global _, Handlebars */
+(function(OC, OCA, _) {
+	$(document).on('ajaxSend', function(elm, xhr, settings) {
+		if (settings.crossDomain === false) {
+			xhr.setRequestHeader('requesttoken', getRequestToken())
+			xhr.setRequestHeader('OCS-APIREQUEST', 'true')
+		}
+	})
+
 	if (!OCA.External) {
 		/**
 		 * @namespace
@@ -334,7 +346,7 @@ import { generateUrl, imagePath, generateOcsUrl } from '@nextcloud/router';
 			OC.Settings.Apps.rebuildNavigation()
 		},
 	}
-})(OC, OCA, _, OC.Backbone)
+})(OC, OCA, _)
 
 window.addEventListener('DOMContentLoaded', function() {
 	OCA.External.App.init()
