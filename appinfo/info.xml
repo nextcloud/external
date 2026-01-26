@@ -14,7 +14,7 @@ It is also possible to add links only for a given language, device type or user 
 
 More information is available in the External sites documentation.]]></description>
 
-	<version>8.0.0</version>
+	<version>9.0.0-dev.0</version>
 	<licence>agpl</licence>
 
 	<author>Joas Schilling</author>
@@ -42,7 +42,7 @@ More information is available in the External sites documentation.]]></descripti
 	<screenshot>https://github.com/nextcloud/external/raw/master/docs/page-sample.png</screenshot>
 
 	<dependencies>
-		<nextcloud min-version="33" max-version="33" />
+		<nextcloud min-version="34" max-version="34" />
 	</dependencies>
 
 	<repair-steps>
