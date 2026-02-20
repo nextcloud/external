@@ -52,7 +52,6 @@ OC.L10N.register(
     "Icons" : "Iconos",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si xubes «prueba.png» y «prueba-dark.png», van usase como un iconu. La versión escura úsase en preseos móviles d'otra miente l'iconu blancu nun ye visible col fondu blancu nes aplicaciones móviles.",
     "Uploading an icon with the same name will replace the current icon." : "Al xubir un iconu col mesmu nome troques l'iconu actual.",
-    "Upload new icon" : "Xubir un iconu nuevu",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Pues usar los marcadores de posición {email}, {uid}, {displayname} y {groups} y van rellenase colos valores del usuariu pa personalizar los enllaces."
+    "Upload new icon" : "Xubir un iconu nuevu"
 },
 "nplurals=2; plural=(n != 1);");

@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "سىنبەلگە",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "ئەگەر test.png ۋە test-dark.png ھۆججىتىنى يۈكلىسىڭىز ، ھەر ئىككىسى بىر سىنبەلگە سۈپىتىدە ئىشلىتىلىدۇ. قاراڭغۇ نۇسخىسى كۆچمە ئۈسكۈنىلەردە ئىشلىتىلىدۇ ، بولمىسا ئاق سىنبەلگە كۆچمە ئەپلەردە ئاق تەگلىكتە كۆرۈنمەيدۇ.",
     "Uploading an icon with the same name will replace the current icon." : "ئوخشاش ئىسىمدىكى سىنبەلگىنى يۈكلەش نۆۋەتتىكى سىنبەلگىنىڭ ئورنىنى ئالىدۇ.",
-    "Upload new icon" : "يېڭى سىنبەلگە يۈكلەڭ",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "تىرناقلار {email} ، {uid} ، {displayname} ۋە {groups} نى ئىشلىتىشكە بولىدۇ ھەمدە ئۇلانمىلارنى خاسلاشتۇرۇش ئۈچۈن ئىشلەتكۈچىنىڭ قىممىتى بىلەن تولدۇرۇلىدۇ."
+    "Upload new icon" : "يېڭى سىنبەلگە يۈكلەڭ"
 },
 "nplurals=2; plural=(n != 1);");

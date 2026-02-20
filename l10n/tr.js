@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Simgeler",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png ya da test-dark.png adında iki dosya yüklerseniz, ikisi dosya tek simge olarak kullanılır. Mobil uygulamalarda beyaz simge beyaz arka plan üzerinde görülemeyeceğinden mobil aygıtlarda koyu sürüm kullanılır.",
     "Uploading an icon with the same name will replace the current icon." : "Aynı adlı bir simge yüklendiğinde geçerli simge değiştirilir.",
-    "Upload new icon" : "Yeni simge yükle",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "{email}, {uid}, {displayname} ve {groups} kodları bağlantıları özelleştirmek için kullanıcının değerleri ile doldurulur."
+    "Upload new icon" : "Yeni simge yükle"
 },
 "nplurals=2; plural=(n > 1);");

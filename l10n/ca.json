@@ -51,7 +51,6 @@
     "Icons" : "Icones",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Si pugeu un fitxer test.png i test-dark.png, s'utilitzaran tots dos com una única icona. La versió fosca s'utilitzarà en els dispositius mòbils; si no, la icona clara no seria visible sobre el fons blanc de les aplicacions mòbils.",
     "Uploading an icon with the same name will replace the current icon." : "Si pugeu una icona amb el mateix nom, sobreescriureu la icona actual.",
-    "Upload new icon" : "Puja una icona nova",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Podeu utilitzar els marcadors de posició {email}, {uid}, {displayname} i {groups} i s'emplenaran amb les dades de l'usuari per a personalitzar els enllaços."
+    "Upload new icon" : "Puja una icona nova"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

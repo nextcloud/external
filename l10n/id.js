@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikon",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Jika Anda mengunggah file test.png dan test-dark.png, keduanya akan digunakan sebagai satu ikon. Versi gelap akan digunakan pada perangkat seluler, jika tidak ikon putih tidak terlihat pada latar belakang putih di aplikasi seluler.",
     "Uploading an icon with the same name will replace the current icon." : "Mengunggah ikon dengan nama yang sama akan menggantikan ikon saat ini.",
-    "Upload new icon" : "Unggah ikon baru",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Placeholder {email}, {uid}, {displayname}, dan {groups} dapat digunakan dan akan diisi dengan nilai pengguna untuk menyesuaikan tautan."
+    "Upload new icon" : "Unggah ikon baru"
 },
 "nplurals=1; plural=0;");
