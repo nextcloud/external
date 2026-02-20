@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikoonid",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Kui laadid üles faili test.png ja test-dark.png, kasutatakse mõlemat ühe ikoonina. Tumedat versiooni hakatakse kasutama mobiilseadmetes, vastasel juhul pole valget ikooni mobiilirakendustes valgel taustal näha.",
     "Uploading an icon with the same name will replace the current icon." : "Sama nimega ikooni üleslaadimine asendab olemasoleva ikooni.",
-    "Upload new icon" : "Laadi üles uus ikoon",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Kohahoidjaid {email}, {uid}, {displayname} ja {groups} saab kasutada ja need täidetakse linkide kohandamiseks kasutaja väärtustega."
+    "Upload new icon" : "Laadi üles uus ikoon"
 },
 "nplurals=2; plural=(n != 1);");

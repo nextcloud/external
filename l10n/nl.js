@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Pictogrammen",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Als je een test.png en een test-dark.png bestand uploadt, worden ze samen als één pictogram gebruikt. De donkere versie wordt gebruikt op mobiele apparaten, want anders is het witte pictogram niet zichtbaar op de witte achtergrond in de mobiele apps.",
     "Uploading an icon with the same name will replace the current icon." : "Uploaden van een pictogram met dezelfde naam vervangt het huidige pictogram.",
-    "Upload new icon" : "Nieuw pictogram uploaden",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "De plaatshouders {email}, {uid}, {displayname} en {groups} kunnen worden gebruikt en worden gevuld met de waarden van de gebruiker om de links aan te passen."
+    "Upload new icon" : "Nieuw pictogram uploaden"
 },
 "nplurals=2; plural=(n != 1);");

@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "圖示",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "如果您同時上傳 test.png 和 test-dark.png 文檔，兩者會被當做同一個圖標。後者為深色版本，將用於移動裝置上，而前者為淺色版本，在移動應用程式的白色背景上會無法看見。",
     "Uploading an icon with the same name will replace the current icon." : "若上傳與目前名稱相同的圖示，將會取代它",
-    "Upload new icon" : "上傳新圖示",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "可以使用佔位字串 {email}、{uid}、{displayname} 與 {groups}，並以使用者的值來自訂連結。"
+    "Upload new icon" : "上傳新圖示"
 },
 "nplurals=1; plural=0;");

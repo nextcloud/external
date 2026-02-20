@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikonok",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ha feltölt egy test.png és egy test-dark.png fájlt, akkor egy ikonként lesznek használva. A sötét verzió mobileszközökön lesz használva, mert különben a fehér ikon nem látszana a mobilalkalmazások fehér hátterén.",
     "Uploading an icon with the same name will replace the current icon." : "Egy megegyező nevű ikon feltöltése a jelenlegi ikon cseréjéhez vezet.",
-    "Upload new icon" : "Új ikon feltöltése",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Az {email}, {uid} és {displayname} és {groups} helykitöltők használhatók, és behelyettesítésre kerülnek a megfelelő felhasználói adatokkal, hogy személyre szabják a hivatkozásokat."
+    "Upload new icon" : "Új ikon feltöltése"
 },
 "nplurals=2; plural=(n != 1);");

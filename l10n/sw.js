@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Aikono",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ukipakia test.png na faili ya test-dark.png, zote mbili zitatumika kama aikoni moja. Toleo la giza litatumika kwenye vifaa vya rununu, vinginevyo ikoni nyeupe haionekani kwenye usuli mweupe kwenye programu za rununu.",
     "Uploading an icon with the same name will replace the current icon." : "Kupakia ikoni yenye jina sawa kutachukua nafasi ya ikoni ya sasa.",
-    "Upload new icon" : "Pakia aikoni mpya",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Vishikilia nafasi {email}, {uid}, {displayname} na {groups} vinaweza kutumika na kujazwa na thamani za mtumiaji ili kubinafsisha viungo."
+    "Upload new icon" : "Pakia aikoni mpya"
 },
 "nplurals=2; plural=(n != 1);");
