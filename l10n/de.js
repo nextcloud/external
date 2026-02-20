@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Symbole",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Lade eine Datei \"test.png\" und eine Datei \"test-dark.png\" hoch. Beide Dateien werden für ein Symbol verwendet. Die dunkle Version wird auf Mobilgeräten verwendet, die helle Version ist auf den hellen Hintergründen der mobilen Apps nicht sichtbar.",
     "Uploading an icon with the same name will replace the current icon." : "Das Hochladen eines Symbols mit gleichem Namen wird das existierende Symbol ersetzen.",
-    "Upload new icon" : "Neues Symbol hochladen",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Die Platzhalter {email}, {uid}, {displayname} und {groups} können benutzt werden, um den Link mit den Benutzerdaten zu ergänzen."
+    "Upload new icon" : "Neues Symbol hochladen"
 },
 "nplurals=2; plural=(n != 1);");

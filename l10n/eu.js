@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikonoak",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "test.png eta test-dark.png fitxategiak igotzen badituzu, ikono bakar gisa erabiliko dira. Bertsio iluna erabiliko da mugikorretan, bestela zuria ez da ikusten atzeko plano zuria duten mugikorreko aplikazioetan.",
     "Uploading an icon with the same name will replace the current icon." : "Ikonoa izen berdinarekin igotzean aurreko ikonoa ordeztuko du.",
-    "Upload new icon" : "Igo ikono berria",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "{email}, {uid}, {displayname} eta {groups} posizio-markatzaileak erabil daitezke eta erabiltzailearen balioekin osatzen dira bere estekak pertsonalizatzeko."
+    "Upload new icon" : "Igo ikono berria"
 },
 "nplurals=2; plural=(n != 1);");

@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Ikony",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "Ak nahráte súbory test.png a test-dark.png, obidva budú použité ako jedna ikona. Verzia dark sa použije na mobilných zariadeniach, v opačnom prípade biela ikona nie je viditeľná na bielom pozadí v mobilných aplikáciách.",
     "Uploading an icon with the same name will replace the current icon." : "Nahratie novej ikony s rovnakým názvom prepíše pôvodnú ikonu.",
-    "Upload new icon" : "Nahrať novú ikonu",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Zástupné symboly {email}, {uid}, {displayname} a {groups} môžu byť použité a sú vyplnené užívateľskými hodnotami pre prispôsobenie odkazov."
+    "Upload new icon" : "Nahrať novú ikonu"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

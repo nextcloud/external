@@ -53,7 +53,6 @@ OC.L10N.register(
     "Icons" : "Значки",
     "If you upload a test.png and a test-dark.png file, both will be used as one icon. The dark version will be used on mobile devices, otherwise the white icon is not visible on the white background in the mobile apps." : "При отправке изображений «test.png» и «dark-test.png», они оба будут использоваться как один значок. Тёмная версия будет использоваться для мобильных устройств, так как светлая версия не будет видна на белом фоне приложений для мобильных устройств.",
     "Uploading an icon with the same name will replace the current icon." : "Загрузка значка с таким же именем заменит существующий.",
-    "Upload new icon" : "Загрузить новый значок",
-    "The placeholders {email}, {uid}, {displayname} and {groups} can be used and are filled with the user´s values to customize the links." : "Для настройки ссылок можно использовать заполнители {email}, {uid}, {displayname} и {groups}, которые заполняются значениями пользователей."
+    "Upload new icon" : "Загрузить новый значок"
 },
 "nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);");
