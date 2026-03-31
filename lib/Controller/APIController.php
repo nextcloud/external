@@ -74,7 +74,7 @@ class APIController extends OCSController {
 
 			$site['redirect'] = (int)$site['redirect'];
 
-			unset($site['lang'], $site['device'], $site['groups']);
+			unset($site['lang'], $site['device'], $site['groups'], $site['jwt']);
 			$sites[] = $site;
 		}
 

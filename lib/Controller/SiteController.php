@@ -109,9 +109,17 @@ class SiteController extends Controller {
 				$url .= ':' . $parts['port'];
 			}
 			$url .= rtrim($parts['path'] ?? '', '/') . '/' . $path;
-			if (isset($parts['query'])) {
-				$url .= '?' . $parts['query'];
+
+			// Ensure the JWT is attached as a query parameter for deep links
+			$query = $parts['query'] ?? '';
+			if (isset($site['jwt']) && !preg_match('/(^|&)jwt=/', $query)) {
+				$jwtParam = 'jwt=' . rawurlencode($site['jwt']);
+				$query = $query !== '' ? $query . '&' . $jwtParam : $jwtParam;
 			}
+			if ($query !== '') {
+				$url .= '?' . $query;
+			}
+
 			if (isset($parts['fragment'])) {
 				$url .= '#' . $parts['fragment'];
 			}
