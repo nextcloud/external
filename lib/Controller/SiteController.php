@@ -89,12 +89,27 @@ class SiteController extends Controller {
 		$this->navigationManager->setActiveEntry('external_index' . $id);
 
 		if ($path !== '') {
-			// Check whether we need to suffix the site URL with a slash, or not.
-			$path = $site['url'][-1] == '/' ? $path : '/' . $path;
+			// Parse the URL to properly insert the path before any query parameters
+			$parts = parse_url($site['url']);
+			$basePath = rtrim($parts['path'] ?? '', '/') . '/' . $path;
+
+			$url = $parts['scheme'] . '://' . $parts['host'];
+			if (isset($parts['port'])) {
+				$url .= ':' . $parts['port'];
+			}
+			$url .= $basePath;
+			if (isset($parts['query'])) {
+				$url .= '?' . $parts['query'];
+			}
+			if (isset($parts['fragment'])) {
+				$url .= '#' . $parts['fragment'];
+			}
+		} else {
+			$url = $site['url'];
 		}
 
 		$response = new TemplateResponse('external', 'frame', [
-			'url' => $site['url'] . $path,
+			'url' => $url,
 			'name' => $site['name'],
 		], 'user');
 
