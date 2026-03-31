@@ -139,6 +139,10 @@ class SitesManager {
 				continue;
 			}
 
+			if (str_contains($site['url'], '{jwt}') && $jwt !== '') {
+				$site['jwt'] = $jwt;
+			}
+
 			$site['url'] = str_replace(
 				['{email}', '{uid}', '{displayname}', '{jwt}', '{groups}', '{language}', '{locale}'],
 				array_map('rawurlencode', [$email, $uid, $displayName, $jwt, implode(',', $groups), $lang, $locale]),
