@@ -89,12 +89,38 @@ class SiteController extends Controller {
 		$this->navigationManager->setActiveEntry('external_index' . $id);
 
 		if ($path !== '') {
-			// Check whether we need to suffix the site URL with a slash, or not.
-			$path = $site['url'][-1] == '/' ? $path : '/' . $path;
+			// Parse the URL to properly insert the path before any query parameters
+			$parts = parse_url($site['url']);
+
+			if ($parts === false || !isset($parts['scheme'], $parts['host'])) {
+				throw new \RuntimeException('Invalid site URL: ' . $site['url']);
+			}
+
+			$url = $parts['scheme'] . '://';
+			if (isset($parts['user'])) {
+				$url .= rawurlencode($parts['user']);
+				if (isset($parts['pass'])) {
+					$url .= ':' . rawurlencode($parts['pass']);
+				}
+				$url .= '@';
+			}
+			$url .= $parts['host'];
+			if (isset($parts['port'])) {
+				$url .= ':' . $parts['port'];
+			}
+			$url .= rtrim($parts['path'] ?? '', '/') . '/' . $path;
+			if (isset($parts['query'])) {
+				$url .= '?' . $parts['query'];
+			}
+			if (isset($parts['fragment'])) {
+				$url .= '#' . $parts['fragment'];
+			}
+		} else {
+			$url = $site['url'];
 		}
 
 		$response = new TemplateResponse('external', 'frame', [
-			'url' => $site['url'] . $path,
+			'url' => $url,
 			'name' => $site['name'],
 		], 'user');
 
