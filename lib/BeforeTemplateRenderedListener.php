@@ -72,7 +72,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 
 		if (count($data) > 0) {
 			$this->initialState->provideInitialState('external-quota-sites', $data);
-			Util::addScript('external', 'dist/quota-files-sidebar');
+			Util::addScript('external', 'external-quota-files-sidebar');
 		}
 	}
 

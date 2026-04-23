@@ -1,0 +1,12 @@
+{
+	"extends": "@vue/tsconfig/tsconfig.json",
+	"include": ["./src"],
+	"compilerOptions": {
+		"lib": [
+			"DOM",
+			"ES2015"
+		],
+		"rootDir": "src",
+		"noImplicitAny": false
+	}
+}

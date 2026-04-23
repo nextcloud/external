@@ -12,11 +12,14 @@ namespace OCA\External\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
+use OCP\Util;
 use Override;
 
 class Admin implements ISettings {
 	#[Override]
 	public function getForm(): TemplateResponse {
+		Util::addScript('external', 'external-admin', 'external');
+		Util::addStyle('external', 'external-admin');
 		return new TemplateResponse('external', 'settings', [], '');
 	}
 
