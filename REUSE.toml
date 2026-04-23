@@ -6,7 +6,7 @@ SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
 SPDX-PackageDownloadLocation = "https://github.com/nextcloud/external"
 
 [[annotations]]
-path = [".github/**", ".editorconfig", "babel.config.js", ".php-cs-fixer.dist.php", "package-lock.json", "package.json", "composer.json", "composer.lock", "README.md", "img/app-dark.svg", "img/app.svg", "webpack.js", "stylelint.config.js", ".eslintrc.js", ".gitignore", ".jshintrc", ".l10nignore", "action/.gitignore", "action/package.json", "action/package-lock.json", "action/dist/index.js", "tests/**", "psalm.xml", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "webpack.config.js", "tsconfig.json"]
+path = [".github/**", ".php-cs-fixer.dist.php", "package-lock.json", "package.json", "composer.json", "composer.lock", "README.md", "stylelint.config.js", ".gitignore", ".l10nignore", "tests/**", "psalm.xml", "vendor-bin/**/composer.json", "vendor-bin/**/composer.lock", ".tx/config", "tsconfig.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"
