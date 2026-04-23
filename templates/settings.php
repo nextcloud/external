@@ -13,7 +13,6 @@
 
 style('external', 'style');
 script('external', 'dist/admin');
-script('settings', 'apps');
 script('external', 'templates');
 
 /** @var array $_ */
