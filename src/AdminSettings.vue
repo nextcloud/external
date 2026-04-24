@@ -137,6 +137,7 @@ import Upload from 'vue-material-design-icons/Upload.vue'
 import ExternalWebsite from './components/ExternalWebsite.vue'
 import logger from './logger.ts'
 import { createSite, deleteIcon, deleteSite as deleteSiteApi, fetchConfig, updateSite, uploadIcon } from './services/api.ts'
+import rebuildNavigation from './services/rebuild-navigation.ts'
 
 interface SiteWithErrors extends Site {
 	nameError?: string
@@ -218,6 +219,7 @@ async function saveSite(site: SiteWithErrors) {
 		} else {
 			await updateSite(site.id, siteData)
 		}
+		rebuildNavigation()
 	} catch (error: unknown) {
 		const response = (error as { response?: { data?: { ocs?: { data?: { field?: string, error?: string } } } } })?.response?.data?.ocs?.data
 		if (response?.field === 'name') {
@@ -236,6 +238,7 @@ async function saveSite(site: SiteWithErrors) {
 async function deleteSite(site: SiteWithErrors, index: number) {
 	if (site.id !== null) {
 		await deleteSiteApi(site.id)
+		rebuildNavigation()
 	}
 	sites.value.splice(index, 1)
 }
