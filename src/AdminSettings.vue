@@ -74,16 +74,23 @@
 
 			<ul class="icon-list">
 				<li
-					v-for="icon in availableIcons"
-					:key="icon.icon"
+					v-for="group in groupedIcons"
+					:key="group.groupKey"
 					class="icon-row">
-					<img :src="icon.url" :alt="icon.name" class="icon-preview">
-					<span class="icon-name">{{ icon.name }}</span>
+					<div class="icon-previews">
+						<img
+							v-for="icon in group.icons"
+							:key="icon.icon"
+							:src="icon.url"
+							:alt="icon.name"
+							class="icon-preview">
+					</div>
+					<span class="icon-name">{{ group.groupKey }}</span>
 					<NcButton
 						:aria-label="t('external', 'Delete icon')"
 						:title="t('external', 'Delete icon')"
 						variant="error"
-						@click="removeIcon(icon)">
+						@click="removeIconGroup(group)">
 						<template #icon>
 							<Delete :size="20" />
 						</template>
@@ -126,7 +133,7 @@ import type { Ref } from 'vue'
 import type { ExternalWebsiteConfig, Icon, Site } from './types.ts'
 
 import { t } from '@nextcloud/l10n'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import NcButton from '@nextcloud/vue/components/NcButton'
 import NcLoadingIcon from '@nextcloud/vue/components/NcLoadingIcon'
 import NcSettingsSection from '@nextcloud/vue/components/NcSettingsSection'
@@ -138,6 +145,11 @@ import ExternalWebsite from './components/ExternalWebsite.vue'
 import logger from './logger.ts'
 import { createSite, deleteIcon, deleteSite as deleteSiteApi, fetchConfig, updateSite, uploadIcon } from './services/api.ts'
 import rebuildNavigation from './services/rebuild-navigation.ts'
+
+interface IconGroup {
+	groupKey: string
+	icons: Icon[]
+}
 
 interface SiteWithErrors extends Site {
 	nameError?: string
@@ -154,6 +166,19 @@ const jwtExplanation = t('external', 'A JSON Web Token containing user´s email,
 const loading = ref(true)
 const sites: Ref<SiteWithErrors[]> = ref([])
 const availableIcons: Ref<Icon[]> = ref([])
+
+const groupedIcons = computed<IconGroup[]>(() => {
+	const groups = new Map<string, Icon[]>()
+	for (const icon of availableIcons.value) {
+		// Strip -dark suffix to get the group key (e.g. "test-dark.png" → "test.png")
+		const groupKey = icon.icon.replace(/-dark(\.[^.]+)$/i, '$1')
+		if (!groups.has(groupKey)) {
+			groups.set(groupKey, [])
+		}
+		groups.get(groupKey)!.push(icon)
+	}
+	return Array.from(groups.entries()).map(([groupKey, icons]) => ({ groupKey, icons }))
+})
 const editingSite: Ref<SiteWithErrors | null> = ref(null)
 const uploadMessage = ref('')
 
@@ -267,11 +292,14 @@ async function onDialogSave(updatedSite: Site) {
 
 /**
  *
- * @param icon
+ * @param group
  */
-async function removeIcon(icon: Icon) {
-	await deleteIcon(icon.icon)
-	availableIcons.value = availableIcons.value.filter((i) => i.icon !== icon.icon)
+async function removeIconGroup(group: IconGroup) {
+	for (const icon of group.icons) {
+		await deleteIcon(icon.icon)
+	}
+	const groupIconNames = new Set(group.icons.map((i) => i.icon))
+	availableIcons.value = availableIcons.value.filter((i) => !groupIconNames.has(i.icon))
 }
 
 /**
@@ -337,6 +365,11 @@ async function handleIconUpload(event: Event) {
 	align-items: center;
 	gap: 0.5rem;
 	margin-block-end: 0.25rem;
+}
+
+.icon-previews {
+	display: flex;
+	gap: 0.25rem;
 }
 
 .icon-preview {
