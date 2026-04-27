@@ -24,6 +24,7 @@ class CopyDefaultIcons implements IRepairStep {
 	) {
 	}
 
+	#[\Override]
 	public function getName(): string {
 		return 'Copy default images to the app data directory';
 	}
@@ -31,6 +32,7 @@ class CopyDefaultIcons implements IRepairStep {
 	/**
 	 * @throws \Exception in case of failure
 	 */
+	#[\Override]
 	public function run(IOutput $output): void {
 		try {
 			$folder = $this->appData->getFolder('icons');

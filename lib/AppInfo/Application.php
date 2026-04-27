@@ -32,12 +32,14 @@ class Application extends App implements IBootstrap {
 		parent::__construct(self::APP_ID);
 	}
 
+	#[\Override]
 	public function register(IRegistrationContext $context): void {
 		$context->registerCapability(Capabilities::class);
 		$context->registerEventListener(BeforeTemplateRenderedEvent::class, BeforeTemplateRenderedListener::class);
 		$context->registerEventListener(LoadAdditionalScriptsEvent::class, BeforeTemplateRenderedListener::class);
 	}
 
+	#[\Override]
 	public function boot(IBootContext $context): void {
 		$context->injectFn($this->registerSites(...));
 	}

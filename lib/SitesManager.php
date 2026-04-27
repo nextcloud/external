@@ -230,7 +230,7 @@ class SitesManager {
 			'groups' => $groups,
 			'redirect' => $redirect,
 		];
-		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites, JSON_THROW_ON_ERROR));
 		$this->config->setValueInt('external', 'max_site', $id);
 
 		return $sites[$id];
@@ -315,7 +315,7 @@ class SitesManager {
 			'groups' => $groups,
 			'redirect' => $redirect,
 		];
-		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites, JSON_THROW_ON_ERROR));
 
 		return $sites[$id];
 	}
@@ -327,7 +327,7 @@ class SitesManager {
 		}
 
 		unset($sites[$id]);
-		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites, JSON_THROW_ON_ERROR));
 	}
 
 	/**
@@ -346,7 +346,7 @@ class SitesManager {
 			]);
 		}
 
-		$this->config->setValueString('external', 'sites', json_encode($fixedSites));
+		$this->config->setValueString('external', 'sites', json_encode($fixedSites, JSON_THROW_ON_ERROR));
 		$this->config->setValueInt('external', 'max_site', max(array_keys($fixedSites)));
 		return $fixedSites;
 	}

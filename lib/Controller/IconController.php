@@ -92,7 +92,11 @@ class IconController extends Controller {
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
-		$target->putContent(file_get_contents($icon['tmp_name'], false));
+		$content = file_get_contents($icon['tmp_name'], false);
+		if ($content === false) {
+			throw new \RuntimeException('Could not read uploaded icon');
+		}
+		$target->putContent($content);
 
 		return new DataResponse([
 			'id' => $target->getName(),

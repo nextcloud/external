@@ -59,7 +59,7 @@ class APIController extends OCSController {
 		}
 
 
-		$etag = md5(json_encode($sites));
+		$etag = md5(json_encode($sites, JSON_THROW_ON_ERROR));
 		if ($this->request->getHeader('If-None-Match') === $etag) {
 			return new DataResponse([], Http::STATUS_NOT_MODIFIED);
 		}

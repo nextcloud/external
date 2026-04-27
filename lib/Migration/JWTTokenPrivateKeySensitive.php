@@ -20,10 +20,12 @@ class JWTTokenPrivateKeySensitive implements IRepairStep {
 	) {
 	}
 
+	#[\Override]
 	public function getName(): string {
 		return 'Mark JWT token private key as sensitive';
 	}
 
+	#[\Override]
 	public function run(IOutput $output): void {
 		foreach ($this->config->getKeys(Application::APP_ID) as $key) {
 			if (!str_starts_with($key, 'jwt_token_privkey_')) {

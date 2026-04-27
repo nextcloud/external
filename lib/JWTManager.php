@@ -67,7 +67,13 @@ class JWTManager {
 				'private_key_bits' => 2048,
 				'private_key_type' => OPENSSL_KEYTYPE_EC,
 			]);
+			if ($privKey === false) {
+				throw new \Exception('Could not create private key');
+			}
 			$pubKey = openssl_pkey_get_details($privKey);
+			if ($pubKey === false) {
+				throw new \Exception('Could not create public key');
+			}
 			$public = $pubKey['key'];
 			if (!openssl_pkey_export($privKey, $secret)) {
 				throw new \Exception('Could not export private key');
@@ -77,7 +83,13 @@ class JWTManager {
 				'private_key_bits' => 2048,
 				'private_key_type' => OPENSSL_KEYTYPE_RSA,
 			]);
+			if ($privKey === false) {
+				throw new \Exception('Could not create private key');
+			}
 			$pubKey = openssl_pkey_get_details($privKey);
+			if ($pubKey === false) {
+				throw new \Exception('Could not create public key');
+			}
 			$public = $pubKey['key'];
 			if (!openssl_pkey_export($privKey, $secret)) {
 				throw new \Exception('Could not export private key');
