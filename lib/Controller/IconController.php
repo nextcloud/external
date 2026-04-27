@@ -16,6 +16,8 @@ namespace OCA\External\Controller;
 use OCP\App\IAppManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http\FileDisplayResponse;
@@ -29,39 +31,16 @@ use OCP\IL10N;
 use OCP\IRequest;
 
 class IconController extends Controller {
-	/** @var IL10N */
-	private $l10n;
-	/** @var IAppData */
-	private $appData;
-	/** @var IAppManager */
-	private $appManager;
-	/** @var ITimeFactory */
-	private $timeFactory;
-
-	/**
-	 * ThemingController constructor.
-	 *
-	 * @param string $appName
-	 * @param IRequest $request
-	 * @param IL10N $l
-	 * @param IAppData $appData
-	 * @param IAppManager $appManager
-	 * @param ITimeFactory $timeFactory
-	 */
 	public function __construct(
-		$appName,
+		string $appName,
 		IRequest $request,
-		IL10N $l,
-		IAppData $appData,
-		IAppManager $appManager,
-		ITimeFactory $timeFactory,
+		private readonly IL10N $l10n,
+		private readonly IAppData $appData,
+		private readonly IAppManager $appManager,
+		private readonly ITimeFactory $timeFactory,
 	) {
 		parent::__construct($appName, $request);
 
-		$this->l10n = $l;
-		$this->appData = $appData;
-		$this->appManager = $appManager;
-		$this->timeFactory = $timeFactory;
 	}
 
 	/**
@@ -113,7 +92,11 @@ class IconController extends Controller {
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
-		$target->putContent(file_get_contents($icon['tmp_name'], false));
+		$content = file_get_contents($icon['tmp_name'], false);
+		if ($content === false) {
+			throw new \RuntimeException('Could not read uploaded icon');
+		}
+		$target->putContent($content);
 
 		return new DataResponse([
 			'id' => $target->getName(),
@@ -121,23 +104,21 @@ class IconController extends Controller {
 		]);
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 */
-	public function showIcon(string $icon): FileDisplayResponse {
+	#[NoAdminRequired]
+	#[NoCSRFRequired]
+	public function showIcon(string $icon, ?bool $dark = null): FileDisplayResponse {
 		$folder = $this->appData->getFolder('icons');
 		try {
 			$iconFile = $folder->getFile($icon);
-		} catch (NotFoundException $exception) {
-			$iconFile = $this->getDefaultIcon($folder, 'external.svg');
+		} catch (NotFoundException) {
+			$iconFile = $this->getDefaultIcon($folder, $icon === 'settings.svg' || $icon === 'settings-dark.svg' ? $icon : 'external.svg');
 		}
 
-		if (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
+		if ($dark === true || (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
 			IRequest::USER_AGENT_CLIENT_ANDROID,
 			IRequest::USER_AGENT_CLIENT_IOS,
 			IRequest::USER_AGENT_CLIENT_DESKTOP,
-		])) {
+		]))) {
 			// Check if there is a dark icon as well
 			$basename = pathinfo($iconFile->getName(), PATHINFO_FILENAME);
 			$basename .= '-dark.';
@@ -145,7 +126,7 @@ class IconController extends Controller {
 
 			try {
 				$iconFile = $folder->getFile($basename);
-			} catch (NotFoundException $exception) {
+			} catch (NotFoundException) {
 			}
 		}
 
@@ -172,8 +153,7 @@ class IconController extends Controller {
 				$iconFile = $folder->getFile(str_replace('-dark.', '.', $icon));
 				$iconFile->delete();
 			}
-		} catch (NotFoundException $exception) {
-		} catch (NotPermittedException $exception) {
+		} catch (NotFoundException|NotPermittedException) {
 		}
 
 		return new DataResponse();

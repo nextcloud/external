@@ -8,8 +8,10 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-script('external', 'external');
-style('external', 'style');
+use OCP\Util;
+
+Util::addScript('external', 'external-external');
+Util::addStyle('external', 'external-external');
 
 /** @var array $_ */
 ?>

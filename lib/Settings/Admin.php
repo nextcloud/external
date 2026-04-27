@@ -11,39 +11,25 @@
 namespace OCA\External\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
+use OCP\Util;
+use Override;
 
 class Admin implements ISettings {
-	/** @var IURLGenerator */
-	protected $url;
-
-	public function __construct(IURLGenerator $url) {
-		$this->url = $url;
-	}
-
-	/**
-	 * @return TemplateResponse
-	 */
-	public function getForm() {
+	#[Override]
+	public function getForm(): TemplateResponse {
+		Util::addScript('external', 'external-admin', 'external');
+		Util::addStyle('external', 'external-admin');
 		return new TemplateResponse('external', 'settings', [], '');
 	}
 
-	/**
-	 * @return string the section ID, e.g. 'sharing'
-	 */
-	public function getSection() {
+	#[Override]
+	public function getSection(): string {
 		return 'external';
 	}
 
-	/**
-	 * @return int whether the form should be rather on the top or bottom of
-	 *             the admin section. The forms are arranged in ascending order of the
-	 *             priority values. It is required to return a value between 0 and 100.
-	 *
-	 * E.g.: 70
-	 */
-	public function getPriority() {
+	#[Override]
+	public function getPriority(): int {
 		return 55;
 	}
 }

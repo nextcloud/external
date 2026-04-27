@@ -20,47 +20,27 @@ use OCA\External\Exceptions\LanguageNotFoundException;
 use OCA\External\Exceptions\SiteNotFoundException;
 use OCA\External\SitesManager;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\OCSController;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IURLGenerator;
-use OCP\IUserSession;
 
 class APIController extends OCSController {
-	/** @var SitesManager */
-	private $sitesManager;
-
-	/** @var IURLGenerator */
-	private $url;
-
-	/** @var IL10N */
-	private $l;
-
-	/** @var IUserSession */
-	protected $userSession;
-
-	/**
-	 * @param string $appName
-	 * @param IRequest $request
-	 * @param SitesManager $sitesManager
-	 * @param IURLGenerator $url
-	 * @param IL10N $l
-	 * @param IUserSession $userSession
-	 */
-	public function __construct($appName, IRequest $request, SitesManager $sitesManager, IURLGenerator $url, IL10N $l, IUserSession $userSession) {
+	public function __construct(
+		string $appName,
+		IRequest $request,
+		private readonly SitesManager $sitesManager,
+		private readonly IURLGenerator $url,
+		private readonly IL10N $l,
+	) {
 		parent::__construct($appName, $request);
-
-		$this->sitesManager = $sitesManager;
-		$this->url = $url;
-		$this->l = $l;
-		$this->userSession = $userSession;
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 */
+	#[NoAdminRequired]
+	#[NoCSRFRequired]
 	public function get(): DataResponse {
 		$data = $this->sitesManager->getSitesToDisplay();
 
@@ -79,7 +59,7 @@ class APIController extends OCSController {
 		}
 
 
-		$etag = md5(json_encode($sites));
+		$etag = md5(json_encode($sites, JSON_THROW_ON_ERROR));
 		if ($this->request->getHeader('If-None-Match') === $etag) {
 			return new DataResponse([], Http::STATUS_NOT_MODIFIED);
 		}
@@ -87,9 +67,7 @@ class APIController extends OCSController {
 		return new DataResponse($sites, Http::STATUS_OK, ['ETag' => $etag]);
 	}
 
-	/**
-	 * @NoCSRFRequired
-	 */
+	#[NoCSRFRequired]
 	public function getAdmin(): DataResponse {
 		$icons = array_map(function ($icon) {
 			return [
@@ -98,7 +76,6 @@ class APIController extends OCSController {
 				'url' => $this->url->linkToRoute('external.icon.showIcon', ['icon' => $icon]),
 			];
 		}, $this->sitesManager->getAvailableIcons());
-		array_unshift($icons, ['icon' => '', 'name' => $this->l->t('Select an icon')]);
 
 		$languages = $this->sitesManager->getAvailableLanguages();
 		array_unshift($languages, ['code' => '', 'name' => $this->l->t('All languages')]);

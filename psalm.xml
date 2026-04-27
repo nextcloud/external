@@ -24,10 +24,6 @@
 		<directory name="vendor" />
 	</extraFiles>
 	<issueHandlers>
-		<UndefinedClass>
-			<errorLevel type="suppress">
-				<referencedClass name="OCA\Files\Event\LoadAdditionalScriptsEvent"/>
-			</errorLevel>
-		</UndefinedClass>
+		<ClassMustBeFinal errorLevel="info" />
 	</issueHandlers>
 </psalm>

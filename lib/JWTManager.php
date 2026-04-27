@@ -19,18 +19,12 @@ use OCP\IAppConfig;
 use OCP\IURLGenerator;
 
 class JWTManager {
-	protected IAppConfig $config;
-	protected ITimeFactory $timeFactory;
-	protected IURLGenerator $urlGenerator;
-
-	public function __construct(IAppConfig $config,
-		ITimeFactory $timeFactory,
-		IURLGenerator $urlGenerator) {
-		$this->config = $config;
-		$this->timeFactory = $timeFactory;
-		$this->urlGenerator = $urlGenerator;
+	public function __construct(
+		private readonly IAppConfig $config,
+		private readonly ITimeFactory $timeFactory,
+		private readonly IURLGenerator $urlGenerator,
+	) {
 	}
-
 
 	/**
 	 * @param array $userdata
@@ -50,15 +44,6 @@ class JWTManager {
 
 		/** @psalm-suppress UndefinedClass */
 		return JWT::encode($data, $secret, $alg);
-	}
-
-	public function getTokenPublicKey(?string $alg = null): string {
-		if ($alg === null) {
-			$alg = $this->getTokenAlgorithm();
-		}
-		$this->ensureTokenKeys($alg);
-
-		return $this->config->getValueString(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg));
 	}
 
 	protected function getTokenPrivateKey(?string $alg = null): string {
@@ -82,7 +67,13 @@ class JWTManager {
 				'private_key_bits' => 2048,
 				'private_key_type' => OPENSSL_KEYTYPE_EC,
 			]);
+			if ($privKey === false) {
+				throw new \Exception('Could not create private key');
+			}
 			$pubKey = openssl_pkey_get_details($privKey);
+			if ($pubKey === false) {
+				throw new \Exception('Could not create public key');
+			}
 			$public = $pubKey['key'];
 			if (!openssl_pkey_export($privKey, $secret)) {
 				throw new \Exception('Could not export private key');
@@ -92,7 +83,13 @@ class JWTManager {
 				'private_key_bits' => 2048,
 				'private_key_type' => OPENSSL_KEYTYPE_RSA,
 			]);
+			if ($privKey === false) {
+				throw new \Exception('Could not create private key');
+			}
 			$pubKey = openssl_pkey_get_details($privKey);
+			if ($pubKey === false) {
+				throw new \Exception('Could not create public key');
+			}
 			$public = $pubKey['key'];
 			if (!openssl_pkey_export($privKey, $secret)) {
 				throw new \Exception('Could not export private key');
