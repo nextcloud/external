@@ -18,7 +18,6 @@ use OCA\External\Exceptions\InvalidTypeException;
 use OCA\External\Exceptions\InvalidURLException;
 use OCA\External\Exceptions\LanguageNotFoundException;
 use OCA\External\Exceptions\SiteNotFoundException;
-use OCP\App\IAppManager;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
 use OCP\Files\SimpleFS\ISimpleFile;
@@ -41,54 +40,22 @@ class SitesManager {
 	public const DEVICE_DESKTOP = 'desktop';
 	public const DEVICE_BROWSER = 'browser';
 
-	/** @var IRequest */
-	protected $request;
-
-	/** @var IAppConfig */
-	protected $config;
-
-	/** @var IFactory */
-	protected $languageFactory;
-
-	/** @var IAppManager */
-	protected $appManager;
-
-	/** @var IGroupManager */
-	protected $groupManager;
-
-	/** @var IUserSession */
-	protected $userSession;
-
-	/** @var JWTManager */
-	protected $JWTManager;
-
-	/** @var IAppData */
-	protected $appData;
-
-
-	public function __construct(IRequest $request,
-		IAppConfig $config,
-		IAppManager $appManager,
-		IGroupManager $groupManager,
-		IUserSession $userSession,
-		IFactory $languageFactory,
-		JWTManager $JWTManager,
-		IAppData $appData) {
-		$this->request = $request;
-		$this->config = $config;
-		$this->appManager = $appManager;
-		$this->groupManager = $groupManager;
-		$this->userSession = $userSession;
-		$this->languageFactory = $languageFactory;
-		$this->JWTManager = $JWTManager;
-		$this->appData = $appData;
+	public function __construct(
+		private readonly IRequest $request,
+		private readonly IAppConfig $config,
+		private readonly IGroupManager $groupManager,
+		private readonly IUserSession $userSession,
+		private readonly IFactory $languageFactory,
+		private readonly JWTManager $JWTManager,
+		private readonly IAppData $appData,
+	) {
 	}
 
 	/**
 	 * @return array
 	 * @throws SiteNotFoundException
 	 */
-	public function getSiteById(int $id) {
+	public function getSiteById(int $id): array {
 		$sites = $this->getSitesToDisplay();
 
 		if (isset($sites[$id])) {
@@ -101,7 +68,7 @@ class SitesManager {
 	/**
 	 * @return array[]
 	 */
-	public function getSitesToDisplay() {
+	public function getSitesToDisplay(): array {
 		$sites = $this->getSites();
 		$lang = $this->languageFactory->findLanguage();
 		$locale = $this->languageFactory->findLocale();
@@ -154,7 +121,7 @@ class SitesManager {
 	/**
 	 * @return array[]
 	 */
-	public function getSites() {
+	public function getSites(): array {
 		$jsonEncodedList = $this->config->getValueString('external', 'sites', '');
 		$sites = json_decode($jsonEncodedList, true);
 
@@ -263,7 +230,7 @@ class SitesManager {
 			'groups' => $groups,
 			'redirect' => $redirect,
 		];
-		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites, JSON_THROW_ON_ERROR));
 		$this->config->setValueInt('external', 'max_site', $id);
 
 		return $sites[$id];
@@ -348,7 +315,7 @@ class SitesManager {
 			'groups' => $groups,
 			'redirect' => $redirect,
 		];
-		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites, JSON_THROW_ON_ERROR));
 
 		return $sites[$id];
 	}
@@ -360,7 +327,7 @@ class SitesManager {
 		}
 
 		unset($sites[$id]);
-		$this->config->setValueString('external', 'sites', json_encode($sites));
+		$this->config->setValueString('external', 'sites', json_encode($sites, JSON_THROW_ON_ERROR));
 	}
 
 	/**
@@ -379,7 +346,7 @@ class SitesManager {
 			]);
 		}
 
-		$this->config->setValueString('external', 'sites', json_encode($fixedSites));
+		$this->config->setValueString('external', 'sites', json_encode($fixedSites, JSON_THROW_ON_ERROR));
 		$this->config->setValueInt('external', 'max_site', max(array_keys($fixedSites)));
 		return $fixedSites;
 	}

@@ -14,23 +14,17 @@ use OCA\External\SitesManager;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IURLGenerator;
 use OCP\Settings\ISettings;
+use Override;
 
 class Personal implements ISettings {
-	/** @var SitesManager */
-	protected $sitesManager;
-
-	/** @var IURLGenerator */
-	protected $url;
-
-	public function __construct(SitesManager $sitesManager, IURLGenerator $url) {
-		$this->sitesManager = $sitesManager;
-		$this->url = $url;
+	public function __construct(
+		private readonly SitesManager $sitesManager,
+		private readonly IURLGenerator $url,
+	) {
 	}
 
-	/**
-	 * @return TemplateResponse
-	 */
-	public function getForm() {
+	#[Override]
+	public function getForm(): TemplateResponse {
 		$sites = $this->sitesManager->getSitesToDisplay();
 
 		$quotaLink = [];
@@ -52,21 +46,13 @@ class Personal implements ISettings {
 		], '');
 	}
 
-	/**
-	 * @return string the section ID, e.g. 'sharing'
-	 */
-	public function getSection() {
+	#[Override]
+	public function getSection(): string {
 		return 'personal-info';
 	}
 
-	/**
-	 * @return int whether the form should be rather on the top or bottom of
-	 *             the admin section. The forms are arranged in ascending order of the
-	 *             priority values. It is required to return a value between 0 and 100.
-	 *
-	 * E.g.: 70
-	 */
-	public function getPriority() {
+	#[Override]
+	public function getPriority(): int {
 		return 55;
 	}
 }
