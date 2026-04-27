@@ -16,6 +16,8 @@ namespace OCA\External\Controller;
 use OCP\App\IAppManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http\FileDisplayResponse;
@@ -29,39 +31,16 @@ use OCP\IL10N;
 use OCP\IRequest;
 
 class IconController extends Controller {
-	/** @var IL10N */
-	private $l10n;
-	/** @var IAppData */
-	private $appData;
-	/** @var IAppManager */
-	private $appManager;
-	/** @var ITimeFactory */
-	private $timeFactory;
-
-	/**
-	 * ThemingController constructor.
-	 *
-	 * @param string $appName
-	 * @param IRequest $request
-	 * @param IL10N $l
-	 * @param IAppData $appData
-	 * @param IAppManager $appManager
-	 * @param ITimeFactory $timeFactory
-	 */
 	public function __construct(
-		$appName,
+		string $appName,
 		IRequest $request,
-		IL10N $l,
-		IAppData $appData,
-		IAppManager $appManager,
-		ITimeFactory $timeFactory,
+		private readonly IL10N $l10n,
+		private readonly IAppData $appData,
+		private readonly IAppManager $appManager,
+		private readonly ITimeFactory $timeFactory,
 	) {
 		parent::__construct($appName, $request);
 
-		$this->l10n = $l;
-		$this->appData = $appData;
-		$this->appManager = $appManager;
-		$this->timeFactory = $timeFactory;
 	}
 
 	/**
@@ -121,10 +100,8 @@ class IconController extends Controller {
 		]);
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 */
+	#[NoAdminRequired]
+	#[NoCSRFRequired]
 	public function showIcon(string $icon): FileDisplayResponse {
 		$folder = $this->appData->getFolder('icons');
 		try {
@@ -172,8 +149,7 @@ class IconController extends Controller {
 				$iconFile = $folder->getFile(str_replace('-dark.', '.', $icon));
 				$iconFile->delete();
 			}
-		} catch (NotFoundException $exception) {
-		} catch (NotPermittedException $exception) {
+		} catch (NotFoundException|NotPermittedException) {
 		}
 
 		return new DataResponse();

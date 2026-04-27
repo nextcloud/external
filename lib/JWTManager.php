@@ -19,18 +19,12 @@ use OCP\IAppConfig;
 use OCP\IURLGenerator;
 
 class JWTManager {
-	protected IAppConfig $config;
-	protected ITimeFactory $timeFactory;
-	protected IURLGenerator $urlGenerator;
-
-	public function __construct(IAppConfig $config,
-		ITimeFactory $timeFactory,
-		IURLGenerator $urlGenerator) {
-		$this->config = $config;
-		$this->timeFactory = $timeFactory;
-		$this->urlGenerator = $urlGenerator;
+	public function __construct(
+		private readonly IAppConfig $config,
+		private readonly ITimeFactory $timeFactory,
+		private readonly IURLGenerator $urlGenerator,
+	) {
 	}
-
 
 	/**
 	 * @param array $userdata
@@ -50,15 +44,6 @@ class JWTManager {
 
 		/** @psalm-suppress UndefinedClass */
 		return JWT::encode($data, $secret, $alg);
-	}
-
-	public function getTokenPublicKey(?string $alg = null): string {
-		if ($alg === null) {
-			$alg = $this->getTokenAlgorithm();
-		}
-		$this->ensureTokenKeys($alg);
-
-		return $this->config->getValueString(Application::APP_ID, 'jwt_token_pubkey_' . strtolower($alg));
 	}
 
 	protected function getTokenPrivateKey(?string $alg = null): string {

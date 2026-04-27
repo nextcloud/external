@@ -14,19 +14,14 @@ use OCP\App\IAppManager;
 use OCP\Files\IAppData;
 use OCP\Files\NotFoundException;
 use OCP\Files\SimpleFS\ISimpleFolder;
-use OCP\IL10N;
 use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;
 
 class CopyDefaultIcons implements IRepairStep {
-	protected IL10N $l;
-	protected IAppManager $appManager;
-	protected IAppData $appData;
-
-	public function __construct(IL10N $l, IAppManager $appManager, IAppData $appData) {
-		$this->l = $l;
-		$this->appManager = $appManager;
-		$this->appData = $appData;
+	public function __construct(
+		private readonly IAppManager $appManager,
+		private readonly IAppData $appData,
+	) {
 	}
 
 	public function getName(): string {

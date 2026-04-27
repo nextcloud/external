@@ -20,7 +20,7 @@ class JWTTokenPrivateKeySensitive implements IRepairStep {
 	) {
 	}
 
-	public function getName() {
+	public function getName(): string {
 		return 'Mark JWT token private key as sensitive';
 	}
 

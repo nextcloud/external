@@ -11,6 +11,7 @@
 namespace OCA\External;
 
 use OCP\Capabilities\ICapability;
+use Override;
 
 /**
  * Class Capabilities
@@ -21,7 +22,8 @@ class Capabilities implements ICapability {
 	/**
 	 * Return this classes capabilities
 	 */
-	public function getCapabilities() {
+	#[Override]
+	public function getCapabilities(): array {
 		return [
 			'external' => [
 				'v1' => [

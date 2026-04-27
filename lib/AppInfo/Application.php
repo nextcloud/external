@@ -39,7 +39,7 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function boot(IBootContext $context): void {
-		$context->injectFn([$this, 'registerSites']);
+		$context->injectFn($this->registerSites(...));
 	}
 
 	public function registerSites(
@@ -61,7 +61,7 @@ class Application extends App implements IBootstrap {
 				continue;
 			}
 
-			$navigationManager->add(function () use ($site, $url) {
+			$navigationManager->add(function () use ($site, $url): array {
 				if ($site['icon'] !== '') {
 					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
 				} else {
