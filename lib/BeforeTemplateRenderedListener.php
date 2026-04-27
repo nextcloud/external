@@ -46,6 +46,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 		$this->initialState = $initialState;
 	}
 
+	#[\Override]
 	public function handle(Event $event): void {
 		if ($event instanceof BeforeTemplateRenderedEvent) {
 			$this->generateNavigationLinks();

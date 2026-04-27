@@ -13,41 +13,30 @@ namespace OCA\External\Controller;
 use OCA\External\Exceptions\SiteNotFoundException;
 use OCA\External\SitesManager;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\RedirectResponse;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
-use OCP\IL10N;
 use OCP\INavigationManager;
 use OCP\IRequest;
 use OCP\IURLGenerator;
 
 class SiteController extends Controller {
-	protected IConfig $config;
-	protected SitesManager $sitesManager;
-	protected INavigationManager $navigationManager;
-	protected IURLGenerator $url;
-	protected IL10N $l10n;
-
-	public function __construct(string $appName,
+	public function __construct(
+		string $appName,
 		IRequest $request,
-		IConfig $config,
-		INavigationManager $navigationManager,
-		SitesManager $sitesManager,
-		IURLGenerator $url,
-		IL10N $l10n) {
+		private readonly IConfig $config,
+		private readonly INavigationManager $navigationManager,
+		private readonly SitesManager $sitesManager,
+		private readonly IURLGenerator $url,
+	) {
 		parent::__construct($appName, $request);
-		$this->config = $config;
-		$this->sitesManager = $sitesManager;
-		$this->navigationManager = $navigationManager;
-		$this->url = $url;
-		$this->l10n = $l10n;
 	}
 
-	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 */
+	#[NoAdminRequired]
+	#[NoCSRFRequired]
 	public function showPage(int $id, string $path): TemplateResponse|RedirectResponse {
 		try {
 			$site = $this->sitesManager->getSiteById($id);
@@ -58,11 +47,10 @@ class SiteController extends Controller {
 	}
 
 	/**
-	 * @NoAdminRequired
-	 * @NoCSRFRequired
-	 *
 	 * This is used when the app is set as default app
 	 */
+	#[NoAdminRequired]
+	#[NoCSRFRequired]
 	public function showDefaultPage(): TemplateResponse|RedirectResponse {
 		// Show first available page when there is one
 		$sites = $this->sitesManager->getSitesToDisplay();
@@ -89,12 +77,38 @@ class SiteController extends Controller {
 		$this->navigationManager->setActiveEntry('external_index' . $id);
 
 		if ($path !== '') {
-			// Check whether we need to suffix the site URL with a slash, or not.
-			$path = $site['url'][-1] == '/' ? $path : '/' . $path;
+			// Parse the URL to properly insert the path before any query parameters
+			$parts = parse_url($site['url']);
+
+			if ($parts === false || !isset($parts['scheme'], $parts['host'])) {
+				throw new \RuntimeException('Invalid site URL: ' . $site['url']);
+			}
+
+			$url = $parts['scheme'] . '://';
+			if (isset($parts['user'])) {
+				$url .= rawurlencode($parts['user']);
+				if (isset($parts['pass'])) {
+					$url .= ':' . rawurlencode($parts['pass']);
+				}
+				$url .= '@';
+			}
+			$url .= $parts['host'];
+			if (isset($parts['port'])) {
+				$url .= ':' . $parts['port'];
+			}
+			$url .= rtrim($parts['path'] ?? '', '/') . '/' . $path;
+			if (isset($parts['query'])) {
+				$url .= '?' . $parts['query'];
+			}
+			if (isset($parts['fragment'])) {
+				$url .= '#' . $parts['fragment'];
+			}
+		} else {
+			$url = $site['url'];
 		}
 
 		$response = new TemplateResponse('external', 'frame', [
-			'url' => $site['url'] . $path,
+			'url' => $url,
 			'name' => $site['name'],
 		], 'user');
 
