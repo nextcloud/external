@@ -24,26 +24,12 @@ use OCP\Util;
  * @template-implements IEventListener<Event>
  */
 class BeforeTemplateRenderedListener implements IEventListener {
-	/** @var SitesManager */
-	protected $sitesManager;
-	/** @var INavigationManager */
-	protected $navigationManager;
-	/** @var IURLGenerator */
-	protected $urlGenerator;
-
-	/** @var IInitialState */
-	private $initialState;
-
 	public function __construct(
-		SitesManager $sitesManager,
-		INavigationManager $navigationManager,
-		IURLGenerator $urlGenerator,
-		IInitialState $initialState,
+		private readonly SitesManager $sitesManager,
+		private readonly INavigationManager $navigationManager,
+		private readonly IURLGenerator $urlGenerator,
+		private readonly IInitialState $initialState,
 	) {
-		$this->sitesManager = $sitesManager;
-		$this->navigationManager = $navigationManager;
-		$this->urlGenerator = $urlGenerator;
-		$this->initialState = $initialState;
 	}
 
 	#[\Override]
@@ -63,25 +49,27 @@ class BeforeTemplateRenderedListener implements IEventListener {
 		$data = [];
 		foreach ($sites as $site) {
 			if ($site['type'] === SitesManager::TYPE_QUOTA) {
-				$image = $this->generateImageLink($site);
+				$imageDark = $this->generateImageLink($site, true);
+				$imageLight = $this->generateImageLink($site, false);
 				$href = $this->getHref($site);
 
-				$data[] = ['name' => $site['name'], 'href' => $href, 'image' => $image];
+				$data[] = ['name' => $site['name'], 'href' => $href, 'imageLight' => $imageLight, 'imageDark' => $imageDark];
 			}
 		}
 
 		if (count($data) > 0) {
 			$this->initialState->provideInitialState('external-quota-sites', $data);
-			Util::addScript('external', 'dist/quota-files-sidebar');
+			Util::addStyle('external', 'external-quota-files-sidebar');
+			Util::addScript('external', 'external-quota-files-sidebar');
 		}
 	}
 
-	protected function generateImageLink(array $site): string {
+	protected function generateImageLink(array $site, bool $dark): string {
 		if ($site['icon'] !== '') {
-			return $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
+			return $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => $site['icon'], 'dark' => $dark]);
 		}
 
-		return $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
+		return $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg', 'dark' => $dark]);
 	}
 
 	protected function getHref(array $site): string {
@@ -101,7 +89,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 			}
 
 			$this->navigationManager->add(function () use ($site) {
-				$image = $this->generateImageLink($site);
+				$image = $this->generateImageLink($site, false);
 				$href = $this->getHref($site);
 
 				return [

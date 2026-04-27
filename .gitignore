@@ -8,3 +8,5 @@ build
 /vendor-bin/*/vendor
 /lib/Vendor
 .php-cs-fixer.cache
+/css
+/js

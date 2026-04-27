@@ -76,7 +76,6 @@ class APIController extends OCSController {
 				'url' => $this->url->linkToRoute('external.icon.showIcon', ['icon' => $icon]),
 			];
 		}, $this->sitesManager->getAvailableIcons());
-		array_unshift($icons, ['icon' => '', 'name' => $this->l->t('Select an icon')]);
 
 		$languages = $this->sitesManager->getAvailableLanguages();
 		array_unshift($languages, ['code' => '', 'name' => $this->l->t('All languages')]);
