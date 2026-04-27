@@ -106,15 +106,15 @@ class IconController extends Controller {
 
 	#[NoAdminRequired]
 	#[NoCSRFRequired]
-	public function showIcon(string $icon, bool $dark): FileDisplayResponse {
+	public function showIcon(string $icon, ?bool $dark = null): FileDisplayResponse {
 		$folder = $this->appData->getFolder('icons');
 		try {
 			$iconFile = $folder->getFile($icon);
-		} catch (NotFoundException $exception) {
-			$iconFile = $this->getDefaultIcon($folder, 'external.svg');
+		} catch (NotFoundException) {
+			$iconFile = $this->getDefaultIcon($folder, $icon === 'settings.svg' || $icon === 'settings-dark.svg' ? $icon : 'external.svg');
 		}
 
-		if ($dark || (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
+		if ($dark === true || (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
 			IRequest::USER_AGENT_CLIENT_ANDROID,
 			IRequest::USER_AGENT_CLIENT_IOS,
 			IRequest::USER_AGENT_CLIENT_DESKTOP,
@@ -126,7 +126,7 @@ class IconController extends Controller {
 
 			try {
 				$iconFile = $folder->getFile($basename);
-			} catch (NotFoundException $exception) {
+			} catch (NotFoundException) {
 			}
 		}
 

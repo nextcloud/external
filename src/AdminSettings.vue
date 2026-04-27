@@ -83,6 +83,7 @@
 							:key="icon.icon"
 							:src="icon.url"
 							:alt="icon.name"
+							:class="icon.url.includes('-dark') ? 'icon-preview-dark' : 'icon-preview-light'"
 							class="icon-preview">
 					</div>
 					<span class="icon-name">{{ group.groupKey }}</span>
@@ -376,6 +377,18 @@ async function handleIconUpload(event: Event) {
 	width: 32px;
 	height: 32px;
 	object-fit: contain;
+
+	&-dark {
+		@media (prefers-color-scheme: dark) {
+			background: #fff;
+		}
+	}
+
+	&-light {
+		@media (prefers-color-scheme: light) {
+			background: #000;
+		}
+	}
 }
 
 .icon-name {
