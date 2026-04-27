@@ -106,7 +106,7 @@ class IconController extends Controller {
 
 	#[NoAdminRequired]
 	#[NoCSRFRequired]
-	public function showIcon(string $icon): FileDisplayResponse {
+	public function showIcon(string $icon, bool $dark): FileDisplayResponse {
 		$folder = $this->appData->getFolder('icons');
 		try {
 			$iconFile = $folder->getFile($icon);
@@ -114,11 +114,11 @@ class IconController extends Controller {
 			$iconFile = $this->getDefaultIcon($folder, 'external.svg');
 		}
 
-		if (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
+		if ($dark || (strpos($icon, '-dark.') === false && $this->request->isUserAgent([
 			IRequest::USER_AGENT_CLIENT_ANDROID,
 			IRequest::USER_AGENT_CLIENT_IOS,
 			IRequest::USER_AGENT_CLIENT_DESKTOP,
-		])) {
+		]))) {
 			// Check if there is a dark icon as well
 			$basename = pathinfo($iconFile->getName(), PATHINFO_FILENAME);
 			$basename .= '-dark.';

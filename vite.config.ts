@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 export default createAppConfig({
 	admin: join(import.meta.dirname, 'src', 'admin.ts'),
-	'quota-files-sidebar': join(import.meta.dirname, 'src', 'quota-files-sidebar.js'),
+	'quota-files-sidebar': join(import.meta.dirname, 'src', 'quota-files-sidebar.ts'),
 }, {
 	minify: isProduction,
 	extractLicenseInformation: true,
