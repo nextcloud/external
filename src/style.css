@@ -1,0 +1,103 @@
+/*
+ * SPDX-FileCopyrightText: 2017 Joas Schilling <coding@schilljs.com>
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */ 
+.site-name, .site-url {
+	width: 35%;
+}
+
+.site-lang, .site-icon, .site-device, .site-type {
+	width: 20%;
+}
+
+.site-redirect-box {
+	padding: 8px 0;
+}
+
+#external .icon-more {
+	width: 16px;
+	height: 16px;
+	padding: 14px;
+	opacity: .5;
+	cursor: pointer;
+}
+
+#external .icon-more:hover {
+	opacity: 1;
+}
+
+#external label > span {
+	display: inline-block;
+	min-width: 120px;
+}
+
+#external ul.external_sites > li {
+	margin-left: -5px;
+	padding: 5px 0 10px 5px;
+}
+
+#external ul.external_sites > li.saving {
+	box-shadow: inset 2px 0 #CCCCCC;
+}
+
+#external ul.external_sites > li.saved {
+	box-shadow: inset 2px 0 #00AA00;
+}
+
+#external ul.external_sites > li.failure {
+	box-shadow: inset 2px 0 #AA0000;
+}
+
+#external ul.external_sites > li .options {
+	padding: 0 10px;
+}
+
+#external ul.icon-list li {
+	padding: 5px 0;
+	display: inline-block;
+	width: 33%;
+}
+
+#external ul.icon-list .img {
+	padding: 5px;
+	border-radius: 5px;
+	background: #efefef;
+	display: inline-block;
+}
+
+#external ul.icon-list .img img {
+	width: 32px;
+	vertical-align: middle;
+}
+
+#external ul.icon-list li.twin-icons img:first-child {
+	margin-right: 5px;
+}
+
+#external ul.icon-list span {
+	padding-left: 10px;
+}
+
+#external ul.icon-list span.icon-delete {
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+#loading_sites {
+	width: 512px;
+}
+
+.delete-button {
+	margin-left: 123px;
+	display: inline-block;
+}
+
+.invalid-value {
+	border-color: #AA0000 !important;
+}
+
+#ifm {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
