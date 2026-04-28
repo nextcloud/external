@@ -3,10 +3,11 @@ OC.L10N.register(
     {
     "Name" : "Enw",
     "URL" : "URL",
+    "Remove site" : "Gwaredu safle",
+    "Icons" : "Eiconau",
+    "Save" : "Cadw",
     "Language" : "Iaith",
     "Groups" : "Grwpiau",
-    "Redirect" : "Ailgyfeirio",
-    "Remove site" : "Gwaredu safle",
-    "Icons" : "Eiconau"
+    "Redirect" : "Ailgyfeirio"
 },
 "nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3;");
