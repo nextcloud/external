@@ -5,9 +5,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 8.0.1 - 2026-04-28
+### Fixed
+- Remove non-existent script reference in settings
+- Correctly merge path segments and query params
+
 ## 8.0.0 - 2026-01-14
 ### Changed
 - Require Nextcloud 33
+
+## 7.0.1 - 2026-04-28
+### Fixed
+- Correctly merge path segments and query params
 
 ## 7.0.0 - 2025-08-19
 ### Changed
