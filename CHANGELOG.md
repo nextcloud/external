@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 7.0.1 - 2026-04-28
+### Fixed
+- Correctly merge path segments and query params
+
 ## 7.0.0 - 2025-08-19
 ### Changed
 - Require Nextcloud 32
