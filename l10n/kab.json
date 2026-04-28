@@ -1,7 +1,9 @@
 { "translations": {
+    "Uploading…" : "Asali …",
     "Name" : "Nom",
     "URL" : "URL",
-    "Groups" : "Igrawen",
-    "Uploading…" : "Asali …"
+    "Cancel" : "Semmet",
+    "Save" : "Sekles",
+    "Groups" : "Igrawen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

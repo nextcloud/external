@@ -1,7 +1,6 @@
 OC.L10N.register(
     "external",
     {
-    "Select an icon" : "Kies ’n ikoon",
     "All languages" : "Alle tale",
     "All devices" : "Alle toestelle",
     "Only in the Android app" : "Slegs in die Android-toep",
@@ -18,15 +17,16 @@ OC.L10N.register(
     "No file uploaded" : "Geen lêer opgelaai",
     "External sites" : "Eksterne werwe",
     "__language_name__" : "Afrikaans",
+    "New site" : "Nuwe werf",
     "Name" : "Naam",
     "URL" : "Bronadres",
-    "Language" : "Taal",
-    "Groups" : "Groepe",
-    "Devices" : "Toestelle",
-    "Icon" : "Ikoon",
-    "Position" : "Posisie",
-    "Redirect" : "Herverwys",
     "Remove site" : "Verwyder werf",
-    "New site" : "Nuwe werf"
+    "Icon" : "Ikoon",
+    "Language" : "Taal",
+    "Position" : "Posisie",
+    "Devices" : "Toestelle",
+    "Groups" : "Groepe",
+    "Redirect" : "Herverwys",
+    "Select an icon" : "Kies ’n ikoon"
 },
 "nplurals=2; plural=(n != 1);");

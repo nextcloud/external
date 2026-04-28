@@ -2,14 +2,16 @@
     "All languages" : "Tất cả ngôn ngữ",
     "No file uploaded" : "Không có tệp nào được tải lên",
     "__language_name__" : "Tiếng Việt",
+    "Uploading…" : "Đang tải lên…",
     "Name" : "Tên",
     "URL" : "URL",
+    "Remove site" : "Xóa URL",
+    "Icons" : "Biểu tượng",
+    "Cancel" : "Cancel",
+    "Save" : "Lưu",
+    "Icon" : "Biểu tượng",
     "Language" : "Ngôn ngữ",
     "Groups" : "Nhóm",
-    "Icon" : "Biểu tượng",
-    "Redirect" : "Chuyển hướng",
-    "Remove site" : "Xóa URL",
-    "Uploading…" : "Đang tải lên…",
-    "Icons" : "Biểu tượng"
+    "Redirect" : "Chuyển hướng"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

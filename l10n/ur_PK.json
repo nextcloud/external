@@ -2,6 +2,8 @@
     "__language_name__" : "اردو",
     "Name" : "اسم",
     "URL" : "یو ار ایل",
-    "Remove site" : "سائٹ ہٹایں"
+    "Remove site" : "سائٹ ہٹایں",
+    "Cancel" : "Cancel",
+    "Save" : "حفظ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
