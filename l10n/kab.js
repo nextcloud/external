@@ -1,9 +1,11 @@
 OC.L10N.register(
     "external",
     {
+    "Uploading…" : "Asali …",
     "Name" : "Nom",
     "URL" : "URL",
-    "Groups" : "Igrawen",
-    "Uploading…" : "Asali …"
+    "Cancel" : "Semmet",
+    "Save" : "Sekles",
+    "Groups" : "Igrawen"
 },
 "nplurals=2; plural=(n != 1);");

@@ -1,7 +1,6 @@
 OC.L10N.register(
     "external",
     {
-    "Select an icon" : "เลือกไอคอน",
     "All languages" : "ภาษาทั้งหมด",
     "Header" : "ส่วนหัว",
     "Setting menu" : "เมนูการตั้งค่า",
@@ -14,18 +13,21 @@ OC.L10N.register(
     "Only in the browser" : "เฉพาะในเบราว์เซอร์",
     "External sites" : "เว็บไซต์ภายนอก",
     "__language_name__" : "ไทย",
+    "Uploading…" : "กำลังอัปโหลด…",
     "Name" : "ชื่อ",
     "URL" : "URL",
-    "Language" : "ภาษา",
-    "Groups" : "กลุ่ม",
-    "Devices" : "อุปกรณ์",
-    "Icon" : "ไอคอน",
-    "Position" : "ตำแหน่ง",
-    "Redirect" : "เปลี่ยนเส้นทาง",
     "Remove site" : "ลบเว็บไซต์ออก",
-    "Uploading…" : "กำลังอัปโหลด…",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "นอกจากนี้โปรดทราบว่าหลายเว็บไซต์ในปัจจุบันไม่อนุญาตให้ใช้ iframe เนื่องจากเหตุผลด้านความปลอดภัย",
     "Icons" : "ไอคอน",
-    "Upload new icon" : "อัปโหลดไอคอนใหม่"
+    "Upload new icon" : "อัปโหลดไอคอนใหม่",
+    "Cancel" : "Cancel",
+    "Save" : "บันทึก",
+    "Icon" : "ไอคอน",
+    "Language" : "ภาษา",
+    "Position" : "ตำแหน่ง",
+    "Devices" : "อุปกรณ์",
+    "Groups" : "กลุ่ม",
+    "Redirect" : "เปลี่ยนเส้นทาง",
+    "Select an icon" : "เลือกไอคอน"
 },
 "nplurals=1; plural=0;");

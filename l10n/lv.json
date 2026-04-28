@@ -1,21 +1,23 @@
 { "translations": {
-    "Select an icon" : "Atlasīt ikonu",
     "All languages" : "Visas valodas",
     "Setting menu" : "Iestatījumu izvēlne",
     "User quota" : "Lietotāja apjoms",
     "No file uploaded" : "Nav augšupielādēta datne",
     "__language_name__" : "Latviešu",
+    "Uploading…" : "Augšupielādē...",
     "Name" : "Nosaukums",
     "URL" : "URL",
-    "Language" : "Valoda",
-    "Groups" : "Grupas",
-    "Devices" : "Ierīces",
-    "Icon" : "Ikona",
-    "Redirect" : "Novirzīt",
     "Remove site" : "Noņemt vietni",
-    "Delete icon" : "Noņemt ikonu",
-    "Uploading…" : "Augšupielādē...",
     "Icons" : "Ikonas",
-    "Upload new icon" : "Augšupielādēt jaunu ikonu"
+    "Delete icon" : "Noņemt ikonu",
+    "Upload new icon" : "Augšupielādēt jaunu ikonu",
+    "Cancel" : "Atcelt",
+    "Save" : "Saglabāt",
+    "Icon" : "Ikona",
+    "Language" : "Valoda",
+    "Devices" : "Ierīces",
+    "Groups" : "Grupas",
+    "Redirect" : "Novirzīt",
+    "Select an icon" : "Atlasīt ikonu"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
 }
