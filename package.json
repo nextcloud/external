@@ -1,6 +1,6 @@
 {
   "name": "external",
-  "version": "7.0.0-dev.0",
+  "version": "7.0.1",
   "private": true,
   "description": "",
   "author": "Joas Schilling <coding@schilljs.com>",
