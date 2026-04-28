@@ -1,7 +1,7 @@
 { "translations": {
+    "Uploading…" : "Puyando...",
     "Name" : "Nombre",
     "Language" : "Luenga",
-    "Groups" : "Grupos",
-    "Uploading…" : "Puyando..."
+    "Groups" : "Grupos"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

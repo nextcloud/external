@@ -4,9 +4,11 @@ OC.L10N.register(
     "__language_name__" : "Հայերեն",
     "Name" : "Անուն",
     "URL" : "URL",
-    "Language" : "Լեզու",
-    "Groups" : "Խմբեր",
     "Remove site" : "Ջնջել կայքը",
-    "Icons" : "լոգոտիպներ"
+    "Icons" : "լոգոտիպներ",
+    "Cancel" : "Cancel",
+    "Save" : "Պահպանել",
+    "Language" : "Լեզու",
+    "Groups" : "Խմբեր"
 },
 "nplurals=2; plural=(n != 1);");

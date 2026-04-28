@@ -7,9 +7,10 @@ OC.L10N.register(
     "The given device is invalid" : "දී ඇති උපාංගය වලංගු නොවේ",
     "The site does not exist" : "වියමන අඩවිය නොපවතී",
     "__language_name__" : "සිංහල",
+    "Uploading…" : "උඩුගත වෙමින්…",
     "Name" : "නම",
+    "Cancel" : "Cancel",
     "Language" : "භාෂාව",
-    "Groups" : "සමූහ…",
-    "Uploading…" : "උඩුගත වෙමින්…"
+    "Groups" : "සමූහ…"
 },
 "nplurals=2; plural=(n != 1);");
