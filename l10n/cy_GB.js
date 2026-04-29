@@ -5,6 +5,7 @@ OC.L10N.register(
     "URL" : "URL",
     "Remove site" : "Gwaredu safle",
     "Icons" : "Eiconau",
+    "Cancel" : "Cancel",
     "Save" : "Cadw",
     "Language" : "Iaith",
     "Groups" : "Grwpiau",

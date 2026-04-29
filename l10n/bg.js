@@ -43,6 +43,8 @@ OC.L10N.register(
     "Uploading an icon with the same name will replace the current icon." : "Качването на икона с име на вече съществуваща такава ще доведе до презаписване на съществуващата икона.",
     "Delete icon" : "Изтрий иконата",
     "Upload new icon" : "Качи нова икона",
+    "Cancel" : "Cancel",
+    "Save" : "Запиши",
     "Icon" : "Икона",
     "Language" : "Език",
     "Position" : "Позиция",

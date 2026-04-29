@@ -4,6 +4,8 @@ OC.L10N.register(
     "__language_name__" : "Bosanski jezik",
     "Name" : "Ime",
     "URL" : "Url",
+    "Cancel" : "Cancel",
+    "Save" : "Spremi",
     "Language" : "Jezik",
     "Groups" : "Grupe"
 },

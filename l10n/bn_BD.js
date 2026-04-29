@@ -6,6 +6,8 @@ OC.L10N.register(
     "URL" : "URL",
     "Remove site" : "সাইট অপসারণ",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "আরো মনে রাখুন যে নিরাপত্তাজনিত কারণে ইদানিং অনেক সাইট iframing অনুমোদন করেনা",
+    "Cancel" : "Cancel",
+    "Save" : "সংরক্ষণ",
     "Language" : "ভাষা",
     "Groups" : "গোষ্ঠীসমূহ",
     "Select an icon" : "একটি আইকন নির্বাচন কর"

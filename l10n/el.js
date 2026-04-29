@@ -44,6 +44,7 @@ OC.L10N.register(
     "Uploading an icon with the same name will replace the current icon." : "Η μεταφόρτωση ενός εικονιδίου με το ίδιο όνομα θα αντικαταστήσει το τρέχον εικονίδιο.",
     "Delete icon" : "Διαγραφή εικονιδίου",
     "Upload new icon" : "Μεταφόρτωση νέου εικονιδίου",
+    "Cancel" : "Ακύρωση",
     "Save" : "Αποθήκευση",
     "Icon" : "Εικονίδιο",
     "Language" : "Γλώσσα",
