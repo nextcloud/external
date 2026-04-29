@@ -44,6 +44,7 @@ OC.L10N.register(
     "Uploading an icon with the same name will replace the current icon." : "Nahrání ikony se stejným názvem nahradí tu stávající.",
     "Delete icon" : "Smazat ikonu",
     "Upload new icon" : "Nahrát novou ikonu",
+    "Cancel" : "Zrušit",
     "Save" : "Uložit",
     "Icon" : "Ikona",
     "Language" : "Jazyk",

@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Uploading…" : "Puyando...",
     "Name" : "Nombre",
+    "Cancel" : "Cancel",
     "Language" : "Luenga",
     "Groups" : "Grupos"
 },
