@@ -21,6 +21,8 @@ OC.L10N.register(
     "Name" : "Naam",
     "URL" : "Bronadres",
     "Remove site" : "Verwyder werf",
+    "Cancel" : "Cancel",
+    "Save" : "Stoor",
     "Icon" : "Ikoon",
     "Language" : "Taal",
     "Position" : "Posisie",

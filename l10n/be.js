@@ -14,10 +14,13 @@ OC.L10N.register(
     "Icons" : "Значкі",
     "Delete icon" : "Выдаліць значок",
     "Upload new icon" : "Запампаваць новы значок",
+    "Cancel" : "Скасаваць",
+    "Save" : "Захаваць",
     "Icon" : "Значок",
     "Language" : "Мова",
     "Devices" : "Прылады",
     "Groups" : "Групы",
+    "All groups" : "Усе групы",
     "Select an icon" : "Выберыце значок",
     "Reloading icon list…" : "Перазагрузка спісу значкоў…"
 },

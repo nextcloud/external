@@ -44,6 +44,7 @@ OC.L10N.register(
     "Uploading an icon with the same name will replace the current icon." : "Upload et ikon med det samme navn for at udskifte det nuværende ikon.",
     "Delete icon" : "Slet ikon",
     "Upload new icon" : "Upload nyt ikon",
+    "Cancel" : "Annullér",
     "Save" : "Gem",
     "Icon" : "Ikon",
     "Language" : "Sprog",

@@ -42,6 +42,8 @@
     "Uploading an icon with the same name will replace the current icon." : "سيؤدي رفع أيقونة بنفس الاسم إلى استبدال الأيقونة الحالية.",
     "Delete icon" : "حذف أيقونة",
     "Upload new icon" : "إرسال أيقونة جديدة",
+    "Cancel" : "Cancel",
+    "Save" : "حفظ",
     "Icon" : "الأيقونة",
     "Language" : "اللغة",
     "Position" : "الموقع",

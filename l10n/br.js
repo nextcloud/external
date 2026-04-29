@@ -6,6 +6,8 @@ OC.L10N.register(
     "Uploading…" : "O pellkas",
     "Name" : "Anv",
     "URL" : "URL",
+    "Cancel" : "Cancel",
+    "Save" : "Enrollañ",
     "Icon" : "Skeudennig",
     "Language" : "Yezh",
     "Groups" : "Strolladoù"
