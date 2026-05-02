@@ -20,7 +20,7 @@
     "@nextcloud/l10n": "^3.4.0",
     "@nextcloud/logger": "^3.0.2",
     "@nextcloud/router": "^3.1.0",
-    "@nextcloud/vue": "^9.0.0",
+    "@nextcloud/vue": "^9.7.0",
     "vue": "^3.5.21",
     "vue-material-design-icons": "^5.3.1"
   },
