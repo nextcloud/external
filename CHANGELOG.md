@@ -5,6 +5,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 9.0.0 - 2026-05-05
+### Changed
+- Require Nextcloud 34
+
 ## 8.0.1 - 2026-04-28
 ### Fixed
 - Remove non-existent script reference in settings
