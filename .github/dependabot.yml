@@ -7,6 +7,8 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
+  cooldown:
+    default-days: 10
   open-pull-requests-limit: 10
 - package-ecosystem: composer
   directory: "/vendor-bin/csfixer"
@@ -15,6 +17,8 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
+  cooldown:
+    default-days: 10
   open-pull-requests-limit: 10
 - package-ecosystem: composer
   directory: "/vendor-bin/mozart"
@@ -23,6 +27,8 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
+  cooldown:
+    default-days: 10
   open-pull-requests-limit: 10
 - package-ecosystem: composer
   directory: "/vendor-bin/phpunit"
@@ -31,6 +37,8 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
+  cooldown:
+    default-days: 10
   open-pull-requests-limit: 10
 - package-ecosystem: composer
   directory: "/vendor-bin/psalm"
@@ -39,6 +47,8 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
+  cooldown:
+    default-days: 10
   open-pull-requests-limit: 10
 - package-ecosystem: npm
   directory: "/"
@@ -47,6 +57,8 @@ updates:
     day: saturday
     time: "03:00"
     timezone: Europe/Paris
+  cooldown:
+    default-days: 10
   open-pull-requests-limit: 10
   # Disable automatic rebasing because without a build CI will likely fail anyway
   rebase-strategy: "disabled"
