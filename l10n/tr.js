@@ -28,7 +28,7 @@ OC.L10N.register(
     "Add external sites to your Nextcloud navigation" : "Nextcloud gezinme bölümüne dış siteleri ekler",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Bu uygulama yöneticilerin Nextcloud menülerine çeşitli bağlantılar ekleyebilmesini sağlar.\nBağlantıya tıklandığında yönlendirilen site Nextcloud çerçevesi içinde görüntülenir.\nBağlantılar belirli bir dil, aygıt türü ya da kullanıcı grubu için eklenebilir.\n\nAyrıntılı bilgi almak için dış siteler uygulamasının belgelerine bakabilirsiniz.",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "İçinde kullanıcının e-postasını, kullanıcı kodunu ve görünen adını içeren bir JSON site kodu {jwt} yer belirtici kullanılarak bağlantıya eklenebilir. Kodun nasıl çözüleceğini {linkstart}belgeler{linkend} bölümünden öğrenebilirsiniz.",
-    "New site" : "Site ekle",
+    "New site" : "Yeni site",
     "Uploading…" : "Yükleniyor …",
     "Icon uploaded successfully" : "Simge yüklendi",
     "Icon could not be uploaded" : "Simge yüklenemedi",
