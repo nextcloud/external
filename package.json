@@ -30,7 +30,7 @@
     "@nextcloud/vite-config": "^2.4.0",
     "@vue/tsconfig": "^0.9.1",
     "typescript": "^6.0.3",
-    "vite": "^7.1.5"
+    "vite": "^8.0.14"
   },
   "browserslist": [
     "extends @nextcloud/browserslist-config"
