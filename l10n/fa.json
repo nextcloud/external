@@ -28,10 +28,14 @@
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it.",
     "New site" : "سایت جدید",
     "Uploading…" : "در حال آپلود...",
+    "Icon uploaded successfully" : "آیکن با موفقیت بارگذاری شد",
     "Icon could not be uploaded" : "Icon could not be uploaded",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites.",
+    "The placeholders {email}, {uid}, {displayname}, {groups}, {language} and {locale} can be used and are filled with the user's values to customize the links." : "می‌توان از placeholderهای {email}، {uid}، {displayname}، {groups}، {language} و {locale} استفاده کرد؛ این مقادیر با اطلاعات کاربر پر می‌شوند تا پیوندها سفارشی شوند.",
+    "When accessing the external site through the Nextcloud link, path parameters will be forwarded to the external site. So you can also create deep links (e.g. \"mycloud.com/external/1/pageA\" will lead to Nextcloud with the iframe pointed at \"externalsite.com/pageA\")." : "هنگام دسترسی به سایت خارجی از طریق پیوند Nextcloud، پارامترهای مسیر به سایت خارجی منتقل می‌شوند. بنابراین می‌توانید deep link هم بسازید (برای نمونه «mycloud.com/external/1/pageA» کاربر را به Nextcloud می‌برد و iframe را به «externalsite.com/pageA» اشاره می‌دهد).",
     "Name" : "نام",
     "URL" : "آدرس",
+    "Configure site" : "پیکربندی سایت",
     "Remove site" : "حذف سایت",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "علاوه بر این به خاطر داشته باشید که امروزه بسیاری از سایت ها امکان iframing را به دلایل امنیتی غیرفعال کرده اند .",
@@ -48,9 +52,12 @@
     "Position" : "Position",
     "Devices" : "Devices",
     "Groups" : "گروه ها",
+    "All groups" : "همه گروه‌ها",
     "Redirect" : "تغییر مسیر",
+    "Failed to load admin config" : "بارگذاری پیکربندی مدیر ناموفق بود",
     "Select an icon" : "یک آیکون انتخاب کنید",
     "This site does not allow embedding" : "This site does not allow embedding",
-    "Reloading icon list…" : "در حال بارگذاری مجدد لیست ایکون..."
+    "Reloading icon list…" : "در حال بارگذاری مجدد لیست ایکون...",
+    "The placeholders {email}, {uid}, {displayname}, {groups}, {language} and {locale} can be used and are filled with the user´s values to customize the links." : "می‌توان از placeholderهای {email}، {uid}، {displayname}، {groups}، {language} و {locale} استفاده کرد؛ این مقادیر با اطلاعات کاربر پر می‌شوند تا پیوندها سفارشی شوند."
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
