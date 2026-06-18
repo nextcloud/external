@@ -1,11 +1,8 @@
 OC.L10N.register(
     "external",
     {
-    "Uploading…" : "Puyando...",
-    "Name" : "Nombre",
     "Cancel" : "Cancel",
     "Save" : "Save",
-    "Language" : "Luenga",
-    "Groups" : "Grupos"
+    "Groups" : "Bólkar"
 },
 "nplurals=2; plural=(n != 1);");
