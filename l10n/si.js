@@ -10,6 +10,7 @@ OC.L10N.register(
     "Uploading…" : "උඩුගත වෙමින්…",
     "Name" : "නම",
     "Cancel" : "Cancel",
+    "Save" : "Save",
     "Language" : "භාෂාව",
     "Groups" : "සමූහ…"
 },
