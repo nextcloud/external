@@ -25,7 +25,7 @@
     "__language_name__" : "Lietuvių",
     "Add external sites to your Nextcloud navigation" : "Pridėti išorines svetaines į jūsų Nextcloud naršymą",
     "This application allows an admin to add additional links into the Nextcloud menus.\nFollowing a link, the external website appears in the Nextcloud frame.\nIt is also possible to add links only for a given language, device type or user group.\n\nMore information is available in the External sites documentation." : "Ši programėlė leidžia administratoriams  pridėti papildomas nuorodas prie Nextcloud parinkčių.\n Sekant nuorodą, išorinė svetainė pasirodo „Nextcloud“ rėmelyje.\nTaip pat galima pridėti nuorodas priklausomai nuo tik tam tikros kalba, įrenginio tipo ar vartotojų grupės.",
-    "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "JSON interneto prieigos raktas, susidedantis iš vartotojo el. pašto, UID ir rodomo vardo, gali būti įterptas į nuorodą naudojant {jwt} skirtuką. Daugiau informacijos, kaip iššifruoti {linkstart}dokumentacijoje{linkend}",
+    "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "JSON interneto žymuo, susidedantis iš vartotojo el. pašto, UID ir rodomo vardo, gali būti įterptas į nuorodą naudojant {jwt} skirtuką. Daugiau informacijos, kaip iššifruoti {linkstart}dokumentacijoje{linkend}",
     "New site" : "Nauja svetainė",
     "Uploading…" : "Įkeliama…",
     "Icon uploaded successfully" : "Piktograma sėkmingai įkelta",
