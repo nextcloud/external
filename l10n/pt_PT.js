@@ -1,8 +1,13 @@
 OC.L10N.register(
     "external",
     {
+    "Header" : "Cabeçalho",
+    "Only in the Android app" : "Somente no aplicativo Android",
+    "The given URL is invalid" : "A URL fornecida é inválida",
+    "The given icon does not exist" : "O ícone fornecido não existe",
     "No file uploaded" : "Nenhum ficheiro carregado",
     "__language_name__" : "Português",
+    "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Um JSON Web Token contendo o e-mail, UID e apelido do usuário pode ser incluído no link usando o espaço reservado {jwt}. Veja a {linkstart}documentação{linkend} sobre como decodificá-lo.",
     "New site" : "Novo site",
     "Uploading…" : "A enviar…",
     "Name" : "Nome",
@@ -16,6 +21,7 @@ OC.L10N.register(
     "Position" : "Position",
     "Groups" : "Grupos",
     "Redirect" : "Redirecionar",
-    "Select an icon" : "Selecione um ícone"
+    "Select an icon" : "Selecione um ícone",
+    "This site does not allow embedding" : "Este site não permite incorporação"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
