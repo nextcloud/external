@@ -1,11 +1,15 @@
 OC.L10N.register(
     "external",
     {
+    "All languages" : "Todos os idiomas",
     "Header" : "Cabeçalho",
     "Only in the Android app" : "Somente no aplicativo Android",
+    "Only in the iOS app" : "Somente no aplicativo iOS",
     "The given URL is invalid" : "A URL fornecida é inválida",
+    "The given type is invalid" : "O tipo fornecido é inválido",
     "The given icon does not exist" : "O ícone fornecido não existe",
     "No file uploaded" : "Nenhum ficheiro carregado",
+    "Provided image is not a square of 16, 24 or 32 pixels width" : "A imagem fornecida não é um quadrado de 16, 24 ou 32 pixels",
     "__language_name__" : "Português",
     "A JSON Web Token containing user´s email, uid and display name in its payload can be embedded into the link using the {jwt} placeholder. See the {linkstart}documentation{linkend} how to decode it." : "Um JSON Web Token contendo o e-mail, UID e apelido do usuário pode ser incluído no link usando o espaço reservado {jwt}. Veja a {linkstart}documentação{linkend} sobre como decodificá-lo.",
     "New site" : "Novo site",
@@ -19,8 +23,10 @@ OC.L10N.register(
     "Save" : "Guardar",
     "Language" : "Idioma",
     "Position" : "Position",
+    "Devices" : "Dispositivos",
     "Groups" : "Grupos",
     "Redirect" : "Redirecionar",
+    "Failed to load admin config" : "Falha ao carregar a configuração administrativa",
     "Select an icon" : "Selecione um ícone",
     "This site does not allow embedding" : "Este site não permite incorporação"
 },
