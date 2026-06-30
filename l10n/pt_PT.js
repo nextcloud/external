@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "All languages" : "Todos os idiomas",
     "Header" : "Cabeçalho",
+    "Public footer" : "Rodapé público",
     "Only in the Android app" : "Somente no aplicativo Android",
     "Only in the iOS app" : "Somente no aplicativo iOS",
     "The given URL is invalid" : "A URL fornecida é inválida",
