@@ -63,12 +63,21 @@ class Application extends App implements IBootstrap {
 				continue;
 			}
 
-			$navigationManager->add(function () use ($site, $url): array {
-				if ($site['icon'] !== '') {
-					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $site['icon']]);
-				} else {
-					$image = $url->linkToRoute('external.icon.showIcon', ['icon' => 'external.svg']);
+			$navigationManager->add(function () use ($site, $url, $sitesManager): array {
+				$icon = $site['icon'] !== '' ? $site['icon'] : 'external.svg';
+
+				// Settings-menu entries are recoloured by Nextcloud core via the
+				// `--background-invert-if-dark` CSS filter, which expects a
+				// dark-coloured source icon. Prefer the paired `-dark` variant
+				// so the icon stays visible in the dark theme (nextcloud/external#430).
+				if ($site['type'] === SitesManager::TYPE_SETTING && !str_contains($icon, '-dark.')) {
+					$darkIcon = preg_replace('/(\.[^.]+)$/', '-dark$1', $icon);
+					if (is_string($darkIcon) && in_array($darkIcon, $sitesManager->getAvailableIcons(), true)) {
+						$icon = $darkIcon;
+					}
 				}
+
+				$image = $url->linkToRoute('external.icon.showIcon', ['icon' => $icon]);
 
 				$href = $site['url'];
 				if (!$site['redirect']) {
