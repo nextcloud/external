@@ -94,12 +94,11 @@ class BeforeTemplateRenderedListener implements IEventListener {
 
 				return [
 					'id' => 'external_index' . $site['id'],
-					'order' => 80 + $site['id'],
+					'order' => 80 + (int)$site['id'],
 					'href' => $href,
 					'icon' => $image,
 					'type' => $site['type'],
-					'name' => $site['name'],
-					'target' => $site['redirect'],
+					'name' => (string)$site['name'],
 				];
 			});
 		}
