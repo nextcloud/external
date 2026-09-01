@@ -2,6 +2,7 @@ OC.L10N.register(
     "external",
     {
     "__language_name__" : "Lëtzebuergesch",
+    "Uploading…" : "Lued erop …",
     "Name" : "Numm",
     "URL" : "URL",
     "Remove site" : "Site läschen",
