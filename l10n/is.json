@@ -30,7 +30,7 @@
     "Icon could not be uploaded" : "Ekki var hægt að senda inn táknmynd",
     "Add a website directly to the app list in the top bar. This will be visible for all users and is useful to quickly reach other internally used web apps or important sites." : "Bættu vefsvæði beint á forritalistann í toppstikunni. Þetta verður sýnilegt öllum notendum og nýtist til að nálgast á fljótlegan hátt vefforrit eða mikilvæga vefi.",
     "Name" : "Heiti",
-    "URL" : "URL",
+    "URL" : "Slóð (URL)",
     "Remove site" : "Fjarlægja vefsvæði",
     "Please note that some browsers will block displaying of sites via HTTP if you are running HTTPS." : "Athugaðu að sumir vafrar loka á birtingu vefsvæða með HTTP ef þú ert að keyra HTTPS.",
     "Furthermore please note that many sites these days disallow iframing due to security reasons." : "Athugaðu einnig að margar síður þessa dagana banna \"iframe\" af öryggisástæðum.",
