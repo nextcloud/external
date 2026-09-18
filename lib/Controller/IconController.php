@@ -63,8 +63,8 @@ class IconController extends Controller {
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
 		}
 
-		if ($imageSize !== false && (!in_array($imageSize[0], [16, 24, 32], true) || $imageSize[0] !== $imageSize[1])) {
-			// Not a square
+		if ($icon['type'] !== 'image/svg+xml' && $imageSize !== false && (!in_array($imageSize[0], [16, 24, 32], true) || $imageSize[0] !== $imageSize[1])) {
+			// Not a square - SVG is vector-based and scales to any size, so skip the pixel dimension check
 			return new DataResponse([
 				'error' => $this->l10n->t('Provided image is not a square of 16, 24 or 32 pixels width'),
 			], Http::STATUS_UNPROCESSABLE_ENTITY);
