@@ -8,7 +8,7 @@ OC.L10N.register(
     "Public footer" : "Verejná pätička",
     "All devices" : "Všetky zariadenia",
     "Only in the Android app" : "Len v Android aplikácii",
-    "Only in the iOS app" : "Len v iOS aplikácii",
+    "Only in the iOS app" : "Len v aplikácii pre iOS",
     "Only in the desktop client" : "Len v PC klientovi",
     "Only in the browser" : "Len v prehliadači",
     "The given label is invalid" : "Zadaná značka je neplatná",
