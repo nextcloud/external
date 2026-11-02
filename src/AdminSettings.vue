@@ -102,19 +102,18 @@
 			<form class="upload-button" @submit.prevent>
 				<input
 					id="uploadicon"
+					ref="uploadInput"
 					class="hidden-upload-input"
 					name="uploadicon"
 					type="file"
 					accept="image/*"
 					@change="handleIconUpload">
-				<label for="uploadicon">
-					<NcButton tag="span" :aria-label="t('external', 'Upload new icon')">
-						<template #icon>
-							<Upload :size="20" />
-						</template>
-						{{ t('external', 'Upload new icon') }}
-					</NcButton>
-				</label>
+				<NcButton :aria-label="t('external', 'Upload new icon')" @click="triggerIconUpload">
+					<template #icon>
+						<Upload :size="20" />
+					</template>
+					{{ t('external', 'Upload new icon') }}
+				</NcButton>
 				<span v-if="uploadMessage" class="upload-message">{{ uploadMessage }}</span>
 			</form>
 		</NcSettingsSection>
@@ -182,6 +181,7 @@ const groupedIcons = computed<IconGroup[]>(() => {
 })
 const editingSite: Ref<SiteWithErrors | null> = ref(null)
 const uploadMessage = ref('')
+const uploadInput: Ref<HTMLInputElement | null> = ref(null)
 
 const config: Ref<ExternalWebsiteConfig> = ref({
 	devices: [],
@@ -301,6 +301,10 @@ async function removeIconGroup(group: IconGroup) {
 	}
 	const groupIconNames = new Set(group.icons.map((i) => i.icon))
 	availableIcons.value = availableIcons.value.filter((i) => !groupIconNames.has(i.icon))
+}
+
+function triggerIconUpload() {
+	uploadInput.value?.click()
 }
 
 /**
