@@ -89,7 +89,20 @@ class BeforeTemplateRenderedListener implements IEventListener {
 			}
 
 			$this->navigationManager->add(function () use ($site) {
-				$image = $this->generateImageLink($site, false);
+				$icon = $site['icon'] !== '' ? $site['icon'] : 'external.svg';
+
+				// Settings-menu entries are recoloured by Nextcloud core via the
+				// `--background-invert-if-dark` CSS filter, which expects a
+				// dark-coloured source icon. Prefer the paired `-dark` variant
+				// so the icon stays visible in the dark theme (nextcloud/external#430).
+				if ($site['type'] === SitesManager::TYPE_SETTING && !str_contains($icon, '-dark.')) {
+					$darkIcon = preg_replace('/(\.[^.]+)$/', '-dark$1', $icon);
+					if (is_string($darkIcon) && in_array($darkIcon, $this->sitesManager->getAvailableIcons(), true)) {
+						$icon = $darkIcon;
+					}
+				}
+
+				$image = $this->urlGenerator->linkToRoute('external.icon.showIcon', ['icon' => $icon, 'dark' => false]);
 				$href = $this->getHref($site);
 
 				return [
